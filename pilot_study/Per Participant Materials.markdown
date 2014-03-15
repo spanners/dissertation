@@ -18,7 +18,7 @@ By signing this form you acknowledge that you have read the information given ab
 
 ### Name
 
-* **GB**
+* **Participant #1**
 
 ### Age
 
