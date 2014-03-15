@@ -1,6 +1,15 @@
-% The potential of declarative programming languages to support user interface programming: the case of ELM
-% Simon Buist
-% October 2013
+---
+title:  'The potential of declarative programming languages to support user interface programming: the case of ELM'
+author:
+- name: Simon Buist
+  affiliation: University of Bath
+tags: [programming, psychology, HCI, user experience]
+abstract: |
+  Your abstract should appear here. An abstract is a short paragraph describing the aims of
+  the project, what was achieved and what contributions it has made.
+
+  It consists of two paragraphs.
+...
 
 \newpage
 This dissertation may be made available for consultation within the University
@@ -10,11 +19,11 @@ consultation.
 Signed:
 \newpage
 
-## The potential of declarative programming languages to support user interface programming: the case of ELM
+## The potential of declarative programming languages to support user interface programming: the case of ELM {-}
 
 Submitted by: Simon Buist
 
-# COPYRIGHT
+# COPYRIGHT {-} 
 
 Attention is drawn to the fact that copyright of this dissertation rests with its author. The
 Intellectual Property Rights of the products produced as part of the project belong to the
@@ -25,7 +34,8 @@ is understood to recognise that its copyright rests with its author and that no 
 from the dissertation and no information derived from it may be published without the
 prior written consent of the author.
 
-# Declaration
+# Declaration {-}
+
 This dissertation is submitted to the University of Bath in accordance with the requirements
 of the degree of Bachelor of Science in the Department of Computer Science. No portion of
 the work in this dissertation has been submitted in support of an application for any other
@@ -34,14 +44,11 @@ where specifically acknowledged, it is the work of the author.
 
 Signed:
 \newpage
-# Abstract
 
-Your abstract should appear here. An abstract is a short paragraph describing the aims of
-the project, what was achieved and what contributions it has made.
-
-# Acknowledgements
+# Acknowledgements {-}
 
 Add any acknowledgements here.
+\newpage
 
 # Introduction
 
@@ -99,7 +106,7 @@ is not idiomatic of Elm or JavaScript (the two languages that I am comparing).
 Something like the following will never be that easy in JavaScript:
 
 ````Haskell
-main = lift asText Mouse . position
+main = lift asText Mouse.position
 ````
 
 ## Experimental design
@@ -132,15 +139,19 @@ work.
 # Bibliography
 
 # Appendix A
+
 ## Design Diagrams
 
 # Appendix B
+
 ## User Documentation
 
 # Appendix C
+
 ## Raw results output
 
 # Appendix D
+
 ## Code
 
 [table]: #table
@@ -154,13 +165,6 @@ Introduction to the problem area
 
 Spending half an hour making a mind-map, starting with the word “Elm”, I
 get the following terms:
-
-
-### Elm mind-map
-
-[scale=0.65,pages=1,pagecommand=[pdf:mindmap]]mindmap.pdf
-
-In list form, with added terms:
 
 -   Signals
 
