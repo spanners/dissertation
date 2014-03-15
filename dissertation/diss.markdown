@@ -73,6 +73,7 @@ Like all chapters, it will have a number of sections
 Items    Values
 -------- --------
 Item 1   Value 1
+
 Item 2   Value 2
 -------- --------
 
