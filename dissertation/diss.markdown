@@ -25,7 +25,7 @@ consultation.
 Signed:
 \newpage
 
-## The potential of declarative programming languages to support user interface programming: the case of ELM {-}
+**The potential of declarative programming languages to support user interface programming: the case of ELM**
 
 Submitted by: Simon Buist
 

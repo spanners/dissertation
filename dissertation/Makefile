@@ -1,5 +1,5 @@
 %.pdf: %.markdown footer.tex
-	pandoc -s -A footer.tex --template custom.tex --toc -N --smart --bibliography $*.bib -f markdown -o $@ $<
+	pandoc -s --variable mainfont=Georgia --variable sansfont=Arial --variable monofont="Bitstream Vera Sans Mono" --variable fontsize=12pt -A footer.tex --template custom.tex --toc -N --smart --bibliography $*.bib --csl the-open-university-harvard.csl -f markdown -o $@ $<
 
 %.beamer.pdf: %.markdown
 	pandoc -s -N --smart --bibliography $*.bib -f markdown -t beamer -o $@ $<
