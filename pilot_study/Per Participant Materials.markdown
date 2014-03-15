@@ -1,4 +1,5 @@
 ﻿# Consent Form
+
 ## Study Overview
 
 This study aims to assess how Functional Reactive Programming Languages are used. To do this, we will be asking you to modify a Mario game to get him to fly. The session will take no more than 1 hour.
@@ -16,33 +17,21 @@ You have the right to withdraw from the study at any time and to have any data a
 
 By signing this form you acknowledge that you have read the information given above and understand the terms and conditions of this study.
 
-### Name
+-------------------- ---------------------------- -------- -------------------
+Name                 Age                          Sex      Occupation
+**Participant #1**   **23**                       **Male** **Student**
+-------------------- ---------------------------- -------- -------------------
 
-* **Participant #1**
-
-### Age
-
-* **23**
-
-### Sex
-
-* **Male**
-
-### Occupation
-
-* **Student**
-
-## Signed
+Signed
 
 * **YES**
 
-### Date
+Date
 
 * **10/12/2013**
 
 Experimenter: Simon Buist, Dept. of Computer Science. EMAIL ADDRESS
-
----
+\newpage
 
 # Pre-questionnaire
 
@@ -53,6 +42,7 @@ Experimenter: Simon Buist, Dept. of Computer Science. EMAIL ADDRESS
     * No
 2. If so, please list the Functional programming  languages you’ve used before:
     * **Lisp**
+
 # Design & Software
 
 For the purposes of this questionnaire, we consider a piece of software to be an application for which you have received/conceived of a specification, and coded a solution that meets this solution.
@@ -74,6 +64,7 @@ For the purposes of this questionnaire, we consider a piece of software to be an
     * **5**
 5. What programming languages do you know?
     * **Java, prolog, php, lisp**
+\newpage
 
 # General Demographics
 
@@ -98,8 +89,7 @@ For the purposes of this questionnaire, we consider a piece of software to be an
     * **Student**
     * Retired
     * Unable to work
-
----
+\newpage
 
 # Post-Questionnaire
 
