@@ -84,85 +84,7 @@ Another section, just for good measure. You can reference a table, figure or equ
 
 # Literature Survey
 
-This is the chapter for your Literature Survey.
-You will wish to cite authors 
-
-# Requirements
-
-If you are doing a primarily software development project, this is the chapter in which you
-review the requirements decisions and critique the requirements process.
-
-# Design
-
-This is the chapter in which you review your design decisions at various levels and critique
-the design process.
-
-
-## Pilot study
-
-In reflection, the task I chose was too difficult to capture the cognitive load incurred by
-the language itself for a given task, due to the difficulty of the task itself creating noise.
-I could improve this by simplifying the task, in a way that is ‘language agnostic’, i.e. that
-is not idiomatic of Elm or JavaScript (the two languages that I am comparing).
-Something like the following will never be that easy in JavaScript:
-
-````Haskell
-main = lift asText Mouse.position
-````
-
-## Experimental design
-
-Foo
-
-# Implementation and Testing
-This is the chapter in which you review the implementation and testing decisions and issues,
-and critique these processes.
-Code can be output inline using ````some code````. For example, this code is inline:
-````public static int example = 0;```` (I have used the character | as a delimiter, but any
-non-reserved character not in the code text can be used.)
-Code snippets can be output using the environment with the code given in the environment. For example, consider listing 5.1, below.
-Listing 5.1: Example code
-
-Code listings are produced using the package “Listings”. This has many useful options, so
-have a look at the package documentation for further ideas.
-
-# Results
-
-This is the chapter in which you review the outcomes, and critique the outcomes process.
-You may include user evaluation here too.
-
-# Conclusions
-
-This is the chapter in which you review the major achievements in the light of your original
-objectives, critique the process, critique your own learning and identify possible future
-work.
-
-# Bibliography
-
-# Appendix A
-
-## Design Diagrams
-
-# Appendix B
-
-## User Documentation
-
-# Appendix C
-
-## Raw results output
-
-# Appendix D
-
-## Code
-
-[table]: #table
-
-
-A survey of relevant papers
-===========================
-
-Introduction to the problem area
---------------------------------
+## Introduction to the problem area
 
 Spending half an hour making a mind-map, starting with the word “Elm”, I
 get the following terms:
@@ -388,13 +310,12 @@ offering new ways to organize and visualize the code in any application.
 
 **Flow Based Programming**
 
-\* [NoFlo](http://noflojs.org/), [Flowhub.io](http://flowhub.io/) \*
-BOOK: [J. Paul Morrison](http://www.jpaulmorrison.com/fbp/) – Flow Based
-Programming \* [Example of NoFlo implementation of
-Jekyll](https://github.com/the-grid/noflo-jekyll)
+* [NoFlo](http://noflojs.org/)
+* [Flowhub.io](http://flowhub.io/)
+* [J. Paul Morrison](http://www.jpaulmorrison.com/fbp/) – Flow Based Programming
+* [Example of NoFlo implementation of Jekyll](https://github.com/the-grid/noflo-jekyll)
 
-What does it mean to be ‘easy to use?’
---------------------------------------
+## What does it mean to be ‘easy to use?’
 
 In the process of surveying relevant (and sometimes irrelevant)
 literature to this dissertation, recurring conceptual patterns were
@@ -455,8 +376,7 @@ are doing it in good time, and fail to break out of it”, whereas experts
 think much more about the problem at hand before proceeding with a
 solution [@Lopez2012a].
 
-Running User Studies
---------------------
+## Running User Studies
 
 Perhaps a further direction of investigation may be running an
 experiment to spot whether or not Elm’s auto-updating IDE lends to a
@@ -527,4 +447,75 @@ could measure this by way of measuring the mouse position relative to
 the IDE, clicks, and key-presses, using tools built-in to Elm and a bit
 of extension to stream this over the Internet to my storage facilities
 [@WhatFRP].
+
+# Requirements
+
+If you are doing a primarily software development project, this is the chapter in which you
+review the requirements decisions and critique the requirements process.
+
+# Design
+
+This is the chapter in which you review your design decisions at various levels and critique
+the design process.
+
+
+## Pilot study
+
+In reflection, the task I chose was too difficult to capture the cognitive load incurred by
+the language itself for a given task, due to the difficulty of the task itself creating noise.
+I could improve this by simplifying the task, in a way that is ‘language agnostic’, i.e. that
+is not idiomatic of Elm or JavaScript (the two languages that I am comparing).
+Something like the following will never be that easy in JavaScript:
+
+````Haskell
+main = lift asText Mouse.position
+````
+
+## Experimental design
+
+Foo
+
+# Implementation and Testing
+This is the chapter in which you review the implementation and testing decisions and issues,
+and critique these processes.
+Code can be output inline using ````some code````. For example, this code is inline:
+````public static int example = 0;```` (I have used the character | as a delimiter, but any
+non-reserved character not in the code text can be used.)
+Code snippets can be output using the environment with the code given in the environment. For example, consider listing 5.1, below.
+Listing 5.1: Example code
+
+Code listings are produced using the package “Listings”. This has many useful options, so
+have a look at the package documentation for further ideas.
+
+# Results
+
+This is the chapter in which you review the outcomes, and critique the outcomes process.
+You may include user evaluation here too.
+
+# Conclusions
+
+This is the chapter in which you review the major achievements in the light of your original
+objectives, critique the process, critique your own learning and identify possible future
+work.
+
+# Bibliography {-}
+
+# Appendix A
+
+## Design Diagrams
+
+# Appendix B
+
+## User Documentation
+
+# Appendix C
+
+## Raw results output
+
+# Appendix D
+
+## Code
+
+[table]: #table
+
 
