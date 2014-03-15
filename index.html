@@ -1,98 +1,250 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Dissertation by spanners</title>
-  </head>
-
-  <body>
-    <a id="forkme_banner" href="https://github.com/spanners/dissertation">View on GitHub</a>
-    <div class="shell">
-
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Dissertation</h1>
-            <h2></h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/spanners/dissertation/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/spanners/dissertation/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/spanners">spanners</a> can be found on <a href="https://github.com/spanners/dissertation">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
-    </div>
-
-    
-  </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>The potential of declarative programming languages to support user interface programming: the case of ELM</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">The potential of declarative programming languages to support user interface programming: the case of ELM</h1>
+<h2 class="author"></h2>
+</div>
+<p>This dissertation may be made available for consultation within the University Library and may be photocopied or lent to other libraries for the purposes of consultation.</p>
+<p>Signed: </p>
+<h2 id="the-potential-of-declarative-programming-languages-to-support-user-interface-programming-the-case-of-elm" class="unnumbered">The potential of declarative programming languages to support user interface programming: the case of ELM</h2>
+<p>Submitted by: Simon Buist</p>
+<h1 id="copyright" class="unnumbered">COPYRIGHT</h1>
+<p>Attention is drawn to the fact that copyright of this dissertation rests with its author. The Intellectual Property Rights of the products produced as part of the project belong to the author unless otherwise specified below, in accordance with the University of Bath’s policy on intellectual property (see http://www.bath.ac.uk/ordinances/22.pdf). This copy of the dissertation has been supplied on condition that anyone who consults it is understood to recognise that its copyright rests with its author and that no quotation from the dissertation and no information derived from it may be published without the prior written consent of the author.</p>
+<h1 id="declaration" class="unnumbered">Declaration</h1>
+<p>This dissertation is submitted to the University of Bath in accordance with the requirements of the degree of Bachelor of Science in the Department of Computer Science. No portion of the work in this dissertation has been submitted in support of an application for any other degree or qualification of this or any other university or institution of learning. Except where specifically acknowledged, it is the work of the author.</p>
+<p>Signed: </p>
+<h1 id="acknowledgements" class="unnumbered">Acknowledgements</h1>
+<p>Add any acknowledgements here. </p>
+<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<p>This is the introductory chapter.</p>
+<h2 id="example-section"><span class="header-section-number">1.1</span> Example Section</h2>
+<p>Like all chapters, it will have a number of sections</p>
+<h3 id="example-subsection"><span class="header-section-number">1.1.1</span> Example Subsection</h3>
+<p>…and sub-sections</p>
+<h4 id="example-sub-subsection"><span class="header-section-number">1.1.1.1</span> Example sub-subsection</h4>
+<p>…and sub-subsections.</p>
+<h4 id="table"><span class="header-section-number">1.1.1.2</span> Table</h4>
+<table>
+<caption>An example table</caption>
+<col width="12%" />
+<col width="12%" />
+<thead>
+<tr class="header">
+<th align="left">Items</th>
+<th align="left">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Item 1 Item 2</td>
+<td align="left">Value 1 Value 2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="another-section"><span class="header-section-number">1.2</span> Another section</h2>
+<p>Another section, just for good measure. You can reference a table, figure or equation using <a href="#table">table</a></p>
+<h1 id="literature-survey"><span class="header-section-number">2</span> Literature Survey</h1>
+<p>This is the chapter for your Literature Survey. You will wish to cite authors</p>
+<h1 id="requirements"><span class="header-section-number">3</span> Requirements</h1>
+<p>If you are doing a primarily software development project, this is the chapter in which you review the requirements decisions and critique the requirements process.</p>
+<h1 id="design"><span class="header-section-number">4</span> Design</h1>
+<p>This is the chapter in which you review your design decisions at various levels and critique the design process.</p>
+<h2 id="pilot-study"><span class="header-section-number">4.1</span> Pilot study</h2>
+<p>In reflection, the task I chose was too difficult to capture the cognitive load incurred by the language itself for a given task, due to the difficulty of the task itself creating noise. I could improve this by simplifying the task, in a way that is ‘language agnostic’, i.e. that is not idiomatic of Elm or JavaScript (the two languages that I am comparing). Something like the following will never be that easy in JavaScript:</p>
+<pre class="sourceCode Haskell"><code class="sourceCode haskell">main <span class="fu">=</span> lift asText Mouse.position</code></pre>
+<h2 id="experimental-design"><span class="header-section-number">4.2</span> Experimental design</h2>
+<p>Foo</p>
+<h1 id="implementation-and-testing"><span class="header-section-number">5</span> Implementation and Testing</h1>
+<p>This is the chapter in which you review the implementation and testing decisions and issues, and critique these processes. Code can be output inline using <code>some code</code>. For example, this code is inline: <code>public static int example = 0;</code> (I have used the character | as a delimiter, but any non-reserved character not in the code text can be used.) Code snippets can be output using the environment with the code given in the environment. For example, consider listing 5.1, below. Listing 5.1: Example code</p>
+<p>Code listings are produced using the package “Listings”. This has many useful options, so have a look at the package documentation for further ideas.</p>
+<h1 id="results"><span class="header-section-number">6</span> Results</h1>
+<p>This is the chapter in which you review the outcomes, and critique the outcomes process. You may include user evaluation here too.</p>
+<h1 id="conclusions"><span class="header-section-number">7</span> Conclusions</h1>
+<p>This is the chapter in which you review the major achievements in the light of your original objectives, critique the process, critique your own learning and identify possible future work.</p>
+<h1 id="bibliography"><span class="header-section-number">8</span> Bibliography</h1>
+<h1 id="appendix-a"><span class="header-section-number">9</span> Appendix A</h1>
+<h2 id="design-diagrams"><span class="header-section-number">9.1</span> Design Diagrams</h2>
+<h1 id="appendix-b"><span class="header-section-number">10</span> Appendix B</h1>
+<h2 id="user-documentation"><span class="header-section-number">10.1</span> User Documentation</h2>
+<h1 id="appendix-c"><span class="header-section-number">11</span> Appendix C</h1>
+<h2 id="raw-results-output"><span class="header-section-number">11.1</span> Raw results output</h2>
+<h1 id="appendix-d"><span class="header-section-number">12</span> Appendix D</h1>
+<h2 id="code"><span class="header-section-number">12.1</span> Code</h2>
+<h1 id="a-survey-of-relevant-papers"><span class="header-section-number">13</span> A survey of relevant papers</h1>
+<h2 id="introduction-to-the-problem-area"><span class="header-section-number">13.1</span> Introduction to the problem area</h2>
+<p>Spending half an hour making a mind-map, starting with the word “Elm”, I get the following terms:</p>
+<ul>
+<li><p>Signals</p>
+<ul>
+<li><p>Impure</p></li>
+<li><p>Time</p></li>
+<li><p>Input/Output</p></li>
+<li><p>History – Past &amp; Future</p></li>
+<li><p>Data model</p></li>
+</ul></li>
+<li><p>“Natural” Separation of Data model/Logic/Layout</p></li>
+<li><p>Less cognitive load?</p></li>
+<li><p>“Easy”</p>
+<ul>
+<li><p>Professed to be “easy” by the creator!</p></li>
+<li><p>What does it mean to be “easy”?</p></li>
+<li><p>Operationalisation</p></li>
+<li><p>Self-reporting</p></li>
+</ul></li>
+<li><p>Programming Language</p>
+<ul>
+<li><p>Reactive</p>
+<ul>
+<li><p>“Instant feedback”</p></li>
+<li><p>“I/O-sensitive”</p></li>
+<li><p>Thrashing?</p></li>
+</ul></li>
+<li><p>Functional</p>
+<ul>
+<li><p>Pure</p></li>
+<li><p>Testing</p>
+<ul>
+<li><p>properties</p></li>
+<li><p>QuickCheck</p></li>
+<li><p>Delta Debugging</p></li>
+</ul></li>
+</ul></li>
+<li><p>Haskell derivative</p>
+<ul>
+<li><p>Embedded Domain-specific Language</p></li>
+<li><p>See also: Idris</p></li>
+</ul></li>
+<li><p>Multiple back-ends</p>
+<ul>
+<li><p>Javascript</p></li>
+<li><p>Java</p></li>
+<li><p>C</p></li>
+</ul></li>
+</ul></li>
+<li><p>Programming</p>
+<ul>
+<li><p>code-compile-run loop</p>
+<ul>
+<li><p>“Programming blind”</p></li>
+<li><p>“Slow feedback”</p></li>
+</ul></li>
+<li><p>Text editor</p></li>
+<li><p>IDE</p></li>
+<li><p>Paradigms</p>
+<ul>
+<li><p>Declarative</p></li>
+<li><p>I’ll tell you WHAT I want you to do, you figure out HOW to do it</p></li>
+</ul></li>
+<li><p>Encoding ideas</p>
+<ul>
+<li><p>Mapping of natural language concepts into formal language</p></li>
+<li><p>Loss of information?</p></li>
+<li><p>Augmented reality?</p></li>
+</ul></li>
+<li><p>Abstraction</p>
+<ul>
+<li><p>What level?</p></li>
+<li><p>What generation? 3GL? 4GL?</p></li>
+<li><p>Metaprogramming e.g. AspectJ</p></li>
+<li><p>Black/White box</p></li>
+</ul></li>
+<li><p>Cognitive offloading</p></li>
+<li><p>What is it?</p>
+<ul>
+<li><p>Art?</p></li>
+<li><p>Engineering?</p></li>
+<li><p>Science?</p></li>
+<li><p>Language?</p></li>
+<li><p>Mathematics?</p></li>
+<li><p>Ephemeral</p></li>
+<li><p>Intangible</p></li>
+<li><p>Limitless</p></li>
+<li><p>Limited</p></li>
+</ul></li>
+</ul></li>
+<li><p>IDE</p>
+<ul>
+<li>Split View: Code | Runtime</li>
+</ul></li>
+<li><p>Feedback</p>
+<ul>
+<li><p>“Instant-update”</p></li>
+<li><p>On-the-fly</p></li>
+</ul></li>
+</ul>
+<p>The problem area of user-interface programming, and more generally, the activity of programming in a context such as a software engineering environment, encompasses certain realms of interest. Through my survey of literature, my research has touched upon the above-mentioned terms, and I have discovered some thought-provoking problems that exist in the field of programming. The concept of ‘Programming’ embodies other concepts – art-forms, engineering processes, science, language, and mathematics, among others. To me, programming is a creative endeavour unlike any other – in which the programmer weilds materials of no substance – the code – by manipulating symbols on a screen, which represent states in the machine being used. There are so many programming languages, and all languages (all that are Turing-complete) reduce to the same language – that of a Turing Machine. So, <em>why do we have so many programming languages?</em>.</p>
+<p><em>Beware of the Turing tar-pit in which everything is possible but nothing of interest is easy.</em> <span class="citation">(Perlis 1982)</span></p>
+<p>Different languages lend themselves to different ways of thinking about problems. They may place emphasis on one feature, for example list manipulation and hide others such as types. The language or programming environment may make explicit the effect of changes as they are encoded, as opposed to queuing up a block of changes and the programmer having to initiate an update manually.</p>
+<p>I would like to draw your attention in particular to the terms <strong>Abstraction</strong>, <strong>Cognitive offloading</strong>, <strong>Feedback</strong>, <strong>Loss of information?</strong>/<strong>Augmented reality?</strong>, <strong>Thrashing</strong>, and <strong>“Programming blind”</strong>. These, at current, are my topics of interest, and my literature review has up to this point been inextricably and heavily influenced by this.</p>
+<p>Under the umbrella quote of “Don’t program blind” – tools that help the programmer see what he’s doing:</p>
+<p>From: <a href="http://johnkurkowski.com/posts/dont-learn-to-code-learn-to-program-but-come-back-in-10-years/">Don’t Learn to Code, Learn to Program – But come back in 10 years</a>:</p>
+<p>Quite a sad title really. And sad content. BUT it does link to some wise words from Jeff Atwood, Peter Norvig (“Learn to program in 10 years!”), and has a handful of links to different projects and a nice quote:</p>
+<ul>
+<li>If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilization. * – Gerald M. Weinberg, The Psychology of Computer Programming (1971)</li>
+</ul>
+<p><a href="http://www.wired.com/wiredenterprise/2014/01/light-table/">Out in the open: These Hackers want to give youSuperpowers</a></p>
+<p>“We consider programming a modern-day superpower. You can create something out of nothing, cure cancer, build billion-dollar companies,” he says. “We’re looking at how we can give that super power to everyone else.”</p>
+<p>The problem with coding, he says, is that you can’t see the results of your work until after you’re done. In that sense, programming is unlike almost every other craft. “When a chef adds an ingredient, he can smell it, he can taste it,” Granger says. “When an artist makes a stroke on a canvas, he can see it. But programming isn’t that way.”</p>
+<p><em>‘We consider programming a modern-day superpower. You can create something out of nothing, cure cancer, build billion-dollar companies.’</em></p>
+<p>— Chris Granger</p>
+<p>Programmers may spend hours or days working on code before they can make sure it actually works. “We have to play computer in our heads,” he says. “We write each line, imagine what it will do. You have to act like a computer. The problem with that is that we’re pretty crappy computers.” But Light Table seeks to bridge that gap.</p>
+<p>Light Table is an open source programming tool that lets programmers see the results of their code as their write it. It’s not an entirely new idea. In the mid-1960s, an educational tool called Logo gave programming students immediate feedback. More recently, languages like the kid friendly Scratch and artist friendly Processing have offered a kind of visual feedback, giving coders more insight into their programs as they’re written.</p>
+<p>But applying those ideas to professional software — complex applications with thousands or even millions of lines of code — is another matter. Light Table tackles such software by not only by displaying the results of the code you’re working on right now, but by showing how it relates to other parts of your software and how data flow from one chunk of code to another. It also weaves documentation throughout the code, while offering new ways to organize and visualize the code in any application.</p>
+<p><strong>Flow Based Programming</strong></p>
+<p>* <a href="http://noflojs.org/">NoFlo</a>, <a href="http://flowhub.io/">Flowhub.io</a> * BOOK: <a href="http://www.jpaulmorrison.com/fbp/">J. Paul Morrison</a> – Flow Based Programming * <a href="https://github.com/the-grid/noflo-jekyll">Example of NoFlo implementation of Jekyll</a></p>
+<h2 id="what-does-it-mean-to-be-easy-to-use"><span class="header-section-number">13.2</span> What does it mean to be ‘easy to use?’</h2>
+<p>In the process of surveying relevant (and sometimes irrelevant) literature to this dissertation, recurring conceptual patterns were observed – one particular instance of this is that several authors seem to lay victim to the trap of claiming their creation is “easy to use”, “better”, “simpler than <span class="math"><em>x</em></span>” without providing any supportive evidence of this.</p>
+<p>Perhaps these are incidents of ‘experimenter bias’ – where the evaluator is naturally predisposed to a positive appraisal of their own findings. One way to avoid this is to have one set of people perform the data capture and another set perform the data analysis. Nevertheless, these patterns emerge, and present numerous opportunities for experimentation and subsequent evidence supporting or contradicting these claims. Experiments may see if the same conclusions are reached as the above-mentioned authors, accounting for the ‘evaluator effect’ <span class="citation">(Hertzum and Jacobsen 2001)</span>.</p>
+<p>Whether this particular route is taken for experimentation hinges on pilot studies that will be conducted concurrently to the Literature Survey, each inextricably shaping the other’s direction of investigation and inquiry.</p>
+<p>The catalyst to this whole dissertation was a talk about the concept of a highly reactive development environment – where changes in the code result in instantaneous updates to the runtime, ‘on-the-fly’. This was presented in Bret Victor’s “Inventing on Principle” <span class="citation">(Victor 2012)</span>. In his presentation Bret makes several assertions about the ‘traditional’ style of coding, one statement of which is that “most of the developer’s time is spent looking at the code, blindly without an immediate connection to the thing they’re making”. He argues that “so much of creation is discovery, and you can’t discover anything if you can’t see what you’re doing” – alluding to his earlier statement that the compile-run-debug cycle is much like this.</p>
+<p>Evan Czaplicki, in his thesis of which Elm is the product <span class="citation">(Czaplicki 2012)</span>, makes similar claims – “[Elm] makes it <em>quick and easy</em> to create and combine text, images, and video into rich multimedia displays.” While the evaluation of Elm’s usability is not the focus of the thesis, rather, it is to establish a context for Functional Reactive Programming and describe the implementation details, he makes other usability claims without evidence – “[non-declarative frameworks for graphical user interfaces] mire programmers in the many small, nonessential details of handling user input and modifying the display.”, “FRP makes GUI programming much more manageable”, and in a section entitled <em>The Benefits of Functional GUIs</em>, “In Elm, divisions between data code, display code, and user interaction code arise fairly naturally, helping programmers write robust GUI code”. If these claims are true, there is all the more evidence that Elm should be a language of choice for GUI programmers, but experiments must be done to determine this.</p>
+<p>And perhaps this rapid development cycle is not always suitable – in their 2012 paper, Lopez et al. show that novices tend to “thrash” about, trying out many ideas that may or may not be a solution, and executing “poorly directed, ineffective problem solving …failing to realise they are doing it in good time, and fail to break out of it”, whereas experts think much more about the problem at hand before proceeding with a solution <span class="citation">(Lopez, Petre, and Nuseibeh 2012)</span>.</p>
+<h2 id="running-user-studies"><span class="header-section-number">13.3</span> Running User Studies</h2>
+<p>Perhaps a further direction of investigation may be running an experiment to spot whether or not Elm’s auto-updating IDE lends to a lack of critical thinking – some operationalization may be <em>pauses reported as ‘thinking’ made during development</em> – where a pause is disambiguated as ‘thinking’ by the experimenter asking the participant why they did not perform any interaction with the computer for more than 10 seconds, and the participant reports that they were planning/designing/other similar activity. Along this line of thinking, a paper studying the relationship between speech pauses and cognitive load <span class="citation">(Khawaja, Ruiz, and Chen 2008)</span> found through studying 48 mixed gender participants that there is statistically significant indicators of cognitive load through analysing pauses in speech. Perhaps this concept of pauses can be applied to the activity of programming. However, the planned method of disambiguating pauses via self-reporting (previously mentioned) would not be suitable according to these authors – “such measures can be either physically or psychologically intrusive and disrupt the normal flow of the interaction”, although a paper cited by <span class="citation">(Khawaja, Ruiz, and Chen 2008)</span> itself claims that “although self-ratings may appear questionable, it has been demonstrated that people are quite capable of giving a numerical indication of their perceived mental burden <span class="citation">(Gopher and Braune 1984)</span>”. Indeed a pilot study by Fraser and Kölling <span class="citation">(McKay and K<span>ö</span>lling 2012)</span> structures the self-reporting by getting the users to evaluate an IDE as they use it using a set of subject-specific heuristics that they have designed. They showed that this customised set of heuristics helped guide the user more effectively than Nielsen’s heuristics in evaluating usability, so one could develop a custom set of heuristics for evaluating the usability of Elm.</p>
+<p>From the Elm thesis <span class="citation">(Czaplicki 2012)</span>, the language syntax and rapid feedback seem simple enough that it is conceivable (or at the very least, possible and of experimental interest) to allow the user to customise the UI layout to their liking. Letting the user shape the UI in concert with a UI programmer is covered the study of the interface development environment “Mobi-D” in millitary and medical applications <span class="citation">(Puerta 1997)</span>, with success in those fields. It may be worth speculating how Elm would fit into the development cycle that Puerta’s paper outlines, as this may lend inspiration to potential user interface enhancements to the Elm IDE for A/B testing. It must be noted that there does not seem to be a re-emergence of Mobi-D since the paper was written, however.</p>
+<p>My goal is to answer these questions. By way of conducting user studies, leveraging Elm with extensions to do A/B testing to illustrate it’s effectiveness (or ineffectiveness) at enhancing User Interface Design.</p>
+<p>Central to this idea of iteration is my desired method of performing user studies: I will first do what I have called a “Pilot” – a short and shallow trial User Study that focuses not on the research I’m concerned with, but instead the particular experimental design I would like to use in my actual User Study. By employing a Pilot I can hopefully get an idea of the nature of the experimental design – perhaps discovering any variables I had not previously considered that will require me to increase my sample size or simplify the experiment in order to mitigate their effect on the dependent variable I wish to test for. These are all problems discovered in <span class="citation">(Yates 2012)</span> – including basic teething problems in getting the experiment to flow smoothly. In an even less detailed aspect, the pilot may allow me to look at what is out there. It may help to not look for anything in particular initially, and see what happens.</p>
+<p>At this stage, with the help of discussion with my Project Supervisor, I have some ideas about how to gather data in User Studies and these pilots could prove to be a useful testbed for such tools. I have a hypothesis that the novice developer “thrashing” <span class="citation">(Lopez, Petre, and Nuseibeh 2012)</span> can be observed by shorter pauses between editing and experimentation, and I could measure this by way of measuring the mouse position relative to the IDE, clicks, and key-presses, using tools built-in to Elm and a bit of extension to stream this over the Internet to my storage facilities <span class="citation">(Czaplicki 2013)</span>.</p>
+<div class="references">
+<p>Czaplicki, Evan. 2012. “Elm: Concurrent FRP for Functional GUIs.”</p>
+<p>———. 2013. “What Is Functional Reactive Programming?” (October). <a href="http://elm-lang.org/learn/What-is-FRP.elm">http://elm-lang.org/learn/What-is-FRP.elm</a>.</p>
+<p>Gopher, Daniel, and Rolf Braune. 1984. “On the Psychophysics of Workload: Why Bother with Subjective Measures?” <em>Human Factors: The Journal of the Human Factors and Ergonomics Society</em> 26 (5): 519–532.</p>
+<p>Hertzum, Morten, and Niels Ebbe Jacobsen. 2001. “The Evaluator Effect: A Chilling Fact About Usability Evaluation Methods.” <em>International Journal of Human-Computer Interaction</em> 13 (4): 421–443.</p>
+<p>Khawaja, M. Asif, Natalie Ruiz, and Fang Chen. 2008. “Think Before You Talk: An Empirical Study of Relationship Between Speech Pauses and Cognitive Load.” In <em>Proceedings of the 20th Australasian Conference on Computer-Human Interaction: Designing for Habitus and Habitat</em>, 335–338. OZCHI ’08. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/1517744.1517814">10.1145/1517744.1517814</a>. <a href="http://doi.acm.org/10.1145/1517744.1517814">http://doi.acm.org/10.1145/1517744.1517814</a>.</p>
+<p>Lopez, Tamara, Marian Petre, and Bashar Nuseibeh. 2012. “Thrashing, Tolerating and Compromising in Software Development.” In <em>Psychology of Programming Interest Group Annual Conference (PPIG-2012)</em>, edited by Yanguo Jing, 70–81. London Metropolitan University, UK: London Metropolitan University.</p>
+<p>McKay, Fraser, and Michael K<span>ö</span>lling. 2012. “Evaluation of Subject-Specific Heuristics for Initial Learning Environments: A Pilot Study.” In <em>Proceedings of the 24th Psychology of Programming Interest Group Annual Conference 2012</em>, 128–138. London Metropolitan University.</p>
+<p>Perlis, Alan J. 1982. “Epigrams on Programming.” <em>SIGPLAN Notices</em> 17 (9): 7–13.</p>
+<p>Puerta, Angel R. 1997. “A Model-Based Interface Development Environment.” <em>IEEE Softw.</em> 14 (4) (July): 40–47. doi:<a href="http://dx.doi.org/10.1109/52.595902">10.1109/52.595902</a>. <a href="http://dx.doi.org/10.1109/52.595902">http://dx.doi.org/10.1109/52.595902</a>.</p>
+<p>Victor, Bret. 2012. “Inventing on Principle.” In Presented at the Canadian University Software Engineering Conference (CUSEC). <a href="http://vimeo.com/36579366">http://vimeo.com/36579366</a>.</p>
+<p>Yates, Rebecca. 2012. “Conducting Field Studies in Software Engineering: An Experience Report.” In <em>Psychology of Programming Interest Group Annual Conference (PPIG-2012)</em>, edited by Yanguo Jing, 82–85. London Metropolitan University, UK: London Metropolitan University.</p>
+</div>
+</body>
 </html>
