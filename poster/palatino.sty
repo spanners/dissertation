@@ -1,0 +1,32 @@
+% -----------------------------------------------------------------
+% Filename: palatino.sty ( Zapf Calligraphic 801 )
+% Created by: tex bpl
+% Created using fontinst v1.335
+% Created for [4allTeX postscript font setup]
+% Created on [1996/04/26]
+% Use phbfonti.sty file (in 4allTeX package)
+% Based on PSNFSS 2.4.1 and 3.x by S. Rahtz
+% Put this file in a TEXINPUT directory.
+% -----------------------------------------------------------------
+% Can be processed by LaTeX209 and LaTeX2e
+\def\fileversion{3q}
+\def\filedate{94/10/22}
+\def\docdate{94/10/22}
+\ifx\ProvidesPackage\undefined
+\immediate\write\sixt@@n{File: palatino.sty NFSS1 fontinst (PhB)}
+\ifx\selectfont\undefined
+\@latexerr{No NFSS1 detected...}\@eha\endinput\fi
+
+\ifx\declare@font\undefined\input{psnfss.sup}\fi
+\def\load@bpl{\postscript@fontdef{Zapf Calligraphic 801 }{bpl}%
+  {bplr}{bplri}{bplb}{bplbi}{bplrc}{bplro}}
+\late@extra@def{bpl}{}{}
+\load@bpl
+\else
+\immediate\write\sixt@@n{File: palatino.sty LaTeX2e fontinst (PhB)}
+\ProvidesPackage{palatino}[\filedate\space\fileversion\space
+ LaTeX2e fontinst (PhB)]\fi
+
+\def\rmdefault{bpl}
+\def\switchfont{}
+\endinput
