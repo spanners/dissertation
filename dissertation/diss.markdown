@@ -1,3 +1,7 @@
+% The potential of declarative programming languages to support user interface programming: the case of ELM
+% Simon Buist
+% March 2014
+
 ---
 title:  'The potential of declarative programming languages to support user interface programming: the case of ELM'
 author:
@@ -10,6 +14,8 @@ abstract: |
 
   It consists of two paragraphs.
 ...
+
+[table]: #table
 
 \newpage
 This dissertation may be made available for consultation within the University
@@ -507,23 +513,3 @@ objectives, critique the process, critique your own learning and identify possib
 work.
 
 # Bibliography {-}
-
-# Appendix A
-
-## Design Diagrams
-
-# Appendix B
-
-## User Documentation
-
-# Appendix C
-
-## Raw results output
-
-# Appendix D
-
-## Code
-
-[table]: #table
-
-
