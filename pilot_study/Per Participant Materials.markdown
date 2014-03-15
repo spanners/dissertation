@@ -104,11 +104,11 @@ For the purposes of this questionnaire, we consider a piece of software to be an
 # Post-Questionnaire
 
 1. Please detail any comments on the result that you achieved
-    * I am happy with my result.
+    * **I am happy with my result.**
 2. Please detail any comments on how you achieved it
-    * My first intention was to get myself familiarised with the language and its syntax and understand the basics of what the code was doing. After that I experimented with a few changes and succeeded in finishing the task.
+    * **My first intention was to get myself familiarised with the language and its syntax and understand the basics of what the code was doing. After that I experimented with a few changes and succeeded in finishing the task.**
 3. Please detail any other comments
-    * I think that the goal of the task could have been made more clear from the beginning, specifically what is meant by having the character fly and what should happen when you press the jumping button. Also, had to ask for the movement characters as they were not explained in the task description.
+    * **I think that the goal of the task could have been made more clear from the beginning, specifically what is meant by having the character fly and what should happen when you press the jumping button. Also, had to ask for the movement characters as they were not explained in the task description.**
 
 ---
 
