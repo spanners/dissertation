@@ -467,9 +467,17 @@ I could improve this by simplifying the task, in a way that is ‘language agnos
 is not idiomatic of Elm or JavaScript (the two languages that I am comparing).
 Something like the following will never be that easy in JavaScript:
 
-````Haskell
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.haskell .numberLines}
+-- | Inefficient quicksort in haskell.
+qsort :: (Enum a) => [a] -> [a]
+qsort []     = []
+qsort (x:xs) = qsort (filter (< x) xs) ++ [x] ++
+               qsort (filter (>= x) xs) 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.haskell .numberLines}
 main = lift asText Mouse.position
-````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ## Experimental design
 
