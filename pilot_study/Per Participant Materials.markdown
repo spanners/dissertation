@@ -18,29 +18,29 @@ By signing this form you acknowledge that you have read the information given ab
 
 ### Name
 
-GB
+* **GB**
 
 ### Age
 
-* 23
+* **23**
 
 ### Sex
 
-* Male
+* **Male**
 
 ### Occupation
 
-* Student
+* **Student**
 
 ## Signed
 
-* *YES*
+* **YES**
 
 ### Date
 
-* 10/12/2013
+* **10/12/2013**
 
-**Experimenter:** Simon Buist, Dept. of Computer Science. EMAIL ADDRESS
+Experimenter: Simon Buist, Dept. of Computer Science. EMAIL ADDRESS
 
 ---
 
@@ -50,12 +50,12 @@ GB
 
 1. Have you ever used a Functional programming language before? Examples are: Scheme, Lisp, Haskell, ML, SPARK. Please circle one answer)
 
-* *Yes*
+* **Yes**
 * No
 
 2. If so, please list the Functional programming  languages you’ve used before:
 
-* *Lisp*
+* **Lisp**
 
 # Design & Software
 
@@ -63,12 +63,12 @@ For the purposes of this questionnaire, we consider a piece of software to be an
 
 1. Have you designed software before?
 
-* *Yes*
+* **Yes**
 * No
 
 2. On what platforms have you designed software?
 
-* *Desktop*
+* **Desktop**
 * Mobile
 * Tablet
 * Web
@@ -76,17 +76,17 @@ For the purposes of this questionnaire, we consider a piece of software to be an
 3. For what purposes have you designed software?
 
 * Commercial
-* *Academic (e.g. Coursework)*
+* **Academic (e.g. Coursework)**
 * Personal project
 * Other: 
 
 4. Roughly how many pieces of software have you designed?
 
-* *5*
+* **5**
 
 5. What programming languages do you know?
 
-* *Java, prolog, php, lisp*
+* **Java, prolog, php, lisp**
 
 # General Demographics
 
@@ -96,14 +96,14 @@ For the purposes of this questionnaire, we consider a piece of software to be an
 
 2. What is your sex? (Please circle one answer)
 
-* *Male*
+* **Male**
 * Female
 
 3. What is the highest degree or level of education you have completed? If currently enrolled please indicate the highest you have attained previously. (Please circle one answer)
 
 * None
 * GCSEs or equivalent
-* *A/AS levels or equivalent*
+* **A/AS levels or equivalent**
 * BSc/BA or equivalent
 * MSc/MA or equivalent
 * PhD or equivalent
@@ -117,7 +117,7 @@ For the purposes of this questionnaire, we consider a piece of software to be an
 * Unemployed
 * Self-employed
 * Employed
-* *Student*
+* **Student**
 * Retired
 * Unable to work
 
