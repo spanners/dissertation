@@ -21,7 +21,6 @@ By signing this form you acknowledge that you have read the information given ab
 Name                 Age      Sex      Occupation
 -------------------- -------- -------- -------------------
 ................     ...      ...      .................. 
-
 -------------------- -------- -------- -------------------
 
 Signed
