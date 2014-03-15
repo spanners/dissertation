@@ -1,2 +1,2 @@
-all: poster.pdf
-	pdflatex poster.tex
+all:
+	pdflatex poster.tex && pdflatex poster.tex
