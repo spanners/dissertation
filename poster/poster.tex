@@ -11,6 +11,8 @@
 \geometry{
   hmargin=2.5cm, % little modification of margins
 }
+\usepackage{harvard}
+\bibliographystyle{agsm}  %{alpha}
 
 %
 \usepackage[utf8]{inputenc}
@@ -58,11 +60,10 @@ Your text with scientific results or something...
 Your text with scientific results or something... 
 Your text with scientific results or something... 
 
-In Ref.~\cite{ref1}...
-In Refs.~\cite{ref1,ref2}...
-On webpage~\cite{web}...
-
 \section{2. Introduction}
+
+``Beware of the Turing tar-pit in which everything is possible but nothing of
+interest is easy.'' \cite{PerlisTuringTarpit}
 
 Your text with scientific results or something... 
 Your text with scientific results or something... 
@@ -102,7 +103,7 @@ Your text with scientific results or something...
 \vskip1ex
 \begin{figure}
 \centering
-\includegraphics[width=0.99\columnwidth]{logo}
+\includegraphics[width=0.99\columnwidth]{logo.pdf}
 \caption{This is a picture with scientific results.}
 \end{figure}
 \vskip2ex
@@ -176,15 +177,14 @@ Your text with scientific results or something...
 
 \subsection{References}
 
-\begin{thebibliography}{99}
+\bibliography{poster}
 
-\bibitem{ref1} J.~Doe, Article name, \textit{Phys. Rev. Lett.}
+%\bibitem{ref1} J.~Doe, Article name, \textit{Phys. Rev. Lett.}
 
-\bibitem{ref2} J.~Doe, J. Smith, Other article name, \textit{Phys. Rev. Lett.}
+%\bibitem{ref2} J.~Doe, J. Smith, Other article name, \textit{Phys. Rev. Lett.}
 
-\bibitem{web} \url{http://www.google.pl}
+%\bibitem{web} \url{http://www.google.pl}
 
-\end{thebibliography}
 %--End of references-----------------------------------------------------------
 
 \end{multicols}
