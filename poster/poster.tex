@@ -5,11 +5,11 @@
 %--A0 beamer slide-------------------------------------------------------------
 \documentclass[final]{beamer}
 \usepackage[orientation=landscape,size=a0,
-            scale=1.50         % font scale factor
+            scale=1.5         % font scale factor
            ]{beamerposter}
            
 \geometry{
-  hmargin=2.5cm, % little modification of margins
+  hmargin=1cm, % little modification of margins
 }
 %\usepackage{harvard}
 \bibliographystyle{ieeetr}  %{agsm} %{alpha}
@@ -22,6 +22,30 @@
 %
 %==The poster style============================================================
 \usetheme{sharelatex}
+
+%==Scale down to A2============================================================
+\usepackage{pgfpages}
+\pgfpagesdeclarelayout{resize and center}
+{
+  \def\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+    physical height=\pgfpageoptionheight,%
+    physical width=\pgfpageoptionwidth%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {%
+    resized width=\pgfphysicalwidth,%
+    resized height=\pgfphysicalheight,%
+    border shrink=\pgfpageoptionborder,%
+%    center=\pgfpoint{.5215\pgfphysicalwidth}{.47\pgfphysicalheight}%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.47\pgfphysicalheight}%
+  }%
+}
+\pgfpagesuselayout{resize and center}[a2paper,landscape]
 
 %==Title, date and authors of the poster=======================================
 \title
