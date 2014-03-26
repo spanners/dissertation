@@ -17,10 +17,14 @@ The Scientific Method
 Using Thematic Analysis in Psychology
 =====================================
 
-"Amongst the number of different branches that the paper talks about,
-*this* specific one is the flavour of thematic analysis that I am going
-to use" -- e.g. essentialism NOT constructionism, one aspect NOT whole,
-theoretical NOT inductive...
+In doing Thematic Analysis [TA], as a researcher, one must make **explicit** the
+particular variant of TA that you intend to carry out, and the whole analysis
+must be framed from that point on by that experimental methodology.
+
+One must make the statement along the lines of: "Amongst the number of different
+branches that the paper talks about, *X* with *Y* themes and *Z* focus is the
+flavour of thematic analysis that I am going to use" -- e.g. essentialism NOT
+constructionism, one aspect NOT whole, theoretical NOT inductive...
 
   ----------------------------------------------------------------------
   Phase                       Description of the process
