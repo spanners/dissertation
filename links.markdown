@@ -25,18 +25,16 @@ handful of links to different projects and a nice quote:
 
 ### [Out in the open: These Hackers want to give you Superpowers]
 
-“We consider programming a modern-day superpower. You can create something out
-of nothing, cure cancer, build billion-dollar companies,” he says.  “We’re
-looking at how we can give that super power to everyone else.”
+"We consider programming a modern-day superpower. You can create something out
+of nothing, cure cancer, build billion-dollar companies," he says.  "We’re
+looking at how we can give that super power to everyone else."
     
 
     The problem with coding, he says, is that you can't see the results of your
     work until after you're done. In that sense, programming is unlike almost
     every other craft. "When a chef adds an ingredient, he can smell it, he can
     taste it," Granger says. "When an artist makes a stroke on a canvas, he can
-    see it. But programming isn’t that way." 'We consider programming a
-    modern-day superpower. You can create something out of nothing, cure cancer,
-    build billion-dollar companies.'
+    see it. But programming isn’t that way." 
     
         -- Chris Granger
     
@@ -49,11 +47,11 @@ bridge that gap.
 
 
 Light Table is an open source programming tool that lets programmers see the
-results of their code as their write it. It’s not an entirely new idea. In the
+results of their code as their write it. It's not an entirely new idea. In the
 mid-1960s, an educational tool called Logo gave programming students immediate
 feedback. More recently, languages like the kid friendly Scratch and artist
 friendly Processing have offered a kind of visual feedback, giving coders more
-insight into their programs as they’re written.
+insight into their programs as they're written.
 
 
 But applying those ideas to professional software -- complex applications with
