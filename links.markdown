@@ -4,11 +4,9 @@
 * [Ur/Web](http://www.impredicative.com/ur/)
 
 
-# Under the umbrella quote of "Don't program blind" -- tools that help the
-programmer see what he's doing:
+# Under the umbrella quote of "Don't program blind" -- tools that help theprogrammer see what he's doing:
 
-## From: [Don't Learn to Code, Learn to Program -- But come back in 10
-years](http://johnkurkowski.com/posts/dont-learn-to-code-learn-to-program-but-come-back-in-10-years/):
+## [Don't Learn to Code, Learn to Program]
 
 Quite a sad title really. And sad content. BUT it does link to some wise words
 from Jeff Atwood, Peter Norvig ("Learn to program in 10 years!"), and has a
@@ -20,8 +18,7 @@ handful of links to different projects and a nice quote:
         – Gerald M. Weinberg, The Psychology of Computer Programming (1971)
 
 
-## [Out in the open: These Hackers want to give you
-Superpowers](http://www.wired.com/wiredenterprise/2014/01/light-table/)
+## [Out in the open: These Hackers want to give you Superpowers]
 
 “We consider programming a modern-day superpower. You can create something out
 of nothing, cure cancer, build billion-dollar companies,” he says.  “We’re
@@ -74,3 +71,6 @@ visualize the code in any application.
 * http://lukauskas.co.uk/articles/2014/02/13/why-your-python-runs-slow-part-1-data-structures/
 * http://www.ex-parrot.com/~pete/but-it-doesnt-mean-anything.html
 * https://www.redhat.com/support/
+
+[Don't Learn to Code, Learn to Program]: #http://johnkurkowski.com/posts/dont-learn-to-code-learn-to-program-but-come-back-in-10-years
+[Out in the open: These Hackers want to give you Superpowers]: #http://www.wired.com/wiredenterprise/2014/01/light-table
