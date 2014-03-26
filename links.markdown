@@ -1,12 +1,17 @@
+# Links (useful?) for my dissertation
+
 * [PPIG workshops and papers](http://www.ppig.org/workshops/)
 * [Leon's Guide to the 13-point ethics
   checklist](http://www.cs.bath.ac.uk/Leon/pages/ethics.shtml#checklist)
 * [Ur/Web](http://www.impredicative.com/ur/)
+* [http://prog21.dadgum.com/190.html]()
+* [http://www.robsheldon.com/blog/depression-programming/]()
+* [ttp://lukauskas.co.uk/articles/2014/02/13/why-your-python-runs-slow-part-1-data-structures/]()
+* [http://www.ex-parrot.com/~pete/but-it-doesnt-mean-anything.html]()
 
+## Under the umbrella quote of "Don't program blind" -- tools that help theprogrammer see what he's doing:
 
-# Under the umbrella quote of "Don't program blind" -- tools that help theprogrammer see what he's doing:
-
-## [Don't Learn to Code, Learn to Program]
+### [Don't Learn to Code, Learn to Program]
 
 Quite a sad title really. And sad content. BUT it does link to some wise words
 from Jeff Atwood, Peter Norvig ("Learn to program in 10 years!"), and has a
@@ -15,31 +20,31 @@ handful of links to different projects and a nice quote:
     If builders built buildings the way programmers wrote programs, then the
     first woodpecker that came along would destroy civilization.
 
-        – Gerald M. Weinberg, The Psychology of Computer Programming (1971)
+        -- Gerald M. Weinberg, The Psychology of Computer Programming (1971)
 
 
-## [Out in the open: These Hackers want to give you Superpowers]
+### [Out in the open: These Hackers want to give you Superpowers]
 
 “We consider programming a modern-day superpower. You can create something out
 of nothing, cure cancer, build billion-dollar companies,” he says.  “We’re
 looking at how we can give that super power to everyone else.”
     
 
-    The problem with coding, he says, is that you can’t see the results of your
-    work until after you’re done. In that sense, programming is unlike almost
-    every other craft. “When a chef adds an ingredient, he can smell it, he can
-    taste it,” Granger says. “When an artist makes a stroke on a canvas, he can
-    see it. But programming isn’t that way.” ‘We consider programming a
+    The problem with coding, he says, is that you can't see the results of your
+    work until after you're done. In that sense, programming is unlike almost
+    every other craft. "When a chef adds an ingredient, he can smell it, he can
+    taste it," Granger says. "When an artist makes a stroke on a canvas, he can
+    see it. But programming isn’t that way." 'We consider programming a
     modern-day superpower. You can create something out of nothing, cure cancer,
-    build billion-dollar companies.’
+    build billion-dollar companies.'
     
-        — Chris Granger
+        -- Chris Granger
     
 
 Programmers may spend hours or days working on code before they can make sure it
-actually works. “We have to play computer in our heads,” he says.  “We write
+actually works. "We have to play computer in our heads," he says.  "We write
 each line, imagine what it will do. You have to act like a computer. The problem
-with that is that we’re pretty crappy computers.” But Light Table seeks to
+with that is that we’re pretty crappy computers." But Light Table seeks to
 bridge that gap.
 
 
@@ -51,8 +56,8 @@ friendly Processing have offered a kind of visual feedback, giving coders more
 insight into their programs as they’re written.
 
 
-But applying those ideas to professional software — complex applications with
-thousands or even millions of lines of code — is another matter. Light Table
+But applying those ideas to professional software -- complex applications with
+thousands or even millions of lines of code -- is another matter. Light Table
 tackles such software by not only by displaying the results of the code you’re
 working on right now, but by showing how it relates to other parts of your
 software and how data flow from one chunk of code to another.  It also weaves
@@ -66,11 +71,6 @@ visualize the code in any application.
   Programming
 * [Example of NoFlo implementation of
   Jekyll](https://github.com/the-grid/noflo-jekyll)
-* http://prog21.dadgum.com/190.html
-* http://www.robsheldon.com/blog/depression-programming/
-* http://lukauskas.co.uk/articles/2014/02/13/why-your-python-runs-slow-part-1-data-structures/
-* http://www.ex-parrot.com/~pete/but-it-doesnt-mean-anything.html
-* https://www.redhat.com/support/
 
-[Don't Learn to Code, Learn to Program]: #http://johnkurkowski.com/posts/dont-learn-to-code-learn-to-program-but-come-back-in-10-years
-[Out in the open: These Hackers want to give you Superpowers]: #http://www.wired.com/wiredenterprise/2014/01/light-table
+[Don't Learn to Code, Learn to Program]: http://johnkurkowski.com/posts/dont-learn-to-code-learn-to-program-but-come-back-in-10-years
+[Out in the open: These Hackers want to give you Superpowers]: http://www.wired.com/wiredenterprise/2014/01/light-table
