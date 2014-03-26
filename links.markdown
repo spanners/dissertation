@@ -34,7 +34,7 @@ looking at how we can give that super power to everyone else."
     work until after you're done. In that sense, programming is unlike almost
     every other craft. "When a chef adds an ingredient, he can smell it, he can
     taste it," Granger says. "When an artist makes a stroke on a canvas, he can
-    see it. But programming isn’t that way." 
+    see it. But programming isn't that way." 
     
         -- Chris Granger
     
@@ -42,7 +42,7 @@ looking at how we can give that super power to everyone else."
 Programmers may spend hours or days working on code before they can make sure it
 actually works. "We have to play computer in our heads," he says.  "We write
 each line, imagine what it will do. You have to act like a computer. The problem
-with that is that we’re pretty crappy computers." But Light Table seeks to
+with that is that we're pretty crappy computers." But Light Table seeks to
 bridge that gap.
 
 
@@ -56,7 +56,7 @@ insight into their programs as they're written.
 
 But applying those ideas to professional software -- complex applications with
 thousands or even millions of lines of code -- is another matter. Light Table
-tackles such software by not only by displaying the results of the code you’re
+tackles such software by not only by displaying the results of the code you're
 working on right now, but by showing how it relates to other parts of your
 software and how data flow from one chunk of code to another.  It also weaves
 documentation throughout the code, while offering new ways to organize and
