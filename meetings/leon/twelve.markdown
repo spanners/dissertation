@@ -31,10 +31,10 @@ Discussed findings from analysis of pilot study
   is *HARD!*. Is there some programmatic way of narrowing the video data to
   points of interest?
 
-### Model adjustment 2
+### Model Adjustment 2
 
 * Track the user mouse and keyboard movements in a 3-tuple: (Time t, (Mouse.x,
-  Mouse.y), Keypress x)
+  Mouse.y), Keypress k)
   
 * It doesn't have to be implemented this way. I could extend **Model Adjustment
   1** to define blocks of code as tokens in themselves, and capture how long the
@@ -45,3 +45,35 @@ Discussed findings from analysis of pilot study
   explosion of the volume of data -- countrary to what I intend to achieve). His
   refinement was to define regions of interest in the code pane, and *only when
   the mouse/key cursor is in the region, do I capture data*. 
+
+* Use the `if cursor in region then log (Time t, (Mouse.x, Mouse.y), Keypress
+  k)` functionality as a *lens* to focus on significant portions of video
+  capture.
+
+# Further discussion
+
+We then discussed some questions that might lead my direction of study in the
+next steps of my research:
+
+* Is the mouse/cursor position a proxy for someone's attention as they carry out
+  the task?
+
+* Often when I'm coding I'll leave the cursor where it is but think about other
+  regions of code. I don't necessarily move the keyboard/mouse cursor to the
+  section of code I'm thinking about. Instead, I use it as a 'bookmark' to track
+  what I'm currently implementing, and may scroll around to other parts.
+
+
+# Actions
+
+1. Design a task in JavaScript to go inside this adjusted model
+   (incorporating Model Adjustment 1 and 2).
+
+   This will require a degree of *"implementation juggling"* in order to find a
+   balance of code-length/difficulty over the same task in Elm in such a way
+   that is not creating noise in the thing being studied: Cognitive load. 
+
+   Keep the reactivity constant, compare the differences in ease between JS and
+   Elm.
+
+2. If time available, run another Pilot study on this task + adjusted model
