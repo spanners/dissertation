@@ -63,17 +63,39 @@ next steps of my research:
   section of code I'm thinking about. Instead, I use it as a 'bookmark' to track
   what I'm currently implementing, and may scroll around to other parts.
 
+## We also discussed...
+
+The result of the dissertation will be a list of observed cognitive
+easing/loading that each language produces for users, much like an
+advantage/disadvantage comparison:
+
+----------- ------------
+Elm         JavaScript
+----------- ------------
++ ...       + ...
+
++ ...       - ...
+
+- ...       - ...
+
+- ...       + ...
+
++ ...       _
+----------- ------------
+
 
 # Actions
 
 1. Design a task in JavaScript to go inside this adjusted model
    (incorporating Model Adjustment 1 and 2).
 
-   This will require a degree of *"implementation juggling"* in order to find a
-   balance of code-length/difficulty over the same task in Elm in such a way
-   that is not creating noise in the thing being studied: Cognitive load. 
+     This will require a degree of *"implementation juggling"* in order to find a
+     balance of code-length/difficulty over the same task in Elm in such a way
+     that is not creating noise in the thing being studied: Cognitive load. 
 
-   Keep the reactivity constant, compare the differences in ease between JS and
-   Elm.
+     Keep the reactivity constant, compare the differences in ease between JS and
+     Elm.
 
 2. If time available, run another Pilot study on this task + adjusted model
+
+
