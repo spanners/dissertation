@@ -21,7 +21,7 @@
 
 ### Group meeting with Leon at East Building, 11:15 Friday 4th October 2013
 
-#### N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE ENGINEERING STUFF (Year 1)
+**N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE ENGINEERING STUFF (Year 1)**
 
 * Reading material
 
