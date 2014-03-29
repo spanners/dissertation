@@ -19,13 +19,11 @@
 ## Meeting minutes (sample)
 
 
-Group meeting with Leon at East Building, 11:15 Friday 4th October 2013
+### Group meeting with Leon at East Building, 11:15 Friday 4th October 2013
 
+#### N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE ENGINEERING STUFF (Year 1)
 
-# N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE
-ENGINEERING STUFF (Year 1)
-
-## Reading material
+* Reading material
 
 In email repsonse to request for FYP meeting, **Leon writes:**
 
@@ -85,9 +83,9 @@ Also in moodle product page, **Leon also writes:**
 * Shneiderman and Plaisant (2005) Designing the User Interface. hapter 10:
   Collaboration.
 
-# Leon asked us to answer these questions and bring a notebook:
+#### Leon asked us to answer these questions and bring a notebook:
 
-## Q1. What I hope to get out of my FYP as an experience?
+* Q1. What I hope to get out of my FYP as an experience?
 
 I hope to gain a deep and meaningful understanding of the programmer as a user,
 as an individual and the context of that individual -- e.g. in a software team
@@ -133,14 +131,14 @@ These are:
 5. "FRP makes tasks considerably easier by taking care of the messy .how. of
    events, display, and updates."
 
-## Q2. Where my Project Idea came from (what inspired me)?
+* Q2. Where my Project Idea came from (what inspired me)?
 
 * The pain of coding and writing GUIs in PyQt4 while at my last job at Altran
 * The joys of coding in Haskell
 * The pain of writing GUIs in Haskell
 * The joys of coding and writing GUIs in Elm!
 
-## Q3. What are my concerns?
+* Q3. What are my concerns?
 
 1. Difficulty procuring programmers (users) -- specifically those that meet my
    criteria of not having used a declarative programming language.
@@ -157,24 +155,24 @@ These are:
 ---
 
 
-# 30/10/2013 @ 9:15 am in STV ## Individual Meeting after Proposal hand-in
+### 30/10/2013 @ 9:15 am in STV ## Individual Meeting after Proposal hand-in
 
 Our discussion centered around the direction I wish to take following my Project
 Proposal.
 
-### AB Testing of the language with the same IDE
+#### AB Testing of the language with the same IDE
 
 The primary direction I mentioned (as echoed in my Proposal) was doing AB
 testing of Elm vs. another language (e.g. JavaScript) (i.e. the language is the
 dependent variable) using the same Concurrent FRP IDE (the independent
 variable).
 
-### Test just the paradigm
+#### Test just the paradigm
 
 He also suggested a potential experiment to test just the paradigm, eliminating
 the IDE from the experiment above. Perhaps for a Pilot study.
 
-### Experiment process
+#### Experiment process
 
 1. Study question (e.g. Is it easy?)
 2. Measurement concept (e.g. "Easy")
@@ -206,7 +204,7 @@ the IDE from the experiment above. Perhaps for a Pilot study.
    "Given our definition of easy, our multiple operationalisations of the
    concept of easy show that this is infact objectively true/false".
 
-### Pilots
+#### Pilots
 
 We also spoke about ideas for pilot studies -- asking "What might be surprising
 insights into declarative programming languages for User Interface Design -- the
@@ -228,7 +226,7 @@ leading.
 Leon suggested I gather a rich data set, as it's difficult to take notes AND
 prompt the user during an experiment. SO difficult. Perhaps record video.
 
-## Actions for next meeting
+#### Actions for next meeting
 
 Devise a Pilot study, answering these 3 questions:
 
@@ -240,17 +238,17 @@ Also see paper Leon will send me on "Thematic analysis & Psychology"
 
 ---
 
-# Wed Mar 25 14:30 GMT 2014
+### Wed Mar 25 14:30 GMT 2014
 
 (Several meetings undocumented)
 
 TODO: Refer to notes in Diary for previous entries.
 
-## Progress since last meeting
+#### Progress since last meeting
 
 Discussed findings from analysis of pilot study
 
-### Observation 1
+#### Observation 1
 
 * Prompting *"What are you thinking about?"* etc. seemed to place additional
   cognitive load on the user as they spent longer resuming than when not
@@ -262,18 +260,18 @@ Discussed findings from analysis of pilot study
 * In particular, the majority of instances where the users paused turned out to
   be confusion as to the semantics & syntax of the language.
 
-### Model Adjustment 1
+#### Model Adjustment 1
 
 * Add tooltips that appear as the user places the keyboard cursor to the right
   of a token in the language.
 
-### Observation 2
+#### Observation 2
 
 * Sifting through 1-hour+ of video data capture for incidences of cognitive load
   is *HARD!*. Is there some programmatic way of narrowing the video data to
   points of interest?
 
-### Model Adjustment 2
+#### Model Adjustment 2
 
 * Track the user mouse and keyboard movements in a 3-tuple: (Time t, (Mouse.x,
   Mouse.y), Keypress k)
@@ -292,7 +290,7 @@ Discussed findings from analysis of pilot study
   k)` functionality as a *lens* to focus on significant portions of video
   capture.
 
-# Further discussion
+#### Further discussion
 
 We then discussed some questions that might lead my direction of study in the
 next steps of my research:
@@ -306,7 +304,7 @@ next steps of my research:
   what I'm currently implementing, and may scroll around to other parts.
 
 
-# Actions
+#### Actions
 
 1. Design a task in JavaScript to go inside this adjusted model (incorporating
    Model Adjustment 1 and 2).
