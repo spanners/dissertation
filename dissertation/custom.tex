@@ -136,7 +136,7 @@ $endif$
 $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+\author{$for(author)$$author.name$\\$author.affiliation$$sep$ \and $endfor$}
 $if(date)$
 \date{$date$}
 $else$

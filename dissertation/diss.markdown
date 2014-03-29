@@ -1,11 +1,8 @@
-% The potential of declarative programming languages to support user interface programming: the case of ELM
-% Simon Buist
-
 ---
 title:  'The potential of declarative programming languages to support user interface programming: the case of ELM'
 author:
 - name: Simon Buist
-  affiliation: University of Bath
+  affiliation: The University of Bath
 tags: [programming, psychology, HCI, user experience]
 abstract: |
   Your abstract should appear here. An abstract is a short paragraph describing the aims of
