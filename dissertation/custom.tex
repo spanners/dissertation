@@ -137,7 +137,11 @@ $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
 \author{$for(author)$$author$$sep$ \and $endfor$}
+$if(date)$
 \date{$date$}
+$else$
+\date{\today}
+$endif$
 $for(header-includes)$
 $header-includes$
 $endfor$
@@ -164,6 +168,49 @@ $if(toc)$
 \tableofcontents
 }
 $endif$
+\newpage
+This dissertation may be made available for consultation within the
+University Library and may be photocopied or lent to other libraries for
+the purposes of consultation.
+
+Signed: \newpage
+
+\textbf{The potential of declarative programming languages to support
+user interface programming: the case of ELM}
+
+Submitted by: Simon Buist
+
+\section*{COPYRIGHT}\label{copyright}
+\addcontentsline{toc}{section}{COPYRIGHT}
+
+Attention is drawn to the fact that copyright of this dissertation rests
+with its author. The Intellectual Property Rights of the products
+produced as part of the project belong to the author unless otherwise
+specified below, in accordance with the University of Bath's policy on
+intellectual property (see http://www.bath.ac.uk/ordinances/22.pdf).
+This copy of the dissertation has been supplied on condition that anyone
+who consults it is understood to recognise that its copyright rests with
+its author and that no quotation from the dissertation and no
+information derived from it may be published without the prior written
+consent of the author.
+
+\section*{Declaration}\label{declaration}
+\addcontentsline{toc}{section}{Declaration}
+
+This dissertation is submitted to the University of Bath in accordance
+with the requirements of the degree of Bachelor of Science in the
+Department of Computer Science. No portion of the work in this
+dissertation has been submitted in support of an application for any
+other degree or qualification of this or any other university or
+institution of learning. Except where specifically acknowledged, it is
+the work of the author.
+
+Signed: \newpage
+
+\section*{Acknowledgements}\label{acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
+
+Add any acknowledgements here. \newpage
 $body$
 
 $if(natbib)$
