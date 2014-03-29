@@ -102,7 +102,7 @@ objective measure.
 
 I would also like to gather self-reported, more "fuzzy" feedback on user's
 perception of their productivity -- pain points, advantages, etc.  they
-experience in using Language X to product a UI compared to Language Y
+experience in using Language X to produce a UI compared to Language Y
 (Declarative languages like Elm, etc)
 
 I wish to verify, empirically, the comparisons and claims made on the [What is
