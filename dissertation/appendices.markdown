@@ -16,10 +16,13 @@
 
 # Appendix E
 
+
 ## Meeting minutes (sample)
 
 
-### Group meeting with Leon at East Building, 11:15 Friday 4th October 2013
+### Fri Oct 4 11:15 GMT 2013 
+
+Group meeting with supervisor Leon Watts 
 
 **N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE ENGINEERING STUFF (Year 1)**
 
@@ -155,7 +158,9 @@ These are:
 ---
 
 
-### 30/10/2013 @ 9:15 am in STV ## Individual Meeting after Proposal hand-in
+### Tue Oct 30 09:15 GMT 2013 
+
+Individual Meeting after Proposal hand-in
 
 Our discussion centered around the direction I wish to take following my Project
 Proposal.
