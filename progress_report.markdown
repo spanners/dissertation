@@ -21,7 +21,7 @@ mouse input. See the [palindrome Elm example]() for input signals. [Source here]
      Look at how Evan does this in his elm-js-and-html example. I have forked
      this at http://github.com/spanners/elm-js-and-html
 
-2. The second disadvantage is that it uses [Firebase](http://firebase.io) as a
+2. The second disadvantage is that it uses [Firebase][] as a
    backend for data storage. 
    
      This is a proprietary application. I would much rather use something Open
@@ -43,3 +43,59 @@ mouse input. See the [palindrome Elm example]() for input signals. [Source here]
 
 * Use `Elm.worker(Main.Elm, div, {})` and make the div somehow encompass the
   entire CodeMirror window...
+
+
+# Mon Mar 31 23:42:00 BST 2014
+
+## What did I get done?
+
+* This: http://github.com/spanners/elm-html-and-js !
+
+I managed to get [Evan's stamps example]() example working with [Firebase]().
+Now I can successfully store user mouse events persistently in a JSON file.
+
+This required dealing with **Disadvantage 1.** ([See entry 1]()), which I did
+successfully, using the new `port` FFI :)
+
+I convert Elm Records into JSON Strings to be stored in Firebase like so:
+
+    firebaseRequest requestType requestData = 
+      Http.request requestType 
+                   "https://username.firebaseio-demo.com/stamps.json" 
+                   requestData 
+                   []
+     
+    serialize r = r |> JEXP.fromRecord 
+                    |> Json.fromJSObject 
+                    |> Json.toJSString " " 
+                    |> JS.toString
+     
+    toRequestData (x,y) = {x = x, y = y} |> serialize
+     
+    toRequest event = case event of 
+      (x,y) -> firebaseRequest "post" (event |> toRequestData)
+     
+    requests = clicks ~> toRequest
+     
+    sendRequests = Http.send requests
+
+
+## What do I hope to do tomorrow?
+
+* Use this inside the Elm `Editor.hs` IDE.
+
+    This should be very straightforward.
+
+    1. Allow Elm code to be read from a file into `Editor.hs`
+    2. Modify the stamps example to be bare
+    3. Modify the stamps example to define regions of code to be logged for
+       input
+
+* Design a task in JavaScript
+
+* Get the Elm IDE to optionally interpret JavaScript instead of compiling Elm
+  (limit this so only I, the experimenter, can do this)
+
+[Evan's stamps example]: http://github.com/evancz/elm-html-and-js
+[Firebase]: http://firebase.io
+[See entry]: #sun-mar-30-00:49:51-gmt-2014
