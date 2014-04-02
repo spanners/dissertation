@@ -9,6 +9,10 @@ cognitive load.
 
 This now works, so I am ready to demo this (See Action 1.)
 
+The only issue worth tweaking is that user activity data is captured separately
+from the error output, so I will need to collate the data afterwards or find
+some way to feed it into the same data store.
+
 ## Meeting Discussion
 
 2 Hypotheses
