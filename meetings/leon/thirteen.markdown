@@ -7,7 +7,15 @@ cognitive load.
 
 ![Extensions made to the Elm IDE]
 
-This now works, so I am ready to demo this (See Action 1.)
+I have implemented full-screen mouse tracking that stores to a database a tuple:
+
+    (t, (x, y))
+
+in JSON (so it's more like 
+`{{uniq-userid: {125125, (67, 321)}}, {uniq-userid: {125126, (67, 322)}} ...}`)
+and this is awesome :)
+
+I am ready to demo this (See Action 1.)
 
 The only issue worth tweaking is that user activity data is captured separately
 from the error output, so I will need to collate the data afterwards or find
