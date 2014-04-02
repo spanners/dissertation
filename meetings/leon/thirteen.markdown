@@ -42,7 +42,8 @@ regions of code OR they pertain to achieving the set task.
 3. Define regions to select for logging activity. Why? Because:
     * Complex logic in code, OR
     * Relevant to task
-    * Captures Thrash (keep on going over the same thing, e.g.).
+    * Captures Thrash (keep on going over the same thing, e.g.). Errors made
+      also captures thrash!
 
 4. Determine what to do with mouse (for example) data.
 
