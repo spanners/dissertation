@@ -6,7 +6,7 @@
     3. `wget http://www.haskell.org/ghc/dist/7.6.3/ghc-7.6.3-src.tar.bz2`
     4. `tar xjf ghc-7.6.3-src.tar.bz2`
     5. `cd ghc-7.6.3`
-    6. `./configure
+    6. `./configure`
     7. `make -j 8`
     8. `sudo make install`
     9. `wget`
