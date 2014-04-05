@@ -8,8 +8,7 @@ exec cd ghc-7.6.3
 exec ./configure
 exec make -j 8
 exec sudo make install
-exec wget
-exec http://lambda.haskell.org/platform/download/2013.2.0.0/haskell-platform-2013.2.0.0.tar.gz
+exec wget http://lambda.haskell.org/platform/download/2013.2.0.0/haskell-platform-2013.2.0.0.tar.gz
 exec tar xzvf haskell-platform-2013.2.0.0.tar.gz
 exec cd haskell-platform-2013.2.0.0
 exec ./configure
