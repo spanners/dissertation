@@ -44,7 +44,7 @@ regions of code OR they pertain to achieving the set task.
 # Actions
 
 1. Demo to Hilary Johnson
-    1. Install on VPS (See [build script](install_elm.sh))
+    1. Install on VPS (See [build script](../../install_elm.sh))
     2. Run these:      
 
             git clone https://github.com/spanners/elm-lang.org` 
