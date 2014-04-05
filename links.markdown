@@ -1,5 +1,6 @@
 # Links (useful?) for my dissertation
 
+* [A/B Testing]()
 * [PPIG workshops and papers](http://www.ppig.org/workshops/)
 * [Leon's Guide to the 13-point ethics
   checklist](http://www.cs.bath.ac.uk/Leon/pages/ethics.shtml#checklist)
@@ -72,3 +73,4 @@ visualize the code in any application.
 
 [Don't Learn to Code, Learn to Program]: http://johnkurkowski.com/posts/dont-learn-to-code-learn-to-program-but-come-back-in-10-years
 [Out in the open: These Hackers want to give you Superpowers]: http://www.wired.com/wiredenterprise/2014/01/light-table
+[A/B Testing]: http://visualwebsiteoptimizer.com/split-testing-blog/how-to-calculate-ab-test-sample-size/
