@@ -62,6 +62,8 @@ regions of code OR they pertain to achieving the set task.
        defined region is the mouse movement tracked e.g. `if mouse(x,y) in
        some2by2Square then Just mouse(x,y) else Nothing`
 
+       See https://github.com/spanners/laska/blob/master/Signals.elm
+
 2. Demo to Hilary Johnson
     1. Install on VPS (See [build script](../../install_elm.sh))
     2. Run these:      
