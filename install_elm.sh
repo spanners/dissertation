@@ -11,6 +11,7 @@ cd ..
 ./configure
 make -j 8
 sudo make install
+cd
 wget http://lambda.haskell.org/platform/download/2013.2.0.0/haskell-platform-2013.2.0.0.tar.gz
 tar xzvf haskell-platform-2013.2.0.0.tar.gz
 cd haskell-platform-2013.2.0.0
