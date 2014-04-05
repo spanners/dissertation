@@ -11,9 +11,8 @@ I have implemented full-screen mouse tracking that stores to a database a tuple:
 
     (t, (x, y))
 
-in JSON (so it's more like 
+for every mouse move, producing a list in JSON (so it's more like 
 `{{uniq-userid: {125125, (67, 321)}}, {uniq-userid: {125126, (67, 322)}} ...}`)
-and this is awesome :)
 
 I am ready to demo this (See Action 1.)
 
