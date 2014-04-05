@@ -7,6 +7,7 @@ tar xjf ghc-7.6.3-src.tar.bz2
 cd ghc-7.6.3/mk
 cp build.mk.sample build.mk
 sed -i 's/^#BuildFlavour = quick/BuildFlavour = quick/' build.mk
+cd ..
 ./configure
 make -j 8
 sudo make install
