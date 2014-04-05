@@ -44,6 +44,11 @@ regions of code OR they pertain to achieving the set task.
 # Actions
 
 1. Demo to Hilary Johnson
+    1. Install on VPS (See [build script](install_elm.sh))
+    2.      
+            git clone https://github.com/spanners/elm-lang.org` 
+            cd elm-lang.org`
+            cabal install --bindir=.`
 
 2. Design a task in JS and Elm
 
