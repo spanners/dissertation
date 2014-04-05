@@ -42,7 +42,27 @@ regions of code OR they pertain to achieving the set task.
 
 # Actions
 
-1. Demo to Hilary Johnson
+1. Refine Mouse logging 
+
+    1. Make it so that I can run arbitrary Elm code in the editor via a fileOpen
+       operation 
+    2. Make an Elm file that logs mouse movements ready to be loaded into the Editor
+    3. Load it into the editor and test it uploads to Firebase
+    4. Modify Editor.hs 
+    
+            case (Elm.compile elmSrc) of 
+                Left jsSrc -> ...
+                Right _ -> error "blah"
+    
+       So that when we get an error, we timestamp and append it to a log file so
+       this can later be collated with the Firebase to determine when errors were
+       made
+
+    5. Make it so I can define regions in the mouse tracking -- i.e. ONLY within a
+       defined region is the mouse movement tracked e.g. `if mouse(x,y) in
+       some2by2Square then Just mouse(x,y) else Nothing`
+
+2. Demo to Hilary Johnson
     1. Install on VPS (See [build script](../../install_elm.sh))
     2. Run these:      
 
@@ -50,14 +70,15 @@ regions of code OR they pertain to achieving the set task.
             cd elm-lang.org
             cabal install --bindir=.
 
-2. Design a task in JS and Elm
+3. Design a task in JS and Elm
 
-3. Define regions to select for logging activity. Why? Because:
+4. Define regions to select for logging activity. Why? Because:
     * Complex logic in code, OR
     * Relevant to task
     * Captures Thrash (keep on going over the same thing, e.g.). Errors made
       also captures thrash!
 
-4. Determine what to do with mouse (for example) data.
+5. Determine what to do with mouse (for example) data.
 
 [Extensions made to the Elm IDE]: ide-extensions.png
+
