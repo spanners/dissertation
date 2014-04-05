@@ -47,9 +47,9 @@ regions of code OR they pertain to achieving the set task.
     1. Install on VPS (See [build script](../../install_elm.sh))
     2. Run these:      
 
-            git clone https://github.com/spanners/elm-lang.org` 
-            cd elm-lang.org`
-            cabal install --bindir=.`
+            git clone https://github.com/spanners/elm-lang.org
+            cd elm-lang.org
+            cabal install --bindir=.
 
 2. Design a task in JS and Elm
 
