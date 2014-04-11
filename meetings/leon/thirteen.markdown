@@ -44,11 +44,11 @@ regions of code OR they pertain to achieving the set task.
 
 1. Refine Mouse logging 
 
-    1. Make it so that I can run arbitrary Elm code in the editor via a fileOpen
+    1. *DONE* Make it so that I can run arbitrary Elm code in the editor via a fileOpen
        operation 
-    2. Make an Elm file that logs mouse movements ready to be loaded into the Editor
-    3. Load it into the editor and test it uploads to Firebase
-    4. Modify [Generator.hs](https://github.com/spanners/elm-lang.org/blob/master/server/Generator.hs)
+    2. *DONE* Make an Elm file that logs mouse movements ready to be loaded into the Editor
+    3. *DONE* Load it into the editor and test it uploads to Firebase
+    4. *DONE* Modify [Generator.hs](https://github.com/spanners/elm-lang.org/blob/master/server/Generator.hs)
     
             case (Elm.compile elmSrc) of 
                 Left jsSrc -> ...
@@ -80,7 +80,7 @@ regions of code OR they pertain to achieving the set task.
             cd elm-lang.org
             cabal install --bindir=.
 
-3. Design a task in JS and Elm
+3. *DONE* Design a task in JS and Elm
 
 4. Define regions to select for logging activity. Why? Because:
     * Complex logic in code, OR
@@ -88,7 +88,7 @@ regions of code OR they pertain to achieving the set task.
     * Captures Thrash (keep on going over the same thing, e.g.). Errors made
       also captures thrash!
 
-5. Determine what to do with mouse (for example) data.
+5. *DONE* Determine what to do with mouse (for example) data.
 
 [Extensions made to the Elm IDE]: ide-extensions.png
 
