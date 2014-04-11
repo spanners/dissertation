@@ -48,7 +48,7 @@ regions of code OR they pertain to achieving the set task.
        operation 
     2. Make an Elm file that logs mouse movements ready to be loaded into the Editor
     3. Load it into the editor and test it uploads to Firebase
-    4. Modify Editor.hs 
+    4. Modify [Generator.hs](https://github.com/spanners/elm-lang.org/blob/master/server/Generator.hs)
     
             case (Elm.compile elmSrc) of 
                 Left jsSrc -> ...
@@ -57,6 +57,14 @@ regions of code OR they pertain to achieving the set task.
        So that when we get an error, we timestamp and append it to a log file so
        this can later be collated with the Firebase to determine when errors were
        made
+
+       I'll need to insert a layer between `compile :: Snap()` and `serveHtml ::
+       MonadSnap m => H.Html -> m ()` that performs the logging. It will have
+       type signature `TypedHtml -> 
+
+       [compile](https://github.com/spanners/elm-lang.org/blob/master/server/Server.hs#L81)
+       [serveHtml](https://github.com/spanners/elm-lang.org/blob/master/server/Server.hs#L69)
+
 
     5. Make it so I can define regions in the mouse tracking -- i.e. ONLY within a
        defined region is the mouse movement tracked e.g. `if mouse(x,y) in
