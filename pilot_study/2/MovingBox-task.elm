@@ -1,17 +1,31 @@
+{- 
+
+Try moving the square around with your keyboard's arrow keys
+
+Click your mouse over there =====> 
+Use arrows Up, Down, Left, Right
+
+Whee!
+
+Now modify the code to prevent the square from going outside 
+the edge of the grey window.
+
+-}
+
 import Keyboard
 
 areaSize = 400
 squareSize = 40
 
 main : Signal Element
-main = display <~ position
+main = lift display position
 
 delta : Signal Float
 delta = fps 30
 
 input : Signal (Float, (Float,Float))
 input =
-    let vectors = toVector <~ Keyboard.arrows
+    let vectors = lift toVector Keyboard.arrows
     in  sampleOn delta (lift2 (,) delta vectors)
 
 toVector : { x:Int, y:Int } -> (Float,Float)
