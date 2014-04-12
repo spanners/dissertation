@@ -69,10 +69,10 @@ Within-subjects is the converse of the above methodological properties
 3. Implement *Region filtering* functionality so mouse activity is only logged
    when the clicks occur within defined region(s)
 
-4. Integrate JS task into IDE
+4. **DONE** Integrate JS task into IDE
 
 5. Perform pilot study
 
-6. Visualise mouse date
+6. Visualise mouse data
 
 [table above]: #2x2-study-between-subjects
