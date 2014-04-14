@@ -10,6 +10,18 @@
 
 ## Raw results output
 
+### firebase-mouseclick-data.json
+
+~~~~ {include="code/firebase-mouseclick-data.json"}
+this will be replaced by contents of README
+~~~~
+
+### error\_log.json
+
+~~~~ {include="code/error\_log.json"}
+this will be replaced by contents of README
+~~~~
+
 # Appendix D
 
 ## Code
@@ -57,11 +69,6 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
-### firebase-mouseclick-data.json
-
-~~~~ {include="code/firebase-mouseclick-data.json"}
-this will be replaced by contents of README
-~~~~
 
 ### MovingBox.js
 
