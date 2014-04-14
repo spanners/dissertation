@@ -407,7 +407,7 @@ get the following terms:
 <p>Also see paper Leon will send me on “Thematic analysis &amp; Psychology”</p>
 <h3 id="wed-mar-25-1430-gmt-2014"><span class="header-section-number">4.2.2</span> Wed Mar 25 14:30 GMT 2014</h3>
 <p>(Several meetings undocumented)</p>
-<p>TODO: Refer to notes in Diary for previous entries.</p>
+<p><strong>TODO</strong>: Refer to notes in Diary for previous entries.</p>
 <h4 id="progress-since-last-meeting"><span class="header-section-number">4.2.2.1</span> Progress since last meeting</h4>
 <p>Discussed findings from analysis of pilot study</p>
 <h5 id="observation-1"><span class="header-section-number">4.2.2.1.1</span> Observation 1</h5>
@@ -498,37 +498,37 @@ get the following terms:
 <ol type="1">
 <li><p>Refine Mouse logging</p>
 <ol type="1">
-<li><em>DONE</em> Make it so that I can run arbitrary Elm code in the editor via a fileOpen operation</li>
-<li><em>DONE</em> Make an Elm file that logs mouse movements ready to be loaded into the Editor</li>
-<li><em>DONE</em> Load it into the editor and test it uploads to Firebase</li>
-<li><p><em>DONE</em> Modify <a href="https://github.com/spanners/elm-lang.org/blob/master/server/Generator.hs">Generator .hs</a></p>
+<li><strong>DONE</strong> Make it so that I can run arbitrary Elm code in the editor via a fileOpen operation</li>
+<li><strong>DONE</strong> Make an Elm file that logs mouse movements ready to be loaded into <a href="#editor.hs">Editor.hs</a></li>
+<li><strong>DONE</strong> Load it into the editor and test it uploads to Firebase</li>
+<li><p><strong>DONE</strong> Modify <a href="#generate.hs">Generate.hs</a></p>
 <pre><code>case (Elm.compile elmSrc) of 
     Left jsSrc -&gt; ...
     Right _ -&gt; error &quot;blah&quot;</code></pre></li>
 </ol>
 <p>So that when we get an error, we timestamp and append it to a log file so this can later be collated with the Firebase to determine when errors were made</p>
-<p>I’ll need to insert a layer between <code>compile :: Snap()</code> and <code>serveHtml ::    MonadSnap m =&gt; H.Html -&gt; m ()</code> that performs the logging. It will have type signature `TypedHtml -&gt;</p>
-<p><a href="https://github.com/spanners/elm-lang.org/blob/master/server/Server.hs#L81">compile</a> <a href="https://github.com/spanners/elm-lang.org/blob/master/server/Server.hs#L69">serveHtml</a></p>
+<p>I’ll need to insert a layer between <code>compile :: Snap()</code> and <code>serveHtml ::    MonadSnap m =&gt; H.Html -&gt; m ()</code> that performs the logging. It will have type signature <code>TypedHtml -&gt; H.Html</code></p>
+<p>See the functions <code>compile</code> and <code>serveHtml</code> in <a href="#server.hs">Server.hs</a></p>
 <ol start="5" type="1">
 <li>Make it so I can define regions in the mouse tracking – i.e. ONLY within a defined region is the mouse movement tracked e.g. <code>if mouse(x,y) in    some2by2Square then Just mouse(x,y) else Nothing</code></li>
 </ol>
-<p>See https://github.com/spanners/laska/blob/master/Signals.elm</p></li>
+<p>See <a href="">https://github.com/spanners/laska/blob/master/Signals.elm</a></p></li>
 <li>Demo to Hilary Johnson
 <ol type="1">
-<li>Install on VPS (See <a href="https://github.com/spanners/dissertation/blob/master/install_elm.sh">build script</a></li>
+<li>Install on VPS (See <a href="#install-elm.sh">install_elm.sh</a>)</li>
 <li><p>Run these:</p>
 <pre><code>git clone https://github.com/spanners/elm-lang.org
 cd elm-lang.org
 cabal install --bindir=.</code></pre></li>
 </ol></li>
-<li><p><em>DONE</em> Design a task in JS and Elm</p></li>
+<li><p><strong>DONE</strong> Design a task in JS and Elm</p></li>
 <li>Define regions to select for logging activity. Why? Because:
 <ul>
 <li>Complex logic in code, OR</li>
 <li>Relevant to task</li>
 <li>Captures Thrash (keep on going over the same thing, e.g.). Errors made also captures thrash!</li>
 </ul></li>
-<li><p><em>DONE</em> Determine what to do with mouse (for example) data.</p></li>
+<li><p><strong>DONE</strong> Determine what to do with mouse (for example) data.</p></li>
 </ol>
 <h3 id="tuesday-apr-8-143000-bst-2014"><span class="header-section-number">4.2.4</span> Tuesday Apr 8 14:30:00 BST 2014</h3>
 <p>What makes code difficult to understand and work with?</p>
@@ -537,7 +537,7 @@ cabal install --bindir=.</code></pre></li>
 <li>Declaring and defining simultaneously?</li>
 <li>Compound if/then/else statements?</li>
 </ul>
-<p>“[Programming is] manipulating symbols blindly” ~ Bret Victor</p>
+<p><em>[Programming is] manipulating symbols blindly</em> ~ Bret Victor</p>
 <p>Do a 2x2 study, defining regions in the code monitoring mouse clicks. Regions can either be simple/hard in complexity (exhibiting/not-exhibiting one of the above ‘difficult’ properties). Or code can be task-oriented or not, that is <em>the code does/does not need to be changed to achieve the completed task set for the user</em>:</p>
 <h4 id="x2-study-between-subjects"><span class="header-section-number">4.2.4.1</span> 2x2 study between-subjects</h4>
 <table>
@@ -591,7 +591,7 @@ cabal install --bindir=.</code></pre></li>
 <ol type="1">
 <li><p><strong>DONE</strong> Reorder divs so embedded div is on top of editor div.</p>
 <p>This turned out (I am fairly certain) to be due to codemirror.js binding mouse clicks. It was solved by using Elm’s <code>Mouse.isDown</code>. Using <code>Mouse.isDown</code> has the added benefit of tracking mouse selects and drags, because it logs <code>(x,y)</code> when the mouse is down and <code>(x,y)</code> again when it is up.</p></li>
-<li><p><strong>DONE</strong> Create a task that features <em>Hard/Simple x Task/Not-task</em> (See <a href="#2x2-study-between-subjects">table above</a>)</p></li>
+<li><p><strong>DONE</strong> Create a task that features <em>Hard/Simple x Task/Not-task</em> (See <a href="#x2-study-between-subjects">table above</a>)</p></li>
 <li><p><del>Implement <em>Region filtering</em> functionality so mouse activity is only logged when the clicks occur within defined region(s)</del></p>
 <p>I have instead defined bounding boxes that pertain to the regions I want to track as a mouse-data filter – that is, I capture all click data for the whole frame, and then filter it by comparing x,y co-ordinates with my bounding boxes. If it’s in the box, keep it, otherwise discard.</p></li>
 <li><p><strong>DONE</strong> Integrate JS task into IDE</p></li>
