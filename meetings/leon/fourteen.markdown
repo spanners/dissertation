@@ -66,8 +66,8 @@ Within-subjects is the converse of the above methodological properties
 
 2. **DONE** Create a task that features *Hard/Simple x Task/Not-task* (See [table above])
 
-3. **NOT-DOING** Implement *Region filtering* functionality so mouse activity is only logged
-   when the clicks occur within defined region(s)
+3. ~~Implement *Region filtering* functionality so mouse activity is only logged
+   when the clicks occur within defined region(s)~~
 
     I have instead defined bounding boxes that pertain to the regions I want to
     track as a mouse-data filter -- that is, I capture all click data for the
@@ -78,6 +78,6 @@ Within-subjects is the converse of the above methodological properties
 
 5. **DONE** Perform pilot study
 
-6. **IN-PROGRESS** Visualise mouse data
+6. **WIP** Visualise mouse data
 
 [table above]: #2x2-study-between-subjects
