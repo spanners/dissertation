@@ -52,7 +52,7 @@ getHtmlPage name elmname jsSrc =
           \a:visited {text-decoration: none}\n\
           \a:active {text-decoration: none}\n\
           \a:hover {text-decoration: underline; \
-          color: rgb(234,21,122);}" :: String)
+          \color: rgb(234,21,122);}" :: String)
       H.body $ do
         let js = H.script ! A.type_ "text/javascript"
             runFullscreen = 
