@@ -34,10 +34,28 @@ this will be replaced by contents of README
 
 ### EmbedMeElm.elm
 
-~~~~ {include="code/EmbedMeElm.Elm"}
+~~~~ {include="code/EmbedMeElm.elm"}
 this will be replaced by contents of README
 ~~~~
 
+
+### EmbedMeJS.elm
+
+~~~~ {include="code/EmbedMeJS.elm"}
+this will be replaced by contents of README
+~~~~
+
+### fullScreenEmbedMe.js
+
+~~~~ {include="code/fullScreenEmbedMe.js"}
+this will be replaced by contents of README
+~~~~
+
+### fullScreenEmbedMe.js
+
+~~~~ {include="code/fullScreenEmbedMe.js"}
+this will be replaced by contents of README
+~~~~
 
 
 # Appendix E
