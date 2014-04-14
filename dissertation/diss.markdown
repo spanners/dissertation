@@ -48,7 +48,7 @@ Another section, just for good measure. You can reference a table, figure or equ
 # Literature Survey
 
 ## Introduction to the problem area
-
+<!--
 Spending half an hour making a mind-map, starting with the word "Elm", I
 get the following terms:
 
@@ -182,7 +182,7 @@ get the following terms:
     -   "Instant-update"
 
     -   On-the-fly
-
+-->
 
 The problem area of user-interface programming, and more generally, the
 activity of programming in a context such as a software engineering
