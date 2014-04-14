@@ -63,6 +63,17 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
+### MovingBox.js
+
+~~~~ {include="code/public/jsTask/MovingBox.js"}
+this will be replaced by contents of README
+~~~~
+
+### MovingBox.elm
+
+~~~~ {include="code/public/elmTask/MovingBox.elm"}
+this will be replaced by contents of README
+~~~~
 
 # Appendix E
 
