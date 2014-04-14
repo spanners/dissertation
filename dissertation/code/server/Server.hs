@@ -196,13 +196,13 @@ setupLogging =
         exists <- doesFileExist path
         when (not exists) $ BS.writeFile path ""
 
--- | Compile all of the Elm files in public/, placing results in public/build/
+-- | Compile all of the Elm files in public/, put results in public/build/
 precompile :: IO ()
 precompile =
   do setCurrentDirectory "public"
      files <- getFiles True ".elm" "."
      forM_ files $ \file -> rawSystem "elm" 
-                                        ["--make","--runtime=/elm-runtime.js",file]
+                                ["--make","--runtime=/elm-runtime.js",file]
      htmls <- getFiles False ".html" "build"
      mapM_ adjustHtmlFile htmls
      setCurrentDirectory ".."

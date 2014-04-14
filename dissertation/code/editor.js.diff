@@ -15,7 +15,8 @@ index d2bebc8..302663e 100644
  
  function toggleVerbose() {
      if (!mode.verbose) showType(true);
--    document.getElementById('toggle_link').innerHTML = mode.verbose ? 'more' : 'less';
+-    document.getElementById('toggle_link').innerHTML = mode.verbose ? 
+-      'more' : 'less';
 -    mode.verbose = !mode.verbose;
 +    document.getElementById('toggle_link').innerHTML = mode.verbose ? '' : '';
 +    mode.verbose = true;

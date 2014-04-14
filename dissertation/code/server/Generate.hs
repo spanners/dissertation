@@ -30,7 +30,8 @@ getJSPage name jsSrc =
       H.head $ do
         H.meta ! A.charset "UTF-8"
         H.title . H.toHtml $ name
-        H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/misc/js.css"
+        H.link ! A.rel "stylesheet" ! A.type_ "text/css" 
+                                    ! A.href "/misc/js.css"
         script "/pixi.js"
       H.body $ do
         H.div ! A.style "width: 400px; height: 400px; position:\
@@ -50,11 +51,13 @@ getHtmlPage name elmname jsSrc =
          ("a:link {text-decoration: none; color: rgb(15,102,230);}\n\
           \a:visited {text-decoration: none}\n\
           \a:active {text-decoration: none}\n\
-          \a:hover {text-decoration: underline; color: rgb(234,21,122);}" :: String)
+          \a:hover {text-decoration: underline; \
+          color: rgb(234,21,122);}" :: String)
       H.body $ do
         let js = H.script ! A.type_ "text/javascript"
-            runFullscreen = "var runningElmModule = Elm.fullscreen(" ++ elmname 
-                                                                     ++ ")"
+            runFullscreen = 
+                "var runningElmModule = Elm.fullscreen(" ++ elmname 
+                                                         ++ ")"
         js ! A.src (H.toValue ("/elm-runtime.js?0.11" :: String)) $ ""
         js $ preEscapedToMarkup jsSrc
         js $ preEscapedToMarkup runFullscreen
@@ -89,8 +92,9 @@ html name src =
       H.body $ do
         let js = H.script ! A.type_ "text/javascript"
             elmname = "Elm." ++ fromMaybe "Main" (Elm.moduleName src)
-            runFullscreen = "var runningElmModule = Elm.fullscreen(" ++ elmname 
-                                                                     ++ ")"
+            runFullscreen = 
+                  "var runningElmModule = Elm.fullscreen(" ++ elmname 
+                                                           ++ ")"
         js ! A.src (H.toValue ("/elm-runtime.js?0.11" :: String)) $ ""
         case Elm.compile src of
           Right jsSrc -> do

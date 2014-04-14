@@ -82,9 +82,11 @@ jsEditor filePath code =
     H.html $ do
       H.head $ do
         H.title . toHtml $ "JS Editor: " ++ FP.takeBaseName filePath
-        H.link ! A.rel "stylesheet" ! A.href "/codemirror-3.x/lib/codemirror.css"
+        H.link ! A.rel "stylesheet" 
+               ! A.href "/codemirror-3.x/lib/codemirror.css"
         mapM_ themeAttr themes
-        H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/misc/editor.css"
+        H.link ! A.rel "stylesheet" ! A.type_ "text/css" 
+                                    ! A.href "/misc/editor.css"
         mapM_ script jsFiles2
         script "/elm-runtime.js?0.11"
         script "http://cdn.firebase.com/v0/firebase.js"
@@ -115,9 +117,11 @@ editor filePath code =
     H.html $ do
       H.head $ do
         H.title . toHtml $ "Elm Editor: " ++ FP.takeBaseName filePath
-        H.link ! A.rel "stylesheet" ! A.href "/codemirror-3.x/lib/codemirror.css"
+        H.link ! A.rel "stylesheet" 
+               ! A.href "/codemirror-3.x/lib/codemirror.css"
         mapM_ themeAttr themes
-        H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/misc/editor.css"
+        H.link ! A.rel "stylesheet" ! A.type_ "text/css" 
+                                    ! A.href "/misc/editor.css"
         mapM_ script jsFiles
         script "/elm-runtime.js?0.11"
         script "http://cdn.firebase.com/v0/firebase.js"
@@ -155,7 +159,8 @@ buttons = H.div ! A.class_ "valign_kids"
                  ! A.id "compile_button"
                  ! A.value "Compile"
                  ! A.onclick "compile()"
-                 ! A.title "Ctrl-Enter: change program behavior but keep the state"
+                 ! A.title "Ctrl-Enter: change program behavior \
+                             \but keep the state"
 
 options :: Html
 options = H.div ! A.class_ "valign_kids"
@@ -189,7 +194,8 @@ editorOptions = theme >> zoom >> lineNumbers
               
       zoom =
           H.select ! A.id "editor_zoom"
-                   ! A.onchange "setZoom(this.options[this.selectedIndex].innerHTML)"
+                   ! A.onchange "setZoom(this.options[this.selectedIndex].\
+                                  \innerHTML)"
                    $ mapM_ optionFor ["100%", "80%", "150%", "200%"]
 
       lineNumbers = do

@@ -8,13 +8,13 @@
 
 ### firebase-mouseclick-data.json
 
-~~~~ {include="code/firebase-mouseclick-data.json"}
+~~~~ {.haskell .numberLines include="code/firebase-mouseclick-data.json"}
 this will be replaced by contents of README
 ~~~~
 
 ### error\_log.json
 
-~~~~ {include="code/error\_log.json"}
+~~~~ {.json .numberLines include="code/error\_log.json"}
 this will be replaced by contents of README
 ~~~~
 
@@ -24,57 +24,57 @@ this will be replaced by contents of README
 
 ### Server.hs
 
-~~~~ {include="code/server/Server.hs"}
+~~~~ {.haskell .numberLines include="code/server/Server.hs"}
 this will be replaced by contents of README
 ~~~~
 
 ### Editor.hs
 
-~~~~ {include="code/server/Editor.hs"}
+~~~~ {.haskell .numberLines include="code/server/Editor.hs"}
 this will be replaced by contents of README
 ~~~~
 
 ### Generate.hs
 
-~~~~ {include="code/server/Generate.hs"}
+~~~~ {.haskell .numberLines include="code/server/Generate.hs"}
 this will be replaced by contents of README
 ~~~~
 
 ### EmbedMeElm.elm
 
-~~~~ {include="code/EmbedMeElm.elm"}
+~~~~ {.haskell .numberLines include="code/EmbedMeElm.elm"}
 this will be replaced by contents of README
 ~~~~
 
 
 ### EmbedMeJS.elm
 
-~~~~ {include="code/EmbedMeJS.elm"}
+~~~~ {.haskell .numberLines include="code/EmbedMeJS.elm"}
 this will be replaced by contents of README
 ~~~~
 
 ### fullScreenEmbedMe.js
 
-~~~~ {include="code/fullScreenEmbedMe.js"}
+~~~~ {.javascript .numberLines include="code/fullScreenEmbedMe.js"}
 this will be replaced by contents of README
 ~~~~
 
 ### editor.js.diff
 
-~~~~ {include="code/editor.js.diff"}
+~~~~ {.diff .numberLines include="code/editor.js.diff"}
 this will be replaced by contents of README
 ~~~~
 
 
 ### MovingBox.js
 
-~~~~ {include="code/public/jsTask/MovingBox.js"}
+~~~~ {.javascript .numberLines include="code/public/jsTask/MovingBox.js"}
 this will be replaced by contents of README
 ~~~~
 
 ### MovingBox.elm
 
-~~~~ {include="code/public/elmTask/MovingBox.elm"}
+~~~~ {.haskell .numberLines include="code/public/elmTask/MovingBox.elm"}
 this will be replaced by contents of README
 ~~~~
 
