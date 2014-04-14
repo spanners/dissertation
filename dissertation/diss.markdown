@@ -1,5 +1,5 @@
 ---
-title:  'The potential of declarative programming languages to support user interface programming: the case of ELM'
+title:  'The potential of declarative programming languages to support user interface programming: the case of Elm'
 author:
 - name: Simon Buist
   affiliation: The University of Bath
