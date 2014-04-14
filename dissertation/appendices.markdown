@@ -14,6 +14,24 @@
 
 ## Code
 
+### Server.hs
+
+~~~~ {include="code/server/Server.hs"}
+this will be replaced by contents of README
+~~~~
+
+### Editor.hs
+
+~~~~ {include="code/server/Editor.hs"}
+this will be replaced by contents of README
+~~~~
+
+### Generate.hs
+
+~~~~ {include="code/server/Generate.hs"}
+this will be replaced by contents of README
+~~~~
+
 # Appendix E
 
 
