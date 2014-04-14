@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="" />
-  <title>The potential of declarative programming languages to support user interface programming: the case of ELM</title>
+  <title>The potential of declarative programming languages to support user interface programming: the case of Elm</title>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -79,8 +79,16 @@ var ADAPT_CONFIG = {
 </ul></li>
 <li><a href="#requirements"><span class="toc-section-number">3</span> Requirements</a></li>
 <li><a href="#design"><span class="toc-section-number">4</span> Design</a><ul>
-<li><a href="#pilot-study"><span class="toc-section-number">4.1</span> Pilot study</a></li>
-<li><a href="#experimental-design"><span class="toc-section-number">4.2</span> Experimental design</a></li>
+<li><a href="#pilot-study"><span class="toc-section-number">4.1</span> Pilot study</a><ul>
+<li><a href="#reading-material"><span class="toc-section-number">4.1.1</span> Reading material</a></li>
+<li><a href="#leon-asked-us-to-answer-these-questions-and-bring-a-notebook"><span class="toc-section-number">4.1.2</span> Leon asked us to answer these questions and bring a notebook:</a></li>
+</ul></li>
+<li><a href="#experimental-design"><span class="toc-section-number">4.2</span> Experimental design</a><ul>
+<li><a href="#am-in-stv"><span class="toc-section-number">4.2.1</span> 30/10/2013 @ 9:15 am in STV</a></li>
+<li><a href="#wed-mar-25-1430-gmt-2014"><span class="toc-section-number">4.2.2</span> Wed Mar 25 14:30 GMT 2014</a></li>
+<li><a href="#tue-apr-1-143000-bst-2014"><span class="toc-section-number">4.2.3</span> Tue Apr 1 14:30:00 BST 2014</a></li>
+<li><a href="#tuesday-apr-8-143000-bst-2014"><span class="toc-section-number">4.2.4</span> Tuesday Apr 8 14:30:00 BST 2014</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#implementation-and-testing"><span class="toc-section-number">5</span> Implementation and Testing</a></li>
 <li><a href="#results"><span class="toc-section-number">6</span> Results</a></li>
@@ -89,7 +97,7 @@ var ADAPT_CONFIG = {
 </div> <!-- Grid 3 -->
 <div class="grid_9">
 <header>
-<h1 class="title">The potential of declarative programming languages to support user interface programming: the case of ELM</h1>
+<h1 class="title">The potential of declarative programming languages to support user interface programming: the case of Elm</h1>
 </header>
 <h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
 <p>This is the introductory chapter.</p>
@@ -283,19 +291,297 @@ get the following terms:
 <h2 id="pilot-study"><span class="header-section-number">4.1</span> Pilot study</h2>
 <p>In reflection, the task I chose was too difficult to capture the cognitive load incurred by the language itself for a given task, due to the difficulty of the task itself creating noise. I could improve this by simplifying the task, in a way that is ‘language agnostic’, i.e. that is not idiomatic of Elm or JavaScript (the two languages that I am comparing). Something like the following will never be that easy in JavaScript:</p>
 <table class="sourceCode haskell numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
-2
-3
-4
-5
-</pre></td><td class="sourceCode"><pre><code class="sourceCode haskell"><span class="co">-- | Inefficient quicksort in haskell.</span>
-<span class="ot">qsort ::</span> (<span class="dt">Enum</span> a) <span class="ot">=&gt;</span> [a] <span class="ot">-&gt;</span> [a]
-qsort []     <span class="fu">=</span> []
-qsort (x<span class="fu">:</span>xs) <span class="fu">=</span> qsort (filter (<span class="fu">&lt;</span> x) xs) <span class="fu">++</span> [x] <span class="fu">++</span>
-               qsort (filter (<span class="fu">&gt;=</span> x) xs) </code></pre></td></tr></table>
-<table class="sourceCode haskell numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
 </pre></td><td class="sourceCode"><pre><code class="sourceCode haskell">main <span class="fu">=</span> lift asText Mouse.position</code></pre></td></tr></table>
+<p>Group meeting with Leon at East Building, 11:15 Friday 4th October 2013</p>
+<p><strong>N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE ENGINEERING STUFF (Year 1)</strong></p>
+<h3 id="reading-material"><span class="header-section-number">4.1.1</span> Reading material</h3>
+<p>In email repsonse to request for FYP meeting, <strong>Leon writes:</strong></p>
+<pre><code>Please do a bit of reading around beforehand. Go to the ACM Digital Library and search on &#39;user interface programming&#39;.</code></pre>
+<ol type="1">
+<li><a href="http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE151">ACM Conference on Human Factors in Computing Systems</a></li>
+<li><a href="http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE169">ACM CSCW: Conference on Computer Supported Cooperative Work</a></li>
+<li><a href="http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE172">ACM UIST: Symposium on User Interface Software and Technology</a></li>
+</ol>
+<p>In moodle project page, <strong>Leon writes:</strong></p>
+<pre><code>Your project must be related to contemporary developments in Human-Computer Interaction, and preferably to the part of the HCI world that focuses on interactive systems for collaboration.</code></pre>
+<ol type="1">
+<li>???</li>
+<li>???</li>
+</ol>
+<p>Also In moodle project page, <strong>Leon also writes:</strong></p>
+<pre><code>It normally starts with some user-centred research (observations, interviews, pilot experiment) to ground the problem, carried out concurrently with literature research. 
+The research problem is normally boiled down to something that can be addressed through the production of alternative versions of an interactive system. 
+
+This is closely followed by initial design work and the production of a rough but working prototype leading up to Christmas. 
+
+After the January exams, my students typically re-scope their research problem, based in the outcome of their initial work, and solidify their implementation ready for a full evaluation in March and April.</code></pre>
+<p>Thus, my answers to the questions Leon posed should follow this structure in terms of what I want to get out of it. I can use the above structure to identify <strong>concerns</strong> of potential challenges in each step/combination of steps/step-transitions (e.g. step dependencies, resource procurement)</p>
+<p>Also in moodle product page, <strong>Leon also writes:</strong></p>
+<pre><code>Students should prepare for their projects by refreshing their memories about Interaction from CM20216 activities. You should read about HCI in general, and support for collaboration in particular. Look at any or all of the following book chapters:</code></pre>
+<ul>
+<li>Sharp, Rogers and Preece (2007) Interaction Design. hapter 4: Designing to Support Communication and Collaboration.</li>
+<li>Dix, Finlay, Abowd and Beale (2004) Human-Computer Interaction. hapter 14: Communication and Collaboration Models.</li>
+<li>Shneiderman and Plaisant (2005) Designing the User Interface. hapter 10: Collaboration.</li>
+</ul>
+<h3 id="leon-asked-us-to-answer-these-questions-and-bring-a-notebook"><span class="header-section-number">4.1.2</span> Leon asked us to answer these questions and bring a notebook:</h3>
+<h4 id="q1.-what-i-hope-to-get-out-of-my-fyp-as-an-experience"><span class="header-section-number">4.1.2.1</span> Q1. What I hope to get out of my FYP as an experience?</h4>
+<p>I hope to gain a deep and meaningful understanding of the programmer as a user, as an individual and the context of that individual – e.g. in a software team inside a department, inside a management structure… inside a company.</p>
+<p>I hope to use this understanding to determine processes/work-flows that programmers experience in the endeavour of User Interface Design, both from the individual perspective and as a team.</p>
+<p>Within these work flows, I wish to identify, in detail, metrics to gauge productivity, in order to measure this in experiments, perhaps doing A/B testing with Elm and some other, perhaps procedural language. This is an example of an objective measure.</p>
+<p>I would also like to gather self-reported, more “fuzzy” feedback on user’s perception of their productivity – pain points, advantages, etc. they experience in using Language X to product a UI compared to Language Y (Declarative languages like Elm, etc)</p>
+<p>I wish to verify, empirically, the comparisons and claims made on the <a href="http://elm-lang.org/learn/What-is-FRP.elm">What is FRP?</a> page of the elm-lang.org website, and those claimed it’s research paper (detailing the implementation of Elm, <strong>benefits</strong>, etc.)</p>
+<p>In email again, <strong>Leon writes:</strong></p>
+<pre><code>The Elm site makes **comparative statements.** That is encouraging because it sets up opportunities for you to test some of the claims they make, and to ask new questions about Elm that its proponents may not have considered.</code></pre>
+<p>These are:</p>
+<ol type="1">
+<li>“most current frameworks for graphical user interfaces are not declarative. They mire programmers in the many small, nonessential details of handling user input and manually modifying the display.”</li>
+<li>“with FRP, many of the irrelevant details are left to the compiler, freeing the programmer to think about things that matter.”</li>
+<li>“Coding <a href="http://elm-lang.org/Examples.elm">these examples</a> in a traditional GUI framework such as HTML/CSS/JavaScript . would require significantly more work and headache.”</li>
+<li>“Not only is that painful to code, but it also requires broad and deep knowledge of inconsequential things.”</li>
+<li>“FRP makes tasks considerably easier by taking care of the messy .how. of events, display, and updates.”</li>
+</ol>
+<h4 id="q2.-where-my-project-idea-came-from-what-inspired-me"><span class="header-section-number">4.1.2.2</span> Q2. Where my Project Idea came from (what inspired me)?</h4>
+<ul>
+<li>The pain of coding and writing GUIs in PyQt4 while at my last job at Altran</li>
+<li>The joys of coding in Haskell</li>
+<li>The pain of writing GUIs in Haskell</li>
+<li>The joys of coding and writing GUIs in Elm!</li>
+</ul>
+<h4 id="q3.-what-are-my-concerns"><span class="header-section-number">4.1.2.3</span> Q3. What are my concerns?</h4>
+<ol type="1">
+<li>Difficulty procuring programmers (users) – specifically those that meet my criteria of not having used a declarative programming language.</li>
+<li>Difficulty procuring programmers working in a team</li>
+<li>The complexity/scope of the project – is it enough for a FYP; is it too much?</li>
+<li>Looking at the production of User Interfaces using a programming language, there are many variables – how will I devise an experiment to minimise this and isolate a variable so that I can make some causal/correlational conclusions?</li>
+<li>Concern regarding the dependency of a subsequent part of the project on a previous step – this is inherent of all projects, though.</li>
+</ol>
 <h2 id="experimental-design"><span class="header-section-number">4.2</span> Experimental design</h2>
-<p>Foo</p>
+<h3 id="am-in-stv"><span class="header-section-number">4.2.1</span> 30/10/2013 @ 9:15 am in STV</h3>
+<h4 id="individual-meeting-after-proposal-hand-in"><span class="header-section-number">4.2.1.1</span> Individual Meeting after Proposal hand-in</h4>
+<p>Our discussion centered around the direction I wish to take following my Project Proposal.</p>
+<h5 id="ab-testing-of-the-language-with-the-same-ide"><span class="header-section-number">4.2.1.1.1</span> AB Testing of the language with the same IDE</h5>
+<p>The primary direction I mentioned (as echoed in my Proposal) was doing AB testing of Elm vs. another language (e.g. JavaScript) (i.e. the language is the dependent variable) using the same Concurrent FRP IDE (the independent variable).</p>
+<h5 id="test-just-the-paradigm"><span class="header-section-number">4.2.1.1.2</span> Test just the paradigm</h5>
+<p>He also suggested a potential experiment to test just the paradigm, eliminating the IDE from the experiment above. Perhaps for a Pilot study.</p>
+<h5 id="experiment-process"><span class="header-section-number">4.2.1.1.3</span> Experiment process</h5>
+<ol type="1">
+<li>Study question (e.g. Is it easy?)</li>
+<li>Measurement concept (e.g. “Easy”)</li>
+<li>Operationalisation – taking a measurement concept and mapping it to something concrete (e.g. if completing a pre-defined task the user must complete takes <code>&lt; 5</code> steps, it is ‘easy’ – we can then compare instances of these studies given our definition of easy). This is much like mapping a design to an implementation, and there is a risk of losing information, or ending up with a mismatched concrete instance that does not represent the concept we wish to convey.</li>
+<li>Do another operationalisation of our measurement concept – this allows us to get a different perspective of the same concept. (e.g. if total length of pauses during a 1 hour experiment is <code>&lt; 10</code> minutes, it is ‘easy’). We do this to get ‘coverage’ of the measurement concept. It is a form of cross validation. If we see an overlap in the correlational results after analysis, we can make a stronger assertion that e.g. “language A is easier than language B.”. The idea I am describing here is methodological decision-making.</li>
+<li>Predict what will be the likely results of our experiments on the operationalised measurements. This is “feed forward validation”.</li>
+<li>Do the experiement.</li>
+<li>Analyse the data. See if the data has patterns that correlate with the assertion I wish to make. I will be representing the raw data in some outcome measure – that is turning the raw data into a set of (or a single) value for comparison.</li>
+<li>Does the data answer the study question I set out to ask? This is now “feed backwards validation”.</li>
+<li>Write-up including the ‘nitty-gritty’ of the user study, and a statement like “Given our definition of easy, our multiple operationalisations of the concept of easy show that this is infact objectively true/false”.</li>
+</ol>
+<h5 id="pilots"><span class="header-section-number">4.2.1.1.4</span> Pilots</h5>
+<p>We also spoke about ideas for pilot studies – asking “What might be surprising insights into declarative programming languages for User Interface Design – the case of Elm?”.</p>
+<p>Speak-aloud protocols where you prompt/facilitate the user to say what is on their mind when that e.g. pause for more than 10 seconds – a measurement I set out to look for during an experiment.</p>
+<p>I might ask &gt; I notice you have paused for at least 10 seconds – why did you? &gt;&gt; I thought the code would do X, but it did Y. &gt; Why did you think it would do X? &gt;&gt; …</p>
+<p>I must ask the participant questions designed in a way that they are not leading.</p>
+<p>Leon suggested I gather a rich data set, as it’s difficult to take notes AND prompt the user during an experiment. SO difficult. Perhaps record video.</p>
+<h4 id="actions-for-next-meeting"><span class="header-section-number">4.2.1.2</span> Actions for next meeting</h4>
+<p>Devise a Pilot study, answering these 3 questions:</p>
+<ol type="1">
+<li>What might I ask people to do?</li>
+<li>How will I gather data?</li>
+<li>How will I analyse the data?</li>
+</ol>
+<p>Also see paper Leon will send me on “Thematic analysis &amp; Psychology”</p>
+<h3 id="wed-mar-25-1430-gmt-2014"><span class="header-section-number">4.2.2</span> Wed Mar 25 14:30 GMT 2014</h3>
+<p>(Several meetings undocumented)</p>
+<p>TODO: Refer to notes in Diary for previous entries.</p>
+<h4 id="progress-since-last-meeting"><span class="header-section-number">4.2.2.1</span> Progress since last meeting</h4>
+<p>Discussed findings from analysis of pilot study</p>
+<h5 id="observation-1"><span class="header-section-number">4.2.2.1.1</span> Observation 1</h5>
+<ul>
+<li><p>Prompting <em>“What are you thinking about?”</em> etc. seemed to place additional cognitive load on the user as they spent longer resuming than when not prompted. This caused noise in assessing the actual cognitive load incurred during the completion of the <strong>task</strong>. Were the signs of struggling/undergoing difficulty due to simply not understanding the language, or were they due to the difficulty of the task?</p></li>
+<li><p>In particular, the majority of instances where the users paused turned out to be confusion as to the semantics &amp; syntax of the language.</p></li>
+</ul>
+<h5 id="model-adjustment-1"><span class="header-section-number">4.2.2.1.2</span> Model Adjustment 1</h5>
+<ul>
+<li>Add tooltips that appear as the user places the keyboard cursor to the right of a token in the language.</li>
+</ul>
+<h5 id="observation-2"><span class="header-section-number">4.2.2.1.3</span> Observation 2</h5>
+<ul>
+<li>Sifting through 1-hour+ of video data capture for incidences of cognitive load is <em>HARD!</em>. Is there some programmatic way of narrowing the video data to points of interest?</li>
+</ul>
+<h5 id="model-adjustment-2"><span class="header-section-number">4.2.2.1.4</span> Model Adjustment 2</h5>
+<ul>
+<li><p>Track the user mouse and keyboard movements in a 3-tuple: (Time t, (Mouse.x, Mouse.y), Keypress k)</p></li>
+<li><p>It doesn’t have to be implemented this way. I could extend <strong>Model Adjustment 1</strong> to define blocks of code as tokens in themselves, and capture how long the cursor is static on that particular token.</p></li>
+<li><p>Leon suggested a further refinement of this idea in order to further narrow the data (in fact, just capturing mouse &amp; keyboard movements will result in an explosion of the volume of data – countrary to what I intend to achieve). His refinement was to define regions of interest in the code pane, and <em>only when the mouse/key cursor is in the region, do I capture data</em>.</p></li>
+<li><p>Use the <code>if cursor in region then log (Time t, (Mouse.x, Mouse.y), Keypress   k)</code> functionality as a <em>lens</em> to focus on significant portions of video capture.</p></li>
+</ul>
+<h4 id="further-discussion"><span class="header-section-number">4.2.2.2</span> Further discussion</h4>
+<p>We then discussed some questions that might lead my direction of study in the next steps of my research:</p>
+<ul>
+<li><p>Is the mouse/cursor position a proxy for someone’s attention as they carry out the task?</p></li>
+<li><p>Often when I’m coding I’ll leave the cursor where it is but think about other regions of code. I don’t necessarily move the keyboard/mouse cursor to the section of code I’m thinking about. Instead, I use it as a ‘bookmark’ to track what I’m currently implementing, and may scroll around to other parts.</p></li>
+</ul>
+<h4 id="we-also-discussed"><span class="header-section-number">4.2.2.3</span> We also discussed…</h4>
+<p>The result of the dissertation will be a list of observed cognitive easing/loading that each language produces for users, much like an advantage/disadvantage comparison:</p>
+<table>
+<col style="width: 16%" /><col style="width: 16%" /><thead>
+<tr class="header">
+<th style="text-align: left;">Elm</th>
+<th style="text-align: left;">JavaScript</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">+ …</td>
+<td style="text-align: left;">+ …</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">+ …</td>
+<td style="text-align: left;">- …</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">- …</td>
+<td style="text-align: left;">- …</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">- …</td>
+<td style="text-align: left;">+ …</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">+ …</td>
+<td style="text-align: left;">_</td>
+</tr>
+</tbody>
+</table>
+<h4 id="actions"><span class="header-section-number">4.2.2.4</span> Actions</h4>
+<ol type="1">
+<li><p>Design a task in JavaScript to go inside this adjusted model (incorporating Model Adjustment 1 and 2).</p>
+<p>This will require a degree of <em>“implementation juggling”</em> in order to find a balance of code-length/difficulty over the same task in Elm in such a way that is not creating noise in the thing being studied: Cognitive load.</p>
+<p>Keep the reactivity constant, compare the differences in ease between JS and Elm.</p></li>
+<li><p>If time available, run another Pilot study on this task + adjusted model</p></li>
+</ol>
+<h3 id="tue-apr-1-143000-bst-2014"><span class="header-section-number">4.2.3</span> Tue Apr 1 14:30:00 BST 2014</h3>
+<p>Discussed progress made and what hypotheses to form that may usefully model cognitive load.</p>
+<h4 id="progress-since-last-meeting-1"><span class="header-section-number">4.2.3.1</span> Progress since last meeting</h4>
+<figure>
+<img src="ide-extensions.png" alt="Extensions made to the Elm IDE" /><figcaption>Extensions made to the Elm IDE</figcaption>
+</figure>
+<p>I have implemented full-screen mouse tracking that stores to a database a tuple:</p>
+<pre><code>(t, (x, y))</code></pre>
+<p>for every mouse move, producing a list in JSON (so it’s more like <code>{{uniq-userid: {125125, (67, 321)}}, {uniq-userid: {125126, (67, 322)}} ...}</code>)</p>
+<p>I am ready to demo this (See Action 1.)</p>
+<p>The only issue worth tweaking is that user activity data is captured separately from the error output, so I will need to collate the data afterwards or find some way to feed it into the same data store.</p>
+<h4 id="meeting-discussion"><span class="header-section-number">4.2.3.2</span> Meeting Discussion</h4>
+<p>2 Hypotheses</p>
+<ol type="1">
+<li><p>Why the regions (<em>see green boxes in figure above</em>) I define in the code (to mouse-track e.g.) are meaningful</p></li>
+<li><p>Frequency of semantically or syntactically incorrect errors made will differ as a function of the language under study</p></li>
+</ol>
+<p>These need narrowing as they are too broad to test. Explode them into multiple, tighter hypotheses.</p>
+<p>They are <em>valid</em> because they are <em>well-founded</em> – i.e. I have good reason to believe that # of errors made is an indication of cognitive load. I have good reason to believe that the selected regions will have more mouse activity (or whatever activity I suspect indicates higher cognitive load) as they are harder regions of code OR they pertain to achieving the set task.</p>
+<h4 id="actions-1"><span class="header-section-number">4.2.3.3</span> Actions</h4>
+<ol type="1">
+<li><p>Refine Mouse logging</p>
+<ol type="1">
+<li><em>DONE</em> Make it so that I can run arbitrary Elm code in the editor via a fileOpen operation</li>
+<li><em>DONE</em> Make an Elm file that logs mouse movements ready to be loaded into the Editor</li>
+<li><em>DONE</em> Load it into the editor and test it uploads to Firebase</li>
+<li><p><em>DONE</em> Modify <a href="https://github.com/spanners/elm-lang.org/blob/master/server/Generator.hs">Generator.hs</a></p>
+<pre><code>case (Elm.compile elmSrc) of 
+    Left jsSrc -&gt; ...
+    Right _ -&gt; error &quot;blah&quot;</code></pre></li>
+</ol>
+<p>So that when we get an error, we timestamp and append it to a log file so this can later be collated with the Firebase to determine when errors were made</p>
+<p>I’ll need to insert a layer between <code>compile :: Snap()</code> and <code>serveHtml ::    MonadSnap m =&gt; H.Html -&gt; m ()</code> that performs the logging. It will have type signature `TypedHtml -&gt;</p>
+<p><a href="https://github.com/spanners/elm-lang.org/blob/master/server/Server.hs#L81">compile</a> <a href="https://github.com/spanners/elm-lang.org/blob/master/server/Server.hs#L69">serveHtml</a></p>
+<ol start="5" type="1">
+<li>Make it so I can define regions in the mouse tracking – i.e. ONLY within a defined region is the mouse movement tracked e.g. <code>if mouse(x,y) in    some2by2Square then Just mouse(x,y) else Nothing</code></li>
+</ol>
+<p>See https://github.com/spanners/laska/blob/master/Signals.elm</p></li>
+<li>Demo to Hilary Johnson
+<ol type="1">
+<li>Install on VPS (See <a href="../../install_elm.sh">build script</a>)</li>
+<li><p>Run these:</p>
+<pre><code>git clone https://github.com/spanners/elm-lang.org
+cd elm-lang.org
+cabal install --bindir=.</code></pre></li>
+</ol></li>
+<li><p><em>DONE</em> Design a task in JS and Elm</p></li>
+<li>Define regions to select for logging activity. Why? Because:
+<ul>
+<li>Complex logic in code, OR</li>
+<li>Relevant to task</li>
+<li>Captures Thrash (keep on going over the same thing, e.g.). Errors made also captures thrash!</li>
+</ul></li>
+<li><p><em>DONE</em> Determine what to do with mouse (for example) data.</p></li>
+</ol>
+<h3 id="tuesday-apr-8-143000-bst-2014"><span class="header-section-number">4.2.4</span> Tuesday Apr 8 14:30:00 BST 2014</h3>
+<p>What makes code difficult to understand and work with?</p>
+<ul>
+<li>Bit twiddling?</li>
+<li>Declaring and defining simultaneously?</li>
+<li>Compound if/then/else statements?</li>
+</ul>
+<p>“[Programming is] manipulating symbols blindly” ~ Bret Victor</p>
+<p>Do a 2x2 study, defining regions in the code monitoring mouse clicks. Regions can either be simple/hard in complexity (exhibiting/not-exhibiting one of the above ‘difficult’ properties). Or code can be task-oriented or not, that is <em>the code does/does not need to be changed to achieve the completed task set for the user</em>:</p>
+<h4 id="x2-study-between-subjects"><span class="header-section-number">4.2.4.1</span> 2x2 study between-subjects</h4>
+<table>
+<col style="width: 22%" /><col style="width: 25%" /><thead>
+<tr class="header">
+<th style="text-align: left;">Elm</th>
+<th style="text-align: left;">-</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Simple/Task</td>
+<td style="text-align: left;">Hard/Task</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Simple/Not-Task</td>
+<td style="text-align: left;">Hard/Not-Task</td>
+</tr>
+</tbody>
+</table>
+<table>
+<col style="width: 22%" /><col style="width: 25%" /><thead>
+<tr class="header">
+<th style="text-align: left;">JavaScript</th>
+<th style="text-align: left;">-</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Simple/Task</td>
+<td style="text-align: left;">Hard/Task</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Simple/Not-Task</td>
+<td style="text-align: left;">Hard/Not-Task</td>
+</tr>
+</tbody>
+</table>
+<h4 id="study-method"><span class="header-section-number">4.2.4.2</span> Study method</h4>
+<p>Look at total and/or mean time in each of these areas for comparison.</p>
+<p>My study will be <strong>between-subjects</strong> instead of within-subjects.</p>
+<p>That is, I will study <em>different users</em> for different languages. If a user has completed the task in Elm, I can not have them complete the task in JavaScript, and vice-versa.</p>
+<p>I will necessarily make a compromise here:</p>
+<p>Between-subjects:</p>
+<ul>
+<li><p>I lose the ability to keep programmer competence as constant, thus it is a confounding variable</p></li>
+<li><p>I gain the ability to ignore learned-experience in completing the task – the participant is different every time so will not have done this task before, thus this is not a confounding variable.</p></li>
+</ul>
+<p>Within-subjects is the converse of the above methodological properties</p>
+<h4 id="actions-2"><span class="header-section-number">4.2.4.3</span> Actions</h4>
+<ol type="1">
+<li><p><strong>DONE</strong> Reorder divs so embedded div is on top of editor div.</p>
+<p>This turned out (I am fairly certain) to be due to codemirror.js binding mouse clicks. It was solved by using Elm’s <code>Mouse.isDown</code>. Using <code>Mouse.isDown</code> has the added benefit of tracking mouse selects and drags, because it logs <code>(x,y)</code> when the mouse is down and <code>(x,y)</code> again when it is up.</p></li>
+<li><p><strong>DONE</strong> Create a task that features <em>Hard/Simple x Task/Not-task</em> (See <a href="#2x2-study-between-subjects">table above</a>)</p></li>
+<li><p><del>Implement <em>Region filtering</em> functionality so mouse activity is only logged when the clicks occur within defined region(s)</del></p>
+<p>I have instead defined bounding boxes that pertain to the regions I want to track as a mouse-data filter – that is, I capture all click data for the whole frame, and then filter it by comparing x,y co-ordinates with my bounding boxes. If it’s in the box, keep it, otherwise discard.</p></li>
+<li><p><strong>DONE</strong> Integrate JS task into IDE</p></li>
+<li><p><strong>DONE</strong> Perform pilot study</p></li>
+<li><p><strong>WIP</strong> Visualise mouse data</p></li>
+</ol>
 <h1 id="implementation-and-testing"><span class="header-section-number">5</span> Implementation and Testing</h1>
 <p>This is the chapter in which you review the implementation and testing decisions and issues, and critique these processes. Code can be output inline using <code>some code</code>. For example, this code is inline: <code>public static int example = 0;</code> (I have used the character | as a delimiter, but any non-reserved character not in the code text can be used.) Code snippets can be output using the environment with the code given in the environment. For example, consider listing 5.1, below. Listing 5.1: Example code</p>
 <p>Code listings are produced using the package “Listings”. This has many useful options, so have a look at the package documentation for further ideas.</p>
@@ -471,6 +757,46 @@ qsort (x<span class="fu">:</span>xs) <span class="fu">=</span> qsort (filter (<s
 }</code></pre></td></tr></table>
 <h1 id="appendix-c">Appendix C</h1>
 <h2 id="code">Code</h2>
+<ul>
+<li><p>All code available here: <a href="">https://github.com/spanners/elm-lang.org</a>.</p>
+<ul>
+<li>This is a modifed version of Evan Czaplicki's elm-lang.org code, available here: <a href="">https://github.com/elm-lang/elm-lang.org</a></li>
+</ul></li>
+<li>Elm task here: <a href="">http://mouth.crabdance.com:8000/edit/task/MovingBox.elm</a></li>
+<li><p>Javascript task here: <a href="">http://mouth.crabdance.com:8000/_edit/task/MovingBox.js</a></p></li>
+</ul>
+<h3 id="license">LICENSE</h3>
+<pre include="code/LICENSE"><code>Copyright (c) 2012-2013 Evan Czaplicki
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+
+    * Neither the name of Evan Czaplicki nor the names of other
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+&quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</code></pre>
 <h3 id="server.hs">Server.hs</h3>
 <table class="sourceCode haskell numberLines" include="code/server/Server.hs"><tr class="sourceCode"><td class="lineNumbers"><pre>1
 2
