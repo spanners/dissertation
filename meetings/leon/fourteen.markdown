@@ -71,7 +71,7 @@ Within-subjects is the converse of the above methodological properties
 
 4. **DONE** Integrate JS task into IDE
 
-5. Perform pilot study
+5. **DONE** Perform pilot study
 
 6. Visualise mouse data
 
