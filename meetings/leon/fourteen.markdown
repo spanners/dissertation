@@ -66,13 +66,18 @@ Within-subjects is the converse of the above methodological properties
 
 2. **DONE** Create a task that features *Hard/Simple x Task/Not-task* (See [table above])
 
-3. Implement *Region filtering* functionality so mouse activity is only logged
+3. **NOT-DOING** Implement *Region filtering* functionality so mouse activity is only logged
    when the clicks occur within defined region(s)
+
+    I have instead defined bounding boxes that pertain to the regions I want to
+    track as a mouse-data filter -- that is, I capture all click data for the
+    whole frame, and then filter it by comparing x,y co-ordinates with my
+    bounding boxes. If it's in the box, keep it, otherwise discard.
 
 4. **DONE** Integrate JS task into IDE
 
 5. **DONE** Perform pilot study
 
-6. Visualise mouse data
+6. **IN-PROGRESS** Visualise mouse data
 
 [table above]: #2x2-study-between-subjects
