@@ -1,11 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
+  <meta name="author" content="" />
   <title>The potential of declarative programming languages to support user interface programming: the case of ELM</title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <style type="text/css">
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
@@ -25,14 +27,44 @@ code > span.al { color: #ff0000; font-weight: bold; }
 code > span.fu { color: #06287e; }
 code > span.er { color: #ff0000; font-weight: bold; }
   </style>
-  <link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="css/master.css" />
+<STYLE type="text/css">
+   .toc li {list-style-type: none }
+   dd {padding: 8px 16px}
+ </STYLE>
+<noscript>
+<link rel="stylesheet" href="css/mobile.min.css" />
+</noscript>
+<script>
+// Edit to suit your needs.
+var ADAPT_CONFIG = {
+  // Where is your CSS?
+  path: 'css/',
+
+  // false = Only run once, when page first loads.
+  // true = Change on window resize and page tilt.
+  dynamic: true,
+
+  // First range entry is the minimum.
+  // Last range entry is the maximum.
+  // Separate ranges by "to" keyword.
+  range: [
+    '0px    to 760px  = mobile.min.css',
+    '760px  to 980px  = 720.min.css',
+    '980px  to 1280px = 960.min.css',
+    '1280px to 1600px = 1200.min.css',
+    '1600px to 1940px = 1560.min.css',
+    '1940px to 2540px = 1920.min.css',
+    '2540px           = 2520.min.css'
+  ]
+};
+</script>
+<script src="js/adapt.min.js"></script>
 </head>
 <body>
-<div id="header">
-<h1 class="title">The potential of declarative programming languages to support user interface programming: the case of ELM</h1>
-<h2 class="author"></h2>
-</div>
-<div id="TOC">
+<div class="container_12">
+<div class="grid_3 toc">
+<h3>Table of Contents</h3>
 <ul>
 <li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a><ul>
 <li><a href="#example-section"><span class="toc-section-number">1.1</span> Example Section</a><ul>
@@ -54,7 +86,11 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#results"><span class="toc-section-number">6</span> Results</a></li>
 <li><a href="#conclusions"><span class="toc-section-number">7</span> Conclusions</a></li>
 </ul>
-</div>
+</div> <!-- Grid 3 -->
+<div class="grid_9">
+<header>
+<h1 class="title">The potential of declarative programming languages to support user interface programming: the case of ELM</h1>
+</header>
 <h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
 <p>This is the introductory chapter.</p>
 <h2 id="example-section"><span class="header-section-number">1.1</span> Example Section</h2>
@@ -66,22 +102,20 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h4 id="table"><span class="header-section-number">1.1.1.2</span> Table</h4>
 <table>
 <caption>An example table</caption>
-<col width="12%" />
-<col width="12%" />
-<thead>
+<col style="width: 12%" /><col style="width: 12%" /><thead>
 <tr class="header">
-<th align="left">Items</th>
-<th align="left">Values</th>
+<th style="text-align: left;">Items</th>
+<th style="text-align: left;">Values</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Item 1</td>
-<td align="left">Value 1</td>
+<td style="text-align: left;">Item 1</td>
+<td style="text-align: left;">Value 1</td>
 </tr>
 <tr class="even">
-<td align="left">Item 2</td>
-<td align="left">Value 2</td>
+<td style="text-align: left;">Item 2</td>
+<td style="text-align: left;">Value 2</td>
 </tr>
 </tbody>
 </table>
@@ -226,22 +260,22 @@ get the following terms:
 -->
 
 <p>The problem area of user-interface programming, and more generally, the activity of programming in a context such as a software engineering environment, encompasses certain realms of interest. Through my survey of literature, my research has touched upon the above-mentioned terms, and I have discovered some thought-provoking problems that exist in the field of programming. The concept of ‘Programming’ embodies other concepts – art-forms, engineering processes, science, language, and mathematics, among others. To me, programming is a creative endeavour unlike any other – in which the programmer wields materials of no substance – the code – by manipulating symbols on a screen, which represent states in the machine being used. There are so many programming languages, and all languages (all that are Turing-complete) reduce to the same language – that of a Turing Machine. So, <em>why do we have so many programming languages?</em>.</p>
-<p><em>Beware of the Turing tar-pit in which everything is possible but nothing of interest is easy.</em> <span class="citation">(Perlis, 1982)</span></p>
+<p><em>Beware of the Turing tar-pit in which everything is possible but nothing of interest is easy.</em> <span class="citation" data-cites="PerlisTuringTarpit">(Perlis, 1982)</span></p>
 <p>Different languages lend themselves to different ways of thinking about problems. They may place emphasis on one feature, for example list manipulation and hide others such as types. The language or programming environment may make explicit the effect of changes as they are encoded, as opposed to queuing up a block of changes and the programmer having to initiate an update manually.</p>
 <p>I would like to draw your attention in particular to the terms <strong>Abstraction</strong>, <strong>Cognitive offloading</strong>, <strong>Feedback</strong>, <strong>Loss of information?</strong>/<strong>Augmented reality?</strong>, <strong>Thrashing</strong>, and <strong>“Programming blind”</strong>. These, at current, are my topics of interest, and my literature review has up to this point been inextricably and heavily influenced by this.</p>
 <h2 id="what-does-it-mean-to-be-easy-to-use"><span class="header-section-number">2.2</span> What does it mean to be ‘easy to use?’</h2>
 <p>In the process of surveying relevant (and sometimes irrelevant) literature to this dissertation, recurring conceptual patterns were observed – one particular instance of this is that several authors seem to lay victim to the trap of claiming their creation is “easy to use”, “better”, “simpler than <span class="math"><em>x</em></span>” without providing any supportive evidence of this.</p>
-<p>Perhaps these are incidents of ‘experimenter bias’ – where the evaluator is naturally predisposed to a positive appraisal of their own findings. One way to avoid this is to have one set of people perform the data capture and another set perform the data analysis. Nevertheless, these patterns emerge, and present numerous opportunities for experimentation and subsequent evidence supporting or contradicting these claims. Experiments may see if the same conclusions are reached as the above-mentioned authors, accounting for the ‘evaluator effect’ <span class="citation">(Hertzum &amp; Jacobsen, 2001)</span>.</p>
+<p>Perhaps these are incidents of ‘experimenter bias’ – where the evaluator is naturally predisposed to a positive appraisal of their own findings. One way to avoid this is to have one set of people perform the data capture and another set perform the data analysis. Nevertheless, these patterns emerge, and present numerous opportunities for experimentation and subsequent evidence supporting or contradicting these claims. Experiments may see if the same conclusions are reached as the above-mentioned authors, accounting for the ‘evaluator effect’ <span class="citation" data-cites="Hertzum2001">(Hertzum &amp; Jacobsen, 2001)</span>.</p>
 <p>Whether this particular route is taken for experimentation hinges on pilot studies that will be conducted concurrently to the Literature Survey, each inextricably shaping the other’s direction of investigation and inquiry.</p>
-<p>The catalyst to this whole dissertation was a talk about the concept of a highly reactive development environment – where changes in the code result in instantaneous updates to the runtime, ‘on-the-fly’. This was presented in Bret Victor’s “Inventing on Principle” <span class="citation">(Victor, 2012)</span>. In his presentation Bret makes several assertions about the ‘traditional’ style of coding, one statement of which is that “most of the developer’s time is spent looking at the code, blindly without an immediate connection to the thing they’re making”. He argues that “so much of creation is discovery, and you can’t discover anything if you can’t see what you’re doing” – alluding to his earlier statement that the compile-run-debug cycle is much like this.</p>
-<p>Evan Czaplicki, in his thesis of which Elm is the product <span class="citation">(Czaplicki, 2012)</span>, makes similar claims – “[Elm] makes it <em>quick and easy</em> to create and combine text, images, and video into rich multimedia displays.” While the evaluation of Elm’s usability is not the focus of the thesis, rather, it is to establish a context for Functional Reactive Programming and describe the implementation details, he makes other usability claims without evidence – “[non-declarative frameworks for graphical user interfaces] mire programmers in the many small, nonessential details of handling user input and modifying the display.”, “FRP makes GUI programming much more manageable”, and in a section entitled <em>The Benefits of Functional GUIs</em>, “In Elm, divisions between data code, display code, and user interaction code arise fairly naturally, helping programmers write robust GUI code”. If these claims are true, there is all the more evidence that Elm should be a language of choice for GUI programmers, but experiments must be done to determine this.</p>
-<p>And perhaps this rapid development cycle is not always suitable – in their 2012 paper, Lopez et al. show that novices tend to “thrash” about, trying out many ideas that may or may not be a solution, and executing “poorly directed, ineffective problem solving …failing to realise they are doing it in good time, and fail to break out of it”, whereas experts think much more about the problem at hand before proceeding with a solution <span class="citation">(Lopez et al., 2012)</span>.</p>
+<p>The catalyst to this whole dissertation was a talk about the concept of a highly reactive development environment – where changes in the code result in instantaneous updates to the runtime, ‘on-the-fly’. This was presented in Bret Victor’s “Inventing on Principle” <span class="citation" data-cites="Victor2012a">(Victor, 2012)</span>. In his presentation Bret makes several assertions about the ‘traditional’ style of coding, one statement of which is that “most of the developer’s time is spent looking at the code, blindly without an immediate connection to the thing they’re making”. He argues that “so much of creation is discovery, and you can’t discover anything if you can’t see what you’re doing” – alluding to his earlier statement that the compile-run-debug cycle is much like this.</p>
+<p>Evan Czaplicki, in his thesis of which Elm is the product <span class="citation" data-cites="Czaplicki2012elm">(Czaplicki, 2012)</span>, makes similar claims – “[Elm] makes it <em>quick and easy</em> to create and combine text, images, and video into rich multimedia displays.” While the evaluation of Elm’s usability is not the focus of the thesis, rather, it is to establish a context for Functional Reactive Programming and describe the implementation details, he makes other usability claims without evidence – “[non-declarative frameworks for graphical user interfaces] mire programmers in the many small, nonessential details of handling user input and modifying the display.”, “FRP makes GUI programming much more manageable”, and in a section entitled <em>The Benefits of Functional GUIs</em>, “In Elm, divisions between data code, display code, and user interaction code arise fairly naturally, helping programmers write robust GUI code”. If these claims are true, there is all the more evidence that Elm should be a language of choice for GUI programmers, but experiments must be done to determine this.</p>
+<p>And perhaps this rapid development cycle is not always suitable – in their 2012 paper, Lopez et al. show that novices tend to “thrash” about, trying out many ideas that may or may not be a solution, and executing “poorly directed, ineffective problem solving …failing to realise they are doing it in good time, and fail to break out of it”, whereas experts think much more about the problem at hand before proceeding with a solution <span class="citation" data-cites="Lopez2012a">(Lopez et al., 2012)</span>.</p>
 <h2 id="running-user-studies"><span class="header-section-number">2.3</span> Running User Studies</h2>
-<p>Perhaps a further direction of investigation may be running an experiment to spot whether or not Elm’s auto-updating IDE lends to a lack of critical thinking – some operationalization may be <em>pauses reported as ‘thinking’ made during development</em> – where a pause is disambiguated as ‘thinking’ by the experimenter asking the participant why they did not perform any interaction with the computer for more than 10 seconds, and the participant reports that they were planning/designing/other similar activity. Along this line of thinking, a paper studying the relationship between speech pauses and cognitive load <span class="citation">(Khawaja et al., 2008)</span> found through studying 48 mixed gender participants that there is statistically significant indicators of cognitive load through analysing pauses in speech. Perhaps this concept of pauses can be applied to the activity of programming. However, the planned method of disambiguating pauses via self-reporting (previously mentioned) would not be suitable according to these authors – “such measures can be either physically or psychologically intrusive and disrupt the normal flow of the interaction”, although a paper cited by <span class="citation">(Khawaja et al., 2008)</span> itself claims that “although self-ratings may appear questionable, it has been demonstrated that people are quite capable of giving a numerical indication of their perceived mental burden <span class="citation">(Gopher &amp; Braune, 1984)</span>”. Indeed a pilot study by Fraser and Kölling <span class="citation">(McKay &amp; K<span>ö</span>lling, 2012)</span> structures the self-reporting by getting the users to evaluate an IDE as they use it using a set of subject-specific heuristics that they have designed. They showed that this customised set of heuristics helped guide the user more effectively than Nielsen’s heuristics in evaluating usability, so one could develop a custom set of heuristics for evaluating the usability of Elm.</p>
-<p>From the Elm thesis <span class="citation">(Czaplicki, 2012)</span>, the language syntax and rapid feedback seem simple enough that it is conceivable (or at the very least, possible and of experimental interest) to allow the user to customise the UI layout to their liking. Letting the user shape the UI in concert with a UI programmer is covered the study of the interface development environment “Mobi-D” in millitary and medical applications <span class="citation">(Puerta, 1997)</span>, with success in those fields. It may be worth speculating how Elm would fit into the development cycle that Puerta’s paper outlines, as this may lend inspiration to potential user interface enhancements to the Elm IDE for A/B testing. It must be noted that there does not seem to be a re-emergence of Mobi-D since the paper was written, however.</p>
+<p>Perhaps a further direction of investigation may be running an experiment to spot whether or not Elm’s auto-updating IDE lends to a lack of critical thinking – some operationalization may be <em>pauses reported as ‘thinking’ made during development</em> – where a pause is disambiguated as ‘thinking’ by the experimenter asking the participant why they did not perform any interaction with the computer for more than 10 seconds, and the participant reports that they were planning/designing/other similar activity. Along this line of thinking, a paper studying the relationship between speech pauses and cognitive load <span class="citation" data-cites="Khawaja2008">(Khawaja et al., 2008)</span> found through studying 48 mixed gender participants that there is statistically significant indicators of cognitive load through analysing pauses in speech. Perhaps this concept of pauses can be applied to the activity of programming. However, the planned method of disambiguating pauses via self-reporting (previously mentioned) would not be suitable according to these authors – “such measures can be either physically or psychologically intrusive and disrupt the normal flow of the interaction”, although a paper cited by <span class="citation" data-cites="Khawaja2008">(Khawaja et al., 2008)</span> itself claims that “although self-ratings may appear questionable, it has been demonstrated that people are quite capable of giving a numerical indication of their perceived mental burden <span class="citation" data-cites="Gopher1984">(Gopher &amp; Braune, 1984)</span>”. Indeed a pilot study by Fraser and Kölling <span class="citation" data-cites="McKay2012">(McKay &amp; K<span>ö</span>lling, 2012)</span> structures the self-reporting by getting the users to evaluate an IDE as they use it using a set of subject-specific heuristics that they have designed. They showed that this customised set of heuristics helped guide the user more effectively than Nielsen’s heuristics in evaluating usability, so one could develop a custom set of heuristics for evaluating the usability of Elm.</p>
+<p>From the Elm thesis <span class="citation" data-cites="Czaplicki2012elm">(Czaplicki, 2012)</span>, the language syntax and rapid feedback seem simple enough that it is conceivable (or at the very least, possible and of experimental interest) to allow the user to customise the UI layout to their liking. Letting the user shape the UI in concert with a UI programmer is covered the study of the interface development environment “Mobi-D” in millitary and medical applications <span class="citation" data-cites="Puerta1997">(Puerta, 1997)</span>, with success in those fields. It may be worth speculating how Elm would fit into the development cycle that Puerta’s paper outlines, as this may lend inspiration to potential user interface enhancements to the Elm IDE for A/B testing. It must be noted that there does not seem to be a re-emergence of Mobi-D since the paper was written, however.</p>
 <p>My goal is to answer these questions. By way of conducting user studies, leveraging Elm with extensions to do A/B testing to illustrate it’s effectiveness (or ineffectiveness) at enhancing User Interface Design.</p>
-<p>Central to this idea of iteration is my desired method of performing user studies: I will first do what I have called a “Pilot” – a short and shallow trial User Study that focuses not on the research I’m concerned with, but instead the particular experimental design I would like to use in my actual User Study. By employing a Pilot I can hopefully get an idea of the nature of the experimental design – perhaps discovering any variables I had not previously considered that will require me to increase my sample size or simplify the experiment in order to mitigate their effect on the dependent variable I wish to test for. These are all problems discovered in <span class="citation">(Yates, 2012)</span> – including basic teething problems in getting the experiment to flow smoothly. In an even less detailed aspect, the pilot may allow me to look at what is out there. It may help to not look for anything in particular initially, and see what happens.</p>
-<p>At this stage, with the help of discussion with my Project Supervisor, I have some ideas about how to gather data in User Studies and these pilots could prove to be a useful testbed for such tools. I have a hypothesis that the novice developer “thrashing” <span class="citation">(Lopez et al., 2012)</span> can be observed by shorter pauses between editing and experimentation, and I could measure this by way of measuring the mouse position relative to the IDE, clicks, and key-presses, using tools built-in to Elm and a bit of extension to stream this over the Internet to my storage facilities <span class="citation">(Czaplicki, 2013)</span>.</p>
+<p>Central to this idea of iteration is my desired method of performing user studies: I will first do what I have called a “Pilot” – a short and shallow trial User Study that focuses not on the research I’m concerned with, but instead the particular experimental design I would like to use in my actual User Study. By employing a Pilot I can hopefully get an idea of the nature of the experimental design – perhaps discovering any variables I had not previously considered that will require me to increase my sample size or simplify the experiment in order to mitigate their effect on the dependent variable I wish to test for. These are all problems discovered in <span class="citation" data-cites="Yates2012a">(Yates, 2012)</span> – including basic teething problems in getting the experiment to flow smoothly. In an even less detailed aspect, the pilot may allow me to look at what is out there. It may help to not look for anything in particular initially, and see what happens.</p>
+<p>At this stage, with the help of discussion with my Project Supervisor, I have some ideas about how to gather data in User Studies and these pilots could prove to be a useful testbed for such tools. I have a hypothesis that the novice developer “thrashing” <span class="citation" data-cites="Lopez2012a">(Lopez et al., 2012)</span> can be observed by shorter pauses between editing and experimentation, and I could measure this by way of measuring the mouse position relative to the IDE, clicks, and key-presses, using tools built-in to Elm and a bit of extension to stream this over the Internet to my storage facilities <span class="citation" data-cites="WhatFRP">(Czaplicki, 2013)</span>.</p>
 <h1 id="requirements"><span class="header-section-number">3</span> Requirements</h1>
 <p>If you are doing a primarily software development project, this is the chapter in which you review the requirements decisions and critique the requirements process.</p>
 <h1 id="design"><span class="header-section-number">4</span> Design</h1>
@@ -1554,7 +1588,7 @@ getHtmlPage name elmname jsSrc <span class="fu">=</span>
 <span class="st">          \a:visited {text-decoration: none}\n\</span>
 <span class="st">          \a:active {text-decoration: none}\n\</span>
 <span class="st">          \a:hover {text-decoration: underline; \</span>
-<span class="st">          color: rgb(234,21,122);}&quot;</span><span class="ot"> ::</span> <span class="dt">String</span>)
+<span class="st">          \color: rgb(234,21,122);}&quot;</span><span class="ot"> ::</span> <span class="dt">String</span>)
       H.body <span class="fu">$</span> <span class="kw">do</span>
         <span class="kw">let</span> js <span class="fu">=</span> H.script <span class="fu">!</span> A.type_ <span class="st">&quot;text/javascript&quot;</span>
             runFullscreen <span class="fu">=</span> 
@@ -2275,5 +2309,7 @@ to ask new questions about Elm that its proponents may not have considered.</cod
 <ol start="2" style="list-style-type: decimal">
 <li>If time available, run another Pilot study on this task + adjusted model</li>
 </ol>
+</div> <!-- grid 9 -->
+</div> <!-- Containter 12 -->
 </body>
 </html>
