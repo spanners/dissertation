@@ -11,39 +11,9 @@ abstract: |
   It consists of two paragraphs.
 ...
 
-[table]: #table
-
 # Introduction
 
-This is the introductory chapter.
-
-## Example Section
-
-Like all chapters, it will have a number of sections
-
-### Example Subsection
-
-...and sub-sections
-
-#### Example sub-subsection
-...and sub-subsections.
-
-#### Table
-
-: An example table
-
--------- --------
-Items    Values
--------- --------
-Item 1   Value 1
-
-Item 2   Value 2
--------- --------
-
-## Another section
-
-Another section, just for good measure. You can reference a table, figure or
-equation using [table][]
+    Introduce the topic, Summarise the report
 
 # Literature Survey
 
