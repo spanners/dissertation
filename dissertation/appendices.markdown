@@ -4,10 +4,6 @@
 
 # Appendix B
 
-## User Documentation
-
-# Appendix C
-
 ## Raw results output
 
 ### firebase-mouseclick-data.json
@@ -22,7 +18,7 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
-# Appendix D
+# Appendix C
 
 ## Code
 
@@ -82,7 +78,7 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
-# Appendix E
+# Appendix D
 
 
 ## Meeting minutes (sample)
