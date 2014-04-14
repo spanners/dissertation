@@ -2,3 +2,5 @@
 *.pdf
 appendices.html
 appendices.tex
+*.hi
+*.o
