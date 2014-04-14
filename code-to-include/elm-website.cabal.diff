@@ -1,0 +1,12 @@
+diff --git a/elm-website.cabal b/elm-website.cabal
+index c9d9bb8..ebe4e8b 100644
+--- a/elm-website.cabal
++++ b/elm-website.cabal
+@@ -36,7 +36,6 @@ executable run-elm-website
+                      , mtl
+                      , process
+                      , unordered-containers
+-                     , regex-compat
+ 
+   hs-source-dirs:      server
+
