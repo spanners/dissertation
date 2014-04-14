@@ -1,3 +1,17 @@
+/* 
+
+Try moving the square around with your keyboard's arrow keys
+
+Click your mouse over there =====> 
+Use arrows Up, Down, Left, Right
+
+Whee!
+
+Now modify the code to prevent the square from going outside 
+the edge of the grey window.
+
+*/
+
 // Constants
 var WIDTH = 400;
 var HEIGHT = 400;
