@@ -1,3 +1,7 @@
+submission: diss.pdf
+	mv diss.pdf sdab20-WRITEUP-SimonBuist-Dissertation-2014.pdf
+	tar cjvf sdab20-CODE-SimonBuist-Dissertation-2014.tar.bz code
+
 %.pdf: %.markdown appendices.tex
 	pandoc -s --variable mainfont=Georgia --variable sansfont=Arial --variable monofont="Bitstream Vera Sans Mono" --variable fontsize=12pt -A appendices.tex --template custom.tex --toc -N --smart --bibliography $*.bib --csl the-open-university-harvard.csl -f markdown -o $@ $<
 
