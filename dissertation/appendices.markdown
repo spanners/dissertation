@@ -51,9 +51,15 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
-### fullScreenEmbedMe.js
+### editor.js.diff
 
-~~~~ {include="code/fullScreenEmbedMe.js"}
+~~~~ {include="code/editor.js.diff"}
+this will be replaced by contents of README
+~~~~
+
+### firebase-mouseclick-data.json
+
+~~~~ {include="code/firebase-mouseclick-data.json"}
 this will be replaced by contents of README
 ~~~~
 
