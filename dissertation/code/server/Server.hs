@@ -5,7 +5,6 @@ module Main where
 import Data.Monoid (mempty)
 import qualified Data.ByteString as BS
 import qualified Data.ByteString.Char8 as BSC
-import qualified Data.HashMap.Strict as Map
 import qualified Elm.Internal.Utils as Elm
 import Control.Applicative
 import Control.Monad.Error
@@ -58,8 +57,6 @@ main = do
                 , ("_compile", jsCompile)
                 , ("hotswap", hotswap)
                 ]
-      <|> serveDirectoryWith directoryConfig "public/build"
-      <|> serveDirectoryWith simpleDirectoryConfig "resources"
       <|> error404
 
 error404 :: Snap ()
@@ -77,7 +74,10 @@ logAndServeHtml :: MonadSnap m => (H.Html, Maybe String) -> m ()
 logAndServeHtml (html, Nothing)  = serveHtml html
 logAndServeHtml (html, Just err) =
     do timeStamp <- liftIO $ readProcess "date" ["--rfc-3339=ns"] ""
-       liftIO $ appendFile "error_log.json" $ "{\"" ++ (init timeStamp) ++ "\"," ++ (show (lines err)) ++ "},"
+       liftIO $ appendFile "error_log.json" $ "{\"" ++ (init timeStamp) 
+                                                    ++ "\"," 
+                                                    ++ (show (lines err)) 
+                                                    ++ "},"
        setContentType "text/html" <$> getResponse
        writeLBS (BlazeBS.renderHtml html)
 
@@ -91,7 +91,7 @@ embedJS js participant =
 
 embedHtml :: MonadSnap m => H.Html -> String -> m ()
 embedHtml html participant =
-    do elmSrc <- liftIO $ readFile "EmbedMe.elm"
+    do elmSrc <- liftIO $ readFile "EmbedMeElm.elm"
        setContentType "text/html" <$> getResponse
        writeLBS (BlazeBS.renderHtml (embedMe elmSrc html participant))
 
@@ -147,9 +147,10 @@ embedee elmSrc participant =
             embed $ H.preEscapedToMarkup (subRegex oldID jsSrc newID)
         Left err ->
             H.span ! A.style "font-family: monospace;" $
-            mapM_ (\line -> H.preEscapedToMarkup (Generate.addSpaces line) >> H.br) (lines err)
-      script "/moose.js"
-  where oldID = mkRegex "var user_id = \"1\";"
+            mapM_ addSpaces (lines err)
+      script "/fullScreenEmbedMe.js"
+  where addSpaces line = H.preEscapedToMarkup (Generate.addSpaces line) >> H.br
+        oldID = mkRegex "var user_id = \"1\";"
         newID = ("var user_id = " ++ participant ++ "+'';" :: String)
         jsAttr = H.script ! A.type_ "text/javascript"
         script jsFile = jsAttr ! A.src jsFile $ mempty
@@ -185,27 +186,6 @@ withFile handler = do
       do content <- liftIO $ readFile file
          serveHtml $ handler path content
 
-directoryConfig :: MonadSnap m => DirectoryConfig m
-directoryConfig =
-    fancyDirectoryConfig
-    { indexGenerator = defaultIndexGenerator defaultMimeTypes indexStyle
-    , mimeTypes = Map.insert ".elm" "text/html" defaultMimeTypes
-    }
-
-indexStyle :: BS.ByteString
-indexStyle =
-    "body { margin:0; font-family:sans-serif; background:rgb(245,245,245);\
-    \       font-family: calibri, verdana, helvetica, arial; }\
-    \div.header { padding: 40px 50px; font-size: 24px; }\
-    \div.content { padding: 0 40px }\
-    \div.footer { display:none; }\
-    \table { width:100%; border-collapse:collapse; }\
-    \td { padding: 6px 10px; }\
-    \tr:nth-child(odd) { background:rgb(216,221,225); }\
-    \td { font-family:monospace }\
-    \th { background:rgb(90,99,120); color:white; text-align:left;\
-    \     padding:10px; font-weight:normal; }"
-
 setupLogging :: IO ()
 setupLogging =
     do createDirectoryIfMissing True "log"
@@ -221,16 +201,19 @@ precompile :: IO ()
 precompile =
   do setCurrentDirectory "public"
      files <- getFiles True ".elm" "."
-     forM_ files $ \file -> rawSystem "elm" ["--make","--runtime=/elm-runtime.js",file]
+     forM_ files $ \file -> rawSystem "elm" 
+                                        ["--make","--runtime=/elm-runtime.js",file]
      htmls <- getFiles False ".html" "build"
      mapM_ adjustHtmlFile htmls
      setCurrentDirectory ".."
   where
     getFiles :: Bool -> String -> FilePath -> IO [FilePath]
     getFiles skip ext directory = 
-        if skip && "build" `elem` map FP.dropTrailingPathSeparator (FP.splitPath directory)
+        if skip && "build" `elem` map FP.dropTrailingPathSeparator 
+                                        (FP.splitPath directory)
           then return [] else
-          (do contents <- map (directory </>) `fmap` getDirectoryContents directory
+          (do contents <- map (directory </>) `fmap` 
+                                                getDirectoryContents directory
               let files = filter ((ext==) . FP.takeExtension) contents
                   directories  = filter (not . FP.hasExtension) contents
               filess <- mapM (getFiles skip ext) directories
@@ -256,7 +239,8 @@ style =
     \  a:visited {text-decoration: none}\n\
     \  a:active {text-decoration: none}\n\
     \  a:hover {text-decoration: underline; color: rgb(234,21,122);}\n\
-    \  body { font-family: \"Lucida Grande\",\"Trebuchet MS\",\"Bitstream Vera Sans\",Verdana,Helvetica,sans-serif !important; }\n\
+    \  body { font-family: \"Lucida Grande\",\"Trebuchet MS\",\
+    \  \"Bitstream Vera Sans\",Verdana,Helvetica,sans-serif !important; }\n\
     \  p, li { font-size: 14px !important;\n\
     \          line-height: 1.5em !important; }\n\
     \</style>"

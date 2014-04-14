@@ -1,4 +1,4 @@
-module Moose where
+module EmbedMe where
 
 import Mouse
 import Window

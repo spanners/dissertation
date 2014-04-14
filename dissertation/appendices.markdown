@@ -32,6 +32,14 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
+### EmbedMeElm.elm
+
+~~~~ {include="code/EmbedMeElm.Elm"}
+this will be replaced by contents of README
+~~~~
+
+
+
 # Appendix E
 
 
