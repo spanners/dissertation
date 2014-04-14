@@ -4,3 +4,4 @@ appendices.html
 appendices.tex
 *.hi
 *.o
+include

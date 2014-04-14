@@ -22,6 +22,21 @@ this will be replaced by contents of README
 
 ## Code
 
+* All code available here: [https://github.com/spanners/elm-lang.org](). 
+
+    * This is a modifed version of Evan Czaplicki's elm-lang.org code, available
+      here: [https://github.com/elm-lang/elm-lang.org]()
+
+* Elm task here: [http://mouth.crabdance.com:8000/edit/task/MovingBox.elm]()
+* Javascript task here: [http://mouth.crabdance.com:8000/\_edit/task/MovingBox.js]()
+
+
+### LICENSE
+
+~~~~ {include="code/LICENSE"}
+this will be replaced by contents of README
+~~~~
+
 ### Server.hs
 
 ~~~~ {.haskell .numberLines include="code/server/Server.hs"}
