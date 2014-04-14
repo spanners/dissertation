@@ -2,6 +2,7 @@ dissertation
 ============
 
 [View HTML sample here](http://spanners.github.io/dissertation)
+[View PDF sample here](http://spanners.github.io/dissertation/diss.pdf)
 
 ## Requirements
 
