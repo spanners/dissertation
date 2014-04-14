@@ -42,8 +42,8 @@ Item 2   Value 2
 
 ## Another section
 
-Another section, just for good measure. You can reference a table, figure or equation using
-[table][]
+Another section, just for good measure. You can reference a table, figure or
+equation using [table][]
 
 # Literature Survey
 
@@ -351,22 +351,24 @@ of extension to stream this over the Internet to my storage facilities
 
 # Requirements
 
-If you are doing a primarily software development project, this is the chapter in which you
-review the requirements decisions and critique the requirements process.
+If you are doing a primarily software development project, this is the chapter
+in which you review the requirements decisions and critique the requirements
+process.
 
 # Design
 
-This is the chapter in which you review your design decisions at various levels and critique
-the design process.
+This is the chapter in which you review your design decisions at various levels
+and critique the design process.
 
 
 ## Pilot study
 
-In reflection, the task I chose was too difficult to capture the cognitive load incurred by
-the language itself for a given task, due to the difficulty of the task itself creating noise.
-I could improve this by simplifying the task, in a way that is ‘language agnostic', i.e. that
-is not idiomatic of Elm or JavaScript (the two languages that I am comparing).
-Something like the following will never be that easy in JavaScript:
+In reflection, the task I chose was too difficult to capture the cognitive load
+incurred by the language itself for a given task, due to the difficulty of the
+task itself creating noise.  I could improve this by simplifying the task, in a
+way that is ‘language agnostic', i.e. that is not idiomatic of Elm or JavaScript
+(the two languages that I am comparing).  Something like the following will
+never be that easy in JavaScript:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.haskell .numberLines}
 main = lift asText Mouse.position
@@ -375,72 +377,117 @@ main = lift asText Mouse.position
 Group meeting with Leon at East Building, 11:15 Friday 4th October 2013
 
 
-**N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE ENGINEERING STUFF (Year 1)**
+**N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE
+ENGINEERING STUFF (Year 1)**
 
 ### Reading material
 
 In email repsonse to request for FYP meeting, **Leon writes:**
 
-	Please do a bit of reading around beforehand. Go to the ACM Digital Library and search on 'user interface programming'.
+*Please do a bit of reading around beforehand. Go to the ACM Digital Library and
+search on 'user interface programming'.*
 
-1. [ACM Conference on Human Factors in Computing Systems](http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE151)
-2. [ACM CSCW: Conference on Computer Supported Cooperative Work](http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE169)
-3. [ACM UIST: Symposium on User Interface Software and Technology](http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE172)
+1. [ACM Conference on Human Factors in Computing
+   Systems](http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE151)
+2. [ACM CSCW: Conference on Computer Supported Cooperative
+   Work](http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE169)
+3. [ACM UIST: Symposium on User Interface Software and
+   Technology](http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE172)
 
 
 In moodle project page, **Leon writes:**
 
 
-	Your project must be related to contemporary developments in Human-Computer Interaction, and preferably to the part of the HCI world that focuses on interactive systems for collaboration.
+*Your project must be related to contemporary developments in Human-Computer
+Interaction, and preferably to the part of the HCI world that focuses on
+interactive systems for collaboration*
 
 1. ???
 2. ???
 
 Also In moodle project page, **Leon also writes:**
 
-	It normally starts with some user-centred research (observations, interviews, pilot experiment) to ground the problem, carried out concurrently with literature research. 
-	The research problem is normally boiled down to something that can be addressed through the production of alternative versions of an interactive system. 
-	
-	This is closely followed by initial design work and the production of a rough but working prototype leading up to Christmas. 
-	
-	After the January exams, my students typically re-scope their research problem, based in the outcome of their initial work, and solidify their implementation ready for a full evaluation in March and April.
+*It normally starts with some user-centred research (observations, interviews,
+pilot experiment) to ground the problem, carried out concurrently with
+literature research. 
 
-Thus, my answers to the questions Leon posed should follow this structure in terms of what I want to get out of it. I can use the above structure to identify **concerns** of potential challenges in each step/combination of steps/step-transitions (e.g. step dependencies, resource procurement)
+The research problem is normally boiled down to something that can be addressed
+through the production of alternative versions of an interactive system. 
+
+This is closely followed by initial design work and the production of a rough
+but working prototype leading up to Christmas. 
+
+After the January exams, my students typically re-scope their research problem,
+based in the outcome of their initial work, and solidify their implementation
+ready for a full evaluation in March and April.*
+
+Thus, my answers to the questions Leon posed should follow this structure in
+terms of what I want to get out of it. I can use the above structure to identify
+**concerns** of potential challenges in each step/combination of
+steps/step-transitions (e.g. step dependencies, resource procurement)
 
 
 Also in moodle product page, **Leon also writes:**
 
-	Students should prepare for their projects by refreshing their memories about Interaction from CM20216 activities. You should read about HCI in general, and support for collaboration in particular. Look at any or all of the following book chapters:
+*Students should prepare for their projects by refreshing their memories about
+Interaction from CM20216 activities. You should read about HCI in general, and
+support for collaboration in particular. Look at any or all of the following
+book chapters:*
 
-* Sharp, Rogers and Preece (2007) Interaction Design. hapter 4: Designing to Support Communication and Collaboration.
-* Dix, Finlay, Abowd and Beale (2004) Human-Computer Interaction. hapter 14: Communication and Collaboration Models.
-* Shneiderman and Plaisant (2005) Designing the User Interface. hapter 10: Collaboration.
+* Sharp, Rogers and Preece (2007) Interaction Design. hapter 4: Designing to
+  Support Communication and Collaboration.
+* Dix, Finlay, Abowd and Beale (2004) Human-Computer Interaction. hapter 14:
+  Communication and Collaboration Models.
+* Shneiderman and Plaisant (2005) Designing the User Interface. hapter 10:
+  Collaboration.
 
 ### Leon asked us to answer these questions and bring a notebook:
 
 #### Q1. What I hope to get out of my FYP as an experience?
 
-I hope to gain a deep and meaningful understanding of the programmer as a user, as an individual and the context of that individual -- e.g. in a software team inside a department, inside a management structure... inside a company.
+I hope to gain a deep and meaningful understanding of the programmer as a user,
+as an individual and the context of that individual -- e.g. in a software team
+inside a department, inside a management structure... inside a company.
 
-I hope to use this understanding to determine processes/work-flows that programmers experience in the endeavour of User Interface Design, both from the individual perspective and as a team.
+I hope to use this understanding to determine processes/work-flows that
+programmers experience in the endeavour of User Interface Design, both from the
+individual perspective and as a team.
 
-Within these work flows, I wish to identify, in detail, metrics to gauge productivity, in order to measure this in experiments, perhaps doing A/B testing with Elm and some other, perhaps procedural language. This is an example of an objective measure. 
+Within these work flows, I wish to identify, in detail, metrics to gauge
+productivity, in order to measure this in experiments, perhaps doing A/B testing
+with Elm and some other, perhaps procedural language. This is an example of an
+objective measure. 
 
-I would also like to gather self-reported, more "fuzzy" feedback on user's perception of their productivity -- pain points, advantages, etc.  they experience in using Language X to product a UI compared to Language Y (Declarative languages like Elm, etc)
+I would also like to gather self-reported, more "fuzzy" feedback on user's
+perception of their productivity -- pain points, advantages, etc.  they
+experience in using Language X to product a UI compared to Language Y
+(Declarative languages like Elm, etc)
 
-I wish to verify, empirically, the comparisons and claims made on the [What is FRP?](http://elm-lang.org/learn/What-is-FRP.elm) page of the elm-lang.org website, and those claimed it's research paper (detailing the implementation of Elm, **benefits**, etc.)
+I wish to verify, empirically, the comparisons and claims made on the [What is
+FRP?](http://elm-lang.org/learn/What-is-FRP.elm) page of the elm-lang.org
+website, and those claimed it's research paper (detailing the implementation of
+Elm, **benefits**, etc.)
 
 In email again, **Leon writes:**
 
-	The Elm site makes **comparative statements.** That is encouraging because it sets up opportunities for you to test some of the claims they make, and to ask new questions about Elm that its proponents may not have considered.
+*The Elm site makes **comparative statements.** That is encouraging because it
+sets up opportunities for you to test some of the claims they make, and to ask
+new questions about Elm that its proponents may not have considered.*
 
 These are:
 
-1. "most current frameworks for graphical user interfaces are not declarative. They mire programmers in the many small, nonessential details of handling user input and manually modifying the display."
-2. "with FRP, many of the irrelevant details are left to the compiler, freeing the programmer to think about things that matter."
-3. "Coding [these examples](http://elm-lang.org/Examples.elm) in a traditional GUI framework such as HTML/CSS/JavaScript . would require significantly more work and headache."
-4. "Not only is that painful to code, but it also requires broad and deep knowledge of inconsequential things."
-5. "FRP makes tasks considerably easier by taking care of the messy .how. of events, display, and updates."
+1. "most current frameworks for graphical user interfaces are not declarative.
+   They mire programmers in the many small, nonessential details of handling
+   user input and manually modifying the display."
+2. "with FRP, many of the irrelevant details are left to the compiler, freeing
+   the programmer to think about things that matter."
+3. "Coding [these examples](http://elm-lang.org/Examples.elm) in a traditional
+   GUI framework such as HTML/CSS/JavaScript . would require significantly more
+   work and headache."
+4. "Not only is that painful to code, but it also requires broad and deep
+   knowledge of inconsequential things."
+5. "FRP makes tasks considerably easier by taking care of the messy .how. of
+   events, display, and updates."
 
 #### Q2. Where my Project Idea came from (what inspired me)?
 
@@ -451,11 +498,17 @@ These are:
 
 #### Q3. What are my concerns?
 
-1. Difficulty procuring programmers (users) -- specifically those that meet my criteria of not having used a declarative programming language.
+1. Difficulty procuring programmers (users) -- specifically those that meet my
+   criteria of not having used a declarative programming language.
 2. Difficulty procuring programmers working in a team
-3. The complexity/scope of the project -- is it enough for a FYP; is it too much?
-4. Looking at the production of User Interfaces using a programming language, there are many variables -- how will I devise an experiment to minimise this and isolate a variable so that I can make some causal/correlational conclusions?
-5. Concern regarding the dependency of a subsequent part of the project on a previous step -- this is inherent of all projects, though.
+3. The complexity/scope of the project -- is it enough for a FYP; is it too
+   much?
+4. Looking at the production of User Interfaces using a programming language,
+   there are many variables -- how will I devise an experiment to minimise this
+   and isolate a variable so that I can make some causal/correlational
+   conclusions?
+5. Concern regarding the dependency of a subsequent part of the project on a
+   previous step -- this is inherent of all projects, though.
 
 ## Experimental design
 
@@ -497,8 +550,9 @@ the IDE from the experiment above. Perhaps for a Pilot study.
 5. Predict what will be the likely results of our experiments on the
    operationalised measurements. This is "feed forward validation".
 6. Do the experiement.
-7. Analyse the data. See if the data has patterns that correlate with the assertion I wish to
-   make. I will be representing the raw data in some outcome measure -- that is
+7. Analyse the data. See if the data has patterns that correlate with the
+   assertion I wish to make. I will be representing the raw data in some outcome
+   measure -- that is
    turning the raw data into a set of (or a single) value for comparison. 
 8. Does the data answer the study question I set out to ask? This is now "feed
    backwards validation".
@@ -687,11 +741,13 @@ regions of code OR they pertain to achieving the set task.
 
 1. Refine Mouse logging 
 
-    1. *DONE* Make it so that I can run arbitrary Elm code in the editor via a fileOpen
-       operation 
-    2. *DONE* Make an Elm file that logs mouse movements ready to be loaded into the Editor
+    1. *DONE* Make it so that I can run arbitrary Elm code in the editor via a
+       fileOpen operation 
+    2. *DONE* Make an Elm file that logs mouse movements ready to be loaded into
+       the Editor
     3. *DONE* Load it into the editor and test it uploads to Firebase
-    4. *DONE* Modify [Generator.hs](https://github.com/spanners/elm-lang.org/blob/master/server/Generator.hs)
+    4. *DONE* Modify [Generator
+       .hs](https://github.com/spanners/elm-lang.org/blob/master/server/Generator.hs)
     
             case (Elm.compile elmSrc) of 
                 Left jsSrc -> ...
@@ -716,7 +772,8 @@ regions of code OR they pertain to achieving the set task.
        See https://github.com/spanners/laska/blob/master/Signals.elm
 
 2. Demo to Hilary Johnson
-    1. Install on VPS (See [build script](https://github.com/spanners/dissertation/blob/master/install_elm.sh)
+    1. Install on VPS (See [build
+       script](https://github.com/spanners/dissertation/blob/master/install_elm.sh)
     2. Run these:      
 
             git clone https://github.com/spanners/elm-lang.org
