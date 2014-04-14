@@ -66,12 +66,7 @@ var ADAPT_CONFIG = {
 <div class="grid_3 toc">
 <h3>Table of Contents</h3>
 <ul>
-<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a><ul>
-<li><a href="#example-section"><span class="toc-section-number">1.1</span> Example Section</a><ul>
-<li><a href="#example-subsection"><span class="toc-section-number">1.1.1</span> Example Subsection</a></li>
-</ul></li>
-<li><a href="#another-section"><span class="toc-section-number">1.2</span> Another section</a></li>
-</ul></li>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
 <li><a href="#literature-survey"><span class="toc-section-number">2</span> Literature Survey</a><ul>
 <li><a href="#introduction-to-the-problem-area"><span class="toc-section-number">2.1</span> Introduction to the problem area</a></li>
 <li><a href="#what-does-it-mean-to-be-easy-to-use"><span class="toc-section-number">2.2</span> What does it mean to be ‘easy to use?’</a></li>
@@ -100,35 +95,7 @@ var ADAPT_CONFIG = {
 <h1 class="title">The potential of declarative programming languages to support user interface programming: the case of Elm</h1>
 </header>
 <h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
-<p>This is the introductory chapter.</p>
-<h2 id="example-section"><span class="header-section-number">1.1</span> Example Section</h2>
-<p>Like all chapters, it will have a number of sections</p>
-<h3 id="example-subsection"><span class="header-section-number">1.1.1</span> Example Subsection</h3>
-<p>…and sub-sections</p>
-<h4 id="example-sub-subsection"><span class="header-section-number">1.1.1.1</span> Example sub-subsection</h4>
-<p>…and sub-subsections.</p>
-<h4 id="table"><span class="header-section-number">1.1.1.2</span> Table</h4>
-<table>
-<caption>An example table</caption>
-<col style="width: 12%" /><col style="width: 12%" /><thead>
-<tr class="header">
-<th style="text-align: left;">Items</th>
-<th style="text-align: left;">Values</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Item 1</td>
-<td style="text-align: left;">Value 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Item 2</td>
-<td style="text-align: left;">Value 2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="another-section"><span class="header-section-number">1.2</span> Another section</h2>
-<p>Another section, just for good measure. You can reference a table, figure or equation using <a href="#table">table</a></p>
+<pre><code>Introduce the topic, Summarise the report</code></pre>
 <h1 id="literature-survey"><span class="header-section-number">2</span> Literature Survey</h1>
 <h2 id="introduction-to-the-problem-area"><span class="header-section-number">2.1</span> Introduction to the problem area</h2>
 <!--
@@ -812,6 +779,33 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</code></pre>
+<h3 id="install_elm.sh">install_elm.sh</h3>
+<pre include="code/install_elm.sh"><code>#!/bin/bash
+
+sudo apt-get install libgl1-mesa-dev libglc-dev freeglut3-dev libedit-dev libglw1-mesa libglw1-mesa-dev
+sudo apt-get install ghc
+wget http://www.haskell.org/ghc/dist/7.6.3/ghc-7.6.3-src.tar.bz2
+tar xjf ghc-7.6.3-src.tar.bz2
+cd ghc-7.6.3/mk
+cp build.mk.sample build.mk
+sed -i &#39;s/^#BuildFlavour = quick/BuildFlavour = quick/&#39; build.mk
+cd ..
+./configure
+make -j 8
+sudo make install
+cd
+wget http://lambda.haskell.org/platform/download/2013.2.0.0/haskell-platform-2013.2.0.0.tar.gz
+tar xzvf haskell-platform-2013.2.0.0.tar.gz
+cd haskell-platform-2013.2.0.0
+./configure
+make
+sudo make install
+cabal update
+cabal install cabal-install
+cabal install elm
+cabal install elm-server
+exit 0
 </code></pre>
 <h3 id="server.hs">Server.hs</h3>
 <table class="sourceCode haskell numberLines" include="code/server/Server.hs"><tr class="sourceCode"><td class="lineNumbers"><pre>1
