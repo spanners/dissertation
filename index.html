@@ -4,7 +4,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <meta name="author" content="Simon Buist" />
   <title>The potential of declarative programming languages to support user interface programming: the case of ELM</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
@@ -31,7 +30,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <body>
 <div id="header">
 <h1 class="title">The potential of declarative programming languages to support user interface programming: the case of ELM</h1>
-<h2 class="author">Simon Buist</h2>
+<h2 class="author"></h2>
 </div>
 <div id="TOC">
 <ul>
@@ -90,107 +89,143 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Another section, just for good measure. You can reference a table, figure or equation using <a href="#table">table</a></p>
 <h1 id="literature-survey"><span class="header-section-number">2</span> Literature Survey</h1>
 <h2 id="introduction-to-the-problem-area"><span class="header-section-number">2.1</span> Introduction to the problem area</h2>
-<p>Spending half an hour making a mind-map, starting with the word “Elm”, I get the following terms:</p>
-<ul>
-<li><p>Signals</p>
-<ul>
-<li><p>Impure</p></li>
-<li><p>Time</p></li>
-<li><p>Input/Output</p></li>
-<li><p>History – Past &amp; Future</p></li>
-<li><p>Data model</p></li>
-</ul></li>
-<li><p>“Natural” Separation of Data model/Logic/Layout</p></li>
-<li><p>Less cognitive load?</p></li>
-<li><p>“Easy”</p>
-<ul>
-<li><p>Professed to be “easy” by the creator!</p></li>
-<li><p>What does it mean to be “easy”?</p></li>
-<li><p>Operationalisation</p></li>
-<li><p>Self-reporting</p></li>
-</ul></li>
-<li><p>Programming Language</p>
-<ul>
-<li><p>Reactive</p>
-<ul>
-<li><p>“Instant feedback”</p></li>
-<li><p>“I/O-sensitive”</p></li>
-<li><p>Thrashing?</p></li>
-</ul></li>
-<li><p>Functional</p>
-<ul>
-<li><p>Pure</p></li>
-<li><p>Testing</p>
-<ul>
-<li><p>properties</p></li>
-<li><p>QuickCheck</p></li>
-<li><p>Delta Debugging</p></li>
-</ul></li>
-</ul></li>
-<li><p>Haskell derivative</p>
-<ul>
-<li><p>Embedded Domain-specific Language</p></li>
-<li><p>See also: Idris</p></li>
-</ul></li>
-<li><p>Multiple back-ends</p>
-<ul>
-<li><p>Javascript</p></li>
-<li><p>Java</p></li>
-<li><p>C</p></li>
-</ul></li>
-</ul></li>
-<li><p>Programming</p>
-<ul>
-<li><p>code-compile-run loop</p>
-<ul>
-<li><p>“Programming blind”</p></li>
-<li><p>“Slow feedback”</p></li>
-</ul></li>
-<li><p>Text editor</p></li>
-<li><p>IDE</p></li>
-<li><p>Paradigms</p>
-<ul>
-<li><p>Declarative</p></li>
-<li><p>I’ll tell you WHAT I want you to do, you figure out HOW to do it</p></li>
-</ul></li>
-<li><p>Encoding ideas</p>
-<ul>
-<li><p>Mapping of natural language concepts into formal language</p></li>
-<li><p>Loss of information?</p></li>
-<li><p>Augmented reality?</p></li>
-</ul></li>
-<li><p>Abstraction</p>
-<ul>
-<li><p>What level?</p></li>
-<li><p>What generation? 3GL? 4GL?</p></li>
-<li><p>Metaprogramming e.g. AspectJ</p></li>
-<li><p>Black/White box</p></li>
-</ul></li>
-<li><p>Cognitive offloading</p></li>
-<li><p>What is it?</p>
-<ul>
-<li><p>Art?</p></li>
-<li><p>Engineering?</p></li>
-<li><p>Science?</p></li>
-<li><p>Language?</p></li>
-<li><p>Mathematics?</p></li>
-<li><p>Ephemeral</p></li>
-<li><p>Intangible</p></li>
-<li><p>Limitless</p></li>
-<li><p>Limited</p></li>
-</ul></li>
-</ul></li>
-<li><p>IDE</p>
-<ul>
-<li>Split View: Code | Runtime</li>
-</ul></li>
-<li><p>Feedback</p>
-<ul>
-<li><p>“Instant-update”</p></li>
-<li><p>On-the-fly</p></li>
-</ul></li>
-</ul>
-<p>The problem area of user-interface programming, and more generally, the activity of programming in a context such as a software engineering environment, encompasses certain realms of interest. Through my survey of literature, my research has touched upon the above-mentioned terms, and I have discovered some thought-provoking problems that exist in the field of programming. The concept of ‘Programming’ embodies other concepts – art-forms, engineering processes, science, language, and mathematics, among others. To me, programming is a creative endeavour unlike any other – in which the programmer weilds materials of no substance – the code – by manipulating symbols on a screen, which represent states in the machine being used. There are so many programming languages, and all languages (all that are Turing-complete) reduce to the same language – that of a Turing Machine. So, <em>why do we have so many programming languages?</em>.</p>
+<!--
+Spending half an hour making a mind-map, starting with the word "Elm", I
+get the following terms:
+
+-   Signals
+
+    -   Impure
+
+    -   Time
+
+    -   Input/Output
+
+    -   History – Past & Future
+
+    -   Data model
+
+-   "Natural" Separation of Data model/Logic/Layout
+
+-   Less cognitive load?
+
+-   "Easy"
+
+    -   Professed to be "easy" by the creator!
+
+    -   What does it mean to be "easy"?
+
+    -   Operationalisation
+
+    -   Self-reporting
+
+-   Programming Language
+
+    -   Reactive
+
+        -   "Instant feedback"
+
+        -   "I/O-sensitive"
+
+        -   Thrashing?
+
+    -   Functional
+
+        -   Pure
+
+        -   Testing
+
+            -   properties
+
+            -   QuickCheck
+
+            -   Delta Debugging
+
+    -   Haskell derivative
+
+        -   Embedded Domain-specific Language
+
+        -   See also: Idris
+
+    -   Multiple back-ends
+
+        -   Javascript
+
+        -   Java
+
+        -   C
+
+-   Programming
+
+    -   code-compile-run loop
+
+        -   "Programming blind"
+
+        -   "Slow feedback"
+
+    -   Text editor
+
+    -   IDE
+
+    -   Paradigms
+
+        -   Declarative
+
+        -   I'll tell you WHAT I want you to do, you figure out HOW to
+            do it
+
+    -   Encoding ideas
+
+        -   Mapping of natural language concepts into formal language
+
+        -   Loss of information?
+
+        -   Augmented reality?
+
+    -   Abstraction
+
+        -   What level?
+
+        -   What generation? 3GL? 4GL?
+
+        -   Metaprogramming e.g. AspectJ
+
+        -   Black/White box
+
+    -   Cognitive offloading
+
+    -   What is it?
+
+        -   Art?
+
+        -   Engineering?
+
+        -   Science?
+
+        -   Language?
+
+        -   Mathematics?
+
+        -   Ephemeral
+
+        -   Intangible
+
+        -   Limitless
+
+        -   Limited
+
+-   IDE
+
+    -   Split View: Code | Runtime
+
+-   Feedback
+
+    -   "Instant-update"
+
+    -   On-the-fly
+-->
+
+<p>The problem area of user-interface programming, and more generally, the activity of programming in a context such as a software engineering environment, encompasses certain realms of interest. Through my survey of literature, my research has touched upon the above-mentioned terms, and I have discovered some thought-provoking problems that exist in the field of programming. The concept of ‘Programming’ embodies other concepts – art-forms, engineering processes, science, language, and mathematics, among others. To me, programming is a creative endeavour unlike any other – in which the programmer wields materials of no substance – the code – by manipulating symbols on a screen, which represent states in the machine being used. There are so many programming languages, and all languages (all that are Turing-complete) reduce to the same language – that of a Turing Machine. So, <em>why do we have so many programming languages?</em>.</p>
 <p><em>Beware of the Turing tar-pit in which everything is possible but nothing of interest is easy.</em> <span class="citation">(Perlis, 1982)</span></p>
 <p>Different languages lend themselves to different ways of thinking about problems. They may place emphasis on one feature, for example list manipulation and hide others such as types. The language or programming environment may make explicit the effect of changes as they are encoded, as opposed to queuing up a block of changes and the programmer having to initiate an update manually.</p>
 <p>I would like to draw your attention in particular to the terms <strong>Abstraction</strong>, <strong>Cognitive offloading</strong>, <strong>Feedback</strong>, <strong>Loss of information?</strong>/<strong>Augmented reality?</strong>, <strong>Thrashing</strong>, and <strong>“Programming blind”</strong>. These, at current, are my topics of interest, and my literature review has up to this point been inextricably and heavily influenced by this.</p>
@@ -251,17 +286,1844 @@ qsort (x<span class="fu">:</span>xs) <span class="fu">=</span> qsort (filter (<s
 <h1 id="appendix-a">Appendix A</h1>
 <h2 id="design-diagrams">Design Diagrams</h2>
 <h1 id="appendix-b">Appendix B</h1>
-<h2 id="user-documentation">User Documentation</h2>
-<h1 id="appendix-c">Appendix C</h1>
 <h2 id="raw-results-output">Raw results output</h2>
-<h1 id="appendix-d">Appendix D</h1>
+<h3 id="firebase-mouseclick-data.json">firebase-mouseclick-data.json</h3>
+<table class="sourceCode haskell numberLines" include="code/firebase-mouseclick-data.json"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+</pre></td><td class="sourceCode"><pre><code class="sourceCode haskell">{
+  <span class="st">&quot;js&quot;</span> <span class="fu">:</span> {
+    <span class="st">&quot;12&quot;</span> <span class="fu">:</span> {
+      <span class="st">&quot;-JKVwXgnfg4POT9MArjy&quot;</span> <span class="fu">:</span> {
+        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397490853983</span>,
+        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">0</span>,
+        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">0</span>
+      },
+      <span class="st">&quot;-JKVwXl8I_bLZNqxP36c&quot;</span> <span class="fu">:</span> {
+        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397490854551</span>,
+        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">444</span>,
+        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">417</span>
+      },
+      <span class="st">&quot;-JKVwXj0LD-uRKDsT2Om&quot;</span> <span class="fu">:</span> {
+        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397490854503</span>,
+        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">444</span>,
+        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">417</span>
+      }
+    }
+  },
+  <span class="st">&quot;elm&quot;</span> <span class="fu">:</span> {
+    <span class="st">&quot;33&quot;</span> <span class="fu">:</span> {
+      <span class="st">&quot;-JKRgqJIRPH2EG-edZb5&quot;</span> <span class="fu">:</span> {
+        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397419631953</span>,
+        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">249</span><span class="fu">.</span><span class="dv">59999084472656</span>,
+        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">48</span><span class="fu">.</span><span class="dv">79999923706055</span>
+      },
+      <span class="st">&quot;-JKRhRQi31pr9AP1p1Rr&quot;</span> <span class="fu">:</span> {
+        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397419787709</span>,
+        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">294</span><span class="fu">.</span><span class="dv">3999938964844</span>,
+        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">152</span><span class="fu">.</span><span class="dv">8000030517578</span>
+      },
+      <span class="st">&quot;-JKRffOszNGfgwNdnO_X&quot;</span> <span class="fu">:</span> {
+        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397419324585</span>,
+        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">608</span>,
+        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">346</span><span class="fu">.</span><span class="dv">3999938964844</span>
+      }
+    }
+  }
+}</code></pre></td></tr></table>
+<h3 id="error_log.json">error_log.json</h3>
+<table class="sourceCode json numberLines" include="code/error_log.json"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="sourceCode"><pre><code class="sourceCode json">{
+   <span class="dt">&quot;2014-04-11 21:14:32.141743994+01:00&quot;</span>:{
+      <span class="dt">&quot;Parse error at (line 37, column 44):&quot;</span>,
+      <span class="dt">&quot;unexpected &#39;a&#39;&quot;</span>,
+      <span class="dt">&quot;expecting \&quot;{-\&quot;, \&quot; \&quot; or end of input&quot;</span>
+   },
+   <span class="dt">&quot;2014-04-11 21:35:41.694436974+01:00&quot;</span>:{
+      <span class="dt">&quot;Type error on line 27, column 16 to 77:&quot;</span>,
+      <span class="dt">&quot;        (min (max x (-hHeight)) hHeight,&quot;</span>,
+      <span class="dt">&quot;         (min (max y (-hWidth)),hWidth))&quot;</span>,
+      <span class="dt">&quot;&quot;</span>,
+      <span class="dt">&quot;   Expected Type: Float&quot;</span>,
+      <span class="dt">&quot;     Actual Type: (Float -&gt; Float, Float)&quot;</span>
+   },
+   <span class="dt">&quot;2014-04-12 00:19:14.945129550+01:00&quot;</span>:{
+      <span class="dt">&quot;Parse error at (line 1, column 1):&quot;</span>,
+      <span class="dt">&quot;unexpected \&quot;&lt;\&quot;&quot;</span>,
+      <span class="dt">&quot;expecting reserved word &#39;module&#39;, reserved word &#39;import&#39; </span>
+<span class="dt">	      or at least one datatype or variable definition&quot;</span>
+   },
+   <span class="dt">&quot;2014-04-12 00:19:21.553633974+01:00&quot;</span>:{
+      <span class="dt">&quot;Parse error at (line 1, column 1):&quot;</span>,
+      <span class="dt">&quot;unexpected \&quot;/\&quot;&quot;</span>,
+      <span class="dt">&quot;expecting reserved word &#39;module&#39;, reserved word &#39;import&#39; </span>
+<span class="dt">	      or at least one datatype or variable definition&quot;</span>
+   },
+   <span class="dt">&quot;2014-04-12 00:19:27.053901481+01:00&quot;</span>:{
+      <span class="dt">&quot;Parse error at (line 1, column 1):&quot;</span>,
+      <span class="dt">&quot;unexpected \&quot;/\&quot;&quot;</span>,
+      <span class="dt">&quot;expecting reserved word &#39;module&#39;, reserved word &#39;import&#39; </span>
+<span class="dt">	      or at least one datatype or variable definition&quot;</span>
+   },
+}</code></pre></td></tr></table>
+<h1 id="appendix-c">Appendix C</h1>
 <h2 id="code">Code</h2>
-<h1 id="appendix-e">Appendix E</h1>
+<h3 id="server.hs">Server.hs</h3>
+<table class="sourceCode haskell numberLines" include="code/server/Server.hs"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+</pre></td><td class="sourceCode"><pre><code class="sourceCode haskell"><span class="ot">{-# OPTIONS_GHC -W #-}</span>
+<span class="ot">{-# LANGUAGE OverloadedStrings, DeriveDataTypeable #-}</span>
+<span class="kw">module</span> <span class="dt">Main</span> <span class="kw">where</span>
+
+<span class="kw">import </span><span class="dt">Data.Monoid</span> (mempty)
+<span class="kw">import qualified</span> <span class="dt">Data.ByteString</span> <span class="kw">as</span> <span class="dt">BS</span>
+<span class="kw">import qualified</span> <span class="dt">Data.ByteString.Char8</span> <span class="kw">as</span> <span class="dt">BSC</span>
+<span class="kw">import qualified</span> <span class="dt">Elm.Internal.Utils</span> <span class="kw">as</span> <span class="dt">Elm</span>
+<span class="kw">import </span><span class="dt">Control.Applicative</span>
+<span class="kw">import </span><span class="dt">Control.Monad.Error</span>
+
+<span class="kw">import </span><span class="dt">Text.Blaze.Html5</span> ((!))
+<span class="kw">import qualified</span> <span class="dt">Text.Blaze.Html5</span> <span class="kw">as</span> <span class="dt">H</span>
+<span class="kw">import qualified</span> <span class="dt">Text.Blaze.Html5.Attributes</span> <span class="kw">as</span> <span class="dt">A</span>
+<span class="kw">import qualified</span> <span class="dt">Text.Blaze.Html.Renderer.Utf8</span> <span class="kw">as</span> <span class="dt">BlazeBS</span>
+<span class="kw">import </span><span class="dt">Text.Regex</span>
+
+<span class="kw">import </span><span class="dt">Snap.Core</span>
+<span class="kw">import </span><span class="dt">Snap.Http.Server</span>
+<span class="kw">import </span><span class="dt">Snap.Util.FileServe</span>
+<span class="kw">import </span><span class="dt">System.Console.CmdArgs</span>
+<span class="kw">import </span><span class="dt">System.FilePath</span> <span class="kw">as</span> <span class="dt">FP</span>
+<span class="kw">import </span><span class="dt">System.Process</span>
+<span class="kw">import </span><span class="dt">System.Directory</span>
+<span class="kw">import </span><span class="dt">GHC.Conc</span>
+
+<span class="kw">import qualified</span> <span class="dt">Elm.Internal.Paths</span> <span class="kw">as</span> <span class="dt">Elm</span>
+<span class="kw">import qualified</span> <span class="dt">Generate</span>
+<span class="kw">import qualified</span> <span class="dt">Editor</span>
+
+<span class="kw">data</span> <span class="dt">Flags</span> <span class="fu">=</span> <span class="dt">Flags</span>
+  {<span class="ot"> port ::</span> <span class="dt">Int</span>
+  } <span class="kw">deriving</span> (<span class="dt">Data</span>,<span class="dt">Typeable</span>,<span class="dt">Show</span>,<span class="dt">Eq</span>)
+
+<span class="ot">flags ::</span> <span class="dt">Flags</span>
+flags <span class="fu">=</span> <span class="dt">Flags</span>
+  { port <span class="fu">=</span> <span class="dv">8000</span> <span class="fu">&amp;=</span> help <span class="st">&quot;set the port of the server&quot;</span>
+  }
+
+<span class="co">-- | Set up the server.</span>
+<span class="ot">main ::</span> <span class="dt">IO</span> ()
+main <span class="fu">=</span> <span class="kw">do</span>
+  setNumCapabilities <span class="fu">=&lt;&lt;</span> getNumProcessors
+  putStrLn <span class="st">&quot;Initializing Server&quot;</span>
+  getRuntimeAndDocs
+  setupLogging
+  precompile
+  cargs <span class="ot">&lt;-</span> cmdArgs flags
+  httpServe (setPort (port cargs) defaultConfig) <span class="fu">$</span>
+      ifTop (serveElm <span class="st">&quot;public/Empty.elm&quot;</span>)
+      <span class="fu">&lt;|&gt;</span> route [ (<span class="st">&quot;try&quot;</span>, serveHtml Editor.empty)
+                , (<span class="st">&quot;edit&quot;</span>, edit)
+                , (<span class="st">&quot;_edit&quot;</span>, jsEdit) 
+                , (<span class="st">&quot;code&quot;</span>, code)
+                , (<span class="st">&quot;_code&quot;</span>, jsCode)
+                , (<span class="st">&quot;compile&quot;</span>, compile)
+                , (<span class="st">&quot;_compile&quot;</span>, jsCompile)
+                , (<span class="st">&quot;hotswap&quot;</span>, hotswap)
+                ]
+      <span class="fu">&lt;|&gt;</span> error404
+
+<span class="ot">error404 ::</span> <span class="dt">Snap</span> ()
+error404 <span class="fu">=</span>
+    <span class="kw">do</span> modifyResponse <span class="fu">$</span> setResponseStatus <span class="dv">404</span> <span class="st">&quot;Not found&quot;</span>
+       serveElm <span class="st">&quot;public/build/Error404.elm&quot;</span>
+
+<span class="ot">serveElm ::</span> <span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">Snap</span> ()
+serveElm <span class="fu">=</span> serveFileAs <span class="st">&quot;text/html; charset=UTF-8&quot;</span>
+
+<span class="ot">logAndServeJS ::</span> <span class="dt">MonadSnap</span> m <span class="ot">=&gt;</span> <span class="dt">H.Html</span> <span class="ot">-&gt;</span> m ()
+logAndServeJS <span class="fu">=</span> serveHtml 
+
+<span class="ot">logAndServeHtml ::</span> <span class="dt">MonadSnap</span> m <span class="ot">=&gt;</span> (<span class="dt">H.Html</span>, <span class="dt">Maybe</span> <span class="dt">String</span>) <span class="ot">-&gt;</span> m ()
+logAndServeHtml (html, <span class="dt">Nothing</span>)  <span class="fu">=</span> serveHtml html
+logAndServeHtml (html, <span class="dt">Just</span> err) <span class="fu">=</span>
+    <span class="kw">do</span> timeStamp <span class="ot">&lt;-</span> liftIO <span class="fu">$</span> readProcess <span class="st">&quot;date&quot;</span> [<span class="st">&quot;--rfc-3339=ns&quot;</span>] <span class="st">&quot;&quot;</span>
+       liftIO <span class="fu">$</span> appendFile <span class="st">&quot;error_log.json&quot;</span> <span class="fu">$</span> <span class="st">&quot;{\&quot;&quot;</span> <span class="fu">++</span> (init timeStamp) 
+                                                    <span class="fu">++</span> <span class="st">&quot;\&quot;,&quot;</span> 
+                                                    <span class="fu">++</span> (show (lines err)) 
+                                                    <span class="fu">++</span> <span class="st">&quot;},&quot;</span>
+       setContentType <span class="st">&quot;text/html&quot;</span> <span class="fu">&lt;$&gt;</span> getResponse
+       writeLBS (BlazeBS.renderHtml html)
+
+
+<span class="ot">embedJS ::</span> <span class="dt">MonadSnap</span> m <span class="ot">=&gt;</span> <span class="dt">H.Html</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> m ()
+embedJS js participant <span class="fu">=</span>
+    <span class="kw">do</span> 
+       elmSrc <span class="ot">&lt;-</span> liftIO <span class="fu">$</span> readFile <span class="st">&quot;EmbedMeJS.elm&quot;</span>
+       setContentType <span class="st">&quot;text/html&quot;</span> <span class="fu">&lt;$&gt;</span> getResponse
+       writeLBS (BlazeBS.renderHtml (embedMe elmSrc js participant))
+
+<span class="ot">embedHtml ::</span> <span class="dt">MonadSnap</span> m <span class="ot">=&gt;</span> <span class="dt">H.Html</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> m ()
+embedHtml html participant <span class="fu">=</span>
+    <span class="kw">do</span> elmSrc <span class="ot">&lt;-</span> liftIO <span class="fu">$</span> readFile <span class="st">&quot;EmbedMeElm.elm&quot;</span>
+       setContentType <span class="st">&quot;text/html&quot;</span> <span class="fu">&lt;$&gt;</span> getResponse
+       writeLBS (BlazeBS.renderHtml (embedMe elmSrc html participant))
+
+<span class="ot">serveHtml ::</span> <span class="dt">MonadSnap</span> m <span class="ot">=&gt;</span> <span class="dt">H.Html</span> <span class="ot">-&gt;</span> m ()
+serveHtml html <span class="fu">=</span>
+    <span class="kw">do</span> setContentType <span class="st">&quot;text/html&quot;</span> <span class="fu">&lt;$&gt;</span> getResponse
+       writeLBS (BlazeBS.renderHtml html)
+
+<span class="ot">hotswap ::</span> <span class="dt">Snap</span> ()
+hotswap <span class="fu">=</span> maybe error404 serve <span class="fu">=&lt;&lt;</span> getParam <span class="st">&quot;input&quot;</span>
+    <span class="kw">where</span>
+      serve code <span class="fu">=</span>
+          <span class="kw">do</span> setContentType <span class="st">&quot;application/javascript&quot;</span> <span class="fu">&lt;$&gt;</span> getResponse
+             writeBS <span class="fu">.</span> BSC.pack <span class="fu">.</span> Generate.js <span class="fu">$</span> BSC.unpack code
+
+<span class="ot">jsCompile ::</span> <span class="dt">Snap</span> ()
+jsCompile <span class="fu">=</span> maybe error404 serve <span class="fu">=&lt;&lt;</span> getParam <span class="st">&quot;input&quot;</span>
+    <span class="kw">where</span>
+      serve <span class="fu">=</span> logAndServeJS <span class="fu">.</span> Generate.logAndJS <span class="st">&quot;Compiled JS&quot;</span> <span class="fu">.</span> BSC.unpack
+
+<span class="ot">compile ::</span> <span class="dt">Snap</span> ()
+compile <span class="fu">=</span> maybe error404 serve <span class="fu">=&lt;&lt;</span> getParam <span class="st">&quot;input&quot;</span>
+    <span class="kw">where</span>
+      serve <span class="fu">=</span> logAndServeHtml <span class="fu">.</span> Generate.logAndHtml <span class="st">&quot;Compiled Elm&quot;</span> <span class="fu">.</span> BSC.unpack
+
+<span class="ot">edit ::</span> <span class="dt">Snap</span> ()
+edit <span class="fu">=</span> <span class="kw">do</span>
+  participant <span class="ot">&lt;-</span> BSC.unpack <span class="fu">.</span> maybe <span class="st">&quot;&quot;</span> id <span class="fu">&lt;$&gt;</span> getParam <span class="st">&quot;p&quot;</span>
+  cols <span class="ot">&lt;-</span> BSC.unpack <span class="fu">.</span> maybe <span class="st">&quot;50%,50%&quot;</span> id <span class="fu">&lt;$&gt;</span> getQueryParam <span class="st">&quot;cols&quot;</span>
+  withFile (Editor.ide cols participant) 
+
+<span class="ot">jsEdit ::</span> <span class="dt">Snap</span> ()
+jsEdit <span class="fu">=</span> <span class="kw">do</span>
+  participant <span class="ot">&lt;-</span> BSC.unpack <span class="fu">.</span> maybe <span class="st">&quot;&quot;</span> id <span class="fu">&lt;$&gt;</span> getParam <span class="st">&quot;p&quot;</span>
+  cols <span class="ot">&lt;-</span> BSC.unpack <span class="fu">.</span> maybe <span class="st">&quot;50%,50%&quot;</span> id <span class="fu">&lt;$&gt;</span> getQueryParam <span class="st">&quot;cols&quot;</span>
+  withFile (Editor.jsIde cols participant)
+
+<span class="ot">code ::</span> <span class="dt">Snap</span> ()
+code <span class="fu">=</span> <span class="kw">do</span>
+  participant <span class="ot">&lt;-</span> BSC.unpack <span class="fu">.</span> maybe <span class="st">&quot;&quot;</span> id <span class="fu">&lt;$&gt;</span> getParam <span class="st">&quot;p&quot;</span>
+  embedWithFile Editor.editor participant
+
+<span class="ot">jsCode ::</span> <span class="dt">Snap</span> ()
+jsCode <span class="fu">=</span> <span class="kw">do</span>
+  participant <span class="ot">&lt;-</span> BSC.unpack <span class="fu">.</span> maybe <span class="st">&quot;&quot;</span> id <span class="fu">&lt;$&gt;</span> getParam <span class="st">&quot;p&quot;</span>
+  jsEmbedWithFile Editor.jsEditor participant
+
+<span class="ot">embedee ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span>
+embedee elmSrc participant <span class="fu">=</span>
+    H.span <span class="fu">$</span> <span class="kw">do</span>
+      <span class="kw">case</span> Elm.compile elmSrc <span class="kw">of</span>
+        <span class="dt">Right</span> jsSrc <span class="ot">-&gt;</span> <span class="kw">do</span>
+            embed <span class="fu">$</span> H.preEscapedToMarkup (subRegex oldID jsSrc newID)
+        <span class="dt">Left</span> err <span class="ot">-&gt;</span>
+            H.span <span class="fu">!</span> A.style <span class="st">&quot;font-family: monospace;&quot;</span> <span class="fu">$</span>
+            mapM_ addSpaces (lines err)
+      script <span class="st">&quot;/fullScreenEmbedMe.js&quot;</span>
+  <span class="kw">where</span> addSpaces line <span class="fu">=</span> H.preEscapedToMarkup (Generate.addSpaces line) <span class="fu">&gt;&gt;</span> H.br
+        oldID <span class="fu">=</span> mkRegex <span class="st">&quot;var user_id = \&quot;1\&quot;;&quot;</span>
+        newID <span class="fu">=</span> (<span class="st">&quot;var user_id = &quot;</span> <span class="fu">++</span> participant <span class="fu">++</span> <span class="st">&quot;+&#39;&#39;;&quot;</span><span class="ot"> ::</span> <span class="dt">String</span>)
+        jsAttr <span class="fu">=</span> H.script <span class="fu">!</span> A.type_ <span class="st">&quot;text/javascript&quot;</span>
+        script jsFile <span class="fu">=</span> jsAttr <span class="fu">!</span> A.src jsFile <span class="fu">$</span> mempty
+        embed jsCode <span class="fu">=</span> jsAttr <span class="fu">$</span> jsCode
+
+<span class="ot">embedMe ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span>
+embedMe elmSrc target participant <span class="fu">=</span> target <span class="fu">&gt;&gt;</span> (embedee elmSrc participant)
+
+<span class="ot">jsEmbedWithFile ::</span> (<span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span>) <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Snap</span> ()
+jsEmbedWithFile handler participant <span class="fu">=</span> <span class="kw">do</span>
+  path <span class="ot">&lt;-</span> BSC.unpack <span class="fu">.</span> rqPathInfo <span class="fu">&lt;$&gt;</span> getRequest
+  <span class="kw">let</span> file <span class="fu">=</span> <span class="st">&quot;public/&quot;</span> <span class="fu">++</span> path         
+  exists <span class="ot">&lt;-</span> liftIO (doesFileExist file)
+  <span class="kw">if</span> not exists <span class="kw">then</span> error404 <span class="kw">else</span>
+      <span class="kw">do</span> content <span class="ot">&lt;-</span> liftIO <span class="fu">$</span> readFile file
+         embedJS (handler path content) participant
+
+<span class="ot">embedWithFile ::</span> (<span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span>) <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Snap</span> ()
+embedWithFile handler participant <span class="fu">=</span> <span class="kw">do</span>
+  path <span class="ot">&lt;-</span> BSC.unpack <span class="fu">.</span> rqPathInfo <span class="fu">&lt;$&gt;</span> getRequest
+  <span class="kw">let</span> file <span class="fu">=</span> <span class="st">&quot;public/&quot;</span> <span class="fu">++</span> path         
+  exists <span class="ot">&lt;-</span> liftIO (doesFileExist file)
+  <span class="kw">if</span> not exists <span class="kw">then</span> error404 <span class="kw">else</span>
+      <span class="kw">do</span> content <span class="ot">&lt;-</span> liftIO <span class="fu">$</span> readFile file
+         embedHtml (handler path content) participant
+    
+<span class="ot">withFile ::</span> (<span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span>) <span class="ot">-&gt;</span> <span class="dt">Snap</span> ()
+withFile handler <span class="fu">=</span> <span class="kw">do</span>
+  path <span class="ot">&lt;-</span> BSC.unpack <span class="fu">.</span> rqPathInfo <span class="fu">&lt;$&gt;</span> getRequest
+  <span class="kw">let</span> file <span class="fu">=</span> <span class="st">&quot;public/&quot;</span> <span class="fu">++</span> path         
+  exists <span class="ot">&lt;-</span> liftIO (doesFileExist file)
+  <span class="kw">if</span> not exists <span class="kw">then</span> error404 <span class="kw">else</span>
+      <span class="kw">do</span> content <span class="ot">&lt;-</span> liftIO <span class="fu">$</span> readFile file
+         serveHtml <span class="fu">$</span> handler path content
+
+<span class="ot">setupLogging ::</span> <span class="dt">IO</span> ()
+setupLogging <span class="fu">=</span>
+    <span class="kw">do</span> createDirectoryIfMissing <span class="dt">True</span> <span class="st">&quot;log&quot;</span>
+       createIfMissing <span class="st">&quot;log/access.log&quot;</span>
+       createIfMissing <span class="st">&quot;log/error.log&quot;</span>
+    <span class="kw">where</span>
+      createIfMissing path <span class="fu">=</span> <span class="kw">do</span>
+        exists <span class="ot">&lt;-</span> doesFileExist path
+        when (not exists) <span class="fu">$</span> BS.writeFile path <span class="st">&quot;&quot;</span>
+
+<span class="co">-- | Compile all of the Elm files in public/, put results in public/build/</span>
+<span class="ot">precompile ::</span> <span class="dt">IO</span> ()
+precompile <span class="fu">=</span>
+  <span class="kw">do</span> setCurrentDirectory <span class="st">&quot;public&quot;</span>
+     files <span class="ot">&lt;-</span> getFiles <span class="dt">True</span> <span class="st">&quot;.elm&quot;</span> <span class="st">&quot;.&quot;</span>
+     forM_ files <span class="fu">$</span> \file <span class="ot">-&gt;</span> rawSystem <span class="st">&quot;elm&quot;</span> 
+                                [<span class="st">&quot;--make&quot;</span>,<span class="st">&quot;--runtime=/elm-runtime.js&quot;</span>,file]
+     htmls <span class="ot">&lt;-</span> getFiles <span class="dt">False</span> <span class="st">&quot;.html&quot;</span> <span class="st">&quot;build&quot;</span>
+     mapM_ adjustHtmlFile htmls
+     setCurrentDirectory <span class="st">&quot;..&quot;</span>
+  <span class="kw">where</span>
+<span class="ot">    getFiles ::</span> <span class="dt">Bool</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> [<span class="dt">FilePath</span>]
+    getFiles skip ext directory <span class="fu">=</span> 
+        <span class="kw">if</span> skip <span class="fu">&amp;&amp;</span> <span class="st">&quot;build&quot;</span> <span class="ot">`elem`</span> map FP.dropTrailingPathSeparator 
+                                        (FP.splitPath directory)
+          <span class="kw">then</span> return [] <span class="kw">else</span>
+          (<span class="kw">do</span> contents <span class="ot">&lt;-</span> map (directory <span class="fu">&lt;/&gt;</span>) <span class="ot">`fmap`</span> 
+                                                getDirectoryContents directory
+              <span class="kw">let</span> files <span class="fu">=</span> filter ((ext<span class="fu">==</span>) <span class="fu">.</span> FP.takeExtension) contents
+                  directories  <span class="fu">=</span> filter (not <span class="fu">.</span> FP.hasExtension) contents
+              filess <span class="ot">&lt;-</span> mapM (getFiles skip ext) directories
+              return (files <span class="fu">++</span> concat filess))
+
+<span class="ot">getRuntimeAndDocs ::</span> <span class="dt">IO</span> ()
+getRuntimeAndDocs <span class="fu">=</span> <span class="kw">do</span>
+  writeFile <span class="st">&quot;resources/elm-runtime.js&quot;</span> <span class="fu">=&lt;&lt;</span> readFile Elm.runtime
+  writeFile <span class="st">&quot;resources/docs.json&quot;</span> <span class="fu">=&lt;&lt;</span> readFile Elm.docs
+
+<span class="ot">adjustHtmlFile ::</span> <span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+adjustHtmlFile file <span class="fu">=</span>
+  <span class="kw">do</span> src <span class="ot">&lt;-</span> BSC.readFile file
+     <span class="kw">let</span> (before, after) <span class="fu">=</span> BSC.breakSubstring <span class="st">&quot;&lt;title&gt;&quot;</span> src
+     BSC.writeFile (FP.replaceExtension file <span class="st">&quot;elm&quot;</span>) <span class="fu">$</span>
+        BSC.concat [before, style, after]
+     removeFile file
+
+<span class="ot">style ::</span> <span class="dt">BSC.ByteString</span>
+style <span class="fu">=</span> 
+    <span class="st">&quot;&lt;style type=\&quot;text/css\&quot;&gt;\n\</span>
+<span class="st">    \  a:link {text-decoration: none; color: rgb(15,102,230);}\n\</span>
+<span class="st">    \  a:visited {text-decoration: none}\n\</span>
+<span class="st">    \  a:active {text-decoration: none}\n\</span>
+<span class="st">    \  a:hover {text-decoration: underline; color: rgb(234,21,122);}\n\</span>
+<span class="st">    \  body { font-family: \&quot;Lucida Grande\&quot;,\&quot;Trebuchet MS\&quot;,\</span>
+<span class="st">    \  \&quot;Bitstream Vera Sans\&quot;,Verdana,Helvetica,sans-serif !important; }\n\</span>
+<span class="st">    \  p, li { font-size: 14px !important;\n\</span>
+<span class="st">    \          line-height: 1.5em !important; }\n\</span>
+<span class="st">    \&lt;/style&gt;&quot;</span></code></pre></td></tr></table>
+<h3 id="editor.hs">Editor.hs</h3>
+<table class="sourceCode haskell numberLines" include="code/server/Editor.hs"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+</pre></td><td class="sourceCode"><pre><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE OverloadedStrings #-}</span>
+<span class="kw">module</span> <span class="dt">Editor</span> (editor,jsEditor,jsIde,ide,empty) <span class="kw">where</span>
+
+<span class="kw">import </span><span class="dt">Data.Monoid</span> (mempty)
+<span class="kw">import </span><span class="dt">Text.Blaze.Html</span>
+<span class="kw">import qualified</span> <span class="dt">Text.Blaze.Html5</span> <span class="kw">as</span> <span class="dt">H</span>
+<span class="kw">import qualified</span> <span class="dt">Text.Blaze.Html5.Attributes</span> <span class="kw">as</span> <span class="dt">A</span>
+<span class="kw">import </span><span class="dt">Network.HTTP.Base</span> (urlEncode)
+<span class="kw">import qualified</span> <span class="dt">System.FilePath</span> <span class="kw">as</span> <span class="dt">FP</span>
+
+<span class="kw">import qualified</span> <span class="dt">Elm.Internal.Utils</span> <span class="kw">as</span> <span class="dt">Elm</span>
+<span class="kw">import </span><span class="dt">Data.Maybe</span> (fromMaybe)
+
+<span class="kw">import </span><span class="dt">Generate</span> (addSpaces)
+
+
+<span class="co">-- | Display an editor and the compiled result side-by-side.</span>
+<span class="ot">jsIde ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Html</span>
+jsIde cols participant fileName code <span class="fu">=</span>
+    jsIdeBuilder cols
+                 participant
+                 (<span class="st">&quot;JS Editor: &quot;</span> <span class="fu">++</span> FP.takeBaseName fileName)
+                 fileName
+                 (<span class="st">&quot;/_compile?input=&quot;</span> <span class="fu">++</span> urlEncode code)
+
+<span class="co">-- | Display an editor and the compiled result side-by-side.</span>
+<span class="ot">ide ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Html</span>
+ide cols participant fileName code <span class="fu">=</span>
+    ideBuilder cols
+               participant
+               (<span class="st">&quot;Elm Editor: &quot;</span> <span class="fu">++</span> FP.takeBaseName fileName)
+               fileName
+               (<span class="st">&quot;/compile?input=&quot;</span> <span class="fu">++</span> urlEncode code)
+
+<span class="co">-- | Display an editor and the compiled result side-by-side.</span>
+<span class="ot">empty ::</span> <span class="dt">Html</span>
+empty <span class="fu">=</span> ideBuilder <span class="st">&quot;50%,50%&quot;</span> <span class="st">&quot;1&quot;</span> <span class="st">&quot;Try Elm&quot;</span> <span class="st">&quot;Empty.elm&quot;</span> <span class="st">&quot;/Try.elm&quot;</span>
+
+<span class="ot">jsIdeBuilder ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Html</span>
+jsIdeBuilder cols participant title input output <span class="fu">=</span>
+    H.docTypeHtml <span class="fu">$</span> <span class="kw">do</span>
+      H.head <span class="fu">.</span> H.title <span class="fu">.</span> toHtml <span class="fu">$</span> title
+      preEscapedToMarkup <span class="fu">$</span> 
+         concat [ <span class="st">&quot;&lt;frameset cols=\&quot;&quot;</span> <span class="fu">++</span> cols <span class="fu">++</span> <span class="st">&quot;\&quot;&gt;\n&quot;</span>
+          , <span class="st">&quot;  &lt;frame name=\&quot;input\&quot; src=\&quot;/_code/&quot;</span>, input, <span class="st">&quot;?p=&quot;</span>, 
+            participant, <span class="st">&quot;\&quot; /&gt;\n&quot;</span>
+          , <span class="st">&quot;  &lt;frame name=\&quot;output\&quot; src=\&quot;&quot;</span>, output, <span class="st">&quot;\&quot; /&gt;\n&quot;</span>
+          , <span class="st">&quot;&lt;/frameset&gt;&quot;</span> ]
+
+
+<span class="ot">ideBuilder ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Html</span>
+ideBuilder cols participant title input output <span class="fu">=</span>
+    H.docTypeHtml <span class="fu">$</span> <span class="kw">do</span>
+      H.head <span class="fu">.</span> H.title <span class="fu">.</span> toHtml <span class="fu">$</span> title
+      preEscapedToMarkup <span class="fu">$</span> 
+         concat [ <span class="st">&quot;&lt;frameset cols=\&quot;&quot;</span> <span class="fu">++</span> cols <span class="fu">++</span> <span class="st">&quot;\&quot;&gt;\n&quot;</span>
+                , <span class="st">&quot;  &lt;frame name=\&quot;input\&quot; src=\&quot;/code/&quot;</span>, input, <span class="st">&quot;?p=&quot;</span>, 
+                  participant, <span class="st">&quot;\&quot; /&gt;\n&quot;</span>
+                , <span class="st">&quot;  &lt;frame name=\&quot;output\&quot; src=\&quot;&quot;</span>, output, <span class="st">&quot;\&quot; /&gt;\n&quot;</span>
+                , <span class="st">&quot;&lt;/frameset&gt;&quot;</span> ]
+
+<span class="co">-- | list of themes to use with CodeMirror</span>
+<span class="ot">themes ::</span> [<span class="dt">String</span>]
+themes <span class="fu">=</span> [ <span class="st">&quot;ambiance&quot;</span>, <span class="st">&quot;blackboard&quot;</span>, <span class="st">&quot;cobalt&quot;</span>, <span class="st">&quot;eclipse&quot;</span>
+         , <span class="st">&quot;elegant&quot;</span>, <span class="st">&quot;erlang-dark&quot;</span>, <span class="st">&quot;lesser-dark&quot;</span>, <span class="st">&quot;monokai&quot;</span>, <span class="st">&quot;neat&quot;</span>, <span class="st">&quot;night&quot;</span>
+         , <span class="st">&quot;rubyblue&quot;</span>, <span class="st">&quot;solarized&quot;</span>, <span class="st">&quot;twilight&quot;</span>, <span class="st">&quot;vibrant-ink&quot;</span>, <span class="st">&quot;xq-dark&quot;</span> ]
+
+<span class="ot">jsFiles ::</span> [<span class="dt">AttributeValue</span>]
+jsFiles <span class="fu">=</span> [ <span class="st">&quot;/codemirror-3.x/lib/codemirror.js&quot;</span>
+          , <span class="st">&quot;/codemirror-3.x/mode/elm/elm.js&quot;</span>
+          , <span class="st">&quot;/misc/showdown.js&quot;</span>
+          , <span class="st">&quot;/misc/editor.js?0.11&quot;</span> ]
+
+<span class="ot">jsFiles2 ::</span> [<span class="dt">AttributeValue</span>]
+jsFiles2 <span class="fu">=</span> [ <span class="st">&quot;/codemirror-3.x/lib/codemirror.js&quot;</span>
+          , <span class="st">&quot;/codemirror-3.x/mode/javascript/javascript.js&quot;</span>
+          , <span class="st">&quot;/misc/showdown.js&quot;</span>
+          , <span class="st">&quot;/misc/editor.js?0.11&quot;</span> ]
+
+<span class="ot">jsEditor ::</span> <span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Html</span>
+jsEditor filePath code <span class="fu">=</span>
+    H.html <span class="fu">$</span> <span class="kw">do</span>
+      H.head <span class="fu">$</span> <span class="kw">do</span>
+        H.title <span class="fu">.</span> toHtml <span class="fu">$</span> <span class="st">&quot;JS Editor: &quot;</span> <span class="fu">++</span> FP.takeBaseName filePath
+        H.link <span class="fu">!</span> A.rel <span class="st">&quot;stylesheet&quot;</span> 
+               <span class="fu">!</span> A.href <span class="st">&quot;/codemirror-3.x/lib/codemirror.css&quot;</span>
+        mapM_ themeAttr themes
+        H.link <span class="fu">!</span> A.rel <span class="st">&quot;stylesheet&quot;</span> <span class="fu">!</span> A.type_ <span class="st">&quot;text/css&quot;</span> 
+                                    <span class="fu">!</span> A.href <span class="st">&quot;/misc/editor.css&quot;</span>
+        mapM_ script jsFiles2
+        script <span class="st">&quot;/elm-runtime.js?0.11&quot;</span>
+        script <span class="st">&quot;http://cdn.firebase.com/v0/firebase.js&quot;</span>
+      H.body <span class="fu">$</span> <span class="kw">do</span>
+        H.form <span class="fu">!</span> A.id <span class="st">&quot;inputForm&quot;</span> 
+               <span class="fu">!</span> A.action <span class="st">&quot;/_compile&quot;</span> 
+               <span class="fu">!</span> A.method <span class="st">&quot;post&quot;</span> 
+               <span class="fu">!</span> A.target <span class="st">&quot;output&quot;</span> <span class="fu">$</span> <span class="kw">do</span>
+           H.div <span class="fu">!</span> A.id <span class="st">&quot;editor_box&quot;</span> <span class="fu">$</span>
+             H.textarea <span class="fu">!</span> A.name <span class="st">&quot;input&quot;</span> <span class="fu">!</span> A.id <span class="st">&quot;input&quot;</span> <span class="fu">$</span> toHtml (<span class="ch">&#39;\n&#39;</span><span class="fu">:</span>code)
+           H.div <span class="fu">!</span> A.id <span class="st">&quot;options&quot;</span> <span class="fu">$</span> <span class="kw">do</span>
+             bar <span class="st">&quot;documentation&quot;</span> docs
+             bar <span class="st">&quot;editor_options&quot;</span> editorOptions
+             bar <span class="st">&quot;always_on&quot;</span> (buttons <span class="fu">&gt;&gt;</span> options)
+        embed <span class="st">&quot;initEditor();&quot;</span>
+  <span class="kw">where</span> themeAttr theme <span class="fu">=</span> H.link <span class="fu">!</span> A.rel <span class="st">&quot;stylesheet&quot;</span> 
+                                 <span class="fu">!</span> A.href (toValue (<span class="st">&quot;/codemirror-3.x/theme/&quot;</span> 
+                                                      <span class="fu">++</span> theme 
+                                                      <span class="fu">++</span> <span class="st">&quot;.css&quot;</span><span class="ot"> ::</span> <span class="dt">String</span>))
+        jsAttr <span class="fu">=</span> H.script <span class="fu">!</span> A.type_ <span class="st">&quot;text/javascript&quot;</span>
+        script jsFile <span class="fu">=</span> jsAttr <span class="fu">!</span> A.src jsFile <span class="fu">$</span> mempty
+        embed jsCode <span class="fu">=</span> jsAttr <span class="fu">$</span> jsCode
+
+<span class="co">-- | Create an HTML document that allows you to edit and submit Elm code</span>
+<span class="co">--   for compilation.</span>
+<span class="ot">editor ::</span> <span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Html</span>
+editor filePath code <span class="fu">=</span>
+    H.html <span class="fu">$</span> <span class="kw">do</span>
+      H.head <span class="fu">$</span> <span class="kw">do</span>
+        H.title <span class="fu">.</span> toHtml <span class="fu">$</span> <span class="st">&quot;Elm Editor: &quot;</span> <span class="fu">++</span> FP.takeBaseName filePath
+        H.link <span class="fu">!</span> A.rel <span class="st">&quot;stylesheet&quot;</span> 
+               <span class="fu">!</span> A.href <span class="st">&quot;/codemirror-3.x/lib/codemirror.css&quot;</span>
+        mapM_ themeAttr themes
+        H.link <span class="fu">!</span> A.rel <span class="st">&quot;stylesheet&quot;</span> <span class="fu">!</span> A.type_ <span class="st">&quot;text/css&quot;</span> 
+                                    <span class="fu">!</span> A.href <span class="st">&quot;/misc/editor.css&quot;</span>
+        mapM_ script jsFiles
+        script <span class="st">&quot;/elm-runtime.js?0.11&quot;</span>
+        script <span class="st">&quot;http://cdn.firebase.com/v0/firebase.js&quot;</span>
+      H.body <span class="fu">$</span> <span class="kw">do</span>
+        H.form <span class="fu">!</span> A.id <span class="st">&quot;inputForm&quot;</span> 
+               <span class="fu">!</span> A.action <span class="st">&quot;/compile&quot;</span> 
+               <span class="fu">!</span> A.method <span class="st">&quot;post&quot;</span> 
+               <span class="fu">!</span> A.target <span class="st">&quot;output&quot;</span> <span class="fu">$</span> <span class="kw">do</span>
+           H.div <span class="fu">!</span> A.id <span class="st">&quot;editor_box&quot;</span> <span class="fu">$</span>
+             H.textarea <span class="fu">!</span> A.name <span class="st">&quot;input&quot;</span> <span class="fu">!</span> A.id <span class="st">&quot;input&quot;</span> <span class="fu">$</span> toHtml (<span class="ch">&#39;\n&#39;</span><span class="fu">:</span>code)
+           H.div <span class="fu">!</span> A.id <span class="st">&quot;options&quot;</span> <span class="fu">$</span> <span class="kw">do</span>
+             bar <span class="st">&quot;documentation&quot;</span> docs
+             bar <span class="st">&quot;editor_options&quot;</span> editorOptions
+             bar <span class="st">&quot;always_on&quot;</span> (buttons <span class="fu">&gt;&gt;</span> options)
+        embed <span class="st">&quot;initEditor();&quot;</span>
+  <span class="kw">where</span> themeAttr theme <span class="fu">=</span> H.link <span class="fu">!</span> A.rel <span class="st">&quot;stylesheet&quot;</span> 
+                                 <span class="fu">!</span> A.href (toValue (<span class="st">&quot;/codemirror-3.x/theme/&quot;</span> 
+                                                      <span class="fu">++</span> theme 
+                                                      <span class="fu">++</span> <span class="st">&quot;.css&quot;</span><span class="ot"> ::</span> <span class="dt">String</span>))
+        jsAttr <span class="fu">=</span> H.script <span class="fu">!</span> A.type_ <span class="st">&quot;text/javascript&quot;</span>
+        script jsFile <span class="fu">=</span> jsAttr <span class="fu">!</span> A.src jsFile <span class="fu">$</span> mempty
+        embed jsCode <span class="fu">=</span> jsAttr <span class="fu">$</span> jsCode
+
+<span class="ot">bar ::</span> <span class="dt">AttributeValue</span> <span class="ot">-&gt;</span> <span class="dt">Html</span> <span class="ot">-&gt;</span> <span class="dt">Html</span>
+bar id&#39; body <span class="fu">=</span> H.div <span class="fu">!</span> A.id id&#39; <span class="fu">!</span> A.class_ <span class="st">&quot;option&quot;</span> <span class="fu">$</span> body
+
+<span class="ot">buttons ::</span> <span class="dt">Html</span>
+buttons <span class="fu">=</span> H.div <span class="fu">!</span> A.class_ <span class="st">&quot;valign_kids&quot;</span>
+                <span class="fu">!</span> A.style <span class="st">&quot;float:right; padding-right: 6px;&quot;</span>
+                <span class="fu">$</span> compileButton
+      <span class="kw">where</span>
+        compileButton <span class="fu">=</span> 
+            H.input
+                 <span class="fu">!</span> A.type_ <span class="st">&quot;button&quot;</span>
+                 <span class="fu">!</span> A.id <span class="st">&quot;compile_button&quot;</span>
+                 <span class="fu">!</span> A.value <span class="st">&quot;Compile&quot;</span>
+                 <span class="fu">!</span> A.onclick <span class="st">&quot;compile()&quot;</span>
+                 <span class="fu">!</span> A.title <span class="st">&quot;Ctrl-Enter: change program behavior \</span>
+<span class="st">                             \but keep the state&quot;</span>
+
+<span class="ot">options ::</span> <span class="dt">Html</span>
+options <span class="fu">=</span> H.div <span class="fu">!</span> A.class_ <span class="st">&quot;valign_kids&quot;</span>
+                <span class="fu">!</span> A.style <span class="st">&quot;float:left; padding-left:6px; padding-top:2px;&quot;</span>
+                <span class="fu">$</span> (docs&#39; <span class="fu">&gt;&gt;</span> opts)
+    <span class="kw">where</span> 
+      docs&#39; <span class="fu">=</span> 
+        H.span  <span class="fu">!</span> A.title <span class="st">&quot;Show documentation and types.&quot;</span> <span class="fu">$</span> <span class="st">&quot;Hints:&quot;</span> <span class="fu">&gt;&gt;</span>
+            H.input <span class="fu">!</span> A.type_ <span class="st">&quot;checkbox&quot;</span>
+                    <span class="fu">!</span> A.id <span class="st">&quot;show_type_checkbox&quot;</span>
+                    <span class="fu">!</span> A.onchange <span class="st">&quot;showType(this.checked);&quot;</span>
+
+      opts <span class="fu">=</span> 
+        H.span  <span class="fu">!</span> A.title <span class="st">&quot;Show editor options.&quot;</span> 
+                <span class="fu">!</span> A.style <span class="st">&quot;padding-left: 12px;&quot;</span> <span class="fu">$</span> <span class="st">&quot;Options:&quot;</span> <span class="fu">&gt;&gt;</span>
+            H.input <span class="fu">!</span> A.type_ <span class="st">&quot;checkbox&quot;</span>
+                    <span class="fu">!</span> A.id <span class="st">&quot;options_checkbox&quot;</span> 
+                    <span class="fu">!</span> A.onchange <span class="st">&quot;showOptions(this.checked);&quot;</span>
+
+<span class="ot">editorOptions ::</span> <span class="dt">Html</span>
+editorOptions <span class="fu">=</span> theme <span class="fu">&gt;&gt;</span> zoom <span class="fu">&gt;&gt;</span> lineNumbers
+    <span class="kw">where</span>
+<span class="ot">      optionFor ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Html</span>
+      optionFor text <span class="fu">=</span>
+          H.option <span class="fu">!</span> A.value (toValue text) <span class="fu">$</span> toHtml text
+
+      theme <span class="fu">=</span>
+          H.select <span class="fu">!</span> A.id <span class="st">&quot;editor_theme&quot;</span>
+                   <span class="fu">!</span> A.onchange <span class="st">&quot;setTheme(this.value)&quot;</span>
+                   <span class="fu">$</span> mapM_ optionFor themes
+              
+      zoom <span class="fu">=</span>
+          H.select <span class="fu">!</span> A.id <span class="st">&quot;editor_zoom&quot;</span>
+                   <span class="fu">!</span> A.onchange <span class="st">&quot;setZoom(this.options[this.selectedIndex].\</span>
+<span class="st">                                  \innerHTML)&quot;</span>
+                   <span class="fu">$</span> mapM_ optionFor [<span class="st">&quot;100%&quot;</span>, <span class="st">&quot;80%&quot;</span>, <span class="st">&quot;150%&quot;</span>, <span class="st">&quot;200%&quot;</span>]
+
+      lineNumbers <span class="fu">=</span> <span class="kw">do</span>
+        H.span <span class="fu">!</span> A.style <span class="st">&quot;padding-left: 16px;&quot;</span> <span class="fu">$</span> <span class="st">&quot;Line Numbers:&quot;</span>
+        H.input <span class="fu">!</span> A.type_ <span class="st">&quot;checkbox&quot;</span>
+                <span class="fu">!</span> A.id <span class="st">&quot;editor_lines&quot;</span>
+                <span class="fu">!</span> A.onchange <span class="st">&quot;showLines(this.checked);&quot;</span>
+
+<span class="ot">docs ::</span> <span class="dt">Html</span>
+docs <span class="fu">=</span> tipe <span class="fu">&gt;&gt;</span> desc
+    <span class="kw">where</span>
+      tipe <span class="fu">=</span> H.div <span class="fu">!</span> A.class_ <span class="st">&quot;type&quot;</span> <span class="fu">$</span> message <span class="fu">&gt;&gt;</span> more
+
+      message <span class="fu">=</span> H.div <span class="fu">!</span> 
+                  A.style <span class="st">&quot;position:absolute; left:4px; right:36px;\</span>
+<span class="st">                            \overflow:hidden; text-overflow:ellipsis;&quot;</span> <span class="fu">$</span> <span class="st">&quot;&quot;</span>
+
+      more <span class="fu">=</span> H.a <span class="fu">!</span> A.id <span class="st">&quot;toggle_link&quot;</span>
+                 <span class="fu">!</span> A.style <span class="st">&quot;display:none; float:right;&quot;</span>
+                 <span class="fu">!</span> A.href <span class="st">&quot;javascript:toggleVerbose();&quot;</span>
+                 <span class="fu">!</span> A.title <span class="st">&quot;Ctrl+H&quot;</span>
+                 <span class="fu">$</span> <span class="st">&quot;&quot;</span>
+
+      desc <span class="fu">=</span> H.div <span class="fu">!</span> A.class_ <span class="st">&quot;doc&quot;</span>
+                   <span class="fu">!</span> A.style <span class="st">&quot;display:none;&quot;</span>
+                   <span class="fu">$</span> <span class="st">&quot;&quot;</span>
+</code></pre></td></tr></table>
+<h3 id="generate.hs">Generate.hs</h3>
+<table class="sourceCode haskell numberLines" include="code/server/Generate.hs"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+</pre></td><td class="sourceCode"><pre><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE OverloadedStrings #-}</span>
+<span class="kw">module</span> <span class="dt">Generate</span> (logAndJS, logAndHtml, html, js, addSpaces) <span class="kw">where</span>
+
+<span class="kw">import </span><span class="dt">Data.Monoid</span> (mempty)
+<span class="kw">import </span><span class="dt">Data.Maybe</span> (fromMaybe)
+<span class="kw">import </span><span class="dt">Text.Blaze</span> (preEscapedToMarkup)
+<span class="kw">import </span><span class="dt">Text.Blaze.Html5</span> ((!))
+<span class="kw">import qualified</span> <span class="dt">Text.Blaze.Html5</span> <span class="kw">as</span> <span class="dt">H</span>
+<span class="kw">import qualified</span> <span class="dt">Text.Blaze.Html5.Attributes</span> <span class="kw">as</span> <span class="dt">A</span>
+
+<span class="kw">import qualified</span> <span class="dt">Elm.Internal.Utils</span> <span class="kw">as</span> <span class="dt">Elm</span>
+<span class="kw">import </span><span class="dt">Utils</span>
+
+<span class="ot">logAndJS ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span>
+logAndJS name src <span class="fu">=</span> getJSPage name src
+
+<span class="ot">logAndHtml ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> (<span class="dt">H.Html</span>, <span class="dt">Maybe</span> <span class="dt">String</span>)
+logAndHtml name src <span class="fu">=</span>
+    <span class="kw">let</span> elmname <span class="fu">=</span> <span class="st">&quot;Elm.&quot;</span> <span class="fu">++</span> fromMaybe <span class="st">&quot;Main&quot;</span> (Elm.moduleName src) 
+    <span class="kw">in</span>
+      <span class="kw">case</span> Elm.compile src <span class="kw">of</span>
+          <span class="dt">Right</span> jsSrc <span class="ot">-&gt;</span> <span class="kw">do</span>
+              (getHtmlPage name elmname jsSrc, <span class="dt">Nothing</span>)
+          <span class="dt">Left</span> err <span class="ot">-&gt;</span> <span class="kw">do</span>
+              (getErrPage name err, <span class="dt">Just</span> err)
+
+<span class="ot">getJSPage ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span>
+getJSPage name jsSrc <span class="fu">=</span>
+  H.docTypeHtml <span class="fu">$</span> <span class="kw">do</span>
+      H.head <span class="fu">$</span> <span class="kw">do</span>
+        H.meta <span class="fu">!</span> A.charset <span class="st">&quot;UTF-8&quot;</span>
+        H.title <span class="fu">.</span> H.toHtml <span class="fu">$</span> name
+        H.link <span class="fu">!</span> A.rel <span class="st">&quot;stylesheet&quot;</span> <span class="fu">!</span> A.type_ <span class="st">&quot;text/css&quot;</span> 
+                                    <span class="fu">!</span> A.href <span class="st">&quot;/misc/js.css&quot;</span>
+        script <span class="st">&quot;/pixi.js&quot;</span>
+      H.body <span class="fu">$</span> <span class="kw">do</span>
+        H.div <span class="fu">!</span> A.style <span class="st">&quot;width: 400px; height: 400px; position:\</span>
+<span class="st">                        \ absolute; top: 0; left: 0; opacity: 0;&quot;</span> <span class="fu">$</span> mempty
+        jsAttr <span class="fu">$</span> preEscapedToMarkup jsSrc
+ <span class="kw">where</span> jsAttr <span class="fu">=</span> H.script <span class="fu">!</span> A.type_ <span class="st">&quot;text/javascript&quot;</span>
+       script jsFile <span class="fu">=</span> jsAttr <span class="fu">!</span> A.src jsFile <span class="fu">$</span> mempty
+       embed jsCode <span class="fu">=</span> jsAttr <span class="fu">$</span> jsCode
+
+<span class="ot">getHtmlPage ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span>
+getHtmlPage name elmname jsSrc <span class="fu">=</span>
+  H.docTypeHtml <span class="fu">$</span> <span class="kw">do</span>
+      H.head <span class="fu">$</span> <span class="kw">do</span>
+        H.meta <span class="fu">!</span> A.charset <span class="st">&quot;UTF-8&quot;</span>
+        H.title <span class="fu">.</span> H.toHtml <span class="fu">$</span> name
+        H.style <span class="fu">!</span> A.type_ <span class="st">&quot;text/css&quot;</span> <span class="fu">$</span> preEscapedToMarkup
+         (<span class="st">&quot;a:link {text-decoration: none; color: rgb(15,102,230);}\n\</span>
+<span class="st">          \a:visited {text-decoration: none}\n\</span>
+<span class="st">          \a:active {text-decoration: none}\n\</span>
+<span class="st">          \a:hover {text-decoration: underline; \</span>
+<span class="st">          color: rgb(234,21,122);}&quot;</span><span class="ot"> ::</span> <span class="dt">String</span>)
+      H.body <span class="fu">$</span> <span class="kw">do</span>
+        <span class="kw">let</span> js <span class="fu">=</span> H.script <span class="fu">!</span> A.type_ <span class="st">&quot;text/javascript&quot;</span>
+            runFullscreen <span class="fu">=</span> 
+                <span class="st">&quot;var runningElmModule = Elm.fullscreen(&quot;</span> <span class="fu">++</span> elmname 
+                                                         <span class="fu">++</span> <span class="st">&quot;)&quot;</span>
+        js <span class="fu">!</span> A.src (H.toValue (<span class="st">&quot;/elm-runtime.js?0.11&quot;</span><span class="ot"> ::</span> <span class="dt">String</span>)) <span class="fu">$</span> <span class="st">&quot;&quot;</span>
+        js <span class="fu">$</span> preEscapedToMarkup jsSrc
+        js <span class="fu">$</span> preEscapedToMarkup runFullscreen
+
+<span class="ot">getErrPage ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span>
+getErrPage name err <span class="fu">=</span>
+  H.docTypeHtml <span class="fu">$</span> <span class="kw">do</span>
+      H.head <span class="fu">$</span> <span class="kw">do</span>
+        H.meta <span class="fu">!</span> A.charset <span class="st">&quot;UTF-8&quot;</span>
+        H.title <span class="fu">.</span> H.toHtml <span class="fu">$</span> name
+      H.body <span class="fu">$</span>
+        H.span <span class="fu">!</span> A.style <span class="st">&quot;font-family: monospace;&quot;</span> <span class="fu">$</span>
+        mapM_ (\line <span class="ot">-&gt;</span> preEscapedToMarkup (addSpaces line) <span class="fu">&gt;&gt;</span> H.br) 
+                (lines err)
+    
+            
+
+<span class="co">-- | Using a page title and the full source of an Elm program, compile down to</span>
+<span class="co">--   a valid HTML document.</span>
+<span class="ot">html ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">H.Html</span>
+html name src <span class="fu">=</span>
+  H.docTypeHtml <span class="fu">$</span> <span class="kw">do</span>
+      H.head <span class="fu">$</span> <span class="kw">do</span>
+        H.meta <span class="fu">!</span> A.charset <span class="st">&quot;UTF-8&quot;</span>
+        H.title <span class="fu">.</span> H.toHtml <span class="fu">$</span> name
+        H.style <span class="fu">!</span> A.type_ <span class="st">&quot;text/css&quot;</span> <span class="fu">$</span> preEscapedToMarkup
+         (<span class="st">&quot;a:link {text-decoration: none; color: rgb(15,102,230);}\n\</span>
+<span class="st">          \a:visited {text-decoration: none}\n\</span>
+<span class="st">          \a:active {text-decoration: none}\n\</span>
+<span class="st">          \a:hover {text-decoration: underline;\</span>
+<span class="st">          \ color: rgb(234,21,122);}&quot;</span><span class="ot"> ::</span> <span class="dt">String</span>)
+      H.body <span class="fu">$</span> <span class="kw">do</span>
+        <span class="kw">let</span> js <span class="fu">=</span> H.script <span class="fu">!</span> A.type_ <span class="st">&quot;text/javascript&quot;</span>
+            elmname <span class="fu">=</span> <span class="st">&quot;Elm.&quot;</span> <span class="fu">++</span> fromMaybe <span class="st">&quot;Main&quot;</span> (Elm.moduleName src)
+            runFullscreen <span class="fu">=</span> 
+                  <span class="st">&quot;var runningElmModule = Elm.fullscreen(&quot;</span> <span class="fu">++</span> elmname 
+                                                           <span class="fu">++</span> <span class="st">&quot;)&quot;</span>
+        js <span class="fu">!</span> A.src (H.toValue (<span class="st">&quot;/elm-runtime.js?0.11&quot;</span><span class="ot"> ::</span> <span class="dt">String</span>)) <span class="fu">$</span> <span class="st">&quot;&quot;</span>
+        <span class="kw">case</span> Elm.compile src <span class="kw">of</span>
+          <span class="dt">Right</span> jsSrc <span class="ot">-&gt;</span> <span class="kw">do</span>
+              js <span class="fu">$</span> preEscapedToMarkup jsSrc
+              js <span class="fu">$</span> preEscapedToMarkup runFullscreen
+          <span class="dt">Left</span> err <span class="ot">-&gt;</span>
+              H.span <span class="fu">!</span> A.style <span class="st">&quot;font-family: monospace;&quot;</span> <span class="fu">$</span>
+              mapM_ (\line <span class="ot">-&gt;</span> preEscapedToMarkup (addSpaces line) <span class="fu">&gt;&gt;</span> H.br) 
+                      (lines err)
+
+<span class="ot">addSpaces ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span>
+addSpaces str <span class="fu">=</span>
+  <span class="kw">case</span> str <span class="kw">of</span>
+    <span class="ch">&#39; &#39;</span> <span class="fu">:</span> <span class="ch">&#39; &#39;</span> <span class="fu">:</span> rest <span class="ot">-&gt;</span> <span class="st">&quot; &amp;nbsp;&quot;</span> <span class="fu">++</span> addSpaces rest
+    c <span class="fu">:</span> rest <span class="ot">-&gt;</span> c <span class="fu">:</span> addSpaces rest
+    [] <span class="ot">-&gt;</span> []
+
+<span class="ot">js ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span>
+js src <span class="fu">=</span> <span class="kw">case</span> Elm.compile src <span class="kw">of</span>
+           <span class="dt">Right</span> js <span class="ot">-&gt;</span> <span class="st">&quot;{ \&quot;success\&quot; : &quot;</span> <span class="fu">++</span> show js <span class="fu">++</span> <span class="st">&quot; }&quot;</span>
+           <span class="dt">Left</span> err <span class="ot">-&gt;</span> <span class="st">&quot;{ \&quot;error\&quot; : &quot;</span> <span class="fu">++</span> show err <span class="fu">++</span> <span class="st">&quot; }&quot;</span></code></pre></td></tr></table>
+<h3 id="embedmeelm.elm">EmbedMeElm.elm</h3>
+<table class="sourceCode haskell numberLines" include="code/EmbedMeElm.elm"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre></td><td class="sourceCode"><pre><code class="sourceCode haskell"><span class="kw">module</span> <span class="dt">EmbedMe</span> <span class="kw">where</span>
+
+<span class="kw">import </span><span class="dt">Mouse</span>
+<span class="kw">import </span><span class="dt">Window</span>
+<span class="kw">import </span><span class="dt">Keyboard</span>
+<span class="kw">import </span><span class="dt">JavaScript</span> <span class="kw">as</span> <span class="dt">JS</span>
+<span class="kw">import </span><span class="dt">JavaScript.Experimental</span> <span class="kw">as</span> <span class="dt">JEXP</span>
+<span class="kw">import </span><span class="dt">Http</span>
+<span class="kw">import </span><span class="dt">Json</span>
+
+(<span class="fu">~&gt;</span>) <span class="fu">=</span> flip lift
+<span class="kw">infixl</span> <span class="dv">4</span> <span class="fu">~&gt;</span>
+
+clicks <span class="fu">:</span> <span class="dt">Signal</span> (<span class="dt">Time</span>, (<span class="dt">Int</span>,<span class="dt">Int</span>))
+clicks <span class="fu">=</span> timestamp (sampleOn Mouse.isDown Mouse.position)
+
+user_id <span class="fu">=</span> <span class="st">&quot;1&quot;</span>
+
+firebaseRequest requestType requestData <span class="fu">=</span> 
+  Http.request requestType 
+    (<span class="st">&quot;https://sweltering-fire-9141.firebaseio.com/dissertation/elm/&quot;</span> <span class="fu">++</span> user_id 
+                                                                     <span class="fu">++</span> <span class="st">&quot;.json&quot;</span>) 
+    requestData []
+ 
+serialize r <span class="fu">=</span> r <span class="fu">|&gt;</span> JEXP.fromRecord 
+                <span class="fu">|&gt;</span> Json.fromJSObject 
+                <span class="fu">|&gt;</span> Json.toJSString <span class="st">&quot; &quot;</span> 
+                <span class="fu">|&gt;</span> JS.toString
+ 
+toRequestData (t, (x,y)) <span class="fu">=</span> {t <span class="fu">=</span> t, x <span class="fu">=</span> x, y <span class="fu">=</span> y} <span class="fu">|&gt;</span> serialize
+ 
+toRequest event <span class="fu">=</span> <span class="kw">case</span> event <span class="kw">of</span> 
+  (t, (x,y)) <span class="ot">-&gt;</span> firebaseRequest <span class="st">&quot;post&quot;</span> (event <span class="fu">|&gt;</span> toRequestData)
+ 
+requests <span class="fu">=</span> clicks <span class="fu">~&gt;</span> toRequest
+ 
+sendRequests <span class="fu">=</span> Http.send requests</code></pre></td></tr></table>
+<h3 id="embedmejs.elm">EmbedMeJS.elm</h3>
+<table class="sourceCode haskell numberLines" include="code/EmbedMeJS.elm"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre></td><td class="sourceCode"><pre><code class="sourceCode haskell"><span class="kw">module</span> <span class="dt">EmbedMe</span> <span class="kw">where</span>
+
+<span class="kw">import </span><span class="dt">Mouse</span>
+<span class="kw">import </span><span class="dt">Window</span>
+<span class="kw">import </span><span class="dt">Keyboard</span>
+<span class="kw">import </span><span class="dt">JavaScript</span> <span class="kw">as</span> <span class="dt">JS</span>
+<span class="kw">import </span><span class="dt">JavaScript.Experimental</span> <span class="kw">as</span> <span class="dt">JEXP</span>
+<span class="kw">import </span><span class="dt">Http</span>
+<span class="kw">import </span><span class="dt">Json</span>
+
+(<span class="fu">~&gt;</span>) <span class="fu">=</span> flip lift
+<span class="kw">infixl</span> <span class="dv">4</span> <span class="fu">~&gt;</span>
+
+clicks <span class="fu">:</span> <span class="dt">Signal</span> (<span class="dt">Time</span>, (<span class="dt">Int</span>,<span class="dt">Int</span>))
+clicks <span class="fu">=</span> timestamp (sampleOn Mouse.isDown Mouse.position)
+
+user_id <span class="fu">=</span> <span class="st">&quot;1&quot;</span>
+
+firebaseRequest requestType requestData <span class="fu">=</span> 
+  Http.request requestType 
+    (<span class="st">&quot;https://sweltering-fire-9141.firebaseio.com/dissertation/js/&quot;</span> <span class="fu">++</span> user_id 
+                                                                    <span class="fu">++</span> <span class="st">&quot;.json&quot;</span>) 
+    requestData []
+ 
+serialize r <span class="fu">=</span> r <span class="fu">|&gt;</span> JEXP.fromRecord 
+                <span class="fu">|&gt;</span> Json.fromJSObject 
+                <span class="fu">|&gt;</span> Json.toJSString <span class="st">&quot; &quot;</span> 
+                <span class="fu">|&gt;</span> JS.toString
+ 
+toRequestData (t, (x,y)) <span class="fu">=</span> {t <span class="fu">=</span> t, x <span class="fu">=</span> x, y <span class="fu">=</span> y} <span class="fu">|&gt;</span> serialize
+ 
+toRequest event <span class="fu">=</span> <span class="kw">case</span> event <span class="kw">of</span> 
+  (t, (x,y)) <span class="ot">-&gt;</span> firebaseRequest <span class="st">&quot;post&quot;</span> (event <span class="fu">|&gt;</span> toRequestData)
+ 
+requests <span class="fu">=</span> clicks <span class="fu">~&gt;</span> toRequest
+ 
+sendRequests <span class="fu">=</span> Http.send requests</code></pre></td></tr></table>
+<h3 id="fullscreenembedme.js">fullScreenEmbedMe.js</h3>
+<table class="sourceCode javascript numberLines" include="code/fullScreenEmbedMe.js"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+</pre></td><td class="sourceCode"><pre><code class="sourceCode javascript"><span class="kw">var</span> firebaseData = <span class="kw">new</span> <span class="fu">Firebase</span>(
+		<span class="st">&#39;https://sweltering-fire-9141.firebaseio.com/dissertation&#39;</span>);
+<span class="kw">var</span> embedMe = <span class="ot">Elm</span>.<span class="fu">fullscreen</span>(<span class="ot">Elm</span>.<span class="fu">EmbedMe</span>, {});</code></pre></td></tr></table>
+<h3 id="editor.js.diff">editor.js.diff</h3>
+<table class="sourceCode diff numberLines" include="code/editor.js.diff"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="sourceCode"><pre><code class="sourceCode diff"><span class="kw">diff --git a/resources/misc/editor.js b/resources/misc/editor.js</span>
+index d2bebc8..302663e 100644
+<span class="dt">--- a/resources/misc/editor.js</span>
+<span class="dt">+++ b/resources/misc/editor.js</span>
+<span class="dt">@@ -293,7 +293,7 @@ function showOptions(show) {</span>
+ function showType(show) {
+     cookie(&#39;showtype&#39;, show);
+     document.getElementById(&#39;show_type_checkbox&#39;).checked = show;
+<span class="st">-    var newMode = (show ? { mode: Mode.TYPES, verbose: false }</span>
+<span class="ot">+    var newMode = (show ? { mode: Mode.TYPES, verbose: true}</span>
+                         : { mode: Mode.NONE });
+     if (mode.mode === Mode.OPTIONS) {
+         mode.hidden = newMode;
+<span class="dt">@@ -305,8 +305,8 @@ function showType(show) {</span>
+ 
+ function toggleVerbose() {
+     if (!mode.verbose) showType(true);
+<span class="st">-    document.getElementById(&#39;toggle_link&#39;).innerHTML = mode.verbose ? </span>
+<span class="st">-      &#39;more&#39; : &#39;less&#39;;</span>
+<span class="st">-    mode.verbose = !mode.verbose;</span>
+<span class="ot">+    document.getElementById(&#39;toggle_link&#39;).innerHTML = mode.verbose ? &#39;&#39; : &#39;&#39;;</span>
+<span class="ot">+    mode.verbose = true;</span>
+     updateDocumentation();
+ }
+ 
+<span class="dt">@@ -318,8 +318,8 @@ function showVerbose() {</span>
+ function hideStuff() {
+     if (mode.hidden) mode = mode.hidden;
+     document.getElementById(&#39;options_checkbox&#39;).checked = false;
+<span class="st">-    mode.verbose = false;</span>
+<span class="st">-    document.getElementById(&#39;toggle_link&#39;).innerHTML = &#39;more&#39;;</span>
+<span class="ot">+    mode.verbose = true;</span>
+<span class="ot">+    document.getElementById(&#39;toggle_link&#39;).innerHTML = &#39;&#39;;</span>
+     updateDocumentation();
+ }</code></pre></td></tr></table>
+<h3 id="movingbox.js">MovingBox.js</h3>
+<table class="sourceCode javascript numberLines" include="code/public/jsTask/MovingBox.js"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+</pre></td><td class="sourceCode"><pre><code class="sourceCode javascript"><span class="co">/* </span>
+<span class="co"></span>
+<span class="co">Try moving the square around with your keyboard&#39;s arrow keys</span>
+<span class="co"></span>
+<span class="co">Click your mouse over there =====&gt; </span>
+<span class="co">Use arrows Up, Down, Left, Right</span>
+<span class="co"></span>
+<span class="co">Whee!</span>
+<span class="co"></span>
+<span class="co">Now modify the code to prevent the square from going outside </span>
+<span class="co">the edge of the grey window.</span>
+<span class="co"></span>
+<span class="co">*/</span>
+
+<span class="co">// Constants</span>
+<span class="kw">var</span> WIDTH = <span class="dv">400</span>;
+<span class="kw">var</span> HEIGHT = <span class="dv">400</span>;
+<span class="kw">var</span> SQUARE = <span class="dv">40</span>;
+<span class="kw">var</span> COLORS = [
+    <span class="st">&quot;0x000000&quot;</span>,
+    <span class="st">&quot;0xCCCCCC&quot;</span>,
+];
+<span class="kw">var</span> MOVEMENT_SPEED = <span class="dv">5</span>;
+
+<span class="co">// Setting up Pixi</span>
+<span class="co">// http://www.goodboydigital.com/pixijs/docs/</span>
+<span class="kw">var</span> stage = <span class="kw">new</span> <span class="ot">PIXI</span>.<span class="fu">Stage</span>(COLORS[<span class="dv">1</span>]);
+<span class="kw">var</span> renderer = <span class="ot">PIXI</span>.<span class="fu">autoDetectRenderer</span>(WIDTH, HEIGHT);
+<span class="ot">document</span>.<span class="ot">body</span>.<span class="fu">appendChild</span>(<span class="ot">renderer</span>.<span class="fu">view</span>);
+
+<span class="co">// Creating the box</span>
+<span class="kw">var</span> box = <span class="kw">new</span> <span class="ot">PIXI</span>.<span class="fu">Graphics</span>();
+<span class="ot">box</span>.<span class="fu">lineStyle</span>(<span class="dv">1</span>, COLORS[<span class="dv">0</span>], <span class="dv">1</span>);
+<span class="ot">box</span>.<span class="fu">beginFill</span>(COLORS[<span class="dv">1</span>], <span class="dv">0</span>);
+<span class="ot">box</span>.<span class="fu">drawRect</span>(<span class="dv">0</span>, <span class="dv">0</span>, SQUARE, SQUARE);
+<span class="ot">box</span>.<span class="fu">endFill</span>();
+<span class="ot">stage</span>.<span class="fu">addChild</span>(box);
+
+<span class="co">// Setting the position of the box to the middle of the screen</span>
+<span class="ot">box</span>.<span class="fu">x</span> = (WIDTH / <span class="dv">2</span>) - (SQUARE / <span class="dv">2</span>);
+<span class="ot">box</span>.<span class="fu">y</span> = (HEIGHT / <span class="dv">2</span>) - (SQUARE / <span class="dv">2</span>);
+
+<span class="co">// When a key is pressed set it as true in the keyState object</span>
+<span class="co">// Once the key is let go set it back to false</span>
+<span class="kw">var</span> keyState = {};
+
+<span class="ot">window</span>.<span class="fu">addEventListener</span>(<span class="st">&#39;keydown&#39;</span>, <span class="kw">function</span>(e) {
+    keyState[<span class="ot">e</span>.<span class="fu">keyCode</span> || <span class="ot">e</span>.<span class="fu">which</span>] = <span class="kw">true</span>;
+}, <span class="kw">true</span>);
+
+<span class="ot">window</span>.<span class="fu">addEventListener</span>(<span class="st">&#39;keyup&#39;</span>, <span class="kw">function</span>(e) {
+    keyState[<span class="ot">e</span>.<span class="fu">keyCode</span> || <span class="ot">e</span>.<span class="fu">which</span>] = <span class="kw">false</span>;
+}, <span class="kw">true</span>);
+
+<span class="co">// Start the animate loop</span>
+<span class="fu">requestAnimFrame</span>(animate);
+
+<span class="kw">function</span> <span class="fu">animate</span>() {
+    <span class="co">// Left arrow</span>
+    <span class="kw">if</span> (keyState[<span class="dv">37</span>]) {
+        <span class="ot">box</span>.<span class="fu">x</span> -= MOVEMENT_SPEED;
+    }
+
+    <span class="co">// Up arrow</span>
+    <span class="kw">if</span> (keyState[<span class="dv">38</span>]) {
+        <span class="ot">box</span>.<span class="fu">y</span> -= MOVEMENT_SPEED;
+    }
+
+    <span class="co">// Right arrow</span>
+    <span class="kw">if</span> (keyState[<span class="dv">39</span>]) {
+        <span class="ot">box</span>.<span class="fu">x</span> += MOVEMENT_SPEED;
+    }
+
+    <span class="co">// Down array</span>
+    <span class="kw">if</span> (keyState[<span class="dv">40</span>]) {
+        <span class="ot">box</span>.<span class="fu">y</span> += MOVEMENT_SPEED;
+    }
+
+    <span class="co">// Draw everything and keep the loop going</span>
+    <span class="ot">renderer</span>.<span class="fu">render</span>(stage);
+    <span class="fu">requestAnimFrame</span>(animate);
+}</code></pre></td></tr></table>
+<h3 id="movingbox.elm">MovingBox.elm</h3>
+<table class="sourceCode haskell numberLines" include="code/public/elmTask/MovingBox.elm"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+</pre></td><td class="sourceCode"><pre><code class="sourceCode haskell"><span class="co">{- </span>
+
+<span class="co">Try moving the square around with your keyboard&#39;s arrow keys</span>
+
+<span class="co">Click your mouse over there =====&gt; </span>
+<span class="co">Use arrows Up, Down, Left, Right</span>
+
+<span class="co">Whee!</span>
+
+<span class="co">Now modify the code to prevent the square from going outside </span>
+<span class="co">the edge of the grey window.</span>
+
+<span class="co">-}</span>
+
+<span class="kw">import </span><span class="dt">Keyboard</span>
+
+areaSize <span class="fu">=</span> <span class="dv">400</span>
+squareSize <span class="fu">=</span> <span class="dv">40</span>
+
+main <span class="fu">:</span> <span class="dt">Signal</span> <span class="dt">Element</span>
+main <span class="fu">=</span> lift display position
+
+delta <span class="fu">:</span> <span class="dt">Signal</span> <span class="dt">Float</span>
+delta <span class="fu">=</span> fps <span class="dv">30</span>
+
+input <span class="fu">:</span> <span class="dt">Signal</span> (<span class="dt">Float</span>, (<span class="dt">Float</span>,<span class="dt">Float</span>))
+input <span class="fu">=</span>
+    <span class="kw">let</span> vectors <span class="fu">=</span> lift toVector Keyboard.arrows
+    <span class="kw">in</span>  sampleOn delta (lift2 (,) delta vectors)
+
+toVector <span class="fu">:</span> { x<span class="fu">:</span><span class="dt">Int</span>, y<span class="fu">:</span><span class="dt">Int</span> } <span class="ot">-&gt;</span> (<span class="dt">Float</span>,<span class="dt">Float</span>)
+toVector {x,y} <span class="fu">=</span>
+    <span class="kw">if</span> x <span class="fu">/=</span> <span class="dv">0</span> <span class="fu">&amp;&amp;</span> y <span class="fu">/=</span> <span class="dv">0</span>
+      <span class="kw">then</span> (x <span class="fu">/</span> sqrt <span class="dv">2</span>, y <span class="fu">/</span> sqrt <span class="dv">2</span>)
+      <span class="kw">else</span> (x,y)
+
+position <span class="fu">:</span> <span class="dt">Signal</span> (<span class="dt">Float</span>,<span class="dt">Float</span>)
+position <span class="fu">=</span> foldp update (<span class="dv">0</span>,<span class="dv">0</span>) input
+
+update <span class="fu">:</span> (<span class="dt">Float</span>, (<span class="dt">Float</span>,<span class="dt">Float</span>)) <span class="ot">-&gt;</span> (<span class="dt">Float</span>,<span class="dt">Float</span>) <span class="ot">-&gt;</span> (<span class="dt">Float</span>,<span class="dt">Float</span>)
+update (dt,(vx,vy)) (x,y) <span class="fu">=</span>
+    (x <span class="fu">+</span> dt <span class="fu">*</span> vx <span class="fu">/</span> <span class="dv">2</span>, y <span class="fu">+</span> dt <span class="fu">*</span> vy <span class="fu">/</span> <span class="dv">2</span>)
+
+display <span class="fu">:</span> (<span class="dt">Float</span>,<span class="dt">Float</span>) <span class="ot">-&gt;</span> <span class="dt">Element</span>
+display xy <span class="fu">=</span>
+    collage (round areaSize) (round areaSize)
+      [ rect areaSize areaSize
+          <span class="fu">|&gt;</span> filled grey
+      , rect squareSize squareSize
+          <span class="fu">|&gt;</span> outlined (solid black)
+          <span class="fu">|&gt;</span> move xy
+      ]</code></pre></td></tr></table>
+<h1 id="appendix-d">Appendix D</h1>
 <h2 id="meeting-minutes-sample">Meeting minutes (sample)</h2>
-<p>Group meeting with Leon at East Building, 11:15 Friday 4th October 2013</p>
-<h1 id="n.b.-read-up-on-and-remind-yourself-of-hci-stuff-year-2-and-software">N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE</h1>
-<p>ENGINEERING STUFF (Year 1)</p>
-<h2 id="reading-material">Reading material</h2>
+<h3 id="fri-oct-4-1115-gmt-2013">Fri Oct 4 11:15 GMT 2013</h3>
+<p>Group meeting with supervisor Leon Watts</p>
+<p><strong>N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE ENGINEERING STUFF (Year 1)</strong></p>
+<ul>
+<li>Reading material</li>
+</ul>
 <p>In email repsonse to request for FYP meeting, <strong>Leon writes:</strong></p>
 <pre><code>Please do a bit of reading around beforehand. Go to the ACM Digital Library
 and search on &#39;user interface programming&#39;.</code></pre>
@@ -302,12 +2164,14 @@ the following book chapters:</code></pre>
 <li>Dix, Finlay, Abowd and Beale (2004) Human-Computer Interaction. hapter 14: Communication and Collaboration Models.</li>
 <li>Shneiderman and Plaisant (2005) Designing the User Interface. hapter 10: Collaboration.</li>
 </ul>
-<h1 id="leon-asked-us-to-answer-these-questions-and-bring-a-notebook">Leon asked us to answer these questions and bring a notebook:</h1>
-<h2 id="q1.-what-i-hope-to-get-out-of-my-fyp-as-an-experience">Q1. What I hope to get out of my FYP as an experience?</h2>
+<h4 id="leon-asked-us-to-answer-these-questions-and-bring-a-notebook">Leon asked us to answer these questions and bring a notebook:</h4>
+<ul>
+<li>Q1. What I hope to get out of my FYP as an experience?</li>
+</ul>
 <p>I hope to gain a deep and meaningful understanding of the programmer as a user, as an individual and the context of that individual -- e.g. in a software team inside a department, inside a management structure... inside a company.</p>
 <p>I hope to use this understanding to determine processes/work-flows that programmers experience in the endeavour of User Interface Design, both from the individual perspective and as a team.</p>
 <p>Within these work flows, I wish to identify, in detail, metrics to gauge productivity, in order to measure this in experiments, perhaps doing A/B testing with Elm and some other, perhaps procedural language. This is an example of an objective measure.</p>
-<p>I would also like to gather self-reported, more &quot;fuzzy&quot; feedback on user's perception of their productivity -- pain points, advantages, etc. they experience in using Language X to product a UI compared to Language Y (Declarative languages like Elm, etc)</p>
+<p>I would also like to gather self-reported, more &quot;fuzzy&quot; feedback on user's perception of their productivity -- pain points, advantages, etc. they experience in using Language X to produce a UI compared to Language Y (Declarative languages like Elm, etc)</p>
 <p>I wish to verify, empirically, the comparisons and claims made on the <a href="http://elm-lang.org/learn/What-is-FRP.elm">What is FRP?</a> page of the elm-lang.org website, and those claimed it's research paper (detailing the implementation of Elm, <strong>benefits</strong>, etc.)</p>
 <p>In email again, <strong>Leon writes:</strong></p>
 <pre><code>The Elm site makes **comparative statements.** That is encouraging because
@@ -321,14 +2185,14 @@ to ask new questions about Elm that its proponents may not have considered.</cod
 <li>&quot;Not only is that painful to code, but it also requires broad and deep knowledge of inconsequential things.&quot;</li>
 <li>&quot;FRP makes tasks considerably easier by taking care of the messy .how. of events, display, and updates.&quot;</li>
 </ol>
-<h2 id="q2.-where-my-project-idea-came-from-what-inspired-me">Q2. Where my Project Idea came from (what inspired me)?</h2>
 <ul>
+<li><p>Q2. Where my Project Idea came from (what inspired me)?</p></li>
 <li>The pain of coding and writing GUIs in PyQt4 while at my last job at Altran</li>
 <li>The joys of coding in Haskell</li>
 <li>The pain of writing GUIs in Haskell</li>
-<li>The joys of coding and writing GUIs in Elm!</li>
+<li><p>The joys of coding and writing GUIs in Elm!</p></li>
+<li><p>Q3. What are my concerns?</p></li>
 </ul>
-<h2 id="q3.-what-are-my-concerns">Q3. What are my concerns?</h2>
 <ol style="list-style-type: decimal">
 <li>Difficulty procuring programmers (users) -- specifically those that meet my criteria of not having used a declarative programming language.</li>
 <li>Difficulty procuring programmers working in a team</li>
@@ -337,13 +2201,14 @@ to ask new questions about Elm that its proponents may not have considered.</cod
 <li>Concern regarding the dependency of a subsequent part of the project on a previous step -- this is inherent of all projects, though.</li>
 </ol>
 <hr />
-<h1 id="am-in-stv-individual-meeting-after-proposal-hand-in">30/10/2013 @ 9:15 am in STV ## Individual Meeting after Proposal hand-in</h1>
+<h3 id="tue-oct-30-0915-gmt-2013">Tue Oct 30 09:15 GMT 2013</h3>
+<p>Individual Meeting after Proposal hand-in</p>
 <p>Our discussion centered around the direction I wish to take following my Project Proposal.</p>
-<h3 id="ab-testing-of-the-language-with-the-same-ide">AB Testing of the language with the same IDE</h3>
+<h4 id="ab-testing-of-the-language-with-the-same-ide">AB Testing of the language with the same IDE</h4>
 <p>The primary direction I mentioned (as echoed in my Proposal) was doing AB testing of Elm vs. another language (e.g. JavaScript) (i.e. the language is the dependent variable) using the same Concurrent FRP IDE (the independent variable).</p>
-<h3 id="test-just-the-paradigm">Test just the paradigm</h3>
+<h4 id="test-just-the-paradigm">Test just the paradigm</h4>
 <p>He also suggested a potential experiment to test just the paradigm, eliminating the IDE from the experiment above. Perhaps for a Pilot study.</p>
-<h3 id="experiment-process">Experiment process</h3>
+<h4 id="experiment-process">Experiment process</h4>
 <ol style="list-style-type: decimal">
 <li>Study question (e.g. Is it easy?)</li>
 <li>Measurement concept (e.g. &quot;Easy&quot;)</li>
@@ -355,13 +2220,13 @@ to ask new questions about Elm that its proponents may not have considered.</cod
 <li>Does the data answer the study question I set out to ask? This is now &quot;feed backwards validation&quot;.</li>
 <li>Write-up including the 'nitty-gritty' of the user study, and a statement like &quot;Given our definition of easy, our multiple operationalisations of the concept of easy show that this is infact objectively true/false&quot;.</li>
 </ol>
-<h3 id="pilots">Pilots</h3>
+<h4 id="pilots">Pilots</h4>
 <p>We also spoke about ideas for pilot studies -- asking &quot;What might be surprising insights into declarative programming languages for User Interface Design -- the case of Elm?&quot;.</p>
 <p>Speak-aloud protocols where you prompt/facilitate the user to say what is on their mind when that e.g. pause for more than 10 seconds -- a measurement I set out to look for during an experiment.</p>
 <p>I might ask &gt; I notice you have paused for at least 10 seconds -- why did you? &gt;&gt; I thought the code would do X, but it did Y. &gt; Why did you think it would do X? &gt;&gt; ...</p>
 <p>I must ask the participant questions designed in a way that they are not leading.</p>
 <p>Leon suggested I gather a rich data set, as it's difficult to take notes AND prompt the user during an experiment. SO difficult. Perhaps record video.</p>
-<h2 id="actions-for-next-meeting">Actions for next meeting</h2>
+<h4 id="actions-for-next-meeting">Actions for next meeting</h4>
 <p>Devise a Pilot study, answering these 3 questions:</p>
 <ol style="list-style-type: decimal">
 <li>What might I ask people to do?</li>
@@ -370,38 +2235,38 @@ to ask new questions about Elm that its proponents may not have considered.</cod
 </ol>
 <p>Also see paper Leon will send me on &quot;Thematic analysis &amp; Psychology&quot;</p>
 <hr />
-<h1 id="wed-mar-25-1430-gmt-2014">Wed Mar 25 14:30 GMT 2014</h1>
+<h3 id="wed-mar-25-1430-gmt-2014">Wed Mar 25 14:30 GMT 2014</h3>
 <p>(Several meetings undocumented)</p>
 <p>TODO: Refer to notes in Diary for previous entries.</p>
-<h2 id="progress-since-last-meeting">Progress since last meeting</h2>
+<h4 id="progress-since-last-meeting">Progress since last meeting</h4>
 <p>Discussed findings from analysis of pilot study</p>
-<h3 id="observation-1">Observation 1</h3>
+<h4 id="observation-1">Observation 1</h4>
 <ul>
 <li><p>Prompting <em>&quot;What are you thinking about?&quot;</em> etc. seemed to place additional cognitive load on the user as they spent longer resuming than when not prompted. This caused noise in assessing the actual cognitive load incurred during the completion of the <strong>task</strong>. Were the signs of struggling/undergoing difficulty due to simply not understanding the language, or were they due to the difficulty of the task?</p></li>
 <li><p>In particular, the majority of instances where the users paused turned out to be confusion as to the semantics &amp; syntax of the language.</p></li>
 </ul>
-<h3 id="model-adjustment-1">Model Adjustment 1</h3>
+<h4 id="model-adjustment-1">Model Adjustment 1</h4>
 <ul>
 <li>Add tooltips that appear as the user places the keyboard cursor to the right of a token in the language.</li>
 </ul>
-<h3 id="observation-2">Observation 2</h3>
+<h4 id="observation-2">Observation 2</h4>
 <ul>
 <li>Sifting through 1-hour+ of video data capture for incidences of cognitive load is <em>HARD!</em>. Is there some programmatic way of narrowing the video data to points of interest?</li>
 </ul>
-<h3 id="model-adjustment-2">Model Adjustment 2</h3>
+<h4 id="model-adjustment-2">Model Adjustment 2</h4>
 <ul>
 <li><p>Track the user mouse and keyboard movements in a 3-tuple: (Time t, (Mouse.x, Mouse.y), Keypress k)</p></li>
 <li><p>It doesn't have to be implemented this way. I could extend <strong>Model Adjustment 1</strong> to define blocks of code as tokens in themselves, and capture how long the cursor is static on that particular token.</p></li>
 <li><p>Leon suggested a further refinement of this idea in order to further narrow the data (in fact, just capturing mouse &amp; keyboard movements will result in an explosion of the volume of data -- countrary to what I intend to achieve). His refinement was to define regions of interest in the code pane, and <em>only when the mouse/key cursor is in the region, do I capture data</em>.</p></li>
 <li><p>Use the <code>if cursor in region then log (Time t, (Mouse.x, Mouse.y), Keypress   k)</code> functionality as a <em>lens</em> to focus on significant portions of video capture.</p></li>
 </ul>
-<h1 id="further-discussion">Further discussion</h1>
+<h4 id="further-discussion">Further discussion</h4>
 <p>We then discussed some questions that might lead my direction of study in the next steps of my research:</p>
 <ul>
 <li><p>Is the mouse/cursor position a proxy for someone's attention as they carry out the task?</p></li>
 <li><p>Often when I'm coding I'll leave the cursor where it is but think about other regions of code. I don't necessarily move the keyboard/mouse cursor to the section of code I'm thinking about. Instead, I use it as a 'bookmark' to track what I'm currently implementing, and may scroll around to other parts.</p></li>
 </ul>
-<h1 id="actions">Actions</h1>
+<h4 id="actions">Actions</h4>
 <ol style="list-style-type: decimal">
 <li>Design a task in JavaScript to go inside this adjusted model (incorporating Model Adjustment 1 and 2).</li>
 </ol>

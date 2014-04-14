@@ -28,7 +28,7 @@ fieldset,img {
     border:0;
 }
 
-address,caption,cite,code,dfn,em,strong,th,var {
+address,caption,cite,dfn,em,strong,th,var {
     font-style:normal;
     font-weight:400;
 }
@@ -171,7 +171,7 @@ body {
 
 pre,code,kbd,samp,tt {
     font-family:monospace;
-    font-size:95%;
+    font-size:100%;
     line-height:120%;
 }
 
