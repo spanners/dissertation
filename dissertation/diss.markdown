@@ -369,22 +369,457 @@ is not idiomatic of Elm or JavaScript (the two languages that I am comparing).
 Something like the following will never be that easy in JavaScript:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.haskell .numberLines}
--- | Inefficient quicksort in haskell.
-qsort :: (Enum a) => [a] -> [a]
-qsort []     = []
-qsort (x:xs) = qsort (filter (< x) xs) ++ [x] ++
-               qsort (filter (>= x) xs) 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.haskell .numberLines}
 main = lift asText Mouse.position
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Group meeting with Leon at East Building, 11:15 Friday 4th October 2013
+
+
+**N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE ENGINEERING STUFF (Year 1)**
+
+### Reading material
+
+In email repsonse to request for FYP meeting, **Leon writes:**
+
+	Please do a bit of reading around beforehand. Go to the ACM Digital Library and search on 'user interface programming'.
+
+1. [ACM Conference on Human Factors in Computing Systems](http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE151)
+2. [ACM CSCW: Conference on Computer Supported Cooperative Work](http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE169)
+3. [ACM UIST: Symposium on User Interface Software and Technology](http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE172)
+
+
+In moodle project page, **Leon writes:**
+
+
+	Your project must be related to contemporary developments in Human-Computer Interaction, and preferably to the part of the HCI world that focuses on interactive systems for collaboration.
+
+1. ???
+2. ???
+
+Also In moodle project page, **Leon also writes:**
+
+	It normally starts with some user-centred research (observations, interviews, pilot experiment) to ground the problem, carried out concurrently with literature research. 
+	The research problem is normally boiled down to something that can be addressed through the production of alternative versions of an interactive system. 
+	
+	This is closely followed by initial design work and the production of a rough but working prototype leading up to Christmas. 
+	
+	After the January exams, my students typically re-scope their research problem, based in the outcome of their initial work, and solidify their implementation ready for a full evaluation in March and April.
+
+Thus, my answers to the questions Leon posed should follow this structure in terms of what I want to get out of it. I can use the above structure to identify **concerns** of potential challenges in each step/combination of steps/step-transitions (e.g. step dependencies, resource procurement)
+
+
+Also in moodle product page, **Leon also writes:**
+
+	Students should prepare for their projects by refreshing their memories about Interaction from CM20216 activities. You should read about HCI in general, and support for collaboration in particular. Look at any or all of the following book chapters:
+
+* Sharp, Rogers and Preece (2007) Interaction Design. hapter 4: Designing to Support Communication and Collaboration.
+* Dix, Finlay, Abowd and Beale (2004) Human-Computer Interaction. hapter 14: Communication and Collaboration Models.
+* Shneiderman and Plaisant (2005) Designing the User Interface. hapter 10: Collaboration.
+
+### Leon asked us to answer these questions and bring a notebook:
+
+#### Q1. What I hope to get out of my FYP as an experience?
+
+I hope to gain a deep and meaningful understanding of the programmer as a user, as an individual and the context of that individual -- e.g. in a software team inside a department, inside a management structure... inside a company.
+
+I hope to use this understanding to determine processes/work-flows that programmers experience in the endeavour of User Interface Design, both from the individual perspective and as a team.
+
+Within these work flows, I wish to identify, in detail, metrics to gauge productivity, in order to measure this in experiments, perhaps doing A/B testing with Elm and some other, perhaps procedural language. This is an example of an objective measure. 
+
+I would also like to gather self-reported, more "fuzzy" feedback on user's perception of their productivity -- pain points, advantages, etc.  they experience in using Language X to product a UI compared to Language Y (Declarative languages like Elm, etc)
+
+I wish to verify, empirically, the comparisons and claims made on the [What is FRP?](http://elm-lang.org/learn/What-is-FRP.elm) page of the elm-lang.org website, and those claimed it's research paper (detailing the implementation of Elm, **benefits**, etc.)
+
+In email again, **Leon writes:**
+
+	The Elm site makes **comparative statements.** That is encouraging because it sets up opportunities for you to test some of the claims they make, and to ask new questions about Elm that its proponents may not have considered.
+
+These are:
+
+1. "most current frameworks for graphical user interfaces are not declarative. They mire programmers in the many small, nonessential details of handling user input and manually modifying the display."
+2. "with FRP, many of the irrelevant details are left to the compiler, freeing the programmer to think about things that matter."
+3. "Coding [these examples](http://elm-lang.org/Examples.elm) in a traditional GUI framework such as HTML/CSS/JavaScript . would require significantly more work and headache."
+4. "Not only is that painful to code, but it also requires broad and deep knowledge of inconsequential things."
+5. "FRP makes tasks considerably easier by taking care of the messy .how. of events, display, and updates."
+
+#### Q2. Where my Project Idea came from (what inspired me)?
+
+* The pain of coding and writing GUIs in PyQt4 while at my last job at Altran
+* The joys of coding in Haskell
+* The pain of writing GUIs in Haskell
+* The joys of coding and writing GUIs in Elm!
+
+#### Q3. What are my concerns?
+
+1. Difficulty procuring programmers (users) -- specifically those that meet my criteria of not having used a declarative programming language.
+2. Difficulty procuring programmers working in a team
+3. The complexity/scope of the project -- is it enough for a FYP; is it too much?
+4. Looking at the production of User Interfaces using a programming language, there are many variables -- how will I devise an experiment to minimise this and isolate a variable so that I can make some causal/correlational conclusions?
+5. Concern regarding the dependency of a subsequent part of the project on a previous step -- this is inherent of all projects, though.
+
 ## Experimental design
 
-Foo
+### 30/10/2013 @ 9:15 am in STV 
+#### Individual Meeting after Proposal hand-in
+
+Our discussion centered around the direction I wish to take following my Project
+Proposal.
+
+##### AB Testing of the language with the same IDE
+
+The primary direction I mentioned (as echoed in my Proposal) was doing AB
+testing of Elm vs. another language (e.g. JavaScript) (i.e. the language is the
+dependent variable) using the same Concurrent FRP IDE (the independent variable).
+
+##### Test just the paradigm
+
+He also suggested a potential experiment to test just the paradigm, eliminating
+the IDE from the experiment above. Perhaps for a Pilot study.
+
+##### Experiment process
+
+1. Study question (e.g. Is it easy?)
+2. Measurement concept (e.g. "Easy")
+3. Operationalisation -- taking a measurement concept and mapping it to
+   something concrete (e.g. if completing a pre-defined task the user must
+   complete takes `< 5` steps, it is 'easy' -- we can then compare instances of
+   these studies given our definition of easy). This is much like mapping a
+   design to an implementation, and there is a risk of losing information, or
+   ending up with a mismatched concrete instance that does not represent the
+   concept we wish to convey.
+4. Do another operationalisation of our measurement concept -- this allows us to
+   get a different perspective of the same concept. (e.g. if total length of
+   pauses during a 1 hour experiment is `< 10` minutes, it is 'easy'). We do this
+   to get 'coverage' of the measurement concept. It is a form of cross
+   validation. If we see an overlap in the correlational results after analysis,
+   we can make a stronger assertion that e.g. "language A is easier than
+   language B.". The idea I am describing here is methodological decision-making.
+5. Predict what will be the likely results of our experiments on the
+   operationalised measurements. This is "feed forward validation".
+6. Do the experiement.
+7. Analyse the data. See if the data has patterns that correlate with the assertion I wish to
+   make. I will be representing the raw data in some outcome measure -- that is
+   turning the raw data into a set of (or a single) value for comparison. 
+8. Does the data answer the study question I set out to ask? This is now "feed
+   backwards validation".
+9. Write-up including the 'nitty-gritty' of the user study, and a statement like
+   "Given our definition of easy, our multiple operationalisations of the
+   concept of easy show that this is infact objectively true/false".
+
+##### Pilots
+
+We also spoke about ideas for pilot studies -- asking "What might be surprising
+insights into declarative programming languages for User Interface Design -- the
+case of Elm?".
+
+Speak-aloud protocols where you prompt/facilitate the user to say what is on
+their mind when that e.g. pause for more than 10 seconds -- a measurement I set
+out to look for during an experiment. 
+
+I might ask 
+> I notice you have paused for at least 10 seconds -- why did you?
+>> I thought the code would do X, but it did Y.
+> Why did you think it would do X?
+>> ...
+
+I must ask the participant questions designed in a way that they are not
+leading.
+
+Leon suggested I gather a rich data set, as it's difficult to take notes AND
+prompt the user during an experiment. SO difficult. Perhaps record video.
+
+#### Actions for next meeting
+
+Devise a Pilot study, answering these 3 questions:
+
+1. What might I ask people to do?
+2. How will I gather data?
+3. How will I analyse the data?
+
+Also see paper Leon will send me on "Thematic analysis & Psychology"
+
+### Wed Mar 25 14:30 GMT 2014
+
+(Several meetings undocumented)
+
+TODO: Refer to notes in Diary for previous entries.
+
+#### Progress since last meeting
+
+Discussed findings from analysis of pilot study
+
+##### Observation 1
+
+* Prompting *"What are you thinking about?"* etc. seemed to place additional
+  cognitive load on the user as they spent longer resuming than when not
+  prompted. This caused noise in assessing the actual cognitive load incurred
+  during the completion of the **task**. Were the signs of struggling/undergoing
+  difficulty due to simply not understanding the language, or were they due to
+  the difficulty of the task?
+
+* In particular, the majority of instances where the users paused turned out to
+  be confusion as to the semantics & syntax of the language.
+
+##### Model Adjustment 1
+
+* Add tooltips that appear as the user places the keyboard cursor to the right
+  of a token in the language.
+
+##### Observation 2
+
+* Sifting through 1-hour+ of video data capture for incidences of cognitive load
+  is *HARD!*. Is there some programmatic way of narrowing the video data to
+  points of interest?
+
+##### Model Adjustment 2
+
+* Track the user mouse and keyboard movements in a 3-tuple: (Time t, (Mouse.x,
+  Mouse.y), Keypress k)
+  
+* It doesn't have to be implemented this way. I could extend **Model Adjustment
+  1** to define blocks of code as tokens in themselves, and capture how long the
+  cursor is static on that particular token.
+
+* Leon suggested a further refinement of this idea in order to further narrow
+  the data (in fact, just capturing mouse & keyboard movements will result in an
+  explosion of the volume of data -- countrary to what I intend to achieve). His
+  refinement was to define regions of interest in the code pane, and *only when
+  the mouse/key cursor is in the region, do I capture data*. 
+
+* Use the `if cursor in region then log (Time t, (Mouse.x, Mouse.y), Keypress
+  k)` functionality as a *lens* to focus on significant portions of video
+  capture.
+
+#### Further discussion
+
+We then discussed some questions that might lead my direction of study in the
+next steps of my research:
+
+* Is the mouse/cursor position a proxy for someone's attention as they carry out
+  the task?
+
+* Often when I'm coding I'll leave the cursor where it is but think about other
+  regions of code. I don't necessarily move the keyboard/mouse cursor to the
+  section of code I'm thinking about. Instead, I use it as a 'bookmark' to track
+  what I'm currently implementing, and may scroll around to other parts.
+
+#### We also discussed...
+
+The result of the dissertation will be a list of observed cognitive
+easing/loading that each language produces for users, much like an
+advantage/disadvantage comparison:
+
+----------- ------------
+Elm         JavaScript
+----------- ------------
++ ...       + ...
+
++ ...       - ...
+
+- ...       - ...
+
+- ...       + ...
+
++ ...       _
+----------- ------------
+
+
+#### Actions
+
+1. Design a task in JavaScript to go inside this adjusted model
+   (incorporating Model Adjustment 1 and 2).
+
+     This will require a degree of *"implementation juggling"* in order to find a
+     balance of code-length/difficulty over the same task in Elm in such a way
+     that is not creating noise in the thing being studied: Cognitive load. 
+
+     Keep the reactivity constant, compare the differences in ease between JS and
+     Elm.
+
+2. If time available, run another Pilot study on this task + adjusted model
+
+
+
+### Tue Apr  1 14:30:00 BST 2014
+
+Discussed progress made and what hypotheses to form that may usefully model
+cognitive load.
+
+#### Progress since last meeting
+
+![Extensions made to the Elm IDE]
+
+I have implemented full-screen mouse tracking that stores to a database a tuple:
+
+    (t, (x, y))
+
+for every mouse move, producing a list in JSON (so it's more like 
+`{{uniq-userid: {125125, (67, 321)}}, {uniq-userid: {125126, (67, 322)}} ...}`)
+
+I am ready to demo this (See Action 1.)
+
+The only issue worth tweaking is that user activity data is captured separately
+from the error output, so I will need to collate the data afterwards or find
+some way to feed it into the same data store.
+
+#### Meeting Discussion
+
+2 Hypotheses
+
+1. Why the regions (*see green boxes in figure above*) I define in the code (to
+   mouse-track e.g.) are meaningful
+
+2. Frequency of semantically or syntactically incorrect errors made will differ
+   as a function of the language under study
+
+These need narrowing as they are too broad to test. Explode them into multiple,
+tighter hypotheses.
+
+They are *valid* because they are *well-founded* -- i.e. I have good reason to
+believe that # of errors made is an indication of cognitive load. I have good
+reason to believe that the selected regions will have more mouse activity (or
+whatever activity I suspect indicates higher cognitive load) as they are harder
+regions of code OR they pertain to achieving the set task.
+
+
+#### Actions
+
+1. Refine Mouse logging 
+
+    1. *DONE* Make it so that I can run arbitrary Elm code in the editor via a fileOpen
+       operation 
+    2. *DONE* Make an Elm file that logs mouse movements ready to be loaded into the Editor
+    3. *DONE* Load it into the editor and test it uploads to Firebase
+    4. *DONE* Modify [Generator.hs](https://github.com/spanners/elm-lang.org/blob/master/server/Generator.hs)
+    
+            case (Elm.compile elmSrc) of 
+                Left jsSrc -> ...
+                Right _ -> error "blah"
+    
+       So that when we get an error, we timestamp and append it to a log file so
+       this can later be collated with the Firebase to determine when errors were
+       made
+
+       I'll need to insert a layer between `compile :: Snap()` and `serveHtml ::
+       MonadSnap m => H.Html -> m ()` that performs the logging. It will have
+       type signature `TypedHtml -> 
+
+       [compile](https://github.com/spanners/elm-lang.org/blob/master/server/Server.hs#L81)
+       [serveHtml](https://github.com/spanners/elm-lang.org/blob/master/server/Server.hs#L69)
+
+
+    5. Make it so I can define regions in the mouse tracking -- i.e. ONLY within a
+       defined region is the mouse movement tracked e.g. `if mouse(x,y) in
+       some2by2Square then Just mouse(x,y) else Nothing`
+
+       See https://github.com/spanners/laska/blob/master/Signals.elm
+
+2. Demo to Hilary Johnson
+    1. Install on VPS (See [build script](../../install_elm.sh))
+    2. Run these:      
+
+            git clone https://github.com/spanners/elm-lang.org
+            cd elm-lang.org
+            cabal install --bindir=.
+
+3. *DONE* Design a task in JS and Elm
+
+4. Define regions to select for logging activity. Why? Because:
+    * Complex logic in code, OR
+    * Relevant to task
+    * Captures Thrash (keep on going over the same thing, e.g.). Errors made
+      also captures thrash!
+
+5. *DONE* Determine what to do with mouse (for example) data.
+
+[Extensions made to the Elm IDE]: ide-extensions.png
+
+### Tuesday Apr 8 14:30:00 BST 2014
+
+What makes code difficult to understand and work with?
+
+* Bit twiddling?
+* Declaring and defining simultaneously?
+* Compound if/then/else statements?
+
+"[Programming is] manipulating symbols blindly" ~ Bret Victor
+
+Do a 2x2 study, defining regions in the code monitoring mouse clicks. Regions
+can either be simple/hard in complexity (exhibiting/not-exhibiting one of the
+above 'difficult' properties). Or code can be task-oriented or not, that is *the
+code does/does not need to be changed to achieve the completed task set for the
+user*:
+
+#### 2x2 study between-subjects
+
+--------------- ------------------
+Elm             -
+--------------- ------------------
+Simple/Task     Hard/Task
+
+Simple/Not-Task Hard/Not-Task
+--------------- ------------------
+
+--------------- ------------------
+JavaScript      -
+--------------- ------------------
+Simple/Task     Hard/Task
+
+Simple/Not-Task Hard/Not-Task
+--------------- ------------------
+
+#### Study method
+
+Look at total and/or mean time in each of these areas for comparison.
+
+My study will be **between-subjects** instead of within-subjects.
+
+That is, I will study *different users* for different languages. If a user has
+completed the task in Elm, I can not have them complete the task in JavaScript,
+and vice-versa.
+
+I will necessarily make a compromise here:
+
+Between-subjects:
+
+* I lose the ability to keep programmer competence as constant, thus it is a
+  confounding variable
+
+* I gain the ability to ignore learned-experience in completing the task -- the
+  participant is different every time so will not have done this task before,
+  thus this is not a confounding variable.
+
+Within-subjects is the converse of the above methodological properties
+
+#### Actions
+
+1. **DONE** Reorder divs so embedded div is on top of editor div.
+
+    This turned out (I am fairly certain) to be due to codemirror.js binding
+    mouse clicks. It was solved by using Elm's `Mouse.isDown`. Using
+    `Mouse.isDown` has the added benefit of tracking mouse selects and drags,
+    because it logs `(x,y)` when the mouse is down and `(x,y)` again when it is up.
+
+2. **DONE** Create a task that features *Hard/Simple x Task/Not-task* (See [table above])
+
+3. ~~Implement *Region filtering* functionality so mouse activity is only logged
+   when the clicks occur within defined region(s)~~
+
+    I have instead defined bounding boxes that pertain to the regions I want to
+    track as a mouse-data filter -- that is, I capture all click data for the
+    whole frame, and then filter it by comparing x,y co-ordinates with my
+    bounding boxes. If it's in the box, keep it, otherwise discard.
+
+4. **DONE** Integrate JS task into IDE
+
+5. **DONE** Perform pilot study
+
+6. **WIP** Visualise mouse data
+
+[table above]: #2x2-study-between-subjects
 
 # Implementation and Testing
+
 This is the chapter in which you review the implementation and testing decisions and issues,
 and critique these processes.
 Code can be output inline using ````some code````. For example, this code is inline:
