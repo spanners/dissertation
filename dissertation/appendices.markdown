@@ -37,6 +37,12 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
+### install\_elm.sh
+
+~~~~ {include="code/install\_elm.sh"}
+this will be replaced by contents of README
+~~~~
+
 ### Server.hs
 
 ~~~~ {.haskell .numberLines include="code/server/Server.hs"}

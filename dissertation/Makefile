@@ -19,7 +19,7 @@
 appendices.tex: include
 	pandoc --filter ./include -o appendices.tex appendices.markdown
 
-appendices.html:
+appendices.html: include
 	pandoc --filter ./include -o appendices.html appendices.markdown
 
 include:

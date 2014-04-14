@@ -597,7 +597,7 @@ Also see paper Leon will send me on "Thematic analysis & Psychology"
 
 (Several meetings undocumented)
 
-TODO: Refer to notes in Diary for previous entries.
+**TODO**: Refer to notes in Diary for previous entries.
 
 #### Progress since last meeting
 
@@ -741,13 +741,12 @@ regions of code OR they pertain to achieving the set task.
 
 1. Refine Mouse logging 
 
-    1. *DONE* Make it so that I can run arbitrary Elm code in the editor via a
+    1. **DONE** Make it so that I can run arbitrary Elm code in the editor via a
        fileOpen operation 
-    2. *DONE* Make an Elm file that logs mouse movements ready to be loaded into
-       the Editor
-    3. *DONE* Load it into the editor and test it uploads to Firebase
-    4. *DONE* Modify [Generator
-       .hs](https://github.com/spanners/elm-lang.org/blob/master/server/Generator.hs)
+    2. **DONE** Make an Elm file that logs mouse movements ready to be loaded
+       into [Editor.hs](#editor.hs)
+    3. **DONE** Load it into the editor and test it uploads to Firebase
+    4. **DONE** Modify [Generate.hs](#generate.hs)
     
             case (Elm.compile elmSrc) of 
                 Left jsSrc -> ...
@@ -759,28 +758,26 @@ regions of code OR they pertain to achieving the set task.
 
        I'll need to insert a layer between `compile :: Snap()` and `serveHtml ::
        MonadSnap m => H.Html -> m ()` that performs the logging. It will have
-       type signature `TypedHtml -> 
+       type signature `TypedHtml -> H.Html`
 
-       [compile](https://github.com/spanners/elm-lang.org/blob/master/server/Server.hs#L81)
-       [serveHtml](https://github.com/spanners/elm-lang.org/blob/master/server/Server.hs#L69)
+       See the functions `compile` and `serveHtml` in [Server.hs](#server.hs) 
 
 
     5. Make it so I can define regions in the mouse tracking -- i.e. ONLY within a
        defined region is the mouse movement tracked e.g. `if mouse(x,y) in
        some2by2Square then Just mouse(x,y) else Nothing`
 
-       See https://github.com/spanners/laska/blob/master/Signals.elm
+       See [https://github.com/spanners/laska/blob/master/Signals.elm]()
 
 2. Demo to Hilary Johnson
-    1. Install on VPS (See [build
-       script](https://github.com/spanners/dissertation/blob/master/install_elm.sh)
+    1. Install on VPS (See [install\_elm.sh](#install-elm.sh))
     2. Run these:      
 
             git clone https://github.com/spanners/elm-lang.org
             cd elm-lang.org
             cabal install --bindir=.
 
-3. *DONE* Design a task in JS and Elm
+3. **DONE** Design a task in JS and Elm
 
 4. Define regions to select for logging activity. Why? Because:
     * Complex logic in code, OR
@@ -788,7 +785,7 @@ regions of code OR they pertain to achieving the set task.
     * Captures Thrash (keep on going over the same thing, e.g.). Errors made
       also captures thrash!
 
-5. *DONE* Determine what to do with mouse (for example) data.
+5. **DONE** Determine what to do with mouse (for example) data.
 
 [Extensions made to the Elm IDE]: ide-extensions.png
 
@@ -800,7 +797,7 @@ What makes code difficult to understand and work with?
 * Declaring and defining simultaneously?
 * Compound if/then/else statements?
 
-"[Programming is] manipulating symbols blindly" ~ Bret Victor
+*[Programming is] manipulating symbols blindly* ~ Bret Victor
 
 Do a 2x2 study, defining regions in the code monitoring mouse clicks. Regions
 can either be simple/hard in complexity (exhibiting/not-exhibiting one of the
@@ -874,7 +871,7 @@ Within-subjects is the converse of the above methodological properties
 
 6. **WIP** Visualise mouse data
 
-[table above]: #2x2-study-between-subjects
+[table above]: #x2-study-between-subjects
 
 # Implementation and Testing
 
