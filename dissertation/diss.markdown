@@ -517,10 +517,11 @@ their mind when that e.g. pause for more than 10 seconds -- a measurement I set
 out to look for during an experiment. 
 
 I might ask 
-> I notice you have paused for at least 10 seconds -- why did you?
->> I thought the code would do X, but it did Y.
-> Why did you think it would do X?
->> ...
+
+* > I notice you have paused for at least 10 seconds -- why did you?
+* >> I thought the code would do X, but it did Y.
+* > Why did you think it would do X?
+* >> ...
 
 I must ask the participant questions designed in a way that they are not
 leading.
@@ -573,8 +574,8 @@ Discussed findings from analysis of pilot study
 
 ##### Model Adjustment 2
 
-* Track the user mouse and keyboard movements in a 3-tuple: (Time t, (Mouse.x,
-  Mouse.y), Keypress k)
+* Track the user mouse and keyboard movements in a 3-tuple: `(Time t, (Mouse.x,
+  Mouse.y), Keypress k)`
   
 * It doesn't have to be implemented this way. I could extend **Model Adjustment
   1** to define blocks of code as tokens in themselves, and capture how long the
