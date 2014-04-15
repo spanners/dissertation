@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sudo apt-get install libgl1-mesa-dev libglc-dev freeglut3-dev libedit-dev libglw1-mesa libglw1-mesa-dev
+sudo apt-get install libgl1-mesa-dev libglc-dev freeglut3-dev 
+sudo apt-get install libedit-dev libglw1-mesa libglw1-mesa-dev
 sudo apt-get install ghc
 wget http://www.haskell.org/ghc/dist/7.6.3/ghc-7.6.3-src.tar.bz2
 tar xjf ghc-7.6.3-src.tar.bz2
@@ -12,7 +13,8 @@ cd ..
 make -j 8
 sudo make install
 cd
-wget http://lambda.haskell.org/platform/download/2013.2.0.0/haskell-platform-2013.2.0.0.tar.gz
+platform="2013.2.0.0/haskell-platform-2013.2.0.0.tar.gz"
+wget "http://lambda.haskell.org/platform/download/"$platform
 tar xzvf haskell-platform-2013.2.0.0.tar.gz
 cd haskell-platform-2013.2.0.0
 ./configure

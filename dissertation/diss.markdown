@@ -723,7 +723,6 @@ regions of code OR they pertain to achieving the set task.
         Left jsSrc -> ...
         Right _ -> error "blah"
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
     
        So that when we get an error, we timestamp and append it to a log file so
        this can later be collated with the Firebase to determine when errors were
