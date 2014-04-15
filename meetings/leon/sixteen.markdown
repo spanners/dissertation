@@ -44,7 +44,7 @@ Talk about "phases" in a programmer's activities during task-completion:
    region (Hard/Task, Hard/Not-Task, Simple/Task, Simple/Not-Task)\*(Elm,
    JavaScript))
 1. Presentation of data (summary means std dev.)
-    1. `x`^2 frequency analyses
+    1. $x^2$ frequency analyses
     1. `2x2x2` making 8 cells. My expected is an even distribution of clicks in
        each category, i.e. if I have 80 clicks in total across all groups, I
        expect to find 10 in each cell if there is no correlation.
