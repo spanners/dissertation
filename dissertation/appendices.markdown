@@ -8,7 +8,7 @@
 
 ### firebase-mouseclick-data.json
 
-~~~~ {.haskell .numberLines include="code/firebase-mouseclick-data.json"}
+~~~~ {.json .numberLines include="code/firebase-mouseclick-data.json"}
 this will be replaced by contents of README
 ~~~~
 
