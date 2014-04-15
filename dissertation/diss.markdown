@@ -909,9 +909,43 @@ Talk about "phases" in a programmer's activities during task-completion:
        each category, i.e. if I have 80 clicks in total across all groups, I
        expect to find 10 in each cell if there is no correlation.
 
+----------- ----------
+Time (min)  Clicks
+----------- ----------
+ 38.717217        183
 
-This is the chapter in which you review the outcomes, and critique the outcomes process.
-You may include user evaluation here too.
+  8.034583        130
+
+  7.878533         39
+
+ 23.672500         25
+
+ 29.754533        391
+
+ 14.993517         78
+
+ 48.960367        769
+
+  6.354050         71
+
+  7.878533         39
+
+ 29.698267        501
+
+ 40.302217        803
+
+ 12.319317         65
+
+ 17.106933         79
+
+ 12.958300        119
+----------- ----------
+
+
+**This is the chapter in which you review the outcomes, and critique the
+outcomes process.**
+
+**You may include user evaluation here too.**
 
 # Conclusions
 
