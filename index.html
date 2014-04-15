@@ -86,7 +86,9 @@ var ADAPT_CONFIG = {
 </ul></li>
 </ul></li>
 <li><a href="#implementation-and-testing"><span class="toc-section-number">5</span> Implementation and Testing</a></li>
-<li><a href="#results"><span class="toc-section-number">6</span> Results</a></li>
+<li><a href="#results"><span class="toc-section-number">6</span> Results</a><ul>
+<li><a href="#tue-apr-15-155038-bst-2014"><span class="toc-section-number">6.0.1</span> Tue Apr 15 15:50:38 BST 2014</a></li>
+</ul></li>
 <li><a href="#conclusions"><span class="toc-section-number">7</span> Conclusions</a></li>
 </ul>
 </div> <!-- Grid 3 -->
@@ -569,7 +571,107 @@ cabal install --bindir=.</code></pre></li>
 <p>This is the chapter in which you review the implementation and testing decisions and issues, and critique these processes. Code can be output inline using <code>some code</code>. For example, this code is inline: <code>public static int example = 0;</code> (I have used the character | as a delimiter, but any non-reserved character not in the code text can be used.) Code snippets can be output using the environment with the code given in the environment. For example, consider listing 5.1, below. Listing 5.1: Example code</p>
 <p>Code listings are produced using the package “Listings”. This has many useful options, so have a look at the package documentation for further ideas.</p>
 <h1 id="results"><span class="header-section-number">6</span> Results</h1>
-<p>This is the chapter in which you review the outcomes, and critique the outcomes process. You may include user evaluation here too.</p>
+<h3 id="tue-apr-15-155038-bst-2014"><span class="header-section-number">6.0.1</span> Tue Apr 15 15:50:38 BST 2014</h3>
+<p>Operationalisation of thrash (the concept), i.e. cementing the concept by a metric that models cognitive load (does it? we don’t know – further work after the analysis of this may determine if it is a plausible indicator of cognitive load)</p>
+<p>Leon suggested an improvement over this experimental method is to take people who are new, and train them up either in JS or Elm, and then run the same task. That way, their level of ability is comparable. (New as in never having used JS or Elm)</p>
+<p>My current method creates quite a bit of noise in the data, because I rely on self-reported level of expertise in JS/Functional languages. I don’t know how to modify the data to account for this. I could group the analyses into categories? I.e those who reported being experts at JS, those who reported never having used it, those who reported being experts in at least one FP language, and those who reported being new.</p>
+<p>Talk about “phases” in a programmer’s activities during task-completion:</p>
+<p>(Not necessarily distinct and in sequence — more often interleaved)</p>
+<ol type="1">
+<li>Familiarisation – Where is the bit I need to change?</li>
+<li>Narrowing in on the task once discovered – Oh I need to change <code>X</code>, but how?</li>
+<li>Solved task</li>
+<li>Playing (?)</li>
+</ol>
+<h4 id="mention-the-ways-in-which-the-study-is-flawed"><span class="header-section-number">6.0.1.1</span> Mention the ways in which the study is flawed:</h4>
+<ol type="1">
+<li>Self-reported expertise</li>
+<li>Self-reported task completion</li>
+<li>No way to be sure which error log pertains to which compile</li>
+<li>Unique participant ID per Surveymonkey</li>
+<li>Surveymonkey has taken my data hostage</li>
+<li>window dimensions?!</li>
+<li>Syntax reference 404</li>
+<li>I did not capture their code solution, so relied on trust</li>
+</ol>
+<h4 id="results-1"><span class="header-section-number">6.0.1.2</span> Results</h4>
+<ol type="1">
+<li>Describe data collected</li>
+<li>How it was analysed (I aggregated regions and looked at number of clicks per region (Hard/Task, Hard/Not-Task, Simple/Task, Simple/Not-Task)*(Elm, JavaScript))</li>
+<li>Presentation of data (summary means std dev.)
+<ol type="1">
+<li><span class="math"><em>x</em><sup>2</sup></span> frequency analyses</li>
+<li><code>2x2x2</code> making 8 cells. My expected is an even distribution of clicks in each category, i.e. if I have 80 clicks in total across all groups, I expect to find 10 in each cell if there is no correlation.</li>
+</ol></li>
+</ol>
+<table>
+<col style="width: 16%" /><col style="width: 16%" /><thead>
+<tr class="header">
+<th style="text-align: left;">Time (min)</th>
+<th style="text-align: left;">Clicks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">38.717217</td>
+<td style="text-align: left;">183</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8.034583</td>
+<td style="text-align: left;">130</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7.878533</td>
+<td style="text-align: left;">39</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">23.672500</td>
+<td style="text-align: left;">25</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">29.754533</td>
+<td style="text-align: left;">391</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">14.993517</td>
+<td style="text-align: left;">78</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">48.960367</td>
+<td style="text-align: left;">769</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6.354050</td>
+<td style="text-align: left;">71</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7.878533</td>
+<td style="text-align: left;">39</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">29.698267</td>
+<td style="text-align: left;">501</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">40.302217</td>
+<td style="text-align: left;">803</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12.319317</td>
+<td style="text-align: left;">65</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">17.106933</td>
+<td style="text-align: left;">79</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12.958300</td>
+<td style="text-align: left;">119</td>
+</tr>
+</tbody>
+</table>
+<p><strong>This is the chapter in which you review the outcomes, and critique the outcomes process.</strong></p>
+<p><strong>You may include user evaluation here too.</strong></p>
 <h1 id="conclusions"><span class="header-section-number">7</span> Conclusions</h1>
 <p>This is the chapter in which you review the major achievements in the light of your original objectives, critique the process, critique your own learning and identify possible future work.</p>
 <div class="references">
