@@ -718,9 +718,12 @@ regions of code OR they pertain to achieving the set task.
     3. **DONE** Load it into the editor and test it uploads to Firebase
     4. **DONE** Modify [Generate.hs](#generate.hs)
     
-            case (Elm.compile elmSrc) of 
-                Left jsSrc -> ...
-                Right _ -> error "blah"
+    ~~~~~~~~~ {.haskell .numberLines}
+    case (Elm.compile elmSrc) of 
+        Left jsSrc -> ...
+        Right _ -> error "blah"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     
        So that when we get an error, we timestamp and append it to a log file so
        this can later be collated with the Firebase to determine when errors were
