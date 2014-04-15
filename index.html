@@ -470,11 +470,14 @@ get the following terms:
 <li><strong>DONE</strong> Make it so that I can run arbitrary Elm code in the editor via a fileOpen operation</li>
 <li><strong>DONE</strong> Make an Elm file that logs mouse movements ready to be loaded into <a href="#editor.hs">Editor.hs</a></li>
 <li><strong>DONE</strong> Load it into the editor and test it uploads to Firebase</li>
-<li><p><strong>DONE</strong> Modify <a href="#generate.hs">Generate.hs</a></p>
-<pre><code>case (Elm.compile elmSrc) of 
-    Left jsSrc -&gt; ...
-    Right _ -&gt; error &quot;blah&quot;</code></pre></li>
+<li><strong>DONE</strong> Modify <a href="#generate.hs">Generate.hs</a></li>
 </ol>
+<table class="sourceCode haskell numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+</pre></td><td class="sourceCode"><pre><code class="sourceCode haskell"><span class="kw">case</span> (Elm.compile elmSrc) <span class="kw">of</span> 
+    <span class="dt">Left</span> jsSrc <span class="ot">-&gt;</span> <span class="fu">...</span>
+    <span class="dt">Right</span> _ <span class="ot">-&gt;</span> error <span class="st">&quot;blah&quot;</span></code></pre></td></tr></table>
 <p>So that when we get an error, we timestamp and append it to a log file so this can later be collated with the Firebase to determine when errors were made</p>
 <p>I’ll need to insert a layer between <code>compile :: Snap()</code> and <code>serveHtml ::    MonadSnap m =&gt; H.Html -&gt; m ()</code> that performs the logging. It will have type signature <code>TypedHtml -&gt; H.Html</code></p>
 <p>See the functions <code>compile</code> and <code>serveHtml</code> in <a href="#server.hs">Server.hs</a></p>
@@ -693,7 +696,7 @@ cabal install --bindir=.</code></pre></li>
 <h1 id="appendix-b">Appendix B</h1>
 <h2 id="raw-results-output">Raw results output</h2>
 <h3 id="firebase-mouseclick-data.json">firebase-mouseclick-data.json</h3>
-<table class="sourceCode haskell numberLines" include="code/firebase-mouseclick-data.json"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+<table class="sourceCode json numberLines" include="code/firebase-mouseclick-data.json"><tr class="sourceCode"><td class="lineNumbers"><pre>1
 2
 3
 4
@@ -733,42 +736,42 @@ cabal install --bindir=.</code></pre></li>
 38
 39
 40
-</pre></td><td class="sourceCode"><pre><code class="sourceCode haskell">{
-  <span class="st">&quot;js&quot;</span> <span class="fu">:</span> {
-    <span class="st">&quot;12&quot;</span> <span class="fu">:</span> {
-      <span class="st">&quot;-JKVwXgnfg4POT9MArjy&quot;</span> <span class="fu">:</span> {
-        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397490853983</span>,
-        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">0</span>,
-        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">0</span>
+</pre></td><td class="sourceCode"><pre><code class="sourceCode json">{
+  <span class="dt">&quot;js&quot;</span> : {
+    <span class="dt">&quot;12&quot;</span> : {
+      <span class="dt">&quot;-JKVwXgnfg4POT9MArjy&quot;</span> : {
+        <span class="dt">&quot;t&quot;</span> : <span class="dv">1397490853983</span>,
+        <span class="dt">&quot;y&quot;</span> : <span class="dv">0</span>,
+        <span class="dt">&quot;x&quot;</span> : <span class="dv">0</span>
       },
-      <span class="st">&quot;-JKVwXl8I_bLZNqxP36c&quot;</span> <span class="fu">:</span> {
-        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397490854551</span>,
-        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">444</span>,
-        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">417</span>
+      <span class="dt">&quot;-JKVwXl8I_bLZNqxP36c&quot;</span> : {
+        <span class="dt">&quot;t&quot;</span> : <span class="dv">1397490854551</span>,
+        <span class="dt">&quot;y&quot;</span> : <span class="dv">444</span>,
+        <span class="dt">&quot;x&quot;</span> : <span class="dv">417</span>
       },
-      <span class="st">&quot;-JKVwXj0LD-uRKDsT2Om&quot;</span> <span class="fu">:</span> {
-        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397490854503</span>,
-        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">444</span>,
-        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">417</span>
+      <span class="dt">&quot;-JKVwXj0LD-uRKDsT2Om&quot;</span> : {
+        <span class="dt">&quot;t&quot;</span> : <span class="dv">1397490854503</span>,
+        <span class="dt">&quot;y&quot;</span> : <span class="dv">444</span>,
+        <span class="dt">&quot;x&quot;</span> : <span class="dv">417</span>
       }
     }
   },
-  <span class="st">&quot;elm&quot;</span> <span class="fu">:</span> {
-    <span class="st">&quot;33&quot;</span> <span class="fu">:</span> {
-      <span class="st">&quot;-JKRgqJIRPH2EG-edZb5&quot;</span> <span class="fu">:</span> {
-        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397419631953</span>,
-        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">249</span><span class="fu">.</span><span class="dv">59999084472656</span>,
-        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">48</span><span class="fu">.</span><span class="dv">79999923706055</span>
+  <span class="dt">&quot;elm&quot;</span> : {
+    <span class="dt">&quot;33&quot;</span> : {
+      <span class="dt">&quot;-JKRgqJIRPH2EG-edZb5&quot;</span> : {
+        <span class="dt">&quot;t&quot;</span> : <span class="dv">1397419631953</span>,
+        <span class="dt">&quot;y&quot;</span> : <span class="fl">249.59999084472656</span>,
+        <span class="dt">&quot;x&quot;</span> : <span class="fl">48.79999923706055</span>
       },
-      <span class="st">&quot;-JKRhRQi31pr9AP1p1Rr&quot;</span> <span class="fu">:</span> {
-        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397419787709</span>,
-        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">294</span><span class="fu">.</span><span class="dv">3999938964844</span>,
-        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">152</span><span class="fu">.</span><span class="dv">8000030517578</span>
+      <span class="dt">&quot;-JKRhRQi31pr9AP1p1Rr&quot;</span> : {
+        <span class="dt">&quot;t&quot;</span> : <span class="dv">1397419787709</span>,
+        <span class="dt">&quot;y&quot;</span> : <span class="fl">294.3999938964844</span>,
+        <span class="dt">&quot;x&quot;</span> : <span class="fl">152.8000030517578</span>
       },
-      <span class="st">&quot;-JKRffOszNGfgwNdnO_X&quot;</span> <span class="fu">:</span> {
-        <span class="st">&quot;t&quot;</span> <span class="fu">:</span> <span class="dv">1397419324585</span>,
-        <span class="st">&quot;y&quot;</span> <span class="fu">:</span> <span class="dv">608</span>,
-        <span class="st">&quot;x&quot;</span> <span class="fu">:</span> <span class="dv">346</span><span class="fu">.</span><span class="dv">3999938964844</span>
+      <span class="dt">&quot;-JKRffOszNGfgwNdnO_X&quot;</span> : {
+        <span class="dt">&quot;t&quot;</span> : <span class="dv">1397419324585</span>,
+        <span class="dt">&quot;y&quot;</span> : <span class="dv">608</span>,
+        <span class="dt">&quot;x&quot;</span> : <span class="fl">346.3999938964844</span>
       }
     }
   }
@@ -883,32 +886,60 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </code></pre>
 <h3 id="install_elm.sh">install_elm.sh</h3>
-<pre include="code/install_elm.sh"><code>#!/bin/bash
+<table class="sourceCode bash numberLines" include="code/install_elm.sh"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="sourceCode"><pre><code class="sourceCode bash"><span class="co">#!/bin/bash</span>
 
-sudo apt-get install libgl1-mesa-dev libglc-dev freeglut3-dev libedit-dev libglw1-mesa libglw1-mesa-dev
-sudo apt-get install ghc
-wget http://www.haskell.org/ghc/dist/7.6.3/ghc-7.6.3-src.tar.bz2
-tar xjf ghc-7.6.3-src.tar.bz2
-cd ghc-7.6.3/mk
-cp build.mk.sample build.mk
-sed -i &#39;s/^#BuildFlavour = quick/BuildFlavour = quick/&#39; build.mk
-cd ..
-./configure
-make -j 8
-sudo make install
-cd
-wget http://lambda.haskell.org/platform/download/2013.2.0.0/haskell-platform-2013.2.0.0.tar.gz
-tar xzvf haskell-platform-2013.2.0.0.tar.gz
-cd haskell-platform-2013.2.0.0
-./configure
-make
-sudo make install
-cabal update
-cabal install cabal-install
-cabal install elm
-cabal install elm-server
-exit 0
-</code></pre>
+<span class="kw">sudo</span> apt-get install libgl1-mesa-dev libglc-dev freeglut3-dev 
+<span class="kw">sudo</span> apt-get install libedit-dev libglw1-mesa libglw1-mesa-dev
+<span class="kw">sudo</span> apt-get install ghc
+<span class="kw">wget</span> http://www.haskell.org/ghc/dist/7.6.3/ghc-7.6.3-src.tar.bz2
+<span class="kw">tar</span> xjf ghc-7.6.3-src.tar.bz2
+<span class="kw">cd</span> ghc-7.6.3/mk
+<span class="kw">cp</span> build.mk.sample build.mk
+<span class="kw">sed</span> -i <span class="st">&#39;s/^#BuildFlavour = quick/BuildFlavour = quick/&#39;</span> build.mk
+<span class="kw">cd</span> ..
+<span class="kw">./configure</span>
+<span class="kw">make</span> -j 8
+<span class="kw">sudo</span> make install
+<span class="kw">cd</span>
+<span class="ot">platform=</span><span class="st">&quot;2013.2.0.0/haskell-platform-2013.2.0.0.tar.gz&quot;</span>
+<span class="kw">wget</span> <span class="st">&quot;http://lambda.haskell.org/platform/download/&quot;</span><span class="ot">$platform</span>
+<span class="kw">tar</span> xzvf haskell-platform-2013.2.0.0.tar.gz
+<span class="kw">cd</span> haskell-platform-2013.2.0.0
+<span class="kw">./configure</span>
+<span class="kw">make</span>
+<span class="kw">sudo</span> make install
+<span class="kw">cabal</span> update
+<span class="kw">cabal</span> install cabal-install
+<span class="kw">cabal</span> install elm
+<span class="kw">cabal</span> install elm-server
+<span class="kw">exit</span> 0</code></pre></td></tr></table>
 <h3 id="server.hs">Server.hs</h3>
 <table class="sourceCode haskell numberLines" include="code/server/Server.hs"><tr class="sourceCode"><td class="lineNumbers"><pre>1
 2
@@ -2588,165 +2619,6 @@ display xy <span class="fu">=</span>
           <span class="fu">|&gt;</span> outlined (solid black)
           <span class="fu">|&gt;</span> move xy
       ]</code></pre></td></tr></table>
-<h1 id="appendix-d">Appendix D</h1>
-<h2 id="meeting-minutes-sample">Meeting minutes (sample)</h2>
-<h3 id="fri-oct-4-1115-gmt-2013">Fri Oct 4 11:15 GMT 2013</h3>
-<p>Group meeting with supervisor Leon Watts</p>
-<p><strong>N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE ENGINEERING STUFF (Year 1)</strong></p>
-<ul>
-<li>Reading material</li>
-</ul>
-<p>In email repsonse to request for FYP meeting, <strong>Leon writes:</strong></p>
-<pre><code>Please do a bit of reading around beforehand. Go to the ACM Digital Library
-and search on &#39;user interface programming&#39;.</code></pre>
-<ol style="list-style-type: decimal">
-<li><a href="http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE151">ACM Conference on Human Factors in Computing Systems</a></li>
-<li><a href="http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE169">ACM CSCW: Conference on Computer Supported Cooperative Work</a></li>
-<li><a href="http://libproxy.bath.ac.uk/login?qurl=http%3A%2F%2Fdl.acm.org%2Fevent.cfm%3Fid%3DRE172">ACM UIST: Symposium on User Interface Software and Technology</a></li>
-</ol>
-<p>In moodle project page, <strong>Leon writes:</strong></p>
-<pre><code>Your project must be related to contemporary developments in Human-Computer
-Interaction, and preferably to the part of the HCI world that focuses on
-interactive systems for collaboration.</code></pre>
-<ol style="list-style-type: decimal">
-<li>???</li>
-<li>???</li>
-</ol>
-<p>Also In moodle project page, <strong>Leon also writes:</strong></p>
-<pre><code>It normally starts with some user-centred research (observations,
-interviews, pilot experiment) to ground the problem, carried out
-concurrently with literature research.  The research problem is normally
-boiled down to something that can be addressed through the production of
-alternative versions of an interactive system. 
-
-This is closely followed by initial design work and the production of a
-rough but working prototype leading up to Christmas. 
-
-After the January exams, my students typically re-scope their research
-problem, based in the outcome of their initial work, and solidify their
-implementation ready for a full evaluation in March and April.</code></pre>
-<p>Thus, my answers to the questions Leon posed should follow this structure in terms of what I want to get out of it. I can use the above structure to identify <strong>concerns</strong> of potential challenges in each step/combination of steps/step-transitions (e.g. step dependencies, resource procurement)</p>
-<p>Also in moodle product page, <strong>Leon also writes:</strong></p>
-<pre><code>Students should prepare for their projects by refreshing their memories
-about Interaction from CM20216 activities. You should read about HCI in
-general, and support for collaboration in particular. Look at any or all of
-the following book chapters:</code></pre>
-<ul>
-<li>Sharp, Rogers and Preece (2007) Interaction Design. hapter 4: Designing to Support Communication and Collaboration.</li>
-<li>Dix, Finlay, Abowd and Beale (2004) Human-Computer Interaction. hapter 14: Communication and Collaboration Models.</li>
-<li>Shneiderman and Plaisant (2005) Designing the User Interface. hapter 10: Collaboration.</li>
-</ul>
-<h4 id="leon-asked-us-to-answer-these-questions-and-bring-a-notebook">Leon asked us to answer these questions and bring a notebook:</h4>
-<ul>
-<li>Q1. What I hope to get out of my FYP as an experience?</li>
-</ul>
-<p>I hope to gain a deep and meaningful understanding of the programmer as a user, as an individual and the context of that individual -- e.g. in a software team inside a department, inside a management structure... inside a company.</p>
-<p>I hope to use this understanding to determine processes/work-flows that programmers experience in the endeavour of User Interface Design, both from the individual perspective and as a team.</p>
-<p>Within these work flows, I wish to identify, in detail, metrics to gauge productivity, in order to measure this in experiments, perhaps doing A/B testing with Elm and some other, perhaps procedural language. This is an example of an objective measure.</p>
-<p>I would also like to gather self-reported, more &quot;fuzzy&quot; feedback on user's perception of their productivity -- pain points, advantages, etc. they experience in using Language X to produce a UI compared to Language Y (Declarative languages like Elm, etc)</p>
-<p>I wish to verify, empirically, the comparisons and claims made on the <a href="http://elm-lang.org/learn/What-is-FRP.elm">What is FRP?</a> page of the elm-lang.org website, and those claimed it's research paper (detailing the implementation of Elm, <strong>benefits</strong>, etc.)</p>
-<p>In email again, <strong>Leon writes:</strong></p>
-<pre><code>The Elm site makes **comparative statements.** That is encouraging because
-it sets up opportunities for you to test some of the claims they make, and
-to ask new questions about Elm that its proponents may not have considered.</code></pre>
-<p>These are:</p>
-<ol style="list-style-type: decimal">
-<li>&quot;most current frameworks for graphical user interfaces are not declarative. They mire programmers in the many small, nonessential details of handling user input and manually modifying the display.&quot;</li>
-<li>&quot;with FRP, many of the irrelevant details are left to the compiler, freeing the programmer to think about things that matter.&quot;</li>
-<li>&quot;Coding <a href="http://elm-lang.org/Examples.elm">these examples</a> in a traditional GUI framework such as HTML/CSS/JavaScript . would require significantly more work and headache.&quot;</li>
-<li>&quot;Not only is that painful to code, but it also requires broad and deep knowledge of inconsequential things.&quot;</li>
-<li>&quot;FRP makes tasks considerably easier by taking care of the messy .how. of events, display, and updates.&quot;</li>
-</ol>
-<ul>
-<li><p>Q2. Where my Project Idea came from (what inspired me)?</p></li>
-<li>The pain of coding and writing GUIs in PyQt4 while at my last job at Altran</li>
-<li>The joys of coding in Haskell</li>
-<li>The pain of writing GUIs in Haskell</li>
-<li><p>The joys of coding and writing GUIs in Elm!</p></li>
-<li><p>Q3. What are my concerns?</p></li>
-</ul>
-<ol style="list-style-type: decimal">
-<li>Difficulty procuring programmers (users) -- specifically those that meet my criteria of not having used a declarative programming language.</li>
-<li>Difficulty procuring programmers working in a team</li>
-<li>The complexity/scope of the project -- is it enough for a FYP; is it too much?</li>
-<li>Looking at the production of User Interfaces using a programming language, there are many variables -- how will I devise an experiment to minimise this and isolate a variable so that I can make some causal/correlational conclusions?</li>
-<li>Concern regarding the dependency of a subsequent part of the project on a previous step -- this is inherent of all projects, though.</li>
-</ol>
-<hr />
-<h3 id="tue-oct-30-0915-gmt-2013">Tue Oct 30 09:15 GMT 2013</h3>
-<p>Individual Meeting after Proposal hand-in</p>
-<p>Our discussion centered around the direction I wish to take following my Project Proposal.</p>
-<h4 id="ab-testing-of-the-language-with-the-same-ide">AB Testing of the language with the same IDE</h4>
-<p>The primary direction I mentioned (as echoed in my Proposal) was doing AB testing of Elm vs. another language (e.g. JavaScript) (i.e. the language is the dependent variable) using the same Concurrent FRP IDE (the independent variable).</p>
-<h4 id="test-just-the-paradigm">Test just the paradigm</h4>
-<p>He also suggested a potential experiment to test just the paradigm, eliminating the IDE from the experiment above. Perhaps for a Pilot study.</p>
-<h4 id="experiment-process">Experiment process</h4>
-<ol style="list-style-type: decimal">
-<li>Study question (e.g. Is it easy?)</li>
-<li>Measurement concept (e.g. &quot;Easy&quot;)</li>
-<li>Operationalisation -- taking a measurement concept and mapping it to something concrete (e.g. if completing a pre-defined task the user must complete takes &lt; 5 steps, it is 'easy' -- we can then compare instances of these studies given our definition of easy). This is much like mapping a design to an implementation, and there is a risk of losing information, or ending up with a mismatched concrete instance that does not represent the concept we wish to convey.</li>
-<li>Do another operationalisation of our measurement concept -- this allows us to get a different perspective of the same concept. (e.g. if total length of pauses during a 1 hour experiment is &lt; 10 minutes, it is 'easy'). We do this to get 'coverage' of the measurement concept. It is a form of cross validation. If we see an overlap in the correlational results after analysis, we can make a stronger assertion that e.g. &quot;language A is easier than language B.&quot;. The idea I am describing here is methodological decision-making.</li>
-<li>Predict what will be the likely results of our experiments on the operationalised measurements. This is &quot;feed forward validation&quot;.</li>
-<li>Do the experiement.</li>
-<li>Analyse the data. See if the data has patterns that correlate with the assertion I wish to make. I will be representing the raw data in some outcome measure -- that is turning the raw data into a set of (or a single) value for comparison.</li>
-<li>Does the data answer the study question I set out to ask? This is now &quot;feed backwards validation&quot;.</li>
-<li>Write-up including the 'nitty-gritty' of the user study, and a statement like &quot;Given our definition of easy, our multiple operationalisations of the concept of easy show that this is infact objectively true/false&quot;.</li>
-</ol>
-<h4 id="pilots">Pilots</h4>
-<p>We also spoke about ideas for pilot studies -- asking &quot;What might be surprising insights into declarative programming languages for User Interface Design -- the case of Elm?&quot;.</p>
-<p>Speak-aloud protocols where you prompt/facilitate the user to say what is on their mind when that e.g. pause for more than 10 seconds -- a measurement I set out to look for during an experiment.</p>
-<p>I might ask &gt; I notice you have paused for at least 10 seconds -- why did you? &gt;&gt; I thought the code would do X, but it did Y. &gt; Why did you think it would do X? &gt;&gt; ...</p>
-<p>I must ask the participant questions designed in a way that they are not leading.</p>
-<p>Leon suggested I gather a rich data set, as it's difficult to take notes AND prompt the user during an experiment. SO difficult. Perhaps record video.</p>
-<h4 id="actions-for-next-meeting">Actions for next meeting</h4>
-<p>Devise a Pilot study, answering these 3 questions:</p>
-<ol style="list-style-type: decimal">
-<li>What might I ask people to do?</li>
-<li>How will I gather data?</li>
-<li>How will I analyse the data?</li>
-</ol>
-<p>Also see paper Leon will send me on &quot;Thematic analysis &amp; Psychology&quot;</p>
-<hr />
-<h3 id="wed-mar-25-1430-gmt-2014">Wed Mar 25 14:30 GMT 2014</h3>
-<p>(Several meetings undocumented)</p>
-<p>TODO: Refer to notes in Diary for previous entries.</p>
-<h4 id="progress-since-last-meeting">Progress since last meeting</h4>
-<p>Discussed findings from analysis of pilot study</p>
-<h4 id="observation-1">Observation 1</h4>
-<ul>
-<li><p>Prompting <em>&quot;What are you thinking about?&quot;</em> etc. seemed to place additional cognitive load on the user as they spent longer resuming than when not prompted. This caused noise in assessing the actual cognitive load incurred during the completion of the <strong>task</strong>. Were the signs of struggling/undergoing difficulty due to simply not understanding the language, or were they due to the difficulty of the task?</p></li>
-<li><p>In particular, the majority of instances where the users paused turned out to be confusion as to the semantics &amp; syntax of the language.</p></li>
-</ul>
-<h4 id="model-adjustment-1">Model Adjustment 1</h4>
-<ul>
-<li>Add tooltips that appear as the user places the keyboard cursor to the right of a token in the language.</li>
-</ul>
-<h4 id="observation-2">Observation 2</h4>
-<ul>
-<li>Sifting through 1-hour+ of video data capture for incidences of cognitive load is <em>HARD!</em>. Is there some programmatic way of narrowing the video data to points of interest?</li>
-</ul>
-<h4 id="model-adjustment-2">Model Adjustment 2</h4>
-<ul>
-<li><p>Track the user mouse and keyboard movements in a 3-tuple: (Time t, (Mouse.x, Mouse.y), Keypress k)</p></li>
-<li><p>It doesn't have to be implemented this way. I could extend <strong>Model Adjustment 1</strong> to define blocks of code as tokens in themselves, and capture how long the cursor is static on that particular token.</p></li>
-<li><p>Leon suggested a further refinement of this idea in order to further narrow the data (in fact, just capturing mouse &amp; keyboard movements will result in an explosion of the volume of data -- countrary to what I intend to achieve). His refinement was to define regions of interest in the code pane, and <em>only when the mouse/key cursor is in the region, do I capture data</em>.</p></li>
-<li><p>Use the <code>if cursor in region then log (Time t, (Mouse.x, Mouse.y), Keypress   k)</code> functionality as a <em>lens</em> to focus on significant portions of video capture.</p></li>
-</ul>
-<h4 id="further-discussion">Further discussion</h4>
-<p>We then discussed some questions that might lead my direction of study in the next steps of my research:</p>
-<ul>
-<li><p>Is the mouse/cursor position a proxy for someone's attention as they carry out the task?</p></li>
-<li><p>Often when I'm coding I'll leave the cursor where it is but think about other regions of code. I don't necessarily move the keyboard/mouse cursor to the section of code I'm thinking about. Instead, I use it as a 'bookmark' to track what I'm currently implementing, and may scroll around to other parts.</p></li>
-</ul>
-<h4 id="actions">Actions</h4>
-<ol style="list-style-type: decimal">
-<li>Design a task in JavaScript to go inside this adjusted model (incorporating Model Adjustment 1 and 2).</li>
-</ol>
-<p>This will require a degree of <em>&quot;implementation juggling&quot;</em> in order to find a balance of code-length/difficulty over the same task in Elm in such a way that is not creating noise in the thing being studied: Cognitive load.</p>
-<p>Keep the reactivity constant, compare the differences in ease between JS and Elm.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>If time available, run another Pilot study on this task + adjusted model</li>
-</ol>
 </div> <!-- grid 9 -->
 </div> <!-- Containter 12 -->
 </body>
