@@ -185,8 +185,8 @@ caption /* This is for a table caption tag, not the p.caption Pandoc uses in a d
 
 pre,
 code {
-  font-size: 12px;
-  font-family: Menlo, Courier, monospace;
+  font-size: 13px;
+  font-family: monospace;
 }
 
 pre,
@@ -203,6 +203,7 @@ pre,
   width: 97%;
 }
 
-code {
-  padding: 0 2px;
+table.lineNumbers {
+  font-size: 13px;
+  font-family: monospace;
 }
