@@ -13,7 +13,36 @@ abstract: |
 
 # Introduction
 
-    Introduce the topic, Summarise the report
+This dissertation provides groundwork in doing user participation studies for
+logging mouse input during the use of a browser-based Interactive Development
+Environment [IDE]. I have used the IDE to perform user studies to compare two
+languages, Elm and JavaScript, in the completion of a basic task: restricting
+the movement of a box object from leaving the bounds of a frame, known as
+*clamping*.  In doing so, I have selected an operationalisation of the concept
+of thrashing [@Lopez2012a] as being indicative of cognitive load during task
+completion.
+
+## Pilot Study
+
+Using per-participant questionnaire (See \ref{questionnaire1}), I captured video
+& audio data of participants while the completed the task of extending a mario
+game to make mario fly
+
+### Observations
+
+Using Thematic analysis [@Braun2006Thematic] to code the data
+
+## Method
+
+A 2×2×2 study, that is 2 Languages (Elm and JavaScript), 2 Region difficulties
+(Hard and Simple) and 2 Region relevances (Relevant and Not relevant) will be
+done to determine if the number of mouse 
+
+## Hypotheses
+
+1H. 
+
+
 
 # Literature Survey
 
@@ -433,8 +462,7 @@ perception of their productivity -- pain points, advantages, etc.  they
 experience in using Language X to product a UI compared to Language Y
 (Declarative languages like Elm, etc)
 
-I wish to verify, empirically, the comparisons and claims made on the [What is
-FRP?](http://elm-lang.org/learn/What-is-FRP.elm) page of the elm-lang.org
+I wish to verify, empirically, the comparisons and claims made on the [http://elm-lang.org/learn/What-is-FRP.elm]() page of the elm-lang.org
 website, and those claimed it's research paper (detailing the implementation of
 Elm, **benefits**, etc.)
 
@@ -451,7 +479,7 @@ These are:
    user input and manually modifying the display."
 2. "with FRP, many of the irrelevant details are left to the compiler, freeing
    the programmer to think about things that matter."
-3. "Coding [these examples](http://elm-lang.org/Examples.elm) in a traditional
+3. "Coding the examples on [http://elm-lang.org/Examples.elm]() in a traditional
    GUI framework such as HTML/CSS/JavaScript . would require significantly more
    work and headache."
 4. "Not only is that painful to code, but it also requires broad and deep
@@ -714,9 +742,9 @@ regions of code OR they pertain to achieving the set task.
     1. **DONE** Make it so that I can run arbitrary Elm code in the editor via a
        fileOpen operation 
     2. **DONE** Make an Elm file that logs mouse movements ready to be loaded
-       into [Editor.hs](#editor.hs)
+       into the editor (See \ref{editor.hs})
     3. **DONE** Load it into the editor and test it uploads to Firebase
-    4. **DONE** Modify [Generate.hs](#generate.hs)
+    4. **DONE** Modify Generate.hs (See \ref{generate.hs})
     
     ~~~~~~~~~ {.haskell .numberLines}
     case (Elm.compile elmSrc) of 
@@ -732,7 +760,8 @@ regions of code OR they pertain to achieving the set task.
        MonadSnap m => H.Html -> m ()` that performs the logging. It will have
        type signature `TypedHtml -> H.Html`
 
-       See the functions `compile` and `serveHtml` in [Server.hs](#server.hs) 
+       See the functions `compile` and `serveHtml` in Server.hs (See
+       \ref{server.hs}). 
 
 
     5. Make it so I can define regions in the mouse tracking -- i.e. ONLY within a
@@ -741,13 +770,15 @@ regions of code OR they pertain to achieving the set task.
 
        See [https://github.com/spanners/laska/blob/master/Signals.elm]()
 
-2. Demo to Hilary Johnson
-    1. Install on VPS (See [install\_elm.sh](#install-elm.sh))
+2. **DONE** Demo to supervisor
+    1. Install on VPS (See \ref{install-elm.sh})
     2. Run these:      
 
-            git clone https://github.com/spanners/elm-lang.org
-            cd elm-lang.org
-            cabal install --bindir=.
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.bash .numberLines}
+    git clone https://github.com/spanners/elm-lang.org
+    cd elm-lang.org
+    cabal install --bindir=.
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 3. **DONE** Design a task in JS and Elm
 
@@ -777,7 +808,7 @@ above 'difficult' properties). Or code can be task-oriented or not, that is *the
 code does/does not need to be changed to achieve the completed task set for the
 user*:
 
-#### 2 × 2 study between-subjects
+#### 2 × 2 study between-subjects \label{tab:2x2study}
 
 --------------- ------------------
 Elm             -
@@ -827,7 +858,8 @@ Within-subjects is the converse of the above methodological properties
     `Mouse.isDown` has the added benefit of tracking mouse selects and drags,
     because it logs `(x,y)` when the mouse is down and `(x,y)` again when it is up.
 
-2. **DONE** Create a task that features *Hard/Simple x Task/Not-task* (See [table above])
+2. **DONE** Create a task that features *Hard/Simple x Task/Not-task* (See
+   \ref{tab:2x2study})
 
 3. ~~Implement *Region filtering* functionality so mouse activity is only logged
    when the clicks occur within defined region(s)~~
@@ -842,8 +874,6 @@ Within-subjects is the converse of the above methodological properties
 5. **DONE** Perform pilot study
 
 6. **WIP** Visualise mouse data
-
-[table above]: #study-between-subjects
 
 # Implementation and Testing
 
