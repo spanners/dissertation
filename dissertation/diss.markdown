@@ -943,6 +943,50 @@ Time (min)  Clicks
  12.958300        119
 ----------- ----------
 
+: Session time and clicks per session for Elm task
+
+
+Instead of $x^2$, consider just using multiple regression with dummy variables
+(binary predictors)
+
+---------- ----- -------- ------ --------- --------- --------- ---------
+Condition  d1    d2       d3     d4        d5        d6        d7        
+---------- ----- -------- ------ --------- --------- --------- ---------
+relevant × 1     0        0      0         0         0         0         
+hard ×                                                                   
+language1                                                                
+
+relevant × 0     1        0      0         0         0         0         
+hard ×                                                                   
+language2                                                                
+
+relevant × 0     0        1      0         0         0         0         
+easy ×                                                                   
+language 1                                                               
+
+relevant × 0     0        0      1         0         0         0         
+easy ×                                                                   
+language 2                                                               
+
+irrelevant 0     0        0      0         1         0         0         
+× hard ×                                                                 
+language1                                                                
+
+irrelevant 0     0        0      0         0         1         0         
+× hard ×                                                                 
+language2                                                                
+
+irrelevant 0     0        0      0         0         0         1         
+× easy ×                                                                 
+language 1                                                               
+
+irrelevant 0     0        0      0         0         0         0         
+× easy ×                                                                 
+language 2                                                               
+---------- ----- -------- ------ --------- --------- --------- ---------
+
+: Multiple regression with dummy variables (d1, d2..) (binary predictors)
+
 
 **This is the chapter in which you review the outcomes, and critique the
 outcomes process.**
