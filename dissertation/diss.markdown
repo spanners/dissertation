@@ -954,35 +954,35 @@ Condition  d1    d2       d3     d4        d5        d6        d7
 ---------- ----- -------- ------ --------- --------- --------- ---------
 relevant × 1     0        0      0         0         0         0         
 hard ×                                                                   
-language1                                                                
+Elm                                                                
 
 relevant × 0     1        0      0         0         0         0         
 hard ×                                                                   
-language2                                                                
+JS                                                                
 
 relevant × 0     0        1      0         0         0         0         
 easy ×                                                                   
-language 1                                                               
+Elm
 
 relevant × 0     0        0      1         0         0         0         
 easy ×                                                                   
-language 2                                                               
+JS
 
 irrelevant 0     0        0      0         1         0         0         
 × hard ×                                                                 
-language1                                                                
+Elm                                                                
 
 irrelevant 0     0        0      0         0         1         0         
 × hard ×                                                                 
-language2                                                                
+JS                                                                
 
 irrelevant 0     0        0      0         0         0         1         
 × easy ×                                                                 
-language 1                                                               
+Elm
 
 irrelevant 0     0        0      0         0         0         0         
 × easy ×                                                                 
-language 2                                                               
+Elm
 ---------- ----- -------- ------ --------- --------- --------- ---------
 
 : Multiple regression with dummy variables (d1, d2..) (binary predictors)
