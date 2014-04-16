@@ -976,7 +976,7 @@ Time (min)  Clicks
 
 
 Instead of $\chi^2$, consider just using multiple regression with dummy
-variables (binary predictors)
+variables (binary predictors) (See Table \ref{tab:multipleregression})
 
 ---------- ------ -------- ------ --------- --------- --------- ---------
 Condition  $d_1$  $d_2$    $d_3$  $d_4$     $d_5$     $d_6$     $d_7$        
@@ -1015,6 +1015,7 @@ JS
 ---------- ------ -------- ------ --------- --------- --------- ---------
 
 : Multiple regression with dummy variables (d1, d2..) (binary predictors)
+\label{tab:multipleregression}
 
 * The $d_n$ in the top row are the dummy variables, the values are the codes you assign them
 * There are $n-1$ dummy variabes; one group is coded as all zeros -- that's your reference group
