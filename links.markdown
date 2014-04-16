@@ -1,5 +1,8 @@
 # Links (useful?) for my dissertation
 
+Instead of $x^2$, consider just using multiple regression with dummy variables
+(binary predictors)
+
 * [A/B Testing]()
 * [PPIG workshops and papers](http://www.ppig.org/workshops/)
 * [Leon's Guide to the 13-point ethics
