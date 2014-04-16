@@ -334,8 +334,8 @@ get the following terms:
 <ol type="1">
 <li>Study question (e.g. Is it easy?)</li>
 <li>Measurement concept (e.g. “Easy”)</li>
-<li>Operationalisation – taking a measurement concept and mapping it to something concrete (e.g. if completing a pre-defined task the user must complete takes <code>&lt; 5</code> steps, it is ‘easy’ – we can then compare instances of these studies given our definition of easy). This is much like mapping a design to an implementation, and there is a risk of losing information, or ending up with a mismatched concrete instance that does not represent the concept we wish to convey.</li>
-<li>Do another operationalisation of our measurement concept – this allows us to get a different perspective of the same concept. (e.g. if total length of pauses during a 1 hour experiment is <code>&lt; 10</code> minutes, it is ‘easy’). We do this to get ‘coverage’ of the measurement concept. It is a form of cross validation. If we see an overlap in the correlational results after analysis, we can make a stronger assertion that e.g. “language A is easier than language B.”. The idea I am describing here is methodological decision-making.</li>
+<li>Operationalisation – taking a measurement concept and mapping it to something concrete (e.g. if completing a pre-defined task the user must complete takes <span class="math"> &lt; 5</span> steps, it is ‘easy’ – we can then compare instances of these studies given our definition of easy). This is much like mapping a design to an implementation, and there is a risk of losing information, or ending up with a mismatched concrete instance that does not represent the concept we wish to convey.</li>
+<li>Do another operationalisation of our measurement concept – this allows us to get a different perspective of the same concept. (e.g. if total length of pauses during a 1 hour experiment is <span class="math"> &lt; 10</span> minutes, it is ‘easy’). We do this to get ‘coverage’ of the measurement concept. It is a form of cross validation. If we see an overlap in the correlational results after analysis, we can make a stronger assertion that e.g. “language A is easier than language B.”. The idea I am describing here is methodological decision-making.</li>
 <li>Predict what will be the likely results of our experiments on the operationalised measurements. This is “feed forward validation”.</li>
 <li>Do the experiement.</li>
 <li>Analyse the data. See if the data has patterns that correlate with the assertion I wish to make. I will be representing the raw data in some outcome measure – that is turning the raw data into a set of (or a single) value for comparison.</li>
@@ -510,8 +510,8 @@ cabal install --bindir=.</code></pre></li>
 <li>Compound if/then/else statements?</li>
 </ul>
 <p><em>[Programming is] manipulating symbols blindly</em> ~ Bret Victor</p>
-<p>Do a 2x2 study, defining regions in the code monitoring mouse clicks. Regions can either be simple/hard in complexity (exhibiting/not-exhibiting one of the above ‘difficult’ properties). Or code can be task-oriented or not, that is <em>the code does/does not need to be changed to achieve the completed task set for the user</em>:</p>
-<h4 id="x2-study-between-subjects"><span class="header-section-number">4.2.4.1</span> 2x2 study between-subjects</h4>
+<p>Do a 2×2 study, defining regions in the code monitoring mouse clicks. Regions can either be simple/hard in complexity (exhibiting/not-exhibiting one of the above ‘difficult’ properties). Or code can be task-oriented or not, that is <em>the code does/does not need to be changed to achieve the completed task set for the user</em>:</p>
+<h4 id="study-between-subjects"><span class="header-section-number">4.2.4.1</span> 2 × 2 study between-subjects</h4>
 <table>
 <col style="width: 22%" /><col style="width: 25%" /><thead>
 <tr class="header">
@@ -563,7 +563,7 @@ cabal install --bindir=.</code></pre></li>
 <ol type="1">
 <li><p><strong>DONE</strong> Reorder divs so embedded div is on top of editor div.</p>
 <p>This turned out (I am fairly certain) to be due to codemirror.js binding mouse clicks. It was solved by using Elm’s <code>Mouse.isDown</code>. Using <code>Mouse.isDown</code> has the added benefit of tracking mouse selects and drags, because it logs <code>(x,y)</code> when the mouse is down and <code>(x,y)</code> again when it is up.</p></li>
-<li><p><strong>DONE</strong> Create a task that features <em>Hard/Simple x Task/Not-task</em> (See <a href="#x2-study-between-subjects">table above</a>)</p></li>
+<li><p><strong>DONE</strong> Create a task that features <em>Hard/Simple x Task/Not-task</em> (See <a href="#study-between-subjects">table above</a>)</p></li>
 <li><p><del>Implement <em>Region filtering</em> functionality so mouse activity is only logged when the clicks occur within defined region(s)</del></p>
 <p>I have instead defined bounding boxes that pertain to the regions I want to track as a mouse-data filter – that is, I capture all click data for the whole frame, and then filter it by comparing x,y co-ordinates with my bounding boxes. If it’s in the box, keep it, otherwise discard.</p></li>
 <li><p><strong>DONE</strong> Integrate JS task into IDE</p></li>
@@ -603,11 +603,12 @@ cabal install --bindir=.</code></pre></li>
 <li>How it was analysed (I aggregated regions and looked at number of clicks per region (Hard/Task, Hard/Not-Task, Simple/Task, Simple/Not-Task)*(Elm, JavaScript))</li>
 <li>Presentation of data (summary means std dev.)
 <ol type="1">
-<li><span class="math"><em>x</em><sup>2</sup></span> frequency analyses</li>
-<li><code>2x2x2</code> making 8 cells. My expected is an even distribution of clicks in each category, i.e. if I have 80 clicks in total across all groups, I expect to find 10 in each cell if there is no correlation.</li>
+<li><span class="math"><em>χ</em><sup>2</sup></span> frequency analyses</li>
+<li>2 × 2 × 2 making 8 cells. My expected is an even distribution of clicks in each category, i.e. if I have 80 clicks in total across all groups, I expect to find 10 in each cell if there is no correlation.</li>
 </ol></li>
 </ol>
 <table>
+<caption>Session time and clicks per session for Elm task</caption>
 <col style="width: 16%" /><col style="width: 16%" /><thead>
 <tr class="header">
 <th style="text-align: left;">Time (min)</th>
@@ -673,6 +674,112 @@ cabal install --bindir=.</code></pre></li>
 </tr>
 </tbody>
 </table>
+<p>Instead of <span class="math"><em>x</em><sup>2</sup></span>, consider just using multiple regression with dummy variables (binary predictors)</p>
+<table>
+<caption>Multiple regression with dummy variables (d1, d2..) (binary predictors)</caption>
+<col style="width: 14%" /><col style="width: 9%" /><col style="width: 12%" /><col style="width: 9%" /><col style="width: 13%" /><col style="width: 13%" /><col style="width: 13%" /><col style="width: 13%" /><thead>
+<tr class="header">
+<th style="text-align: left;">Condition</th>
+<th style="text-align: left;"><span class="math"><em>d</em><sub>1</sub></span></th>
+<th style="text-align: left;"><span class="math"><em>d</em><sub>2</sub></span></th>
+<th style="text-align: left;"><span class="math"><em>d</em><sub>3</sub></span></th>
+<th style="text-align: left;"><span class="math"><em>d</em><sub>4</sub></span></th>
+<th style="text-align: left;"><span class="math"><em>d</em><sub>5</sub></span></th>
+<th style="text-align: left;"><span class="math"><em>d</em><sub>6</sub></span></th>
+<th style="text-align: left;"><span class="math"><em>d</em><sub>7</sub></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">relevant × hard × Elm</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">relevant × hard × JS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">relevant × easy × Elm</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">relevant × easy × JS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">irrelevant × hard × Elm</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">irrelevant × hard × JS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">irrelevant × easy × Elm</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">irrelevant × easy × Elm</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The <span class="math"><em>d</em><sub><em>n</em></sub></span> in the top row are the dummy variables, the values are the codes you assign them</li>
+<li>There are <span class="math"><em>n</em> − 1</span> dummy variabes; one group is coded as all zeros – that’s your reference group</li>
+<li>Why <span class="math"><em>n</em> − 1</span>? If there are 8 dummy codes, there are the same number of variables as conditions. the model’s fully saturated and there are no degrees of freedom
+<ul>
+<li>Similar to <span class="math"><em>x</em><sub>1</sub> = 2, <em>x</em><sub>2</sub> = 4, <em>x</em><sub>3</sub> = 1</span>, and <span class="math"><em>y</em> = 2</span>. then trying to solve for <span class="math"><em>y</em></span></li>
+</ul></li>
+</ul>
 <p><strong>This is the chapter in which you review the outcomes, and critique the outcomes process.</strong></p>
 <p><strong>You may include user evaluation here too.</strong></p>
 <h1 id="conclusions"><span class="header-section-number">7</span> Conclusions</h1>
