@@ -505,14 +505,14 @@ the IDE from the experiment above. Perhaps for a Pilot study.
 2. Measurement concept (e.g. "Easy")
 3. Operationalisation -- taking a measurement concept and mapping it to
    something concrete (e.g. if completing a pre-defined task the user must
-   complete takes `< 5` steps, it is 'easy' -- we can then compare instances of
+   complete takes $< 5$ steps, it is 'easy' -- we can then compare instances of
    these studies given our definition of easy). This is much like mapping a
    design to an implementation, and there is a risk of losing information, or
    ending up with a mismatched concrete instance that does not represent the
    concept we wish to convey.
 4. Do another operationalisation of our measurement concept -- this allows us to
    get a different perspective of the same concept. (e.g. if total length of
-   pauses during a 1 hour experiment is `< 10` minutes, it is 'easy'). We do this
+   pauses during a 1 hour experiment is $< 10$ minutes, it is 'easy'). We do this
    to get 'coverage' of the measurement concept. It is a form of cross
    validation. If we see an overlap in the correlational results after analysis,
    we can make a stronger assertion that e.g. "language A is easier than
@@ -950,7 +950,7 @@ Instead of $x^2$, consider just using multiple regression with dummy variables
 (binary predictors)
 
 ---------- ----- -------- ------ --------- --------- --------- ---------
-Condition  d1    d2       d3     d4        d5        d6        d7        
+Condition  $d1$  $d2$     $d3$   $d4$      $d5$      $d6$      $d7$        
 ---------- ----- -------- ------ --------- --------- --------- ---------
 relevant × 1     0        0      0         0         0         0         
 hard ×                                                                   
@@ -986,6 +986,12 @@ Elm
 ---------- ----- -------- ------ --------- --------- --------- ---------
 
 : Multiple regression with dummy variables (d1, d2..) (binary predictors)
+
+* The ds in the top row are the dummy variables, the values are the codes you assign them
+* There are $n-1$ dummy variabes; one group is coded as all zeros -- that's your reference group
+* Why $n-1$? If there are 8 dummy codes, there are the same number of variables as conditions. the model's fully saturated and there are no degrees of freedom
+    * Similar to $x1 = 2, x2 = 4, x3 = 1$, and $y=2$. then trying to solve for $y$
+
 
 
 **This is the chapter in which you review the outcomes, and critique the
