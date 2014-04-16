@@ -20,16 +20,262 @@ abstract: |
 
 # Introduction
 
+I am interested in the effect of Functional Reactive Programming [FRP]
+on User Interface programming.
 
-## Pilot Study
+I first grew an interest in the field of Functional Reactive Programming
+after seeing Bret Victor’s “Inventing on Principle” @Victor2012a. His
+talk claims that, in the traditional compile-run-debug cycle of coding,
+“most of the developer’s time is spent looking at the code, blindly
+without an immediate connection to the thing they’re making”. He goes on
+to show a side-by-side illustration of a new style of development – on
+one side is the runtime preview, and on the other side is the code
+pertaining to said runtime. Changes in the code update the runtime,
+live. He argues that “so much of creation is discovery, and you can’t
+discover anything if you can’t see what you’re doing” – alluding to his
+earlier statement that the compile-run-debug cycle is much like this. I
+would like to investigate the claims Bret Victor makes, and indeed Elm,
+an instance of such a FRP, whose website also makes similar claims.
+
+A counter-argument may be that this is much like giving a child a
+chainsaw. Is it too powerful? Does this tight feedback loop cut out a
+perhaps crucial pause for thought? Furthermore – is this appropriate for
+all types of programming? Is it at least appropriate for User Interface
+design? It has been shown that novices tend to “thrash” about, trying
+out many ideas that may or may not be a solution, whereas experts think
+much more about the problem at hand before proceeding with a solution
+@Lopez2012a.
+
+My goal is to answer these questions. By way of conducting user studies,
+leveraging Elm with extensions to do A/B testing to illustrate it’s
+effectiveness (or ineffectiveness) at enhancing User Interface Design.
+
+As far as the scope of this project goes, I will be researching as much
+as is necessary in order to meet the aims of the project listed
+[itm:aims]. Should I complete these aims, I may go on to do further user
+studies, or attempt to further analyse, compare and contrast User
+Interface Design and Declarative/Functional Reactive Programming
+languages against other methods, so as to make firmer statements about
+the benefits of Elm.
+
+# Requirements
+
+I will now identify what the requirements are for the project.
+
+## Requirement definitions
+
+### Numbering and referencing system
+
+Below is an example requirement illustrating the requirement numbering
+system in use:
+
+1.  High-level, abstract title which sums up the topic of the associated
+    requirements (E.g. Compare two pieces of program text) [itm:example]
+
+    1.  Requirement associated with high-level title (E.g. The program
+        must show if the two input texts are the same or different)
+        [itm:example-requirement] **Priority** of requirement (**High**,
+        **Medium** or **Low**).
+
+Here I am referencing the above abstract title: [itm:example]
+
+Here I am referencing the above requirement: [itm:example-requirement]
+
+### Priorities system
+
+Below are the meanings of priorities:
+
+-   Priorities may be **High** or **Medium** or **Low**
+
+-   A **High** priority requirement is one that is crucial for the
+    system to function. They feature the word ‘must’.
+
+-   **Medium** – provides additional utility to the system. They feature
+    the word ‘should’.
+
+-   **Low** – is an ancillary feature that adds desirable functionality
+    to the system. They feature the word ‘could’.
+
+## Functional Requirements
+
+1.  Write software to assist the capture of objective data to inform me
+    of the user’s activities as they use the Elm IDE.
+
+    1.  The program must be able to work offline and later transfer
+        collected data to me once a connection is resumed, collecting
+        mouse and keyboard activity\
+        **Priority: High**
+
+2.  Perform Pilot and User Studies
+
+    1.  I must perform Pilot and User Studies in an iterative fashion,
+        each one learning and building upon discoveries made in prior
+        ones, starting vague and getting more and more focused on a
+        particular facet of User Interface Design and/or Declarative
+        programming as an activity.\
+        **Priority: High**
+
+    2.  I must use these studies to inform experimental and software
+        design to disambiguate and filter data collected in the
+        experiment, and to exercise hypotheses.\
+        **Priority: High**
+
+## Non-Functional Requirements
+
+1.  Source code
+
+    1.  The software must be written clearly and simply.\
+        **Priority: High**
+
+    2.  The software must have suitable, concise comments which explain
+        the programs intent, but only where the code alone is not
+        enough.\
+        **Priority: High**
+
+2.  Activity recording
+
+    1.  The program activity recording feature must not slow down the
+        user’s use of the IDE more than 1ms difference than without it.\
+        **Priority: High**
+
+    2.  There should be software to visualise the usage data\
+        **Priority: Medium**
+
+# Project Plan
+
+I will now explain my current plan for the project. Notice that I say
+current here – this may change throughout the course of the project: I
+may narrow in on a topic of interest, or branch out to investigate
+anomalous research findings.
+
+I will be building the end product – the dissertation and software – via
+a process of iterations, much like an iterative Software Lifecycle. The
+Literature Survey is ongoing – throughout the whole project from
+beginning to end – feeding into all parts of the dissertation, and
+indeed this Proposal, as shown in the Gantt chart (Figure  
+\ref{fig:gantt}). The literature I choose is sometimes chosen to support
+points I wish to make, sometimes acting to guide my next area of
+research, reinforce findings, compare or contrast with other research,
+and probably many other things I have not yet thought of. Most
+importantly, I will be looking at who the paper/article etc. is cited
+by, preferring sources that are peer-reviewed.
+
+As well as this literature research, I will also have an ongoing Product
+Literature Survey – looking at existing software out there that is
+related to my current area of interest.
+
+Central to this idea of iteration is my desired method of performing
+user studies: I will first do what I have called a “Pilot” – a short and
+shallow trial User Study that focuses not on the research I’m concerned
+with, but instead the particular experimental design I would like to use
+in my actual User Study. By employing a Pilot I can hopefully get an
+idea of the nature of the experimental design – perhaps discovering any
+variables I had not previously considered that will require me to
+increase my sample size or simplify the experiment in order to mitigate
+their effect on the dependent variable I wish to test for. These are all
+problems discovered in @Yates2012a – including basic teething problems
+in getting the experiment to flow smoothly. In an even less detailed
+aspect, the pilot may allow me to look at what is out there. It may help
+to not look for anything in particular initially, and see what happens.
+
+At this stage, with the help of discussion with my Project Supervisor, I
+have some ideas about how to gather data in User Studies and these
+pilots could prove to be a useful testbed for such tools. I have a
+hypothesis that the novice developer “thrashing” @Lopez2012a can be
+observed by shorter pauses between editing and experimentation, and I
+could measure this by way of measuring the mouse position relative to
+the IDE, clicks, and key-presses, using tools built-in to Elm and a bit
+of extension to stream this over the Internet to my storage facilities
+@WhatFRP.
+
+As you will see in the Gantt chart (Figure \ref{fig:gantt}) I have
+included Testing & Implementation under the same heading as I will be
+doing Test Driven Development. My experience on Placement at PicoChip,
+my job as a Software Engineer at Altran and readings have helped me
+realise that this way of developing is time-saving and improves code
+quality by enforcing modularity in order to test it @Martin2008a and
+@Hunt2000a.
+
+## The plan
+
+![Gantt Chart\label{fig:gantt}](gantt-chart.png)
+
+## Required Resources
+
+I will now talk about the resources I require for the completion of this
+dissertation, including the availability of these resources.
+
+I will require users for my user study. These users must be proficient
+in at least one programming language (declarative programming languages
+are niche in and of themselves, never mind the discipline of
+programming, so some basic knowledge is required in order to see useful
+patterns in User Interface Design). Suitable candidates are First and
+Second Year Computer Science students from most Universities in the UK.
+Their availability is limited – Christmas holidays and coursework
+deadlines may mean that certain periods of the term are particularly
+busy for them. At Bath, suitable periods are therefore November, January
+to Mid February (inclusive), Mid-March to April (inclusive). It will be
+useful to procure free periods for other nearby Universities to hedge my
+bets, and to have a decent random assignment of users so I can make
+equivalent groups in my experiments.
+
+The ACM Digital library, accessible via the Bath portal either from
+University or from home via Single-sign-on is a valuable resource for
+research papers, articles and references. The Cited-By feature will
+allow me to assert the popularity/ranking of each resource. Another
+valuable resource is the Psychology of Programming Interest Group, a
+“[group of] people from diverse communities to explore common interests
+in the psychological aspects of programming and in the computational
+aspects of psychology”, with peer reviewed papers on particularly
+relevant topics to my area of research.
+
+I will require regular access to the Internet, Emacs with haskell-mode
+installed and Elm version 0.10 @Elm2013a. I will also need git for
+software source control, and bitbucket.org for online, private backups
+of my work. I require LaTeX to type up my dissertation, and have chosen
+texlive on Ubuntu 12.04.3 as my development environment of choice. The
+full development environment is installed at the house I am staying in,
+in Bath, on my laptop. I am also able to replicate this environment to a
+satisfactory level at Bath University on any computer with access via
+Putty/SSH or similar to LCPU, as all the above software can be installed
+and run on my Bath University account.
+
+I am using Chromium Version 28.0.1500.71 Ubuntu 12.04
+(28.0.1500.71-0ubuntu1.12.04.1) to run the Elm IDE, which is an
+important dependency that may cause problems in getting Users in User
+Studies to run a functionally equivalent browser. Only recent editions
+of Chrome, Chromium, Firefox, Opera and Safari (not Internet Explorer)
+support Elm web programs.
+
+# Ethical considerations
+
+In conducting User Studies, I will be interacting with people and
+collecting data from them, so I must be considerate and mindful of those
+I talk to and the information I handle.
+
+An Ethical Checklist such as the one Bath University uses as it’s
+template @Bath2013a may assist my research such that I treat each
+participant with care and respect. I may learn from the discoveries made
+by others – in my reading, I came across a paper (also mentioned
+earlier) that highlighted concerns that participants under study had,
+and the paper detailed ways to mitigate these concerns so as to make the
+participant feel that are informed and safe @Yates2012a.
+
+# Pilot Study
 
 Using per-participant questionnaire (See \ref{questionnaire1}), I captured video
 & audio data of participants while the completed the task of extending a mario
 game to make mario fly
 
+## Method
+
 ### Observations
 
 Using Thematic analysis [@Braun2006Thematic] to code the data
+
+### Modification to experimental methodology
+
+More objective!
 
 ## Method
 
@@ -40,7 +286,6 @@ done to determine if the number of mouse
 ## Hypotheses
 
 1H. 
-
 
 
 # Literature Survey
