@@ -808,23 +808,22 @@ above 'difficult' properties). Or code can be task-oriented or not, that is *the
 code does/does not need to be changed to achieve the completed task set for the
 user*:
 
-#### 2 × 2 study between-subjects \label{tab:2x2study}
 
 --------------- ------------------
-Elm             -
---------------- ------------------
+**Elm**         -
+
+Simple/Task     Hard/Task
+
+Simple/Not-Task Hard/Not-Task
+
+**JavaScript**  -
+
 Simple/Task     Hard/Task
 
 Simple/Not-Task Hard/Not-Task
 --------------- ------------------
 
---------------- ------------------
-JavaScript      -
---------------- ------------------
-Simple/Task     Hard/Task
-
-Simple/Not-Task Hard/Not-Task
---------------- ------------------
+: 2 × 2 study between-subjects \label{tab:2x2study}
 
 #### Study method
 
