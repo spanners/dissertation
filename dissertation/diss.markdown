@@ -982,7 +982,7 @@ Elm
 
 irrelevant 0      0        0      0         0         0         0         
 × easy ×                                                                  
-Elm
+JS
 ---------- ------ -------- ------ --------- --------- --------- ---------
 
 : Multiple regression with dummy variables (d1, d2..) (binary predictors)
