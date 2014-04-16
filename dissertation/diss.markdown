@@ -5,22 +5,21 @@ author:
   affiliation: The University of Bath
 tags: [programming, psychology, HCI, user experience]
 abstract: |
-  Your abstract should appear here. An abstract is a short paragraph describing the aims of
-  the project, what was achieved and what contributions it has made.
-
-  It consists of two paragraphs.
+  This dissertation provides groundwork in doing user participation studies for
+  logging input device data during the use of a browser-based Interactive
+  Development Environment [IDE], whose implementation is described herein.
+  Furthermore, the IDE has been used to conduct studies comparing the cognitive
+  load experienced in two languages, Elm and JavaScript, during the completion
+  of a basic task: modifying code to restrict the movement of a 2--D box from
+  leaving the bounds of a frame. The metric of number of mouse clicks in code
+  regions, (*difficult*, *simple*, *task-relevant* and *not-task-relevant*), has
+  been selected as an operationalisation of the concept of *thrashing*
+  [@Lopez2012a] as being indicative of cognitive load during task completion.
+  **The study found...**
 ...
 
 # Introduction
 
-This dissertation provides groundwork in doing user participation studies for
-logging mouse input during the use of a browser-based Interactive Development
-Environment [IDE]. I have used the IDE to perform user studies to compare two
-languages, Elm and JavaScript, in the completion of a basic task: restricting
-the movement of a box object from leaving the bounds of a frame, known as
-*clamping*.  In doing so, I have selected an operationalisation of the concept
-of thrashing [@Lopez2012a] as being indicative of cognitive load during task
-completion.
 
 ## Pilot Study
 
