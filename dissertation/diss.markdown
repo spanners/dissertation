@@ -771,13 +771,13 @@ What makes code difficult to understand and work with?
 
 *[Programming is] manipulating symbols blindly* ~ Bret Victor
 
-Do a 2x2 study, defining regions in the code monitoring mouse clicks. Regions
+Do a 2×2 study, defining regions in the code monitoring mouse clicks. Regions
 can either be simple/hard in complexity (exhibiting/not-exhibiting one of the
 above 'difficult' properties). Or code can be task-oriented or not, that is *the
 code does/does not need to be changed to achieve the completed task set for the
 user*:
 
-#### 2x2 study between-subjects
+#### 2 × 2 study between-subjects
 
 --------------- ------------------
 Elm             -
@@ -843,7 +843,7 @@ Within-subjects is the converse of the above methodological properties
 
 6. **WIP** Visualise mouse data
 
-[table above]: #x2-study-between-subjects
+[table above]: #study-between-subjects
 
 # Implementation and Testing
 
@@ -906,8 +906,8 @@ Talk about "phases" in a programmer's activities during task-completion:
    region (Hard/Task, Hard/Not-Task, Simple/Task, Simple/Not-Task)\*(Elm,
    JavaScript))
 1. Presentation of data (summary means std dev.)
-    1. $x^2$ frequency analyses
-    1. `2x2x2` making 8 cells. My expected is an even distribution of clicks in
+    1. $\chi^2$ frequency analyses
+    1. 2 × 2 × 2 making 8 cells. My expected is an even distribution of clicks in
        each category, i.e. if I have 80 clicks in total across all groups, I
        expect to find 10 in each cell if there is no correlation.
 
@@ -949,49 +949,48 @@ Time (min)  Clicks
 Instead of $x^2$, consider just using multiple regression with dummy variables
 (binary predictors)
 
----------- ----- -------- ------ --------- --------- --------- ---------
-Condition  $d1$  $d2$     $d3$   $d4$      $d5$      $d6$      $d7$        
----------- ----- -------- ------ --------- --------- --------- ---------
-relevant × 1     0        0      0         0         0         0         
-hard ×                                                                   
-Elm                                                                
+---------- ------ -------- ------ --------- --------- --------- ---------
+Condition  $d_1$  $d_2$    $d_3$  $d_4$     $d_5$     $d_6$     $d_7$        
+---------- ------ -------- ------ --------- --------- --------- ---------
+relevant × 1      0        0      0         0         0         0         
+hard ×                                                                    
+Elm                                                                 
 
-relevant × 0     1        0      0         0         0         0         
-hard ×                                                                   
-JS                                                                
+relevant × 0      1        0      0         0         0         0         
+hard ×                                                                    
+JS                                                                 
 
-relevant × 0     0        1      0         0         0         0         
-easy ×                                                                   
+relevant × 0      0        1      0         0         0         0         
+easy ×                                                                    
 Elm
 
-relevant × 0     0        0      1         0         0         0         
-easy ×                                                                   
+relevant × 0      0        0      1         0         0         0         
+easy ×                                                                    
 JS
 
-irrelevant 0     0        0      0         1         0         0         
-× hard ×                                                                 
-Elm                                                                
+irrelevant 0      0        0      0         1         0         0         
+× hard ×                                                                  
+Elm                                                                 
 
-irrelevant 0     0        0      0         0         1         0         
-× hard ×                                                                 
-JS                                                                
+irrelevant 0      0        0      0         0         1         0         
+× hard ×                                                                  
+JS                                                                 
 
-irrelevant 0     0        0      0         0         0         1         
-× easy ×                                                                 
+irrelevant 0      0        0      0         0         0         1         
+× easy ×                                                                  
 Elm
 
-irrelevant 0     0        0      0         0         0         0         
-× easy ×                                                                 
+irrelevant 0      0        0      0         0         0         0         
+× easy ×                                                                  
 Elm
----------- ----- -------- ------ --------- --------- --------- ---------
+---------- ------ -------- ------ --------- --------- --------- ---------
 
 : Multiple regression with dummy variables (d1, d2..) (binary predictors)
 
-* The ds in the top row are the dummy variables, the values are the codes you assign them
+* The $d_n$ in the top row are the dummy variables, the values are the codes you assign them
 * There are $n-1$ dummy variabes; one group is coded as all zeros -- that's your reference group
 * Why $n-1$? If there are 8 dummy codes, there are the same number of variables as conditions. the model's fully saturated and there are no degrees of freedom
-    * Similar to $x1 = 2, x2 = 4, x3 = 1$, and $y=2$. then trying to solve for $y$
-
+    * Similar to $x_1 = 2, x_2 = 4, x_3 = 1$, and $y=2$. then trying to solve for $y$
 
 
 **This is the chapter in which you review the outcomes, and critique the
