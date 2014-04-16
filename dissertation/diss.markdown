@@ -946,8 +946,8 @@ Time (min)  Clicks
 : Session time and clicks per session for Elm task
 
 
-Instead of $x^2$, consider just using multiple regression with dummy variables
-(binary predictors)
+Instead of $\chi^2$, consider just using multiple regression with dummy
+variables (binary predictors)
 
 ---------- ------ -------- ------ --------- --------- --------- ---------
 Condition  $d_1$  $d_2$    $d_3$  $d_4$     $d_5$     $d_6$     $d_7$        
