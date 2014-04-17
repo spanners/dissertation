@@ -63,7 +63,7 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
-### EmbedMeElm.elm \label{embedElm{
+### EmbedMeElm.elm \label{embedElm}
 
 ~~~~ {.haskell .numberLines include="code/EmbedMeElm.elm"}
 this will be replaced by contents of README
