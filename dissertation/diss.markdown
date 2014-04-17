@@ -19,6 +19,8 @@ abstract: |
 
 # Introduction
 
+<!--
+
 I am interested in the effect of Functional Reactive Programming [FRP]
 on User Interface programming.
 
@@ -56,84 +58,8 @@ analyse, compare and contrast User Interface Design and Declarative/Functional
 Reactive Programming languages against other methods, so as to make firmer
 statements about the benefits of Elm.
 
-# Requirements
+-->
 
-I will now identify what the requirements are for the project.
-
-## Requirement definitions
-
-### Numbering and referencing system
-
-Below is an example requirement illustrating the requirement numbering
-system in use:
-
-1.  High-level, abstract title which sums up the topic of the associated
-    requirements (E.g. Compare two pieces of program text) 
-
-    1.  Requirement associated with high-level title (E.g. The program
-        must show if the two input texts are the same or different)
-        **Priority** of requirement (**High**,
-        **Medium** or **Low**).
-
-### Priorities system
-
-Below are the meanings of priorities:
-
--   Priorities may be **High** or **Medium** or **Low**
-
--   A **High** priority requirement is one that is crucial for the
-    system to function. They feature the word ‘must’.
-
--   **Medium** – provides additional utility to the system. They feature
-    the word ‘should’.
-
--   **Low** – is an ancillary feature that adds desirable functionality
-    to the system. They feature the word ‘could’.
-
-## Functional Requirements
-
-1.  Write software to assist the capture of objective data to inform me
-    of the user’s activities as they use the Elm IDE.
-
-    1.  The program must be able to work offline and later transfer
-        collected data to me once a connection is resumed, collecting
-        mouse and keyboard activity\
-        **Priority: High**
-
-2.  Perform Pilot and User Studies
-
-    1.  I must perform Pilot and User Studies in an iterative fashion,
-        each one learning and building upon discoveries made in prior
-        ones, starting vague and getting more and more focused on a
-        particular facet of User Interface Design and/or Declarative
-        programming as an activity.\
-        **Priority: High**
-
-    2.  I must use these studies to inform experimental and software
-        design to disambiguate and filter data collected in the
-        experiment, and to exercise hypotheses.\
-        **Priority: High**
-
-## Non-Functional Requirements
-
-1.  Source code
-
-    1.  The software must be written clearly and simply.\
-        **Priority: High**
-
-    2.  The software must have suitable, concise comments which explain
-        the programs intent, but only where the code alone is not
-        enough.\
-        **Priority: High**
-
-2.  Activity recording
-
-    1.  The program activity recording feature must not slow down the
-        user’s use of the IDE more than 1ms difference than without it.\
-        **Priority: High**
-
-    2.  There should be software to visualise the usage data\
-        **Priority: Medium**
 
 # Project Plan
 
@@ -189,8 +115,6 @@ my job as a Software Engineer at Altran and readings have helped me
 realise that this way of developing is time-saving and improves code
 quality by enforcing modularity in order to test it @Martin2008a and
 @Hunt2000a.
-
-## The plan
 
 ![Gantt Chart\label{fig:gantt}](gantt-chart.png)
 
@@ -254,33 +178,6 @@ by others – in my reading, I came across a paper (also mentioned
 earlier) that highlighted concerns that participants under study had,
 and the paper detailed ways to mitigate these concerns so as to make the
 participant feel that are informed and safe @Yates2012a.
-
-# Pilot Study
-
-Using per-participant questionnaire (See \ref{questionnaire1}), I captured video
-& audio data of participants while the completed the task of extending a mario
-game to make mario fly
-
-## Method
-
-### Observations
-
-Using Thematic analysis [@Braun2006Thematic] to code the data
-
-### Modification to experimental methodology
-
-More objective!
-
-## Method
-
-A 2×2×2 study, that is 2 Languages (Elm and JavaScript), 2 Region difficulties
-(Hard and Simple) and 2 Region relevances (Relevant and Not relevant) will be
-done to determine if the number of mouse 
-
-## Hypotheses
-
-1H. 
-
 
 # Literature Survey
 
@@ -586,24 +483,270 @@ the IDE, clicks, and key-presses, using tools built-in to Elm and a bit
 of extension to stream this over the Internet to my storage facilities
 [@WhatFRP].
 
+
+# Experimental methodology
+
+## AB Testing of the languages with the same IDE?
+
+The primary direction I mentioned (as echoed in my Proposal) was doing AB
+testing of Elm vs. another language (e.g. JavaScript) (i.e. the language is the
+dependent variable) using the same Concurrent FRP IDE (the independent variable).
+
+## Test just the paradigm?
+
+He also suggested a potential experiment to test just the paradigm, eliminating
+the IDE from the experiment above. Perhaps for a Pilot study.
+
+### Experiment process
+
+1. Study question (e.g. Is it easy?)
+2. Measurement concept (e.g. "Easy")
+3. Operationalisation -- taking a measurement concept and mapping it to
+   something concrete (e.g. if completing a pre-defined task the user must
+   complete takes $< 5$ steps, it is 'easy' -- we can then compare instances of
+   these studies given our definition of easy). This is much like mapping a
+   design to an implementation, and there is a risk of losing information, or
+   ending up with a mismatched concrete instance that does not represent the
+   concept we wish to convey.
+4. Do another operationalisation of our measurement concept -- this allows us to
+   get a different perspective of the same concept. (e.g. if total length of
+   pauses during a 1 hour experiment is $< 10$ minutes, it is 'easy'). We do this
+   to get 'coverage' of the measurement concept. It is a form of cross
+   validation. If we see an overlap in the correlational results after analysis,
+   we can make a stronger assertion that e.g. "language A is easier than
+   language B.". The idea I am describing here is methodological decision-making.
+5. Predict what will be the likely results of our experiments on the
+   operationalised measurements. This is "feed forward validation".
+6. Do the experiement.
+7. Analyse the data. See if the data has patterns that correlate with the
+   assertion I wish to make. I will be representing the raw data in some outcome
+   measure -- that is
+   turning the raw data into a set of (or a single) value for comparison. 
+8. Does the data answer the study question I set out to ask? This is now "feed
+   backwards validation".
+9. Write-up including the 'nitty-gritty' of the user study, and a statement like
+   "Given our definition of easy, our multiple operationalisations of the
+   concept of easy show that this is in fact objectively true/false".
+
+### Pilots
+
+We also spoke about ideas for pilot studies -- asking "What might be surprising
+insights into declarative programming languages for User Interface Design -- the
+case of Elm?".
+
+Speak-aloud protocols where you prompt/facilitate the user to say what is on
+their mind when that e.g. pause for more than 10 seconds -- a measurement I set
+out to look for during an experiment. 
+
+I might ask 
+
+* > I notice you have paused for at least 10 seconds -- why did you?
+* >> I thought the code would do X, but it did Y.
+* > Why did you think it would do X?
+* >> ...
+
+I must ask the participant questions designed in a way that they are not
+leading.
+
+Leon suggested I gather a rich data set, as it's difficult to take notes AND
+prompt the user during an experiment. SO difficult. Perhaps record video.
+
+### Actions for next meeting
+
+Devise a Pilot study, answering these 3 questions:
+
+1. What might I ask people to do?
+2. How will I gather data?
+3. How will I analyse the data?
+
+Also see paper Leon will send me on "Thematic analysis & Psychology"
+
+
+
+
+# Pilot Study 1
+
+Using per-participant questionnaire (See \ref{questionnaire1}), I captured video
+& audio data of participants while the completed the task of extending a mario
+game to make mario fly
+
+## Hypotheses
+
+##
+
+### Method
+
+Using Thematic analysis [@Braun2006Thematic] to code the data...
+
+## Results
+
+### Observation 1
+
+* Prompting *"What are you thinking about?"* etc. seemed to place additional
+  cognitive load on the user as they spent longer resuming than when not
+  prompted. This caused noise in assessing the actual cognitive load incurred
+  during the completion of the **task**. Were the signs of struggling/undergoing
+  difficulty due to simply not understanding the language, or were they due to
+  the difficulty of the task?
+
+* In particular, the majority of instances where the users paused turned out to
+  be confusion as to the semantics & syntax of the language.
+
+### Model Adjustment 1
+
+* Add tooltips that appear as the user places the keyboard cursor to the right
+  of a token in the language.
+
+### Observation 2
+
+* Sifting through 1-hour+ of video data capture for incidences of cognitive load
+  is *HARD!*. Is there some programmatic way of narrowing the video data to
+  points of interest?
+
+### Model Adjustment 2
+
+* Track the user mouse and keyboard movements in a 3-tuple: `(Time t, (Mouse.x,
+  Mouse.y), Keypress k)`
+  
+* It doesn't have to be implemented this way. I could extend **Model Adjustment
+  1** to define blocks of code as tokens in themselves, and capture how long the
+  cursor is static on that particular token.
+
+* Leon suggested a further refinement of this idea in order to further narrow
+  the data (in fact, just capturing mouse & keyboard movements will result in an
+  explosion of the volume of data -- countrary to what I intend to achieve). His
+  refinement was to define regions of interest in the code pane, and *only when
+  the mouse/key cursor is in the region, do I capture data*. 
+
+* Use the `if cursor in region then log (Time t, (Mouse.x, Mouse.y), Keypress
+  k)` functionality as a *lens* to focus on significant portions of video
+  capture.
+
+## Further discussion
+
+We then discussed some questions that might lead my direction of study in the
+next steps of my research:
+
+* Is the mouse/cursor position a proxy for someone's attention as they carry out
+  the task?
+
+* Often when I'm coding I'll leave the cursor where it is but think about other
+  regions of code. I don't necessarily move the keyboard/mouse cursor to the
+  section of code I'm thinking about. Instead, I use it as a 'bookmark' to track
+  what I'm currently implementing, and may scroll around to other parts.
+
+### We also discussed...
+
+The result of the dissertation will be a list of observed cognitive
+easing/loading that each language produces for users, much like an
+advantage/disadvantage comparison:
+
+----------- ------------
+Elm         JavaScript
+----------- ------------
++ ...       + ...
+
++ ...       - ...
+
+- ...       - ...
+
+- ...       + ...
+
++ ...       _
+----------- ------------
+
+
+## Actions
+
+1. Design a task in JavaScript to go inside this adjusted model
+   (incorporating Model Adjustment 1 and 2).
+
+     This will require a degree of *"implementation juggling"* in order to find a
+     balance of code-length/difficulty over the same task in Elm in such a way
+     that is not creating noise in the thing being studied: Cognitive load. 
+
+     Keep the reactivity constant, compare the differences in ease between JS and
+     Elm.
+
+2. If time available, run another Pilot study on this task + adjusted model
+
+### Modifications to be made to the experimental methodology
+
+Needs to be more objective! Why? What will I modify?
+
 # Requirements
 
-If you are doing a primarily software development project, this is the chapter
-in which you review the requirements decisions and critique the requirements
-process.
+I will now identify what the requirements are for the project.
+
+## Functional Requirements
+
+1.  Write software to assist the capture of objective data to inform me
+    of the user’s activities as they use the Elm IDE.
+
+    1.  The program must be able to work offline and later transfer
+        collected data to me once a connection is resumed, collecting
+        mouse and keyboard activity\
+        **Priority: High**
+
+2.  Perform Pilot and User Studies
+
+    1.  I must perform Pilot and User Studies in an iterative fashion,
+        each one learning and building upon discoveries made in prior
+        ones, starting vague and getting more and more focused on a
+        particular facet of User Interface Design and/or Declarative
+        programming as an activity.\
+        **Priority: High**
+
+    2.  I must use these studies to inform experimental and software
+        design to disambiguate and filter data collected in the
+        experiment, and to exercise hypotheses.\
+        **Priority: High**
+
+## Non-Functional Requirements
+
+1.  Source code
+
+    1.  The software must be written clearly and simply.\
+        **Priority: High**
+
+    2.  The software must have suitable, concise comments which explain
+        the programs intent, but only where the code alone is not
+        enough.\
+        **Priority: High**
+
+2.  Activity recording
+
+    1.  The program activity recording feature must not slow down the
+        user’s use of the IDE more than 1ms difference than without it.\
+        **Priority: High**
+
+    2.  There should be software to visualise the usage data\
+        **Priority: Medium**
 
 # Design
 
-This is the chapter in which you review your design decisions at various levels
-and critique the design process.
+**This is the chapter in which you review your design decisions at various levels
+and critique the design process.**
+
+More detail on what I will modify. How will I modify?
+
+![Extensions made to the Elm IDE]
+
+# Implementation
+
+Describe how I extended the Elm IDE
+
+# Pilot Study 2
+
+Using the Elm IDE
 
 
-## Pilot study
+## Observations
 
-In reflection, the task I chose was too difficult to capture the cognitive load
+The task I chose for Pilot Study 1 was too difficult to capture the cognitive load
 incurred by the language itself for a given task, due to the difficulty of the
 task itself creating noise.  I could improve this by simplifying the task, in a
-way that is ‘language agnostic', i.e. that is not idiomatic of Elm or JavaScript
+way that is 'language agnostic', i.e. that is not idiomatic of Elm or JavaScript
 (the two languages that I am comparing).  Something like the following will
 never be that easy in JavaScript:
 
@@ -611,7 +754,23 @@ never be that easy in JavaScript:
 main = lift asText Mouse.position
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Group meeting with Leon at East Building, 11:15 Friday 4th October 2013
+**Saw some things in Pilot Study 1, also in the use of the Elm IDE I extended, I saw some
+things before Pilot Study 2.**
+
+### Hypotheses
+
+1H. 
+
+## Experiment
+
+### Method
+
+A 2×2×2 study, that is 2 Languages (Elm and JavaScript), 2 Region difficulties
+(Hard and Simple) and 2 Region relevances (Relevant and Not relevant) will be
+done to determine if the number of mouse clicks per region differ across
+variables.
+
+# Group meeting with Leon at East Building, 11:15 Friday 4th October 2013
 
 
 **N.B. READ UP ON AND REMIND YOURSELF OF HCI STUFF (Year 2) AND SOFTWARE
@@ -748,186 +907,6 @@ These are:
 
 ## Experimental design
 
-### 30/10/2013 @ 9:15 am in STV 
-#### Individual Meeting after Proposal hand-in
-
-Our discussion centered around the direction I wish to take following my Project
-Proposal.
-
-##### AB Testing of the language with the same IDE
-
-The primary direction I mentioned (as echoed in my Proposal) was doing AB
-testing of Elm vs. another language (e.g. JavaScript) (i.e. the language is the
-dependent variable) using the same Concurrent FRP IDE (the independent variable).
-
-##### Test just the paradigm
-
-He also suggested a potential experiment to test just the paradigm, eliminating
-the IDE from the experiment above. Perhaps for a Pilot study.
-
-##### Experiment process
-
-1. Study question (e.g. Is it easy?)
-2. Measurement concept (e.g. "Easy")
-3. Operationalisation -- taking a measurement concept and mapping it to
-   something concrete (e.g. if completing a pre-defined task the user must
-   complete takes $< 5$ steps, it is 'easy' -- we can then compare instances of
-   these studies given our definition of easy). This is much like mapping a
-   design to an implementation, and there is a risk of losing information, or
-   ending up with a mismatched concrete instance that does not represent the
-   concept we wish to convey.
-4. Do another operationalisation of our measurement concept -- this allows us to
-   get a different perspective of the same concept. (e.g. if total length of
-   pauses during a 1 hour experiment is $< 10$ minutes, it is 'easy'). We do this
-   to get 'coverage' of the measurement concept. It is a form of cross
-   validation. If we see an overlap in the correlational results after analysis,
-   we can make a stronger assertion that e.g. "language A is easier than
-   language B.". The idea I am describing here is methodological decision-making.
-5. Predict what will be the likely results of our experiments on the
-   operationalised measurements. This is "feed forward validation".
-6. Do the experiement.
-7. Analyse the data. See if the data has patterns that correlate with the
-   assertion I wish to make. I will be representing the raw data in some outcome
-   measure -- that is
-   turning the raw data into a set of (or a single) value for comparison. 
-8. Does the data answer the study question I set out to ask? This is now "feed
-   backwards validation".
-9. Write-up including the 'nitty-gritty' of the user study, and a statement like
-   "Given our definition of easy, our multiple operationalisations of the
-   concept of easy show that this is infact objectively true/false".
-
-##### Pilots
-
-We also spoke about ideas for pilot studies -- asking "What might be surprising
-insights into declarative programming languages for User Interface Design -- the
-case of Elm?".
-
-Speak-aloud protocols where you prompt/facilitate the user to say what is on
-their mind when that e.g. pause for more than 10 seconds -- a measurement I set
-out to look for during an experiment. 
-
-I might ask 
-
-* > I notice you have paused for at least 10 seconds -- why did you?
-* >> I thought the code would do X, but it did Y.
-* > Why did you think it would do X?
-* >> ...
-
-I must ask the participant questions designed in a way that they are not
-leading.
-
-Leon suggested I gather a rich data set, as it's difficult to take notes AND
-prompt the user during an experiment. SO difficult. Perhaps record video.
-
-#### Actions for next meeting
-
-Devise a Pilot study, answering these 3 questions:
-
-1. What might I ask people to do?
-2. How will I gather data?
-3. How will I analyse the data?
-
-Also see paper Leon will send me on "Thematic analysis & Psychology"
-
-### Wed Mar 25 14:30 GMT 2014
-
-(Several meetings undocumented)
-
-**TODO**: Refer to notes in Diary for previous entries.
-
-#### Progress since last meeting
-
-Discussed findings from analysis of pilot study
-
-##### Observation 1
-
-* Prompting *"What are you thinking about?"* etc. seemed to place additional
-  cognitive load on the user as they spent longer resuming than when not
-  prompted. This caused noise in assessing the actual cognitive load incurred
-  during the completion of the **task**. Were the signs of struggling/undergoing
-  difficulty due to simply not understanding the language, or were they due to
-  the difficulty of the task?
-
-* In particular, the majority of instances where the users paused turned out to
-  be confusion as to the semantics & syntax of the language.
-
-##### Model Adjustment 1
-
-* Add tooltips that appear as the user places the keyboard cursor to the right
-  of a token in the language.
-
-##### Observation 2
-
-* Sifting through 1-hour+ of video data capture for incidences of cognitive load
-  is *HARD!*. Is there some programmatic way of narrowing the video data to
-  points of interest?
-
-##### Model Adjustment 2
-
-* Track the user mouse and keyboard movements in a 3-tuple: `(Time t, (Mouse.x,
-  Mouse.y), Keypress k)`
-  
-* It doesn't have to be implemented this way. I could extend **Model Adjustment
-  1** to define blocks of code as tokens in themselves, and capture how long the
-  cursor is static on that particular token.
-
-* Leon suggested a further refinement of this idea in order to further narrow
-  the data (in fact, just capturing mouse & keyboard movements will result in an
-  explosion of the volume of data -- countrary to what I intend to achieve). His
-  refinement was to define regions of interest in the code pane, and *only when
-  the mouse/key cursor is in the region, do I capture data*. 
-
-* Use the `if cursor in region then log (Time t, (Mouse.x, Mouse.y), Keypress
-  k)` functionality as a *lens* to focus on significant portions of video
-  capture.
-
-#### Further discussion
-
-We then discussed some questions that might lead my direction of study in the
-next steps of my research:
-
-* Is the mouse/cursor position a proxy for someone's attention as they carry out
-  the task?
-
-* Often when I'm coding I'll leave the cursor where it is but think about other
-  regions of code. I don't necessarily move the keyboard/mouse cursor to the
-  section of code I'm thinking about. Instead, I use it as a 'bookmark' to track
-  what I'm currently implementing, and may scroll around to other parts.
-
-#### We also discussed...
-
-The result of the dissertation will be a list of observed cognitive
-easing/loading that each language produces for users, much like an
-advantage/disadvantage comparison:
-
------------ ------------
-Elm         JavaScript
------------ ------------
-+ ...       + ...
-
-+ ...       - ...
-
-- ...       - ...
-
-- ...       + ...
-
-+ ...       _
------------ ------------
-
-
-#### Actions
-
-1. Design a task in JavaScript to go inside this adjusted model
-   (incorporating Model Adjustment 1 and 2).
-
-     This will require a degree of *"implementation juggling"* in order to find a
-     balance of code-length/difficulty over the same task in Elm in such a way
-     that is not creating noise in the thing being studied: Cognitive load. 
-
-     Keep the reactivity constant, compare the differences in ease between JS and
-     Elm.
-
-2. If time available, run another Pilot study on this task + adjusted model
 
 
 
