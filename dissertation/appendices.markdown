@@ -8,13 +8,13 @@
 
 ## Raw results output
 
-### firebase-mouseclick-data.json
+### firebase-mouseclick-data.json \label{mouseclick-data}
 
 ~~~~ {.json .numberLines include="code/firebase-mouseclick-data.json"}
 this will be replaced by contents of README
 ~~~~
 
-### error\_log.json
+### error\_log.json \label{error-log}
 
 ~~~~ {.json .numberLines include="code/error\_log.json"}
 this will be replaced by contents of README
@@ -63,20 +63,20 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
-### EmbedMeElm.elm
+### EmbedMeElm.elm \label{embedElm{
 
 ~~~~ {.haskell .numberLines include="code/EmbedMeElm.elm"}
 this will be replaced by contents of README
 ~~~~
 
 
-### EmbedMeJS.elm
+### EmbedMeJS.elm \label{embedJS}
 
 ~~~~ {.haskell .numberLines include="code/EmbedMeJS.elm"}
 this will be replaced by contents of README
 ~~~~
 
-### fullScreenEmbedMe.js
+### fullScreenEmbedMe.js \label{embeddingCode}
 
 ~~~~ {.javascript .numberLines include="code/fullScreenEmbedMe.js"}
 this will be replaced by contents of README
@@ -89,15 +89,15 @@ this will be replaced by contents of README
 ~~~~
 
 
-### MovingBox.js
+### MovingBox.js \label{jsTask}
 
-~~~~ {.javascript .numberLines include="code/public/jsTask/MovingBox.js"}
+~~~~ {.javascript .numberLines include="code/public/task/MovingBox.js"}
 this will be replaced by contents of README
 ~~~~
 
-### MovingBox.elm
+### MovingBox.elm \label{elmTask}
 
-~~~~ {.haskell .numberLines include="code/public/elmTask/MovingBox.elm"}
+~~~~ {.haskell .numberLines include="code/public/task/MovingBox.elm"}
 this will be replaced by contents of README
 ~~~~
 
