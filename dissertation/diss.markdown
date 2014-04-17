@@ -1,5 +1,5 @@
 ---
-title:  'The potential of declarative programming languages to support user interface programming: the case of Elm'
+title:  'Analysing cognitive load by extending an IDE to support input device logging of users during the activity of user--interface programming'
 author:
 - name: Simon Buist
   affiliation: The University of Bath
