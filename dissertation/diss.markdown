@@ -5,17 +5,16 @@ author:
   affiliation: The University of Bath
 tags: [programming, psychology, HCI, user experience]
 abstract: |
-  This dissertation provides groundwork in doing user participation studies for
-  logging input device data during the use of a browser-based Interactive
-  Development Environment [IDE], whose implementation is described herein.
-  Furthermore, the IDE has been used to conduct studies comparing the cognitive
-  load experienced in two languages, Elm and JavaScript, during the completion
-  of a basic task: modifying code to restrict the movement of a 2--D box from
-  leaving the bounds of a frame. The metric of number of mouse clicks in code
-  regions, (*difficult*, *simple*, *task-relevant* and *not-task-relevant*), has
-  been selected as an operationalisation of the concept of *thrashing*
-  [@Lopez2012a] as being indicative of cognitive load during task completion.
-  **The study found...**
+  This dissertation provides a browser-based Integrated Development Environment
+  [IDE] that logs input device data --- for the purpose of performing user
+  participation studies --- whose implementation is described herein. The IDE is
+  then used to conduct studies comparing the cognitive load
+  experienced with two languages, Elm and JavaScript, during the completion of a
+  basic task: modifying code to restrict the movement of a 2--D box from leaving
+  the bounds of a frame. In order to do this comparison, the metric of `number
+  of mouse clicks per code region` is selected, as an operationalisation
+  of the concept of *thrashing* [@Lopez2012a], as being indicative of cognitive
+  load during task completion.  **The study found...**
 ...
 
 # Introduction
@@ -24,15 +23,15 @@ I am interested in the effect of Functional Reactive Programming [FRP]
 on User Interface programming.
 
 I first grew an interest in the field of Functional Reactive Programming
-after seeing Bret Victor’s “Inventing on Principle” @Victor2012a. His
+after seeing Bret Victor's "Inventing on Principle" @Victor2012a. His
 talk claims that, in the traditional compile-run-debug cycle of coding,
-“most of the developer’s time is spent looking at the code, blindly
-without an immediate connection to the thing they’re making”. He goes on
+"most of the developer's time is spent looking at the code, blindly
+without an immediate connection to the thing they're making". He goes on
 to show a side-by-side illustration of a new style of development – on
 one side is the runtime preview, and on the other side is the code
 pertaining to said runtime. Changes in the code update the runtime,
-live. He argues that “so much of creation is discovery, and you can’t
-discover anything if you can’t see what you’re doing” – alluding to his
+live. He argues that "so much of creation is discovery, and you can’t
+discover anything if you can't see what you're doing" – alluding to his
 earlier statement that the compile-run-debug cycle is much like this. I
 would like to investigate the claims Bret Victor makes, and indeed Elm,
 an instance of such a FRP, whose website also makes similar claims.
@@ -50,13 +49,12 @@ My goal is to answer these questions. By way of conducting user studies,
 leveraging Elm with extensions to do A/B testing to illustrate it’s
 effectiveness (or ineffectiveness) at enhancing User Interface Design.
 
-As far as the scope of this project goes, I will be researching as much
-as is necessary in order to meet the aims of the project listed
-[itm:aims]. Should I complete these aims, I may go on to do further user
-studies, or attempt to further analyse, compare and contrast User
-Interface Design and Declarative/Functional Reactive Programming
-languages against other methods, so as to make firmer statements about
-the benefits of Elm.
+As far as the scope of this project goes, I will be researching as much as is
+necessary in order to meet the aims of the project listed. Should I complete
+these aims, I may go on to do further user studies, or attempt to further
+analyse, compare and contrast User Interface Design and Declarative/Functional
+Reactive Programming languages against other methods, so as to make firmer
+statements about the benefits of Elm.
 
 # Requirements
 
@@ -70,16 +68,12 @@ Below is an example requirement illustrating the requirement numbering
 system in use:
 
 1.  High-level, abstract title which sums up the topic of the associated
-    requirements (E.g. Compare two pieces of program text) [itm:example]
+    requirements (E.g. Compare two pieces of program text) 
 
     1.  Requirement associated with high-level title (E.g. The program
         must show if the two input texts are the same or different)
-        [itm:example-requirement] **Priority** of requirement (**High**,
+        **Priority** of requirement (**High**,
         **Medium** or **Low**).
-
-Here I am referencing the above abstract title: [itm:example]
-
-Here I am referencing the above requirement: [itm:example-requirement]
 
 ### Priorities system
 
