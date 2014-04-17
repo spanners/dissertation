@@ -149,12 +149,14 @@ $endfor$
 \begin{document}
 $if(title)$
 \maketitle
+\thispagestyle{empty}
 $endif$
 $if(abstract)$
 \newpage
 \begin{abstract}
 $abstract$
 \end{abstract}
+\thispagestyle{empty}
 $endif$
 
 $for(include-before)$
@@ -167,14 +169,20 @@ $if(toc)$
 \hypersetup{linkcolor=black}
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
+\thispagestyle{empty}
 }
 $endif$
 \newpage
+\vspace*{\fill}
 This dissertation may be made available for consultation within the
 University Library and may be photocopied or lent to other libraries for
 the purposes of consultation.
 
-Signed: \newpage
+\vspace*{30pt}
+Signed: 
+\vspace*{\fill}
+\thispagestyle{empty}
+\newpage
 
 \textbf{The potential of declarative programming languages to support
 user interface programming: the case of Elm}
@@ -206,7 +214,10 @@ other degree or qualification of this or any other university or
 institution of learning. Except where specifically acknowledged, it is
 the work of the author.
 
-Signed: \newpage
+\vspace*{40pt}
+Signed: 
+\thispagestyle{empty}
+\newpage
 
 \section*{Acknowledgements}\label{acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
@@ -222,7 +233,9 @@ providing me with the foundation and support that made this dissertation
 possible. My regards go to all those that kindly gave of their time to
 participate in the pilot studies and user studies. 
 
+\thispagestyle{empty}
 \newpage
+\setcounter{page}{1}
 $body$
 
 $if(natbib)$
