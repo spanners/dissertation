@@ -1007,7 +1007,7 @@ Talk about "phases" in a programmer's activities during task-completion:
 1. Syntax reference 404
 1. I did not capture window resizing
 
-Not capturing window resizing is problematic -- participant 15 (See
+Not capturing window resizing is problematic -- participant 15 (See Figure
 \ref{fig:visualise-15-overlay}) very likely had a much shorter window height
 than I have used here. I suspect this is the case because of the cluster of
 mouse clicks in the same range of the $x$ axis as the Compile button, but much
