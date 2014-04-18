@@ -14,14 +14,19 @@ class FooTests(unittest.TestCase):
         self.assertEquals(actual, expected)
 
     def testMouseDecode(self):
-        expected = {"-JKMBewWrFje3lHT8spD" : {"t" : 1397327310399, "y" : 646, "x" : 629}}
-        actual = self.dmd.decode('{"-JKMBewWrFje3lHT8spD" : {"t" : 1397327310399, "y" : 646, "x" : 629}}')
+        expected = {"-JKMBewWrFje3lHT8spD" :
+                {"t" : 1397327310399, "y" : 646, "x" : 629}}
+        actual = self.dmd.decode(
+                '{"-JKMBewWrFje3lHT8spD" : ' +
+                '{"t" : 1397327310399, "y" : 646, "x" : 629}}')
 
         self.assertEquals(actual, expected)
 
     def testNumClicks(self):
         expected = 1
-        actual = self.dmd.getNumberOfClicks('{"-JKMBewWrFje3lHT8spD" : {"t" : 1397327310399, "y" : 646, "x" : 629}}')
+        actual = self.dmd.getNumberOfClicks(
+                '{"-JKMBewWrFje3lHT8spD" : ' +
+                '{"t" : 1397327310399, "y" : 646, "x" : 629}}')
 
         self.assertEquals(actual, expected)
 

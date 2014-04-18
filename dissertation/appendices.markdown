@@ -6,6 +6,10 @@
 
 # Appendix B {-}
 
+## Mouse click visualisation \label{visualisations}
+
+![Participant 15, Elm task](visualise1.png)
+
 ## Raw results output
 
 ### firebase-mouseclick-data.json \label{mouseclick-data}
@@ -63,20 +67,20 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
-### EmbedMeElm.elm \label{embedElm}
+### EmbedMeElm.elm \label{EmbedMeElm.elm}
 
 ~~~~ {.haskell .numberLines include="code/EmbedMeElm.elm"}
 this will be replaced by contents of README
 ~~~~
 
 
-### EmbedMeJS.elm \label{embedJS}
+### EmbedMeJS.elm \label{EmbedMeJS.elm}
 
 ~~~~ {.haskell .numberLines include="code/EmbedMeJS.elm"}
 this will be replaced by contents of README
 ~~~~
 
-### fullScreenEmbedMe.js \label{embeddingCode}
+### fullScreenEmbedMe.js \label{fullScreenEmbedMe.js}
 
 ~~~~ {.javascript .numberLines include="code/fullScreenEmbedMe.js"}
 this will be replaced by contents of README
@@ -89,15 +93,27 @@ this will be replaced by contents of README
 ~~~~
 
 
-### MovingBox.js \label{jsTask}
+### MovingBox.js \label{MovingBox.js}
 
 ~~~~ {.javascript .numberLines include="code/public/task/MovingBox.js"}
 this will be replaced by contents of README
 ~~~~
 
-### MovingBox.elm \label{elmTask}
+### MovingBox.elm \label{MovingBox.elm}
 
 ~~~~ {.haskell .numberLines include="code/public/task/MovingBox.elm"}
+this will be replaced by contents of README
+~~~~
+
+### DecodeMouseData.py \label{DecodeMouseData.py}
+
+~~~~ {.python .numberLines include="code/DecodeMouseData.py"}
+this will be replaced by contents of README
+~~~~
+
+### test\_DecodeMouseData.py \label{test-DecodeMouseData.py}
+
+~~~~ {.python .numberLines include="code/test\_DecodeMouseData.py"}
 this will be replaced by contents of README
 ~~~~
 
