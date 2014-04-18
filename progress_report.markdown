@@ -99,3 +99,23 @@ I convert Elm Records into JSON Strings to be stored in Firebase like so:
 [Evan's stamps example]: http://github.com/evancz/elm-html-and-js
 [Firebase]: http://firebase.io
 [See entry]: #sun-mar-30-00:49:51-gmt-2014
+
+
+# Fri Apr 18 03:09:18 BST 2014
+
+It would be so nice if I could point the Elm IDE to mouse data .json
+and view it in an overlay in the code. This is (theoretically) very easy.
+
+* * *
+
+So ok. I only know how to get this working in Elm-runtime-0.10
+but basically, I can just swap where I'm doing a POST to submit mouseclick data, with GET, and magic.
+
+Annoyingly I haven't been able to get this to work with the latest runtime (0.12)
+but hax allows me to enter a special "View participant mouse data" mode into the IDE
+e.g. specify some url path in addition to the experiment
+and the participant ID
+and then it loads elm-runtime-0.10.js instead
+and does GET instead of POST on the same data
+
+:)
