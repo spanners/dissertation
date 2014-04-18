@@ -486,16 +486,18 @@ of extension to stream this over the Internet to my storage facilities
 
 # Experimental methodology
 
-## AB Testing of the languages with the same IDE?
+Here are some possible approaches I could take to analysing the paradigm of declaritive versus imperative progamming.
 
-The primary direction I mentioned (as echoed in my Proposal) was doing AB
-testing of Elm vs. another language (e.g. JavaScript) (i.e. the language is the
-dependent variable) using the same Concurrent FRP IDE (the independent variable).
+1. AB Testing of the languages with the same IDE?
 
-## Test just the paradigm?
+    The primary direction I mentioned (as echoed in my Proposal) was doing AB
+    testing of Elm vs. another language (e.g. JavaScript) (i.e. the language is the
+    dependent variable) using the same Concurrent FRP IDE (the independent variable).
 
-He also suggested a potential experiment to test just the paradigm, eliminating
-the IDE from the experiment above. Perhaps for a Pilot study.
+2. Test just the paradigm?
+
+    Test just the paradigm, eliminating
+    the IDE from the experiment above. Perhaps for a Pilot study.
 
 ### Experiment process
 
@@ -530,9 +532,7 @@ the IDE from the experiment above. Perhaps for a Pilot study.
 
 ### Pilots
 
-We also spoke about ideas for pilot studies -- asking "What might be surprising
-insights into declarative programming languages for User Interface Design -- the
-case of Elm?".
+What might be surprising insights into declarative programming languages for User Interface Design -- the case of Elm?
 
 Speak-aloud protocols where you prompt/facilitate the user to say what is on
 their mind when that e.g. pause for more than 10 seconds -- a measurement I set
@@ -560,8 +560,6 @@ Devise a Pilot study, answering these 3 questions:
 3. How will I analyse the data?
 
 Also see paper Leon will send me on "Thematic analysis & Psychology"
-
-
 
 
 # Pilot Study 1
