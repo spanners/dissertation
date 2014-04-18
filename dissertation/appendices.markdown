@@ -8,7 +8,7 @@
 
 ## Mouse click visualisation \label{visualisations}
 
-![Participant 15, Elm task](visualise1.png)
+![Paricipant 15, Elm task (Overlay)](visualise-15-overlay.png)
 
 ## Raw results output
 
