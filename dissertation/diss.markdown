@@ -999,13 +999,21 @@ Talk about "phases" in a programmer's activities during task-completion:
 #### Mention the ways in which the study is flawed:
 
 1. Self-reported expertise
-2. Self-reported task completion
-3. No way to be sure which error log pertains to which compile
+1. Self-reported task completion
+1. No way to be sure which error log pertains to which compile
 1. Unique participant ID per Surveymonkey
-2. Surveymonkey has taken my data hostage 
-3. window dimensions?! 
-4. Syntax reference 404
-6. I did not capture their code solution, so relied on trust
+1. Surveymonkey has taken my data hostage 
+1. window dimensions?! 
+1. Syntax reference 404
+1. I did not capture window resizing
+
+Not capturing window resizing is problematic -- participant 15 (See
+\ref{fig:visualise-15-overlay}) very likely had a much shorter window height
+than I have used here. I suspect this is the case because of the cluster of
+mouse clicks in the same range of the $x$ axis as the Compile button, but much
+futher up in the $y$ axis, but I have no way to be sure as I did not log window
+dimensions.
+
 
 #### Results
 
