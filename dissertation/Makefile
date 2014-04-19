@@ -21,10 +21,13 @@ submission: diss.pdf
 	pandoc -f markdown -o $@ $< && mv $@ $<
 
 appendices.tex: include
-	pandoc --filter ./include -o appendices.tex appendices.markdown
+	pandoc --filter ./includecode -o appendices.tex appendices.markdown
 
 appendices.html: include
-	pandoc --filter ./include -o appendices.html appendices.markdown
+	pandoc --filter ./includecode -o appendices.html appendices.markdown
 
 include:
 	ghc include.hs
+
+include:
+	ghc includecode.hs
