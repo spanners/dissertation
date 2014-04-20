@@ -14,13 +14,13 @@
 
 ### firebase-mouseclick-data.json \label{mouseclick-data}
 
-~~~~ {.json .numberLines includecode="code/firebase-mouseclick-data.json"}
+~~~~ {.json .numberLines code="code/firebase-mouseclick-data.json"}
 this will be replaced by contents of README
 ~~~~
 
 ### error\_log.json \label{error-log}
 
-~~~~ {.json .numberLines includecode="code/error\_log.json"}
+~~~~ {.json .numberLines code="code/error\_log.json"}
 this will be replaced by contents of README
 ~~~~
 
@@ -39,81 +39,81 @@ this will be replaced by contents of README
 
 ### LICENSE
 
-~~~~ {includecode="code/LICENSE"}
+~~~~ {code="code/LICENSE"}
 this will be replaced by contents of README
 ~~~~
 
 ### install\_elm.sh \label{install-elm.sh}
 
-~~~~ {.bash .numberLines includecode="code/install\_elm.sh"}
+~~~~ {.bash .numberLines code="code/install\_elm.sh"}
 this will be replaced by contents of README
 ~~~~
 
 ### Server.hs \label{server.hs}
 
-~~~~ {.haskell .numberLines includecode="code/server/Server.hs"}
+~~~~ {.haskell .numberLines code="code/server/Server.hs"}
 this will be replaced by contents of README
 ~~~~
 
 ### Editor.hs \label{editor.hs}
 
-~~~~ {.haskell .numberLines includecode="code/server/Editor.hs"}
+~~~~ {.haskell .numberLines code="code/server/Editor.hs"}
 this will be replaced by contents of README
 ~~~~
 
 ### Generate.hs \label{generate.hs}
 
-~~~~ {.haskell .numberLines includecode="code/server/Generate.hs"}
+~~~~ {.haskell .numberLines code="code/server/Generate.hs"}
 this will be replaced by contents of README
 ~~~~
 
 ### EmbedMeElm.elm \label{EmbedMeElm.elm}
 
-~~~~ {.haskell .numberLines includecode="code/EmbedMeElm.elm"}
+~~~~ {.haskell .numberLines code="code/EmbedMeElm.elm"}
 this will be replaced by contents of README
 ~~~~
 
 
 ### EmbedMeJS.elm \label{EmbedMeJS.elm}
 
-~~~~ {.haskell .numberLines includecode="code/EmbedMeJS.elm"}
+~~~~ {.haskell .numberLines code="code/EmbedMeJS.elm"}
 this will be replaced by contents of README
 ~~~~
 
 ### fullScreenEmbedMe.js \label{fullScreenEmbedMe.js}
 
-~~~~ {.javascript .numberLines includecode="code/fullScreenEmbedMe.js"}
+~~~~ {.javascript .numberLines code="code/fullScreenEmbedMe.js"}
 this will be replaced by contents of README
 ~~~~
 
 ### editor.js.diff
 
-~~~~ {.diff .numberLines includecode="code/editor.js.diff"}
+~~~~ {.diff .numberLines code="code/editor.js.diff"}
 this will be replaced by contents of README
 ~~~~
 
 
 ### MovingBox.js \label{MovingBox.js}
 
-~~~~ {.javascript .numberLines includecode="code/public/task/MovingBox.js"}
+~~~~ {.javascript .numberLines code="code/public/task/MovingBox.js"}
 this will be replaced by contents of README
 ~~~~
 
 ### MovingBox.elm \label{MovingBox.elm}
 
-~~~~ {.haskell .numberLines includecode="code/public/task/MovingBox.elm"}
+~~~~ {.haskell .numberLines code="code/public/task/MovingBox.elm"}
 this will be replaced by contents of README
 ~~~~
 
 ### DecodeMouseData.py \label{DecodeMouseData.py}
 
-~~~~ {.python .numberLines includecode="code/DecodeMouseData.py"}
+~~~~ {.python .numberLines code="code/DecodeMouseData.py"}
 this will be replaced by contents of README
 ~~~~
 
 ### test\_DecodeMouseData.py \label{test-DecodeMouseData.py}
 
-~~~~ {.python .numberLines includecode="code/test\_DecodeMouseData.py"}
+~~~~ {.python .numberLines code="code/test\_DecodeMouseData.py"}
 this will be replaced by contents of README
 ~~~~
 
