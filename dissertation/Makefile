@@ -3,13 +3,10 @@ submission: diss.pdf
 	tar cjvf sdab20-CODE-SimonBuist-Dissertation-2014.tar.bz code
 
 diss.pdf: diss.markdown appendices.tex
-	pandoc -s --variable mainfont=Georgia --variable sansfont=Arial --variable monofont="Bitstream Vera Sans Mono" --variable fontsize=12pt -A appendices.tex --template style/latex.template --toc -N --smart --bibliography diss.bib --csl style/the-open-university-harvard.csl -f markdown -o diss.pdf diss.markdown
+	pandoc -s --variable mainfont=Georgia --variable sansfont=Arial --variable monofont="Bitstream Vera Sans Mono" --variable fontsize=12pt -A appendices.tex --template style/latex.template --toc -N --smart --bibliography biblio.bib --csl style/the-open-university-harvard.csl -f markdown -o diss.pdf diss.markdown
 
 diss.html: diss.markdown appendices.html
-	pandoc -N --template=style/html.template --variable mainfont=Georgia --variable sansfont=Arial --variable monofont="Bitstream Vera Sans Mono" --variable fontsize=12pt -A appendices.html --toc --smart --bibliography diss.bib --csl the-open-university-harvard.csl -f markdown -t html5 -o diss.html diss.markdown
-
-%.tex: %.markdown
-	pandoc -s --toc -N --smart --bibliography $*.bib -f markdown -o $@ $<
+	pandoc -N --template=style/html.template --variable mainfont=Georgia --variable sansfont=Arial --variable monofont="Bitstream Vera Sans Mono" --variable fontsize=12pt -A appendices.html --toc --smart --bibliography biblio.bib --csl the-open-university-harvard.csl -f markdown -t html5 -o diss.html diss.markdown
 
 appendices.tex: sections/appendices.markdown
 	pandoc --filter ./includeCode.hs -o appendices.tex sections/appendices.markdown
