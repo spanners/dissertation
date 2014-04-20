@@ -18,36 +18,36 @@ abstract: |
 ...
 
 
-````{markdown="introduction.markdown"}
+````{markdown="sections/introduction.markdown"}
 Introduction
 ````
 
-````{markdown="project-plan.markdown"}
+````{markdown="sections/project-plan.markdown"}
 Project Plan
 ````
 
-````{markdown=literature-survey.markdown}
+````{markdown="sections/literature-survey.markdown"}
 Literature Survey
 ````
 
-````{markdown="experimental-methodology.markdown"}
+````{markdown="sections/experimental-methodology.markdown"}
 Experimental Methodology
 ````
 
-````{markdown="pilot1.markdown"}
+````{markdown="sections/pilot1.markdown"}
 Pilot Study 1
 ````
 
-````{markdown="design.markdown"}
+````{markdown="sections/design.markdown"}
 Design
 ````
 
-````{markdown="implementation.markdown"}
+````{markdown="sections/implementation.markdown"}
 Implementation
 ````
 
 
-````{markdown="pilot2.markdown"}
+````{markdown="sections/pilot2.markdown"}
 Pilot Study 2
 ````
 
@@ -190,7 +190,7 @@ These are:
 
 -->
 
-````{markdown="conclusions.markdown"}
+````{markdown="sections/conclusions.markdown"}
 Conclusions
 ````
 
