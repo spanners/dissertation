@@ -1,3 +1,5 @@
+#! /usr/bin/env runhaskell
+
 -- includeCode.hs
 import Text.Pandoc.JSON
 

@@ -1,3 +1,5 @@
+#! /usr/bin/env runhaskell
+
 import Text.Pandoc.JSON
 
 main :: IO ()
