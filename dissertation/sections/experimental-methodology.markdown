@@ -74,7 +74,3 @@ Devise a Pilot study, answering these 3 questions:
 3. How will I analyse the data?
 
 Also see paper Leon will send me on "Thematic analysis & Psychology"
-
-``` {markdown="pilot1.markdown"}
-this will be replaced by contents of README
-```
