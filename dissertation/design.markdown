@@ -102,7 +102,6 @@ regions of code OR they pertain to achieving the set task.
 
 5. **DONE** Determine what to do with mouse (for example) data.
 
-[Extensions made to the Elm IDE]: ide-extensions.png
 
 What makes code difficult to understand and work with?
 
@@ -184,4 +183,4 @@ Within-subjects is the converse of the above methodological properties
 
 6. **WIP** Visualise mouse data
 
-![Extensions made to the Elm IDE]
+[Extensions made to the Elm IDE]: images/ide-extensions.png

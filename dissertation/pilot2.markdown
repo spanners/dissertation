@@ -34,10 +34,10 @@ variables.
 ## Results
 
 ![Participant 15, Elm task (Overlaid with mouse
-clicks)\label{fig:visualise-15-overlay}](visualise-15-overlay.png)
+clicks)\label{fig:visualise-15-overlay}](images/visualise-15-overlay.png)
 
 ![Participant 18, JS task (Overlaid with mouse
-clicks)\label{fig:visualise-18-overlay}](visualise-18-overlay.png)
+clicks)\label{fig:visualise-18-overlay}](images/visualise-18-overlay.png)
 
 See Figure \ref{fig:visualise-15-overlay} for the visualisation of participant 15
 completing the Elm version of the task.

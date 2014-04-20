@@ -6,10 +6,6 @@
 
 # Appendix B {-}
 
-## Mouse click visualisation \label{visualisations}
-
-![Paricipant 15, Elm task (Overlay)](visualise-15-overlay.png)
-
 ## Raw results output
 
 ### firebase-mouseclick-data.json \label{mouseclick-data}

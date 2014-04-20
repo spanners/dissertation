@@ -1,5 +1,7 @@
 # Introduction
 
+Talk about project in general...
+
 <!--
 
 I am interested in the effect of Functional Reactive Programming [FRP]

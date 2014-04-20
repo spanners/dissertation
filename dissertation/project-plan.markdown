@@ -53,8 +53,6 @@ realise that this way of developing is time-saving and improves code
 quality by enforcing modularity in order to test it @Martin2008a and
 @Hunt2000a.
 
-![Gantt Chart\label{fig:gantt}](gantt-chart.png)
-
 ## Required Resources
 
 I will now talk about the resources I require for the completion of this
@@ -115,3 +113,5 @@ by others – in my reading, I came across a paper (also mentioned
 earlier) that highlighted concerns that participants under study had,
 and the paper detailed ways to mitigate these concerns so as to make the
 participant feel that are informed and safe @Yates2012a.
+
+![Gantt Chart\label{fig:gantt}](images/gantt-chart.png)
