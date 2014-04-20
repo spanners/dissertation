@@ -2,9 +2,5 @@
 *.pdf
 appendices.html
 appendices.tex
-*.hi
-*.o
 sdab20-CODE-SimonBuist-Dissertation-2014.tar.bz
 diss.markdown
-includeMarkdown
-includeCode
