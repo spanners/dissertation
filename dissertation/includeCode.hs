@@ -1,12 +1,12 @@
--- includes.hs
+-- includeCode.hs
 import Text.Pandoc.JSON
 
-doInclude :: Block -> IO Block
-doInclude cb@(CodeBlock (id, classes, namevals) contents) =
+includeCode :: Block -> IO Block
+includeCode cb@(CodeBlock (id, classes, namevals) contents) =
   case lookup "includecode" namevals of
        Just f     -> return . (CodeBlock (id, classes, namevals)) =<< readFile f
        Nothing    -> return cb
-doInclude x = return x
+includeCode x = return x
 
 main :: IO ()
-main = toJSONFilter doInclude
+main = toJSONFilter includeCode
