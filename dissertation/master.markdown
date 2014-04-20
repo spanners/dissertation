@@ -1,4 +1,4 @@
-````{markdown="title-abstract.markdown"}
+````{markdown="sections/title-abstract.markdown"}
 Title and Abstract
 ````
 

@@ -11,11 +11,11 @@ diss.html: diss.markdown appendices.html
 %.tex: %.markdown
 	pandoc -s --toc -N --smart --bibliography $*.bib -f markdown -o $@ $<
 
-appendices.tex: appendices.markdown
-	pandoc --filter ./includeCode.hs -o appendices.tex appendices.markdown
+appendices.tex: sections/appendices.markdown
+	pandoc --filter ./includeCode.hs -o appendices.tex sections/appendices.markdown
 
-appendices.html: appendices.markdown
-	pandoc --filter ./includeCode.hs -o appendices.html appendices.markdown
+appendices.html: sections/appendices.markdown
+	pandoc --filter ./includeCode.hs -o appendices.html sections/appendices.markdown
 
-diss.markdown: master.markdown appendices.markdown title-abstract.markdown sections/conclusions.markdown sections/design.markdown sections/experimental-methodology.markdown sections/implementation.markdown sections/introduction.markdown sections/literature-survey.markdown sections/pilot1.markdown sections/pilot2.markdown sections/project-plan.markdown
+diss.markdown: master.markdown sections/title-abstract.markdown sections/conclusions.markdown sections/design.markdown sections/experimental-methodology.markdown sections/implementation.markdown sections/introduction.markdown sections/literature-survey.markdown sections/pilot1.markdown sections/pilot2.markdown sections/project-plan.markdown sections/appendices.markdown
 	pandoc --filter ./includeMarkdown.hs -o diss.markdown master.markdown
