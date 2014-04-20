@@ -17,7 +17,7 @@ appendices.tex: includeCode appendices.markdown
 appendices.html: includeCode appendices.markdown
 	pandoc --filter ./includeCode -o appendices.html appendices.markdown
 
-diss.markdown: includeMarkdown master.markdown appendices.markdown sections/conclusions.markdown sections/design.markdown sections/experimental-methodology.markdown sections/implementation.markdown sections/introduction.markdown sections/literature-survey.markdown sections/pilot1.markdown sections/pilot2.markdown sections/project-plan.markdown
+diss.markdown: includeMarkdown master.markdown appendices.markdown title-abstract.markdown sections/conclusions.markdown sections/design.markdown sections/experimental-methodology.markdown sections/implementation.markdown sections/introduction.markdown sections/literature-survey.markdown sections/pilot1.markdown sections/pilot2.markdown sections/project-plan.markdown
 	pandoc --filter ./includeMarkdown -o diss.markdown master.markdown
 
 includeMarkdown:
