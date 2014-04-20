@@ -562,7 +562,7 @@ Devise a Pilot study, answering these 3 questions:
 
 Also see paper Leon will send me on "Thematic analysis & Psychology"
 
-``` {includeMarkdown="pilot1.markdown"}
+``` {markdown="pilot1.markdown"}
 this will be replaced by contents of README
 ```
 
@@ -769,7 +769,7 @@ example, consider listing 5.1, below.  Listing 5.1: Example code
 Code listings are produced using the package "Listings". This has many useful
 options, so have a look at the package documentation for further ideas.**
 
-``` {includeMarkdown="pilot2.markdown"}
+``` {markdown="pilot2.markdown"}
 this will be replaced by contents of README
 ```
 
