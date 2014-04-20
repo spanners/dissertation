@@ -34,6 +34,10 @@ Literature Survey
 Experimental Methodology
 ````
 
+````{markdown="pilot1.markdown"}
+Pilot Study 1
+````
+
 ````{markdown="design.markdown"}
 Design
 ````
@@ -43,9 +47,9 @@ Implementation
 ````
 
 
-``` {markdown="pilot2.markdown"}
-this will be replaced by contents of README
-```
+````{markdown="pilot2.markdown"}
+Pilot Study 2
+````
 
 <!--
 
