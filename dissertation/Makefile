@@ -11,10 +11,10 @@ diss.html: diss.markdown appendices.html
 %.tex: %.markdown
 	pandoc -s --toc -N --smart --bibliography $*.bib -f markdown -o $@ $<
 
-appendices.tex: includeCode
+appendices.tex: includeCode appendices.markdown
 	pandoc --filter ./includeCode -o appendices.tex appendices.markdown
 
-appendices.html: includeCode
+appendices.html: includeCode appendices.markdown
 	pandoc --filter ./includeCode -o appendices.html appendices.markdown
 
 diss.markdown: includeMarkdown appendices.markdown conclusions.markdown design.markdown experimental-methodology.markdown implementation.markdown introduction.markdown literature-survey.markdown pilot1.markdown pilot2.markdown project-plan.markdown master.markdown
