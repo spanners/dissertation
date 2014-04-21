@@ -1,18 +1,18 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Editor (editor,ide,empty) where
 
-import Data.Monoid (mempty)
-import Text.Blaze.Html
-import qualified Text.Blaze.Html5 as H
+import           Data.Monoid                 (mempty)
+import           Network.HTTP.Base           (urlEncode)
+import qualified System.FilePath             as FP
+import           Text.Blaze.Html
+import qualified Text.Blaze.Html5            as H
 import qualified Text.Blaze.Html5.Attributes as A
-import Network.HTTP.Base (urlEncode)
-import qualified System.FilePath as FP
 
-import qualified Elm.Internal.Utils as Elm
-import Data.Maybe (fromMaybe)
+import           Data.Maybe                  (fromMaybe)
+import qualified Elm.Internal.Utils          as Elm
 
-import Generate (addSpaces)
-import Utils
+import           Generate                    (addSpaces)
+import           Utils
 
 
 -- | Display an editor and the compiled result side-by-side.
@@ -21,7 +21,7 @@ ide lang cols participant fileName code =
     case lang of
          Javascript -> buildIde ("JS Editor: ", "/_compile")
          Elm        -> buildIde ("Elm Editor: ", "/compile")
-  where buildIde (editStr,compileStr) = 
+  where buildIde (editStr,compileStr) =
             ideBuilder lang
                        cols
                        participant
@@ -39,13 +39,14 @@ ideBuilder lang cols participant title input output =
     case lang of
          Javascript -> makeIde "_code"
          Elm        -> makeIde "code"
-  where 
+  where
         makeIde codeStr =
           H.docTypeHtml $ do
             H.head . H.title . toHtml $ title
-            preEscapedToMarkup $ 
+            preEscapedToMarkup $
                concat [ "<frameset cols=\"" ++ cols ++ "\">\n"
-                      , "  <frame name=\"input\" src=\"/", codeStr, input, "?p=", 
+                      , "  <frame name=\"input\" src=\"/", codeStr, 
+                        input, "?p=",
                         participant, "\" />\n"
                       , "  <frame name=\"output\" src=\"", output, "\" />\n"
                       , "</frameset>" ]
@@ -58,9 +59,9 @@ themes = [ "ambiance", "blackboard", "cobalt", "eclipse"
          , "rubyblue", "solarized", "twilight", "vibrant-ink", "xq-dark" ]
 
 jsFiles :: AttributeValue -> [AttributeValue]
-jsFiles syntaxFile = 
+jsFiles syntaxFile =
           [ "/codemirror-3.x/lib/codemirror.js"
-          , syntaxFile -- "/codemirror-3.x/mode/elm/elm.js" || "/codemirror-3.x/mode/javascript/javascript.js"
+          , syntaxFile
           , "/misc/showdown.js"
           , "/misc/editor.js?0.11" ]
 
@@ -81,18 +82,18 @@ editor lang filePath code =
           H.html $ do
             H.head $ do
               H.title . toHtml $ editStr ++ FP.takeBaseName filePath
-              H.link ! A.rel "stylesheet" 
+              H.link ! A.rel "stylesheet"
                      ! A.href "/codemirror-3.x/lib/codemirror.css"
               mapM_ themeAttr themes
-              H.link ! A.rel "stylesheet" ! A.type_ "text/css" 
+              H.link ! A.rel "stylesheet" ! A.type_ "text/css"
                                           ! A.href "/misc/editor.css"
               mapM_ script $ jsFiles syntaxFile
               script "/elm-runtime.js?0.11"
               script "http://cdn.firebase.com/v0/firebase.js"
             H.body $ do
-              H.form ! A.id "inputForm" 
+              H.form ! A.id "inputForm"
                      ! A.action compileStr
-                     ! A.method "post" 
+                     ! A.method "post"
                      ! A.target "output" $ do
                  H.div ! A.id "editor_box" $
                    H.textarea ! A.name "input" ! A.id "input" $ toHtml ('\n':code)
@@ -101,9 +102,9 @@ editor lang filePath code =
                    bar "editor_options" editorOptions
                    bar "always_on" (buttons >> options)
               jsAttr "initEditor();"
-        themeAttr theme = H.link ! A.rel "stylesheet" 
-                                 ! A.href (toValue ("/codemirror-3.x/theme/" 
-                                                      ++ theme 
+        themeAttr theme = H.link ! A.rel "stylesheet"
+                                 ! A.href (toValue ("/codemirror-3.x/theme/"
+                                                      ++ theme
                                                       ++ ".css" :: String))
         jsAttr = H.script ! A.type_ "text/javascript"
         script jsFile = jsAttr ! A.src jsFile $ mempty
@@ -116,7 +117,7 @@ buttons = H.div ! A.class_ "valign_kids"
                 ! A.style "float:right; padding-right: 6px;"
                 $ compileButton
       where
-        compileButton = 
+        compileButton =
             H.input
                  ! A.type_ "button"
                  ! A.id "compile_button"
@@ -129,18 +130,18 @@ options :: Html
 options = H.div ! A.class_ "valign_kids"
                 ! A.style "float:left; padding-left:6px; padding-top:2px;"
                 $ (docs' >> opts)
-    where 
-      docs' = 
+    where
+      docs' =
         H.span  ! A.title "Show documentation and types." $ "Hints:" >>
             H.input ! A.type_ "checkbox"
                     ! A.id "show_type_checkbox"
                     ! A.onchange "showType(this.checked);"
 
-      opts = 
-        H.span  ! A.title "Show editor options." 
+      opts =
+        H.span  ! A.title "Show editor options."
                 ! A.style "padding-left: 12px;" $ "Options:" >>
             H.input ! A.type_ "checkbox"
-                    ! A.id "options_checkbox" 
+                    ! A.id "options_checkbox"
                     ! A.onchange "showOptions(this.checked);"
 
 editorOptions :: Html
@@ -154,7 +155,7 @@ editorOptions = theme >> zoom >> lineNumbers
           H.select ! A.id "editor_theme"
                    ! A.onchange "setTheme(this.value)"
                    $ mapM_ optionFor themes
-              
+
       zoom =
           H.select ! A.id "editor_zoom"
                    ! A.onchange "setZoom(this.options[this.selectedIndex].\
@@ -172,7 +173,7 @@ docs = tipe >> desc
     where
       tipe = H.div ! A.class_ "type" $ message >> more
 
-      message = H.div ! 
+      message = H.div !
                   A.style "position:absolute; left:4px; right:36px;\
                             \overflow:hidden; text-overflow:ellipsis;" $ ""
 
