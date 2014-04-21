@@ -34,7 +34,12 @@ ide lang cols participant fileName code =
 empty :: Html
 empty = ideBuilder Elm "50%,50%" "1" "Try Elm" "Empty.elm" "/Try.elm"
 
-ideBuilder :: Lang -> String -> String -> String -> String -> String -> Html
+ideBuilder :: Lang -> String 
+                   -> String 
+                   -> String 
+                   -> String 
+                   -> String 
+                   -> Html
 ideBuilder lang cols participant title input output =
     case lang of
          Javascript -> makeIde "_code"
@@ -55,8 +60,9 @@ ideBuilder lang cols participant title input output =
 -- | list of themes to use with CodeMirror
 themes :: [String]
 themes = [ "ambiance", "blackboard", "cobalt", "eclipse"
-         , "elegant", "erlang-dark", "lesser-dark", "monokai", "neat", "night"
-         , "rubyblue", "solarized", "twilight", "vibrant-ink", "xq-dark" ]
+         , "elegant", "erlang-dark", "lesser-dark", "monokai"
+         , "neat", "night", "rubyblue", "solarized", "twilight"
+         , "vibrant-ink", "xq-dark" ]
 
 jsFiles :: AttributeValue -> [AttributeValue]
 jsFiles syntaxFile =
@@ -96,16 +102,18 @@ editor lang filePath code =
                      ! A.method "post"
                      ! A.target "output" $ do
                  H.div ! A.id "editor_box" $
-                   H.textarea ! A.name "input" ! A.id "input" $ toHtml ('\n':code)
+                   H.textarea ! A.name "input" 
+                              ! A.id "input" $ toHtml ('\n':code)
                  H.div ! A.id "options" $ do
                    bar "documentation" docs
                    bar "editor_options" editorOptions
                    bar "always_on" (buttons >> options)
               jsAttr "initEditor();"
         themeAttr theme = H.link ! A.rel "stylesheet"
-                                 ! A.href (toValue ("/codemirror-3.x/theme/"
-                                                      ++ theme
-                                                      ++ ".css" :: String))
+                                 ! A.href (toValue 
+                                            ("/codemirror-3.x/theme/"
+                                                ++ theme
+                                                ++ ".css" :: String))
         jsAttr = H.script ! A.type_ "text/javascript"
         script jsFile = jsAttr ! A.src jsFile $ mempty
 
@@ -158,8 +166,9 @@ editorOptions = theme >> zoom >> lineNumbers
 
       zoom =
           H.select ! A.id "editor_zoom"
-                   ! A.onchange "setZoom(this.options[this.selectedIndex].\
-                                  \innerHTML)"
+                   ! A.onchange 
+                       "setZoom(this.options[this.selectedIndex].\
+                       \innerHTML)"
                    $ mapM_ optionFor ["100%", "80%", "150%", "200%"]
 
       lineNumbers = do

@@ -142,7 +142,8 @@ embedee elmSrc participant =
             H.span ! A.style "font-family: monospace;" $
             mapM_ addSpaces (lines err)
       script "/fullScreenEmbedMe.js"
-  where addSpaces line = H.preEscapedToMarkup (Generate.addSpaces line) >> H.br
+  where addSpaces line = H.preEscapedToMarkup (Generate.addSpaces line) 
+                           >> H.br
         oldID = mkRegex "var user_id = \"1\";"
         newID = "var user_id = " ++ participant ++ "+'';"
         jsAttr = H.script ! A.type_ "text/javascript"
@@ -153,7 +154,9 @@ embedMe elmSrc target participant = target >> embedee elmSrc participant
 
 getPath = BSC.unpack . rqPathInfo <$> getRequest
 
-embedWithFile :: (Lang -> FilePath -> String -> H.Html) -> Lang -> String -> Snap ()
+embedWithFile :: (Lang -> FilePath -> String -> H.Html) -> Lang 
+                                                        -> String 
+                                                        -> Snap ()
 embedWithFile handler lang participant =
     case lang of
          Elm -> useEmbedder embedHtml
@@ -190,7 +193,7 @@ precompile =
   do setCurrentDirectory "public"
      files <- getFiles True ".elm" "."
      forM_ files $ \file -> rawSystem "elm"
-                                ["--make","--runtime=/elm-runtime.js",file]
+                              ["--make","--runtime=/elm-runtime.js",file]
      htmls <- getFiles False ".html" "build"
      mapM_ adjustHtmlFile htmls
      setCurrentDirectory ".."
@@ -200,8 +203,8 @@ precompile =
         if skip && "build" `elem` map FP.dropTrailingPathSeparator
                                         (FP.splitPath directory)
           then return [] else
-          (do contents <- map (directory </>) `fmap`
-                                                getDirectoryContents directory
+          (do contents <- 
+                map (directory </>) `fmap` getDirectoryContents directory
               let files = filter ((ext==) . FP.takeExtension) contents
                   directories  = filter (not . FP.hasExtension) contents
               filess <- mapM (getFiles skip ext) directories
