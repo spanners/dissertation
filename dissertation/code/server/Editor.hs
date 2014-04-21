@@ -100,14 +100,13 @@ editor lang filePath code =
                    bar "documentation" docs
                    bar "editor_options" editorOptions
                    bar "always_on" (buttons >> options)
-              embed "initEditor();"
+              jsAttr "initEditor();"
         themeAttr theme = H.link ! A.rel "stylesheet" 
                                  ! A.href (toValue ("/codemirror-3.x/theme/" 
                                                       ++ theme 
                                                       ++ ".css" :: String))
         jsAttr = H.script ! A.type_ "text/javascript"
         script jsFile = jsAttr ! A.src jsFile $ mempty
-        embed jsCode = jsAttr $ jsCode
 
 bar :: AttributeValue -> Html -> Html
 bar id' body = H.div ! A.id id' ! A.class_ "option" $ body
