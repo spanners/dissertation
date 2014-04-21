@@ -3,6 +3,7 @@
 module Main where
 
 import Data.Monoid (mempty)
+import Data.Maybe (fromMaybe)
 import qualified Data.ByteString as BS
 import qualified Data.ByteString.Char8 as BSC
 import qualified Elm.Internal.Utils as Elm
@@ -75,9 +76,9 @@ logAndServeHtml :: MonadSnap m => (H.Html, Maybe String) -> m ()
 logAndServeHtml (html, Nothing)  = serveHtml html
 logAndServeHtml (html, Just err) =
     do timeStamp <- liftIO $ readProcess "date" ["--rfc-3339=ns"] ""
-       liftIO $ appendFile "error_log.json" $ "{\"" ++ (init timeStamp) 
+       liftIO $ appendFile "error_log.json" $ "{\"" ++ init timeStamp 
                                                     ++ "\"," 
-                                                    ++ (show (lines err)) 
+                                                    ++ show (lines err) 
                                                     ++ "},"
        setContentType "text/html" <$> getResponse
        writeLBS (BlazeBS.renderHtml html)
@@ -117,43 +118,35 @@ compile lang = maybe error404 serve =<< getParam "input"
 
 edit :: Lang -> Snap ()
 edit lang = do
-  participant <- BSC.unpack . maybe "" id <$> getParam "p"
-  cols <- BSC.unpack . maybe "50%,50%" id <$> getQueryParam "cols"
+  participant <- BSC.unpack . fromMaybe "" <$> getParam "p"
+  cols <- BSC.unpack . fromMaybe "50%,50%" <$> getQueryParam "cols"
   withFile (Editor.ide lang cols participant) 
 
 code :: Lang -> Snap ()
 code lang = do
-  participant <- BSC.unpack . maybe "" id <$> getParam "p"
+  participant <- BSC.unpack . fromMaybe "" <$> getParam "p"
   embedWithFile Editor.editor lang participant 
 
 embedee :: String -> String -> H.Html
 embedee elmSrc participant =
     H.span $ do
       case Elm.compile elmSrc of
-        Right jsSrc -> do
-            embed $ H.preEscapedToMarkup (subRegex oldID jsSrc newID)
+        Right jsSrc -> 
+            jsAttr $ H.preEscapedToMarkup (subRegex oldID jsSrc newID)
         Left err ->
             H.span ! A.style "font-family: monospace;" $
             mapM_ addSpaces (lines err)
       script "/fullScreenEmbedMe.js"
   where addSpaces line = H.preEscapedToMarkup (Generate.addSpaces line) >> H.br
         oldID = mkRegex "var user_id = \"1\";"
-        newID = ("var user_id = " ++ participant ++ "+'';" :: String)
+        newID = "var user_id = " ++ participant ++ "+'';"
         jsAttr = H.script ! A.type_ "text/javascript"
         script jsFile = jsAttr ! A.src jsFile $ mempty
-        embed jsCode = jsAttr $ jsCode
 
 embedMe :: String -> H.Html -> String -> H.Html
-embedMe elmSrc target participant = target >> (embedee elmSrc participant)
+embedMe elmSrc target participant = target >> embedee elmSrc participant
 
-jsEmbedWithFile :: (FilePath -> String -> H.Html) -> String -> Snap ()
-jsEmbedWithFile handler participant = do
-  path <- BSC.unpack . rqPathInfo <$> getRequest
-  let file = "public/" ++ path         
-  exists <- liftIO (doesFileExist file)
-  if not exists then error404 else
-      do content <- liftIO $ readFile file
-         embedJS (handler path content) participant
+getPath = BSC.unpack . rqPathInfo <$> getRequest
 
 embedWithFile :: (Lang -> FilePath -> String -> H.Html) -> Lang -> String -> Snap ()
 embedWithFile handler lang participant =
@@ -161,16 +154,15 @@ embedWithFile handler lang participant =
          Elm -> useEmbedder embedHtml
          Javascript -> useEmbedder embedJS
   where useEmbedder embedder = do
-          path <- BSC.unpack . rqPathInfo <$> getRequest
+          path <- getPath
           let file = "public/" ++ path         
           exists <- liftIO (doesFileExist file)
           if not exists then error404 else
               do content <- liftIO $ readFile file
                  embedder (handler lang path content) participant
     
-withFile :: (FilePath -> String -> H.Html) -> Snap ()
 withFile handler = do
-  path <- BSC.unpack . rqPathInfo <$> getRequest
+  path <- getPath
   let file = "public/" ++ path         
   exists <- liftIO (doesFileExist file)
   if not exists then error404 else
@@ -185,7 +177,7 @@ setupLogging =
     where
       createIfMissing path = do
         exists <- doesFileExist path
-        when (not exists) $ BS.writeFile path ""
+        unless exists $ BS.writeFile path ""
 
 -- | Compile all of the Elm files in public/, put results in public/build/
 precompile :: IO ()
