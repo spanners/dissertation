@@ -27,6 +27,7 @@ import GHC.Conc
 import qualified Elm.Internal.Paths as Elm
 import qualified Generate
 import qualified Editor
+import Utils (Lang(..))
 
 data Flags = Flags
   { port :: Int
@@ -49,12 +50,12 @@ main = do
   httpServe (setPort (port cargs) defaultConfig) $
       ifTop (serveElm "public/Empty.elm")
       <|> route [ ("try", serveHtml Editor.empty)
-                , ("edit", edit)
-                , ("_edit", jsEdit) 
-                , ("code", code)
-                , ("_code", jsCode)
-                , ("compile", compile)
-                , ("_compile", jsCompile)
+                , ("edit", edit Elm)
+                , ("code", code Elm)
+                , ("compile", compile Elm)
+                , ("_code", code Javascript)
+                , ("_edit", edit Javascript) 
+                , ("_compile", compile Javascript)
                 , ("hotswap", hotswap)
                 ]
       <|> error404
@@ -107,37 +108,23 @@ hotswap = maybe error404 serve =<< getParam "input"
           do setContentType "application/javascript" <$> getResponse
              writeBS . BSC.pack . Generate.js $ BSC.unpack code
 
-jsCompile :: Snap ()
-jsCompile = maybe error404 serve =<< getParam "input"
+compile :: Lang -> Snap ()
+compile lang = maybe error404 serve =<< getParam "input"
     where
-      serve = logAndServeJS . Generate.logAndJS "Compiled JS" . BSC.unpack
+      serve = case lang of
+                   Elm -> logAndServeHtml . Generate.logAndHtml "Compiled Elm" . BSC.unpack
+                   Javascript -> logAndServeJS . Generate.logAndJS "Compiled JS" . BSC.unpack
 
-compile :: Snap ()
-compile = maybe error404 serve =<< getParam "input"
-    where
-      serve = logAndServeHtml . Generate.logAndHtml "Compiled Elm" . BSC.unpack
-
-edit :: Snap ()
-edit = do
+edit :: Lang -> Snap ()
+edit lang = do
   participant <- BSC.unpack . maybe "" id <$> getParam "p"
   cols <- BSC.unpack . maybe "50%,50%" id <$> getQueryParam "cols"
-  withFile (Editor.ide cols participant) 
+  withFile (Editor.ide lang cols participant) 
 
-jsEdit :: Snap ()
-jsEdit = do
+code :: Lang -> Snap ()
+code lang = do
   participant <- BSC.unpack . maybe "" id <$> getParam "p"
-  cols <- BSC.unpack . maybe "50%,50%" id <$> getQueryParam "cols"
-  withFile (Editor.jsIde cols participant)
-
-code :: Snap ()
-code = do
-  participant <- BSC.unpack . maybe "" id <$> getParam "p"
-  embedWithFile Editor.editor participant
-
-jsCode :: Snap ()
-jsCode = do
-  participant <- BSC.unpack . maybe "" id <$> getParam "p"
-  jsEmbedWithFile Editor.jsEditor participant
+  embedWithFile Editor.editor lang participant 
 
 embedee :: String -> String -> H.Html
 embedee elmSrc participant =
@@ -168,14 +155,18 @@ jsEmbedWithFile handler participant = do
       do content <- liftIO $ readFile file
          embedJS (handler path content) participant
 
-embedWithFile :: (FilePath -> String -> H.Html) -> String -> Snap ()
-embedWithFile handler participant = do
-  path <- BSC.unpack . rqPathInfo <$> getRequest
-  let file = "public/" ++ path         
-  exists <- liftIO (doesFileExist file)
-  if not exists then error404 else
-      do content <- liftIO $ readFile file
-         embedHtml (handler path content) participant
+embedWithFile :: (Lang -> FilePath -> String -> H.Html) -> Lang -> String -> Snap ()
+embedWithFile handler lang participant =
+    case lang of
+         Elm -> useEmbedder embedHtml
+         Javascript -> useEmbedder embedJS
+  where useEmbedder embedder = do
+          path <- BSC.unpack . rqPathInfo <$> getRequest
+          let file = "public/" ++ path         
+          exists <- liftIO (doesFileExist file)
+          if not exists then error404 else
+              do content <- liftIO $ readFile file
+                 embedder (handler lang path content) participant
     
 withFile :: (FilePath -> String -> H.Html) -> Snap ()
 withFile handler = do
