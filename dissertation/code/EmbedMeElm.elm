@@ -18,8 +18,9 @@ user_id = "1"
 
 firebaseRequest requestType requestData = 
   Http.request requestType 
-    ("https://sweltering-fire-9141.firebaseio.com/dissertation/elm/" ++ user_id 
-                                                                     ++ ".json") 
+    ("https://sweltering-fire-9141.firebaseio.com/dissertation/elm/" 
+        ++ user_id 
+        ++ ".json") 
     requestData []
  
 serialize r = r |> JEXP.fromRecord 
