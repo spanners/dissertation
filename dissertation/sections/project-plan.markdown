@@ -5,17 +5,16 @@ current here – this may change throughout the course of the project: I
 may narrow in on a topic of interest, or branch out to investigate
 anomalous research findings.
 
-I will be building the end product – the dissertation and software – via
-a process of iterations, much like an iterative Software Lifecycle. The
-Literature Survey is ongoing – throughout the whole project from
-beginning to end – feeding into all parts of the dissertation, and
-indeed this Proposal, as shown in the Gantt chart (Figure  
-\ref{fig:gantt}). The literature I choose is sometimes chosen to support
-points I wish to make, sometimes acting to guide my next area of
-research, reinforce findings, compare or contrast with other research,
-and probably many other things I have not yet thought of. Most
-importantly, I will be looking at who the paper/article etc. is cited
-by, preferring sources that are peer-reviewed.
+I will be building the end product – the dissertation and software – via a
+process of iterations, much like an iterative Software Lifecycle. The Literature
+Survey is ongoing – throughout the whole project from beginning to end – feeding
+into all parts of the dissertation, and indeed this Proposal, as shown in the
+Gantt chart (Figure \ref{fig:gantt}).  The literature I choose is sometimes
+chosen to support points I wish to make, sometimes acting to guide my next area
+of research, reinforce findings, compare or contrast with other research, and
+probably many other things I have not yet thought of. Most importantly, I will
+be looking at who the paper/article etc. is cited by, preferring sources that
+are peer-reviewed.
 
 As well as this literature research, I will also have an ongoing Product
 Literature Survey – looking at existing software out there that is
