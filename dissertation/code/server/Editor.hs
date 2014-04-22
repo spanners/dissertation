@@ -42,8 +42,8 @@ ideBuilder :: Lang -> String
                    -> Html
 ideBuilder lang cols participant title input output =
     case lang of
-         Javascript -> makeIde "_code"
-         Elm        -> makeIde "code"
+         Javascript -> makeIde "_code/"
+         Elm        -> makeIde "code/"
   where
         makeIde codeStr =
           H.docTypeHtml $ do
