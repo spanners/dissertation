@@ -7,6 +7,7 @@ import           Control.Applicative
 import           Control.Monad.Error
 import qualified Data.ByteString               as BS
 import qualified Data.ByteString.Char8         as BSC
+import qualified Data.HashMap.Strict           as Map
 import           Data.Maybe                    (fromMaybe)
 import           Data.Monoid                   (mempty)
 import qualified Elm.Internal.Utils            as Elm
@@ -53,13 +54,15 @@ main = do
       ifTop (serveElm "public/Empty.elm")
       <|> route [ ("try", serveHtml Editor.empty)
                 , ("edit", edit Elm)
-                , ("code", code Elm)
-                , ("compile", compile Elm)
-                , ("_code", code Javascript)
                 , ("_edit", edit Javascript)
+                , ("code", code Elm)
+                , ("_code", code Javascript)
+                , ("compile", compile Elm)
                 , ("_compile", compile Javascript)
                 , ("hotswap", hotswap)
                 ]
+      <|> serveDirectoryWith directoryConfig "public/build"
+      <|> serveDirectoryWith simpleDirectoryConfig "resources"
       <|> error404
 
 error404 :: Snap ()
@@ -84,17 +87,11 @@ logAndServeHtml (html, Just err) =
        setContentType "text/html" <$> getResponse
        writeLBS (BlazeBS.renderHtml html)
 
-
-embedJS :: MonadSnap m => H.Html -> String -> m ()
-embedJS js participant =
-    do
-       elmSrc <- liftIO $ readFile "EmbedMeJS.elm"
-       setContentType "text/html" <$> getResponse
-       writeLBS (BlazeBS.renderHtml (embedMe elmSrc js participant))
-
-embedHtml :: MonadSnap m => H.Html -> String -> m ()
-embedHtml html participant =
-    do elmSrc <- liftIO $ readFile "EmbedMeElm.elm"
+embedHtml :: MonadSnap m => H.Html -> Lang -> String -> m ()
+embedHtml html lang participant =
+    do elmSrc <- liftIO $ case lang of
+                               Elm -> readFile "EmbedMeElm.elm"
+                               Javascript -> readFile "EmbedMeJS.elm"
        setContentType "text/html" <$> getResponse
        writeLBS (BlazeBS.renderHtml (embedMe elmSrc html participant))
 
@@ -114,23 +111,27 @@ compile :: Lang -> Snap ()
 compile lang = maybe error404 serve =<< getParam "input"
     where
       serve = case lang of
-                   Elm -> 
-                       logAndServeHtml . Generate.logAndHtml "Compiled Elm" 
-                                       . BSC.unpack
-                   Javascript -> 
-                       logAndServeJS . Generate.logAndJS "Compiled JS" 
-                                     . BSC.unpack
+                   Elm -> logAndServeHtml
+                            . Generate.logAndHtml "Compiled Elm"
+                            . BSC.unpack
+                   Javascript -> logAndServeJS
+                                   . Generate.logAndJS "Compiled JS"
+                                   . BSC.unpack
 
 edit :: Lang -> Snap ()
 edit lang = do
   participant <- BSC.unpack . fromMaybe "" <$> getParam "p"
   cols <- BSC.unpack . fromMaybe "50%,50%" <$> getQueryParam "cols"
-  withFile (Editor.ide lang cols participant)
+  case lang of
+       Elm -> withFile (Editor.ide Elm cols participant)
+       Javascript -> withFile (Editor.ide Javascript cols participant)
 
 code :: Lang -> Snap ()
 code lang = do
   participant <- BSC.unpack . fromMaybe "" <$> getParam "p"
-  embedWithFile Editor.editor lang participant
+  case lang of
+       Elm -> embedWithFile Editor.editor Elm participant
+       Javascript -> embedWithFile Editor.editor Javascript participant
 
 embedee :: String -> String -> H.Html
 embedee elmSrc participant =
@@ -140,42 +141,65 @@ embedee elmSrc participant =
             jsAttr $ H.preEscapedToMarkup (subRegex oldID jsSrc newID)
         Left err ->
             H.span ! A.style "font-family: monospace;" $
-            mapM_ addSpaces (lines err)
+            mapM_ (\line ->
+                      H.preEscapedToMarkup
+                      (Generate.addSpaces line)
+                      >> H.br)
+                  (lines err)
       script "/fullScreenEmbedMe.js"
-  where addSpaces line = H.preEscapedToMarkup (Generate.addSpaces line) 
-                           >> H.br
-        oldID = mkRegex "var user_id = \"1\";"
+  where oldID = mkRegex "var user_id = \"1\";"
         newID = "var user_id = " ++ participant ++ "+'';"
         jsAttr = H.script ! A.type_ "text/javascript"
         script jsFile = jsAttr ! A.src jsFile $ mempty
 
 embedMe :: String -> H.Html -> String -> H.Html
-embedMe elmSrc target participant = target >> embedee elmSrc participant
+embedMe elmSrc target participant = target >> embedee
+                                              elmSrc
+                                              participant
 
-getPath = BSC.unpack . rqPathInfo <$> getRequest
-
-embedWithFile :: (Lang -> FilePath -> String -> H.Html) -> Lang 
-                                                        -> String 
+embedWithFile :: (Lang -> FilePath -> String -> H.Html) -> Lang
+                                                        -> String
                                                         -> Snap ()
-embedWithFile handler lang participant =
-    case lang of
-         Elm -> useEmbedder embedHtml
-         Javascript -> useEmbedder embedJS
-  where useEmbedder embedder = do
-          path <- getPath
-          let file = "public/" ++ path
-          exists <- liftIO (doesFileExist file)
-          if not exists then error404 else
-              do content <- liftIO $ readFile file
-                 embedder (handler lang path content) participant
+embedWithFile handler lang participant = do
+  path <- BSC.unpack . rqPathInfo <$> getRequest
+  let file = "public/" ++ path
+  exists <- liftIO (doesFileExist file)
+  if not exists then error404 else
+      do content <- liftIO $ readFile file
+         embedHtml (handler lang path content) lang participant
 
+withFile :: (FilePath -> String -> H.Html) -> Snap ()
 withFile handler = do
-  path <- getPath
+  path <- BSC.unpack . rqPathInfo <$> getRequest
   let file = "public/" ++ path
   exists <- liftIO (doesFileExist file)
   if not exists then error404 else
       do content <- liftIO $ readFile file
          serveHtml $ handler path content
+
+directoryConfig :: MonadSnap m => DirectoryConfig m
+directoryConfig =
+    fancyDirectoryConfig
+    { indexGenerator = defaultIndexGenerator 
+                         defaultMimeTypes 
+                         indexStyle
+    , mimeTypes = Map.insert ".elm" "text/html" defaultMimeTypes
+    }
+
+indexStyle :: BS.ByteString
+indexStyle =
+    "body { margin:0; font-family:sans-serif; \
+    \       background:rgb(245,245,245);\
+    \       font-family: calibri, verdana, helvetica, arial; }\
+    \div.header { padding: 40px 50px; font-size: 24px; }\
+    \div.content { padding: 0 40px }\
+    \div.footer { display:none; }\
+    \table { width:100%; border-collapse:collapse; }\
+    \td { padding: 6px 10px; }\
+    \tr:nth-child(odd) { background:rgb(216,221,225); }\
+    \td { font-family:monospace }\
+    \th { background:rgb(90,99,120); color:white; text-align:left;\
+    \     padding:10px; font-weight:normal; }"
 
 setupLogging :: IO ()
 setupLogging =
@@ -187,13 +211,16 @@ setupLogging =
         exists <- doesFileExist path
         unless exists $ BS.writeFile path ""
 
--- | Compile all of the Elm files in public/, put results in public/build/
+-- | Compile all of the Elm files in public/, 
+--   placing results in public/build/
 precompile :: IO ()
 precompile =
   do setCurrentDirectory "public"
      files <- getFiles True ".elm" "."
-     forM_ files $ \file -> rawSystem "elm"
-                              ["--make","--runtime=/elm-runtime.js",file]
+     forM_ files $ \file ->
+                     rawSystem "elm" [ "--make"
+                                     , "--runtime=/elm-runtime.js"
+                                     , file ]
      htmls <- getFiles False ".html" "build"
      mapM_ adjustHtmlFile htmls
      setCurrentDirectory ".."
@@ -201,10 +228,11 @@ precompile =
     getFiles :: Bool -> String -> FilePath -> IO [FilePath]
     getFiles skip ext directory =
         if skip && "build" `elem` map FP.dropTrailingPathSeparator
-                                        (FP.splitPath directory)
+                                      (FP.splitPath directory)
           then return [] else
-          (do contents <- 
-                map (directory </>) `fmap` getDirectoryContents directory
+          (do contents <- map (directory </>) `fmap`
+                                                getDirectoryContents
+                                                directory
               let files = filter ((ext==) . FP.takeExtension) contents
                   directories  = filter (not . FP.hasExtension) contents
               filess <- mapM (getFiles skip ext) directories
@@ -230,8 +258,9 @@ style =
     \  a:visited {text-decoration: none}\n\
     \  a:active {text-decoration: none}\n\
     \  a:hover {text-decoration: underline; color: rgb(234,21,122);}\n\
-    \  body { font-family: \"Lucida Grande\",\"Trebuchet MS\",\
-    \  \"Bitstream Vera Sans\",Verdana,Helvetica,sans-serif !important; }\n\
+    \  body { font-family: \"Lucida Grande\",\
+    \ \"Trebuchet MS\",\"Bitstream Vera Sans\",Verdana,Helvetica,\
+    \ sans-serif !important; }\n\
     \  p, li { font-size: 14px !important;\n\
     \          line-height: 1.5em !important; }\n\
     \</style>"
