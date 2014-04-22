@@ -63,22 +63,9 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
-### EmbedMeElm.elm \label{EmbedMeElm.elm}
+### EmbedMe.elm \label{EmbedMe.elm}
 
-~~~~ {.haskell .numberLines code="code/EmbedMeElm.elm"}
-this will be replaced by contents of README
-~~~~
-
-
-### EmbedMeJS.elm \label{EmbedMeJS.elm}
-
-~~~~ {.haskell .numberLines code="code/EmbedMeJS.elm"}
-this will be replaced by contents of README
-~~~~
-
-### fullScreenEmbedMe.js \label{fullScreenEmbedMe.js}
-
-~~~~ {.javascript .numberLines code="code/fullScreenEmbedMe.js"}
+~~~~ {.haskell .numberLines code="code/EmbedMe.elm"}
 this will be replaced by contents of README
 ~~~~
 

@@ -9,7 +9,6 @@ import qualified Data.ByteString               as BS
 import qualified Data.ByteString.Char8         as BSC
 import qualified Data.HashMap.Strict           as Map
 import           Data.Maybe                    (fromMaybe)
-import           Data.Monoid                   (mempty)
 import qualified Elm.Internal.Utils            as Elm
 
 import qualified Text.Blaze.Html.Renderer.Utf8 as BlazeBS
@@ -89,11 +88,9 @@ logAndServeHtml (html, Just err) =
 
 embedHtml :: MonadSnap m => H.Html -> Lang -> String -> m ()
 embedHtml html lang participant =
-    do elmSrc <- liftIO $ case lang of
-                               Elm -> readFile "EmbedMeElm.elm"
-                               Javascript -> readFile "EmbedMeJS.elm"
+    do elmSrc <- liftIO $ readFile "EmbedMe.elm"
        setContentType "text/html" <$> getResponse
-       writeLBS (BlazeBS.renderHtml (embedMe elmSrc html participant))
+       writeLBS (BlazeBS.renderHtml (embedMe lang elmSrc html participant))
 
 serveHtml :: MonadSnap m => H.Html -> m ()
 serveHtml html =
@@ -129,8 +126,8 @@ code lang = do
   participant <- BSC.unpack . fromMaybe "" <$> getParam "p"
   embedWithFile Editor.editor lang participant
 
-embedee :: String -> String -> H.Html
-embedee elmSrc participant =
+embedee :: Lang -> String -> String -> H.Html
+embedee lang elmSrc participant =
     H.span $ do
       case Elm.compile elmSrc of
         Right jsSrc ->
@@ -142,16 +139,41 @@ embedee elmSrc participant =
                       (Generate.addSpaces line)
                       >> H.br)
                   (lines err)
-      script "/fullScreenEmbedMe.js"
-  where oldID = mkRegex "var user_id = \"1\";"
-        newID = "var user_id = " ++ participant ++ "+'';"
-        jsAttr = H.script ! A.type_ "text/javascript"
-        script jsFile = jsAttr ! A.src jsFile $ mempty
+      jsAttr $ H.preEscapedToMarkup $ visualiser
+      where langStr = (case lang of 
+                            Elm -> "elm"
+                            Javascript -> "js")
+            visualiser =
+              concat [ "var firebaseData = new Firebase('"
+                      , "http://sweltering-fire-9141.firebaseio.com/"
+                      , "dissertation/"
+                      , langStr
+                      , "/"
+                      , participant
+                      , "');"
+                      , "var elm = Elm.fullscreen(Elm.EmbedMe, {"
+	                  , "stamped: {"
+		              , "      t: 0,"
+		              , "      x: 0,"
+		              , "      y: 0"
+	                  , "  }"
+                      , "});"
+                      , "firebaseData.on('child_added'," 
+                      , "function(snapshot) {"
+	                  , "elm.ports.stamped.send(snapshot.val());"
+                      , "});" ]
+            oldID = mkRegex "var user_id = \"1\";"
+            newID = "var user_id = \"" ++ langStr 
+                                       ++ "/" 
+                                       ++ participant 
+                                       ++ "\";"
+            jsAttr = H.script ! A.type_ "text/javascript"
 
-embedMe :: String -> H.Html -> String -> H.Html
-embedMe elmSrc target participant = target >> embedee
-                                              elmSrc
-                                              participant
+embedMe :: Lang -> String -> H.Html -> String -> H.Html
+embedMe lang elmSrc target participant = target >> embedee
+                                                   lang
+                                                   elmSrc
+                                                   participant
 
 embedWithFile :: (Lang -> FilePath -> String -> H.Html) -> Lang
                                                         -> String
