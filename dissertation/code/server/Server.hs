@@ -122,16 +122,12 @@ edit :: Lang -> Snap ()
 edit lang = do
   participant <- BSC.unpack . fromMaybe "" <$> getParam "p"
   cols <- BSC.unpack . fromMaybe "50%,50%" <$> getQueryParam "cols"
-  case lang of
-       Elm -> withFile (Editor.ide Elm cols participant)
-       Javascript -> withFile (Editor.ide Javascript cols participant)
+  withFile (Editor.ide lang cols participant)
 
 code :: Lang -> Snap ()
 code lang = do
   participant <- BSC.unpack . fromMaybe "" <$> getParam "p"
-  case lang of
-       Elm -> embedWithFile Editor.editor Elm participant
-       Javascript -> embedWithFile Editor.editor Javascript participant
+  embedWithFile Editor.editor lang participant
 
 embedee :: String -> String -> H.Html
 embedee elmSrc participant =

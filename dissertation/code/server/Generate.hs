@@ -75,8 +75,8 @@ getErrPage name err =
 
 
 
--- | Using a page title and the full source of an Elm program, compile down to
---   a valid HTML document.
+-- | Using a page title and full source of an Elm program, compile down 
+--   to a valid HTML document.
 html :: String -> String -> H.Html
 html name src =
   H.docTypeHtml $ do
