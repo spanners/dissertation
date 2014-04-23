@@ -12,18 +12,19 @@ from the literature review, [@Lopez2012a].
 ## Hypotheses
 
 * **H1.** Novice users (*defined as*: those that list themselves as being new to
-  functional programming in the pre-questionnaire (See \ref{questionnaire1}))
+  functional programming in the pre-questionnaire)
   will press compile at least once every 2 minutes during the programming task.
 * **H2.** Novice users will not pause (*defined as:* no mouse movement, no
   typing) for more than 2 minutes during the programming task.
 
 ### Method
 
-1. Consent form is signed.
-2. Pre-questionnaire is given out (See \ref{questionnaire})
-3. User is informed that they may ask for help or a prompt, and that they will
-   be interrupted if they pause, to ask why they paused. They are also informed
-   that they can end at any time, and the goal is to make mario fly.
+1. Consent form is signed (See \ref{questionnaire1})
+2. Pre-questionnaire is given out.
+3. User is informed that they may ask for help, and that they will
+   be prompted if they pause (at the moment they break the pause), to ask why they
+   paused. They are also informed that they can end at any time, and the goal is
+   to make mario fly.
 4. User is shown the result of completed task (mario flying).
 4. Programming task is begun.
 5. User completes or ends the task.
@@ -32,8 +33,8 @@ from the literature review, [@Lopez2012a].
 8. Study ends.
 
 Using Thematic analysis [@Braun2006Thematic] to code the captured audio and
-video data, I will transcribe the programming activity. Users will be allowed to
-ask for a prompt or ask me questions while I observe.
+video data, I will transcribe the programming activity, to see what themes
+arise. 
 
 ## Results
 
