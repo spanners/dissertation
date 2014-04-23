@@ -6,6 +6,9 @@
 
 ![Elm click regions\label{fig:regions-elm}](images/regions_elm.png)
 
+
+![JS click regions\label{fig:regions-js}](images/regions_js.png)
+
 # Appendix B {-}
 
 ## Raw results output
