@@ -4,6 +4,8 @@
 
 ## Design Diagrams \label{design-diagrams}
 
+![Elm click regions\label{fig:regions-elm}](images/regions_elm.png)
+
 # Appendix B {-}
 
 ## Raw results output
