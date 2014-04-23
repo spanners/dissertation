@@ -1,5 +1,5 @@
 ---
-title:  'Analysing cognitive load by extending an IDE to support input device logging of users during the activity of user--interface programming'
+title:  'Extending an IDE to support input device logging of programmers during the activity of user--interface programming: Analysing cognitive load'
 author:
 - name: Simon Buist
   affiliation: The University of Bath
