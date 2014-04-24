@@ -114,51 +114,46 @@ Time (min)  Clicks
 
 : Session time and clicks per session for Elm task
 
----------- ---------- ---------
-Category   Observed   Expected
----------- ---------- ---------
-relevant × 76         106.37
-hard ×                                                                    
-Elm                                                                 
-
-relevant × 33         106.37
-hard ×                                                                    
-JS                                                                 
-
-relevant × 487        106.37
-easy ×                                                                    
-Elm
-
-relevant × 12         106.37
-easy ×                                                                    
-JS
-
-irrelevant 105        106.37
-× hard ×                                                                  
-Elm                                                                 
-
-irrelevant 69         106.37
-× hard ×                                                                  
-JS                                                                 
-
-irrelevant 66         106.37
-× easy ×                                                                  
-Elm
-
-irrelevant 3          106.37
-× easy ×                                                                  
-JS
-
-**TOTAL**  **851**    **851**
----------- ---------- ---------
+---------- --------- ---------- 
+Category   Expected  Observed   
+---------- --------- ---------- 
+relevant × 106.37    76         
+hard ×                                                                     
+Elm                                                                  
+                                
+relevant × 106.37    33         
+hard ×                                                                     
+JS                                                                  
+                                
+relevant × 106.37    487        
+easy ×                                                                     
+Elm                             
+                                
+relevant × 106.37    12         
+easy ×                                                                     
+JS                              
+                                
+irrelevant 106.37    105        
+× hard ×                                                                   
+Elm                                                                  
+                                
+irrelevant 106.37    69         
+× hard ×                                                                   
+JS                                                                  
+                                
+irrelevant 106.37    66         
+× easy ×                                                                   
+Elm                             
+                                
+irrelevant 106.37    3          
+× easy ×                                                                   
+JS                              
+                                
+**TOTAL**  **851**   **851**    
+---------- --------- ---------- 
 
 : Clicks per quadrant
 \label{tab:pre-chisquared}
-
-
-* Elm tasks in total: 15
-* JS tasks in total: 4
-
 
 ---------------------- -------------
 $\chi^2$               1633.879
@@ -177,8 +172,14 @@ Yates' $\rho$--value   0
 
 ## Interpretation
 
-Table \ref{tab:post-chisquared} shows that there is statistical significance,
-and that there is 0 chance this significance arose out of chance.
+Looking at the Pearson's table of $\chi^2$ value *vs.* $\rho$--value
+(probability) we can see that, for an $\alpha$ of 5%, that is a $\rho$--value of
+0.05, a $\chi^2$--value of 12.59 is enough to show significance, and we obtained
+a $\chi^2$--value of 1633.955 (approx.). This means table \ref{tab:post-chisquared} shows that there
+is statistical significance, and that there is therefore less than 0.05
+probability this significance arose out of chance (in fact, it is so small that
+SPSS rounded to 0). We can therefore **reject the null hypothesis $H_0$**, and
+**accept the alternative hypothesis $H_1$**.
 
 **This is the chapter in which you review the outcomes, and critique the
 outcomes process.**
