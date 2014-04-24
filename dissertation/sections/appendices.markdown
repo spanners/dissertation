@@ -96,6 +96,18 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
+### ClicksPerCategory.py \label{ClicksPerCategory.py}
+
+~~~~ {.python .numberLines code="code/ClicksPerCategory.py"}
+this will be replaced by contents of README
+~~~~
+
+### get_clicks_per_category.py \label{get_clicks_per_category.py}
+
+~~~~ {.python .numberLines code="code/get_clicks_per_category.py"}
+this will be replaced by contents of README
+~~~~
+
 ### DecodeMouseData.py \label{DecodeMouseData.py}
 
 ~~~~ {.python .numberLines code="code/DecodeMouseData.py"}
