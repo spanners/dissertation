@@ -175,6 +175,10 @@ Yates' $\rho$--value   0
 : $\chi^2$ calculation of clicks per quadrant
 \label{tab:post-chisquared}
 
+## Interpretation
+
+Table \ref{tab:post-chisquared} shows that there is statistical significance,
+and that there is 0 chance this significance arose out of chance.
 
 **This is the chapter in which you review the outcomes, and critique the
 outcomes process.**
@@ -183,14 +187,17 @@ outcomes process.**
 
 ## Discussion
 
+Flaws:
+
 1. Self-reported expertise
 1. Self-reported task completion
 1. No way to be sure which error log pertains to which compile
 1. Unique participant ID per Surveymonkey
 1. Surveymonkey has taken my data hostage 
-1. window dimensions?! 
+1. Window dimensions not captured
 1. Syntax reference 404
 1. I did not capture window resizing
+1. Mouse scrolling not captured
 
 Not capturing window resizing is problematic -- participant 15 (See Figure
 \ref{fig:visualise-15-overlay}) very likely had a much shorter window height
