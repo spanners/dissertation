@@ -114,53 +114,66 @@ Time (min)  Clicks
 
 : Session time and clicks per session for Elm task
 
-
-Instead of $\chi^2$, consider just using multiple regression with dummy
-variables (binary predictors) (See Table \ref{tab:multipleregression})
-
----------- ------ -------- ------ --------- --------- --------- ---------
-Condition  $d_1$  $d_2$    $d_3$  $d_4$     $d_5$     $d_6$     $d_7$        
----------- ------ -------- ------ --------- --------- --------- ---------
-relevant × 1      0        0      0         0         0         0         
+---------- ---------- ---------
+Category   Observed   Expected
+---------- ---------- ---------
+relevant × 76         106.37
 hard ×                                                                    
 Elm                                                                 
 
-relevant × 0      1        0      0         0         0         0         
+relevant × 33         106.37
 hard ×                                                                    
 JS                                                                 
 
-relevant × 0      0        1      0         0         0         0         
+relevant × 487        106.37
 easy ×                                                                    
 Elm
 
-relevant × 0      0        0      1         0         0         0         
+relevant × 12         106.37
 easy ×                                                                    
 JS
 
-irrelevant 0      0        0      0         1         0         0         
+irrelevant 105        106.37
 × hard ×                                                                  
 Elm                                                                 
 
-irrelevant 0      0        0      0         0         1         0         
+irrelevant 69         106.37
 × hard ×                                                                  
 JS                                                                 
 
-irrelevant 0      0        0      0         0         0         1         
+irrelevant 66         106.37
 × easy ×                                                                  
 Elm
 
-irrelevant 0      0        0      0         0         0         0         
+irrelevant 3          106.37
 × easy ×                                                                  
 JS
----------- ------ -------- ------ --------- --------- --------- ---------
 
-: Multiple regression with dummy variables (d1, d2..) (binary predictors)
-\label{tab:multipleregression}
+**TOTAL**  **851**    **851**
+---------- ---------- ---------
 
-* The $d_n$ in the top row are the dummy variables, the values are the codes you assign them
-* There are $n-1$ dummy variabes; one group is coded as all zeros -- that's your reference group
-* Why $n-1$? If there are 8 dummy codes, there are the same number of variables as conditions. the model's fully saturated and there are no degrees of freedom
-    * Similar to $x_1 = 2, x_2 = 4, x_3 = 1$, and $y=2$. then trying to solve for $y$
+: Clicks per quadrant
+\label{tab:pre-chisquared}
+
+
+* Elm tasks in total: 15
+* JS tasks in total: 4
+
+
+---------------------- -------------
+$\chi^2$               1633.879
+
+degrees of freedom     7
+
+$\rho$--value          0
+
+Yates' $\chi^2$        1626.741
+
+Yates' $\rho$--value   0
+---------------------- -------------
+
+: $\chi^2$ calculation of clicks per quadrant
+\label{tab:post-chisquared}
 
 
 **This is the chapter in which you review the outcomes, and critique the
