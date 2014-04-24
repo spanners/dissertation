@@ -1,40 +1,42 @@
----------- --------
-Category   Clicks
----------- --------
-relevant × 76      
+---------- ---------- ---------
+Category   Observed   Expected
+---------- ---------- ---------
+relevant × 76         106.37
 hard ×                                                                    
 Elm                                                                 
 
-relevant × 33      
+relevant × 33         106.37
 hard ×                                                                    
 JS                                                                 
 
-relevant × 487     
+relevant × 487        106.37
 easy ×                                                                    
 Elm
 
-relevant × 12    
+relevant × 12         106.37
 easy ×                                                                    
 JS
 
-irrelevant 105     
+irrelevant 105        106.37
 × hard ×                                                                  
 Elm                                                                 
 
-irrelevant 69    
+irrelevant 69         106.37
 × hard ×                                                                  
 JS                                                                 
 
-irrelevant 66     
+irrelevant 66         106.37
 × easy ×                                                                  
 Elm
 
-irrelevant 3     
+irrelevant 3          106.37
 × easy ×                                                                  
 JS
----------- -------
 
-: Clicks per category
+**TOTAL**  **851**    **851**
+---------- ---------- ---------
+
+: Clicks per quadrant
 \label{tab:multipleregression}
 
 * Elm tasks in total: 15
