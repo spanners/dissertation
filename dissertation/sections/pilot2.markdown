@@ -114,45 +114,29 @@ Time (min)  Clicks
 
 : Session time and clicks per session for Elm task
 
----------- --------- ---------- 
-Category   Expected  Observed   
----------- --------- ---------- 
-relevant × 106.37    76         
-hard ×                                                                     
-Elm                                                                  
-                                
-relevant × 106.37    33         
-hard ×                                                                     
-JS                                                                  
-                                
-relevant × 106.37    487        
-easy ×                                                                     
-Elm                             
-                                
-relevant × 106.37    12         
-easy ×                                                                     
-JS                              
-                                
-irrelevant 106.37    105        
-× hard ×                                                                   
-Elm                                                                  
-                                
-irrelevant 106.37    69         
-× hard ×                                                                   
-JS                                                                  
-                                
-irrelevant 106.37    66         
-× easy ×                                                                   
-Elm                             
-                                
-irrelevant 106.37    3          
-× easy ×                                                                   
-JS                              
-                                
-**TOTAL**  **851**   **851**    
----------- --------- ---------- 
+----------------------------- ----------- --------- ----------
+Category                      Expected %  Expected  Observed  
+----------------------------- ----------- --------- ----------
+relevant × hard × Elm         12.5 %      106.37    76        
+                                                      
+relevant × hard × JS          12.5 %      106.37    33        
+                                                
+relevant × easy × Elm         12.5 %      106.37    487       
+                                                
+relevant × easy × JS          12.5 %      106.37    12        
+                                                
+irrelevant × hard × Elm       12.5 %      106.37    105       
+                                                
+irrelevant × hard × JS        12.5 %      106.37    69        
+                                                
+irrelevant × easy × Elm       12.5 %      106.37    66        
+                                                
+irrelevant × easy × JS        12.5 %      106.37    3         
+                                                            
+**TOTAL**                     **100%**    **851**   **851**   
+----------------------------- ----------- --------- ----------
 
-: Clicks per quadrant
+: Clicks per Category, Expected and Observed
 \label{tab:pre-chisquared}
 
 ---------------------- -------------
