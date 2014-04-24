@@ -49,3 +49,8 @@ class DecodeMouseData(object):
 if __name__ == "__main__":
     dmd = DecodeMouseData()
     print dmd.getDictPrettyPrint(dmd.getFilesTimeClickDict(sys.argv[1:]))
+    timeAndClicks = dmd.getFilesTimeClickDict(sys.argv[1:])
+    total = 0
+    for filename in timeAndClicks:
+        total += timeAndClicks[filename][1]
+    print "TOTAL: ", total
