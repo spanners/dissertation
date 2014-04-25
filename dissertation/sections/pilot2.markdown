@@ -10,7 +10,7 @@ The task I chose for Pilot Study 1 was too difficult to capture the cognitive lo
 incurred by the language itself for a given task, due to the difficulty of the
 task itself creating noise.  I could improve this by simplifying the task, in a
 way that is 'language agnostic', i.e. that is not idiomatic of Elm or JavaScript
-(the two languages that I am comparing).  Something like the following will
+(the two languages that I am comparing). Something like the following will
 never be that easy in JavaScript:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.haskell .numberLines}
@@ -32,12 +32,71 @@ saw some things before Pilot Study 2.**
 
 ### Method
 
-Use the IDE I have augmented to gather click data, I will run studies 
+Using the IDE I have augmented to gather click data, and a pre-questionnaire to
+determine level of expertise (See Section \ref{pilot2-pre-questionnaire}), I
+will two independent pilots of users completing the same task in either Elm or
+JavaScript.
 
-A 2×2×2 multiple regression, that is --- 2 Languages (Elm, JavaScript) × 2
-region Difficulties (Hard, Simple) × 2 region Relevances (Relevant, Not
-relevant) --- will be done to determine if the number of mouse clicks per region
-differ across variables.
+The task (See code listings \ref{MovingBox.elm} and \ref{MovingBox.js} for the
+Elm and JS versions, respectively) is designed in such a way as to approximate the
+property of being 'language agnostic' -- the versions of the task are reasonably
+similar in length, have the same comments, and variables are named similarly.
+The task is to make the moving box clamp to the grey window's edges when moved
+with arrow keys, preventing it from disappearing. It must be clamped in such a
+way that, upon attempting to move the box *out of the grey window*, it stops
+half-way. A youtube video (See https://www.youtube.com/watch?v=cUgK42N7kt8) is
+to be given to the participants so that they can see what the completed task
+looks like.
+
+This will be a 2×2×2 study, using geometrically defined regions (See Figures
+\ref{fig:regions-elm-labelled} and \ref{fig:regions-js-labelled}), also known as
+bounding boxes, in the code, monitoring the count of mouse clicks per region as
+an indicator of thrashing/cognitive load. Regions can either be easy/hard in
+complexity (exhibiting/not--exhibiting one of the above 'difficult' properties).
+Or code can be task--relevant or task--irrelevant, that is *the code does/does
+not need to be changed to achieve the completed task set for the user*:
+
+
+------------------ -----------------
+**Elm**          
+
+Easy/Relevant      Hard/Task
+
+Easy/Irrelevant    Hard/Irrelevant
+
+**JavaScript**   
+
+Easy/Relevant      Hard/Relevant
+
+Easy/Irrelevant    Hard/Irrelevant
+------------------ -----------------
+
+: 2 × 2 × 2 study between-subjects \label{tab:2x2study}
+
+I will look at total and/or mean time in each of these areas for comparison. The
+study will be **between-subjects** instead of within-subjects. That is, I will
+study *different users* for different languages. If a user has completed the
+task in Elm, I can not have them complete the task in JavaScript, and
+vice-versa.
+
+I will necessarily make a compromise here:
+
+Between-subjects:
+
+* I lose the ability to keep programmer competence as constant, thus it is a
+  confounding variable
+
+* I gain the ability to ignore learned-experience in completing the task -- the
+  participant is different every time so will not have done this task before,
+  thus this is not a confounding variable.
+
+Within-subjects is the converse of the above methodological properties
+
+On the resulting raw data, I will perform a multiple regression --- on the 2
+Languages (Elm, JavaScript) × 2 region Difficulties (Hard, Simple) × 2 region
+Relevances (Relevant, Not
+relevant) --- to determine if the number of mouse clicks per region
+differs across regions.
 
 ## Results
 
@@ -97,7 +156,7 @@ irrelevant × easy × JS        12.5 %      106.37    3
 **TOTAL**                     **100%**    **851**   **851**   
 ----------------------------- ----------- --------- ----------
 
-: Clicks per Category, Expected and Observed
+: 2×2×2 comparison of clicks per category --- Expected and Observed
 \label{tab:pre-chisquared}
 
 
@@ -110,10 +169,6 @@ offset)\label{fig:visualise-15-overlay}](images/visualise-15-overlay.png)
 See Figure \ref{fig:visualise-18-overlay} for the visualisation of participant 18
 completing the JavaScript version of the task.
 
-Operationalisation of thrash (the concept), i.e. cementing the concept by a
-metric that models cognitive load (does it? we don't know -- further work after
-the analysis of this may determine if it is a plausible indicator of cognitive
-load)
 
 
 ### Analysis
@@ -233,17 +288,3 @@ In summary, the flaws I have identified are as follows:
    Captured click data suggests that people did attempt to follow the Syntax
    reference links, and the server access error logs support this indication
    with multiple 404s to the Syntax Reference. 
-
-
-In addition to fixing these flaws/foibles, an improvement over this experimental
-method is to take people who are new -- as in: never having used Elm or JS, and
-train them up either in JS or Elm, and then run the same task.  That way, their
-level of ability is much more comparable. 
-
-My current method creates quite a bit of noise in the data, because I rely on
-self-reported level of expertise in JS/Functional languages. I don't know how to
-modify the data to account for this. I could group the analyses into categories
--- i.e those who reported being experts at JS, those who reported never having
-used it, those who reported being experts in at least one FP language, and those
-who reported being new, and make cross comparisons with groups of equal levels
-of ability.

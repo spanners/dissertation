@@ -111,52 +111,6 @@ What makes code difficult to understand and work with?
 
 *[Programming is] manipulating symbols blindly* ~ Bret Victor
 
-Do a 2×2 study, defining regions in the code monitoring mouse clicks. Regions
-can either be simple/hard in complexity (exhibiting/not-exhibiting one of the
-above 'difficult' properties). Or code can be task-oriented or not, that is *the
-code does/does not need to be changed to achieve the completed task set for the
-user*:
-
-
---------------- ------------------
-**Elm**         -
-
-Simple/Task     Hard/Task
-
-Simple/Not-Task Hard/Not-Task
-
-**JavaScript**  -
-
-Simple/Task     Hard/Task
-
-Simple/Not-Task Hard/Not-Task
---------------- ------------------
-
-: 2 × 2 study between-subjects \label{tab:2x2study}
-
-#### Study method
-
-Look at total and/or mean time in each of these areas for comparison.
-
-My study will be **between-subjects** instead of within-subjects.
-
-That is, I will study *different users* for different languages. If a user has
-completed the task in Elm, I can not have them complete the task in JavaScript,
-and vice-versa.
-
-I will necessarily make a compromise here:
-
-Between-subjects:
-
-* I lose the ability to keep programmer competence as constant, thus it is a
-  confounding variable
-
-* I gain the ability to ignore learned-experience in completing the task -- the
-  participant is different every time so will not have done this task before,
-  thus this is not a confounding variable.
-
-Within-subjects is the converse of the above methodological properties
-
 #### Actions
 
 1. **DONE** Reorder divs so embedded div is on top of editor div.

@@ -35,6 +35,10 @@ Implementation
 Pilot Study 2
 ````
 
+````{markdown="sections/further-work.markdown"}
+Further Work
+````
+
 <!--
 
 # Group meeting with Leon at East Building, 11:15 Friday 4th October 2013

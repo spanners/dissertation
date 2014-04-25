@@ -8,9 +8,9 @@
 
 ![JS click regions\label{fig:regions-js}](images/regions_js.png)
 
-![JS labelled click regions\label{fig:regions-js-labelled}](images/regions_js_labelled.png)
-
 ![Elm labelled regions\label{fig:regions-elm-labelled}](images/regions_elm_labelled.png)
+
+![JS labelled click regions\label{fig:regions-js-labelled}](images/regions_js_labelled.png)
 
 # Appendix B {-}
 
