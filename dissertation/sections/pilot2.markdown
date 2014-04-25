@@ -3,23 +3,27 @@
 Following from the outcomes of Pilot Study 1, including the modifications made
 to the experimental model, and the feature--augmented Elm IDE, I
 would like to conduct another Pilot Study to test the features and determine
-whether it accurately models thrashing/cognitive load.
+whether it accurately models thrashing/cognitive load. This section describes
+the Observations made both from Pilot Study 1, Hypotheses I form due to these
+Observations, The experimental Method, Results, Analysis and Discussion.
 
 ## Observations
 
-The task I chose for Pilot Study 1 was too difficult to capture the cognitive load
-incurred by the language itself for a given task, due to the difficulty of the
-task itself creating noise.  I could improve this by simplifying the task, in a
-way that is 'language agnostic', i.e. that is not idiomatic of Elm or JavaScript
-(the two languages that I am comparing). Something like the following will
-never be that easy in JavaScript:
+Observations and participant feedback from Pilot Study 1 (See
+\ref{pilot1-participant1}) suggest that the task
+I chose, and the way in which I carried out the experiment, was too taxing to
+capture the cognitive load incurred by the language itself for a given task, due
+to the difficulty of the task itself creating noise, and the experimental
+methodology incurring cognitive load -- my prompting and questionning causing
+pauses. I could improve this by simplifying the task, in a way that is 'language
+agnostic', i.e. that is not idiomatic of Elm or JavaScript (the two languages
+that I am comparing).  Something like the following will never be that easy in
+JavaScript:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.haskell .numberLines}
 main = lift asText Mouse.position
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Saw some things in Pilot Study 1, also in the use of the Elm IDE I extended, I
-saw some things before Pilot Study 2.**
 
 ### Hypotheses
 
@@ -48,6 +52,14 @@ way that, upon attempting to move the box *out of the grey window*, it stops
 half-way. A youtube video (See https://www.youtube.com/watch?v=cUgK42N7kt8) is
 to be given to the participants so that they can see what the completed task
 looks like.
+
+The experiment will be conducted remotely.  I will send the participants a link
+to the pre-questionnaire and either the Elm or JS task, and the youtube video
+link. The pre-questionnaire data will be stored on Survey Monkey, the click data
+will be stored on Firebase in JSON via my EmbedMe.elm (See \ref{EmbedMe.elm})
+mouse click tracking program, and I will log the time at which a click occurs
+and it's `(x,y)` coordinates under a participant number unique to each
+participant.
 
 This will be a 2×2×2 study, using geometrically defined regions (See Figures
 \ref{fig:regions-elm-labelled} and \ref{fig:regions-js-labelled}), also known as
@@ -190,11 +202,12 @@ http://0.0.0.0:8000/edit/task/MovingBox.elm?p=18
 
 I will now talk about how I analysed the raw data that was captured.
 
-See Section \ref{multiple-regression} in Appendix for SPSS multiple regression
+I performed the multiple regression on the categories defined using the
+statistics tool SPSS. See Section \ref{multiple-regression} in Appendix for SPSS multiple regression
 output. (**N.B** languages (Lan) and the relevance (Rel) and difficulty (Diff)
 are set to variables in the output: `Elm := 1.00`,  `JS := 2.00`, and later in
 the *K-Way and Higher Order Effects* tables, `Rel := 1`, `Diff := 2`, `Lan :=
-3`)
+3`). The following Chi-square ($\chi^2$) results were obtained.
 
 
 ---------------------- -------------
@@ -234,7 +247,7 @@ $\rho$--value:  0.23
 
 ## Interpretation
 
-Looking at the Pearson's table of $\chi^2$ value *vs.* $\rho$--value
+Looking at the Pearson's lookup table of $\chi^2$ value *vs.* $\rho$--value
 (probability) we can see that, for an $\alpha$ of 5%, that is a $\rho$--value of
 0.05, and 7 degrees of freedom, a $\chi^2$--value of 12.59 is enough to show
 significance, and we obtained a $\chi^2$--value of 1633.955 (approx.). This
@@ -242,18 +255,28 @@ means table \ref{tab:post-chisquared} shows that there is statistical
 significance, and there less than 0.05 probability this significance arose out
 of chance (in fact, it is so small that SPSS rounded to 0). We can therefore
 **reject the null hypothesis $H_0$**, and **accept the alternative hypothesis
-$H_1$**.
+$H_1$**, assuming a rigorous study -- more on this in the Discussion section
+that follows.
 
 ## Discussion
 
-Talk about "phases" in a programmer's activities during task-completion:
+During the few (2 Elm tasks) Pilot Study 2 experiments that I did observe (not
+included in the results), I observed what could be interpreted as "phases" in a
+programmer activity during task--completion:
 
-(Not necessarily distinct and in sequence --- more often interleaved)
 
 1. Familiarisation -- Where is the bit I need to change?
 2. Narrowing in on the task once discovered -- Oh I need to change `X`, but how?
 3. Solved task
 4. Playing (?)
+
+(Not necessarily distinct and in sequence --- more often interleaved)
+
+Since I conducted Pilot Study 2 remotely by sending the participant a link to
+the pre-questionnaire survey (See \ref{pilot2-pre-questionnaire}) and a link to
+either the Elm or JS task (See \ref{MovingBox.elm} and \ref{MovingBox.js},
+respectively) I can not assert with any certainty that this was occuring during
+the experiments in Pilot Study 2.
 
 The study, although found that there is a significant difference in the number
 of clicks in regions between languages (as an operationalisation of cognitive
