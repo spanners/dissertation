@@ -120,6 +120,12 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
+### ttest_scipy.py \label{ttest_scipy.py}
+
+~~~~ {.python .numberLines code="code/ttest_scipy.py"}
+this will be replaced by contents of README
+~~~~
+
 # Appendix D {-}
 
 ## Pilot Study 1 -- Questionnaire \label{questionnaire1}

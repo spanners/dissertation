@@ -20,18 +20,35 @@ saw some things before Pilot Study 2.**
 
 ### Hypotheses
 
-1H. 
+* $H_0$. There will be a uniform distribution of the total amount of clicks per
+  region (Null hypothesis), for an $\alpha$ of 0.05
+
+* $H_1$. There will not be a uniform distribution of the total amount of clicks per
+  region (Alternative hypothesis), for an $\alpha$ of 0.05
+
+* $H_2$. There will be no t--value difference between groups in the total amount of
+  clicks for each of Elm and JS. (Null hypothesis)
+
+* $H_3$. There will be a t--value difference between groups in the total amount
+  of clicks for each of Elm and JS (Alternative hypothesis)
 
 ## Experiment
 
 ### Method
 
-A 2×2×2 study, that is 2 Languages (Elm and JavaScript), 2 Region difficulties
-(Hard and Simple) and 2 Region relevances (Relevant and Not relevant) will be
-done to determine if the number of mouse clicks per region differ across
-variables.
+A 2×2×2 multiple regression, that is 2 Languages $\in$ {Elm, JavaScript}
+(abbreviated as *Lan.*), 2 region Difficulties $\in$ {Hard, Simple} (abbreviated
+as *Diff.*) and 2 region Relevances $\in$ {Relevant, Not relevant} (abbreviated
+as *Rel.*), will be done to determine if the number of mouse clicks per region
+differ across variables.
 
 ## Results
+
+See Section \ref{tab:multiple-regression} in Appendix for SPSS multiple regression
+output. (**N.B** languages (Lan) and the relevance (Rel) and difficulty (Diff)
+are set to variables in the output: `Elm := 1.00`,  `JS := 2.00`, and later in
+the *K-Way and Higher Order Effects* tables, `Rel := 1`, `Diff := 2`, `Lan :=
+3`)
 
 ![Participant 15, Elm task (Overlaid with mouse
 clicks)\label{fig:visualise-15-overlay}](images/visualise-15-overlay.png)
@@ -154,16 +171,37 @@ Yates' $\rho$--value   0
 : $\chi^2$ calculation of clicks per quadrant
 \label{tab:post-chisquared}
 
+### T--test result between groups Elm and JS
+
+Using SciPy's `stats.ttest` function (See \ref{ttest_scipy.py}), and assuming
+no variance between groups, and the following clicks per language in each
+category, 
+
+* Elm: `sum([76, 487, 105, 66]) = 734` clicks
+* JS: `sum([33, 12, 69, 3]) = 117` clicks
+
+we can obtain a T--test value and $\rho$--value.
+
+--------------- -----
+T--value:       1.50 
+
+$\rho$--value:  0.23
+--------------- -----
+
+: T--value and $\rho$--value between languages
+
+
 ## Interpretation
 
 Looking at the Pearson's table of $\chi^2$ value *vs.* $\rho$--value
 (probability) we can see that, for an $\alpha$ of 5%, that is a $\rho$--value of
-0.05, a $\chi^2$--value of 12.59 is enough to show significance, and we obtained
-a $\chi^2$--value of 1633.955 (approx.). This means table \ref{tab:post-chisquared} shows that there
-is statistical significance, and that there is therefore less than 0.05
-probability this significance arose out of chance (in fact, it is so small that
-SPSS rounded to 0). We can therefore **reject the null hypothesis $H_0$**, and
-**accept the alternative hypothesis $H_1$**.
+0.05, and 7 degrees of freedom, a $\chi^2$--value of 12.59 is enough to show
+significance, and we obtained a $\chi^2$--value of 1633.955 (approx.). This
+means table \ref{tab:post-chisquared} shows that there is statistical
+significance, and there less than 0.05 probability this significance arose out
+of chance (in fact, it is so small that SPSS rounded to 0). We can therefore
+**reject the null hypothesis $H_0$**, and **accept the alternative hypothesis
+$H_1$**.
 
 **This is the chapter in which you review the outcomes, and critique the
 outcomes process.**
