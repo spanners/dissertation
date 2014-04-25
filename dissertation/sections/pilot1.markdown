@@ -92,12 +92,12 @@ themes in the data (if there are any), as shown in Table \ref{tab:phases-of-ta}.
 
 The participant that listed themselves as being Experienced in Functional
 Programming did in fact exhibit more thrash than the one that listed themselves
-as being a Novice, contrary to $H_1$ and $H_2$, clicking compile once every 1m3s
-on average, to the Novice's 2m3s, and pausing for an average of 3m24s to the
-Novice's 1m45s. I **reject** hypotheses $H_1$ and $H_2$. It is important to see
-that this is an extremely small sample size, not nearly enough to achieve
-saturation, and so not much meaning can be derived from this result, but it is
-interesting.
+as being a Novice, contrary to $H_1$ and $H_2$ They were observed clicking
+compile once every 1m3s on average, to the Novice's 2m3s, and pausing for an
+average of 3m24s to the Novice's 1m45s. I **reject** hypotheses $H_1$ and $H_2$.
+It is important to see that this is an extremely small sample size, not nearly
+enough to achieve saturation, and so not much meaning can be derived from this
+result, but it is interesting.
 
 ## Observations
 
@@ -120,33 +120,40 @@ interesting.
 
 ### Observation 2
 
-* Sifting through 1-hour+ of video data capture for incidences of cognitive load
-  is *HARD!*. Is there some programmatic way of narrowing the video data to
-  points of interest?
+* More of a meta-observation about the methodology than about the experiment
+  findings itself: Sifting through 1--hour+ of video data capture for incidences
+  of cognitive load is tedious and not particularly fruitful or objective. Is
+  there some programmatic way of narrowing the
+  video data to points of interest?
 
 ### Model Adjustment 2
 
-* Track the user mouse and keyboard movements in a 3-tuple: `(Time t, (Mouse.x,
-  Mouse.y), Keypress k)`
+* Extend the IDE to allow for tracking the user mouse and keyboard movements in
+  a 3-tuple: `(Time t, (Mouse.x, Mouse.y), Keypress k)`
   
-* It doesn't have to be implemented this way. I could extend **Model Adjustment
-  1** to define blocks of code as tokens in themselves, and capture how long the
-  cursor is static on that particular token.
-
-* Leon suggested a further refinement of this idea in order to further narrow
-  the data (in fact, just capturing mouse & keyboard movements will result in an
-  explosion of the volume of data -- countrary to what I intend to achieve). His
-  refinement was to define regions of interest in the code pane, and *only when
-  the mouse/key cursor is in the region, do I capture data*. 
-
-* Use the `if cursor in region then log (Time t, (Mouse.x, Mouse.y), Keypress
-  k)` functionality as a *lens* to focus on significant portions of video
-  capture.
+    * It doesn't have to be implemented this way. I could extend **Model
+      Adjustment 1** to define blocks of code as tokens in themselves, and
+      capture how long the cursor is static on that particular token.
+      
+    * A further refinement of this idea is to filter the data (in
+      fact, just capturing mouse & keyboard movements will result in an
+      explosion of the volume of data -- countrary to what I intend to achieve):
+      define regions of interest in the code pane, and *only when the mouse/key
+      cursor is in the region, do I capture data*. 
+      
+    * Use the `if cursor in region then log (Time t, (Mouse.x, Mouse.y), Keypress
+      k)` functionality as a *lens* to focus on significant portions of video
+      capture.
 
 ## Discussion
 
-Following the Pilot Study, I drafted some questions that might lead my direction
-of study in the next steps of my research:
+Following the Pilot Study, I drafted some questions and thoughts that might lead
+my direction of study in the next steps of my research:
+
+* How can I capture a more objective measure of a user's interaction with the
+  IDE?
+
+* What behaviours are indicative of a user experiencing cognitive load?
 
 * Is the mouse/cursor position a proxy for someone's attention as they carry out
   the task?
@@ -156,7 +163,7 @@ of study in the next steps of my research:
   section of code I'm thinking about. Instead, I use it as a 'bookmark' to track
   what I'm currently implementing, and may scroll around to other parts.
 
-My hope is that the result of this dissertation will be a list of observed
+At this point my goal of this dissertation is to obtain a list of observed
 cognitive easing/loading that each language produces for users, much like an
 advantage/disadvantage comparison:
 
