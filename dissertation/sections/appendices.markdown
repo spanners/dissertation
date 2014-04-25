@@ -128,9 +128,9 @@ this will be replaced by contents of README
 
 # Appendix D {-}
 
-## Pilot Study 1 -- Questionnaire \label{questionnaire1}
+## Pilot Study 1 -- Questionnaire
 
-### Consent Form
+### Consent Form \label{consent-form}
 
 #### Study Overview
 
@@ -164,7 +164,7 @@ Date
 
 Experimenter: Simon Buist, Dept. of Computer Science. EMAIL ADDRESS
 
-### Pre-questionnaire
+### Pre-questionnaire \label{pre-questionnaire}
 
 #### Functional Programming languages
 
@@ -220,7 +220,7 @@ For the purposes of this questionnaire, we consider a piece of software to be an
     * Retired
     * Unable to work
 
-### Post-Questionnaire
+### Post-Questionnaire \label{post-questionnaire}
 
 1. Please detail any comments on the result that you achieved
 
@@ -250,6 +250,4 @@ For the purposes of this questionnaire, we consider a piece of software to be an
 
 If you want to have the study as a whole explained to you, please do so now. However we ask that you refrain from discussing this with potential future participants.
 
-## Multiple Regression
-
-
+## SPSS Multiple Regression \label{multiple-regression}

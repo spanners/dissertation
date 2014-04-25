@@ -258,8 +258,6 @@ $if(biblatex)$
 $endif$
 $for(include-after)$
 $include-after$
-
-\includepdf{sections/SPSS_output.pdf}
-
 $endfor$
+\includepdf[pages={1,2,3}]{sections/SPSS_output.pdf}
 \end{document}
