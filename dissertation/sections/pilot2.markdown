@@ -2,6 +2,8 @@
 
 Using the Elm IDE
 
+Also used questionnaire (See \ref{pilot2-pre-questionnaire}).
+
 ## Observations
 
 The task I chose for Pilot Study 1 was too difficult to capture the cognitive load

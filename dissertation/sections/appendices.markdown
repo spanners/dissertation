@@ -128,7 +128,7 @@ this will be replaced by contents of README
 
 # Appendix D {-}
 
-## Pilot Study 1 -- Questionnaire
+## Pilot Study 1
 
 ### Consent Form \label{consent-form}
 
@@ -250,4 +250,6 @@ For the purposes of this questionnaire, we consider a piece of software to be an
 
 If you want to have the study as a whole explained to you, please do so now. However we ask that you refrain from discussing this with potential future participants.
 
-## SPSS Multiple Regression \label{multiple-regression}
+## Pilot Study 2
+
+### SPSS Multiple Regression \label{multiple-regression}
