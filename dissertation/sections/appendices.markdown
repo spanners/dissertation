@@ -253,3 +253,9 @@ If you want to have the study as a whole explained to you, please do so now. How
 ## Pilot Study 2
 
 ### SPSS Multiple Regression \label{multiple-regression}
+
+**N.B** languages (Lan) and the relevance (Rel) and difficulty (Diff)
+are set to variables in the output: `Elm := 1.00`,  `JS := 2.00`, and later in
+the *K-Way and Higher Order Effects* tables, `Rel := 1`, `Diff := 2`, `Lan :=
+3`
+

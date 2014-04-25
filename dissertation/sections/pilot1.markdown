@@ -11,10 +11,10 @@ from the literature review, [@Lopez2012a].
 
 ## Hypotheses
 
-* **H1.** Novice users (*defined as*: those that list themselves as being new to
+* $H_1$. Novice users (*defined as*: those that list themselves as being new to
   functional programming in the pre-questionnaire)
   will press compile at least once every 2 minutes during the programming task.
-* **H2.** Novice users will not pause (*defined as:* no mouse movement, no
+* $H_2$. Novice users will not pause (*defined as:* no mouse movement, no
   typing) for more than 2 minutes during the programming task.
 
 ### Method
