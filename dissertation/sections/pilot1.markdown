@@ -1,6 +1,6 @@
 # Pilot Study 1
 
-Using a per-participant questionnaire (See \ref{questionnaire1}), I captured video
+Using a per-participant questionnaire (See \ref{pre-questionnaire}), I captured video
 & audio data of 2 participants while they completed the task of extending a
 mario game to make mario fly. This initial pilot study was done to get a feel of
 what behaviours may be worth investigating further while a user completes a
@@ -19,7 +19,7 @@ from the literature review, [@Lopez2012a].
 
 ### Method
 
-1. Consent form is signed (See \ref{questionnaire1})
+1. Consent form is signed (See \ref{consent-form})
 2. Pre-questionnaire is given out.
 3. User is informed that they may ask for help, and that they will
    be prompted if they pause (at the moment they break the pause), to ask why they
@@ -28,7 +28,7 @@ from the literature review, [@Lopez2012a].
 4. User is shown the result of completed task (mario flying).
 4. Programming task is begun.
 5. User completes or ends the task.
-6. Post-questionnaire is given out (See \ref{questionnaire1})
+6. Post-questionnaire is given out (See \ref{post-questionnaire})
 7. De-breifing.
 8. Study ends.
 
