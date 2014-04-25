@@ -22,6 +22,10 @@ Experimental Methodology
 Pilot Study 1
 ````
 
+````{markdown="sections/requirements.markdown"}
+Requirements
+````
+
 ````{markdown="sections/design.markdown"}
 Design
 ````

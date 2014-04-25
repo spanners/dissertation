@@ -320,7 +320,7 @@ For the purposes of this questionnaire, we consider a piece of software to be an
     * **Java, prolog, php, lisp**
 \newpage
 
-# General Demographics
+#### General Demographics
 
 1. How old are you?  	
     * 23	

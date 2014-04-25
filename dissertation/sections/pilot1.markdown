@@ -36,24 +36,7 @@ Using Thematic analysis [@Braun2006Thematic] to code the captured audio and
 video data, I will transcribe the programming activity, to see what themes
 arise. 
 
-The Scientific Method
-=====================
-
-1.  Define a question
-2.  Gather information and resources (observe)
-3.  Form an explanatory hypothesis
-4.  Test the hypothesis by performing an experiment and collecting data
-    in a reproducible manner
-5.  Analyze the data
-6.  Interpret the data and draw conclusions that serve as a starting
-    point for new hypothesis
-7.  Publish results
-8.  Retest (frequently done by other scientists)
-
-[https://en.wikipedia.org/wiki/Scientific---method\#Elements---of---the---scientific---method](https://en.wikipedia.org/wiki/Scientific_method#Elements_of_the_scientific_method)
-
-Using Thematic Analysis in Psychology
-=====================================
+### Using Thematic Analysis in Studies
 
 In doing Thematic Analysis [TA], as a researcher, one must make **explicit** the
 particular variant of TA that you intend to carry out, and the whole analysis
@@ -63,6 +46,9 @@ One must make the statement along the lines of: "Amongst the number of different
 branches that the paper talks about, *X* with *Y* themes and *Z* focus is the
 flavour of thematic analysis that I am going to use" -- e.g. essentialism NOT
 constructionism, one aspect NOT whole, theoretical NOT inductive...
+
+As this is a Pilot Study I will simply be using the 6-phase analysis to gather
+themes in the data (if there are any), as shown in Table \ref{tab:phases-of-ta}.
 
   ----------------------------------------------------------------------
   Phase                       Description of the process
@@ -99,117 +85,21 @@ constructionism, one aspect NOT whole, theoretical NOT inductive...
                               analysis.
   ----------------------------------------------------------------------
 
-  : Phases of Thematic Analysis
-
-  ------------------------------------------------------------------------
-  Process          No.    Criteria
-  ---------------- ------ ------------------------------------------------
-  Transcription    1      The data have been transcribed to an appropriate
-                          level of detail, and the transcripts have been
-                          checked against the tapes for 'accuracy'.
-
-  Coding           2      Each data item has been given equal attention in
-                          the coding process.
-
-  ---              3      Themes have not been generated from a vew vivid
-                          examples (an anecdotal approach), but instead
-                          the coding process has been thorough, inclusive,
-                          and comprehensive.
-
-  ---              4      All relevant extracts for all each theme have
-                          been collated.
-
-  ---              5      Themes have been checked against eachother and
-                          back to the original data set.
-
-  ---              6      Themes are internally coherent, consistent, and
-                          distinctive.
-
-  Analysis         7      Data have been analysed -- interpreted, made
-                          sense of -- rather than just paraphrased or
-                          described.
-
-  ---              8      Analysis and data match each other -- the
-                          extracts illustrate the analytic claims.
-
-  ---              9      Analysis tells a convincing and well-organised
-                          story about the data and topic.
-
-  ---              10     A good balance between analytic narrative and
-                          illustrative extracts is provided.
-
-  Overall          11     Enough time has been allocated to complete all
-                          phases of the analysis adequately, without
-                          rushing a phase or giving it a
-                          once-over-lightly.
-
-  Written report   12     The assumptions about, and specific approach to,
-                          thematic analysis are clearly explicated.
-
-  ---              13     There is a good fit between what you claim to
-                          do, and what you show you have done -- i.e.,
-                          described method and reported analysis are
-                          consistent.
-
-  ---              14     The language and concepts used in the report are
-                          consistent with the epistemological position of
-                          the analysis.
-
-  ---              15     The researcher is positioned as *active* in the
-                          research process; themes do not just 'emerge'.
-  ------------------------------------------------------------------------
-
-  : A 15-Point Checklist of Criteria for Good Thematic Analysis
-
-  ----------------------------------------------------------------------
-  Flexibility.
-
-  Relatively easy and quick method to learn, and do.
-
-  Accessible to researchers with little or no experience of qualitative
-  research.
-
-  Results are generally accessible to educated general public.
-
-  Useful method for working within participatory research paradigm, with
-  participants as collaborators.
-
-  Can usefully summarise key features of a large body of data, and/or
-  offer a 'thick description' of the data set.
-
-  Can highlight similarities *and* differences across the data set.
-
-  Can generate unanticipated insights.
-
-  Allows for social as well as psychological interpretations of data.
-
-  Can be useful for producing qualitative analyses suited to informing
-  policy development.
-  ----------------------------------------------------------------------
-
-  : Advantages of Thematic Analysis
-
-  ------------------------------------------------------------------------
-  Data extract                                Coded for
-  ------------------------------------------- ----------------------------
-  it's too much like hard work I mean how     1. Talked about with partner
-  much paper have you got to sign to change a 2. Too much hassle to change
-  flippin' name no I mean no I no we we have  name
-  thought about it ((inaudible)) half         
-  heartedly and thought no no I jus- I can't  
-  be bothered, it's too much like hard work.  
-  (Kate F07a)                                 
-  ------------------------------------------------------------------------
-
-  : Data extract, with codes applied (From Clarke, Burns, & Burgoyne,
-  2005).
-
-
+  : Phases of Thematic Analysis, from [@Braun2006Thematic]
+  \label{tab:phases-of-ta}
 
 ## Results
 
-* **H1.** This happened
-* **H2.** This happened
+The participant that listed themselves as being Experienced in Functional
+Programming did in fact exhibit more thrash than the one that listed themselves
+as being a Novice, contrary to $H_1$ and $H_2$, clicking compile once every 1m3s
+on average, to the Novice's 2m3s, and pausing for an average of 3m24s to the
+Novice's 1m45s. I **reject** hypotheses $H_1$ and $H_2$. It is important to see
+that this is an extremely small sample size, not nearly enough to achieve
+saturation, and so not much meaning can be derived from this result, but it is
+interesting.
+
+## Observations
 
 ### Observation 1
 
@@ -253,10 +143,10 @@ constructionism, one aspect NOT whole, theoretical NOT inductive...
   k)` functionality as a *lens* to focus on significant portions of video
   capture.
 
-## Further discussion
+## Discussion
 
-We then discussed some questions that might lead my direction of study in the
-next steps of my research:
+Following the Pilot Study, I drafted some questions that might lead my direction
+of study in the next steps of my research:
 
 * Is the mouse/cursor position a proxy for someone's attention as they carry out
   the task?
@@ -266,10 +156,8 @@ next steps of my research:
   section of code I'm thinking about. Instead, I use it as a 'bookmark' to track
   what I'm currently implementing, and may scroll around to other parts.
 
-### We also discussed...
-
-The result of the dissertation will be a list of observed cognitive
-easing/loading that each language produces for users, much like an
+My hope is that the result of this dissertation will be a list of observed
+cognitive easing/loading that each language produces for users, much like an
 advantage/disadvantage comparison:
 
 ----------- ------------
@@ -286,73 +174,5 @@ Elm         JavaScript
 + ...       _
 ----------- ------------
 
-
-## Actions
-
-1. Design a task in JavaScript to go inside this adjusted model
-   (incorporating Model Adjustment 1 and 2).
-
-     This will require a degree of *"implementation juggling"* in order to find a
-     balance of code-length/difficulty over the same task in Elm in such a way
-     that is not creating noise in the thing being studied: Cognitive load. 
-
-     Keep the reactivity constant, compare the differences in ease between JS and
-     Elm.
-
-2. If time available, run another Pilot study on this task + adjusted model
-
-### Modifications to be made to the experimental methodology
-
-Needs to be more objective! Why? What will I modify?
-
-# New Study! First, implement an IDE that logs input
-
-## Requirements
-
-I will now identify what the requirements are for the project.
-
-### Functional Requirements
-
-1.  Write software to assist the capture of objective data to inform me
-    of the user’s activities as they use the Elm IDE.
-
-    1.  The program must be able to work offline and later transfer
-        collected data to me once a connection is resumed, collecting
-        mouse and keyboard activity\
-        **Priority: High**
-
-2.  Perform Pilot and User Studies
-
-    1.  I must perform Pilot and User Studies in an iterative fashion,
-        each one learning and building upon discoveries made in prior
-        ones, starting vague and getting more and more focused on a
-        particular facet of User Interface Design and/or Declarative
-        programming as an activity.\
-        **Priority: High**
-
-    2.  I must use these studies to inform experimental and software
-        design to disambiguate and filter data collected in the
-        experiment, and to exercise hypotheses.\
-        **Priority: High**
-
-### Non-Functional Requirements
-
-1.  Source code
-
-    1.  The software must be written clearly and simply.\
-        **Priority: High**
-
-    2.  The software must have suitable, concise comments which explain
-        the programs intent, but only where the code alone is not
-        enough.\
-        **Priority: High**
-
-2.  Activity recording
-
-    1.  The program activity recording feature must not slow down the
-        user’s use of the IDE more than 1ms difference than without it.\
-        **Priority: High**
-
-    2.  There should be software to visualise the usage data\
-        **Priority: Medium**
-
+I will now discuss Requirements that need to be met in order to realise this
+goal.
