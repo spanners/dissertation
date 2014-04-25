@@ -97,8 +97,8 @@ $endif$
             pdfauthor={$author-meta$},
             pdftitle={$title-meta$},
             colorlinks=true,
-            citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
+            citecolor=$if(citecolor)$$citecolor$$else$black$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$black$endif$,
             linkcolor=$if(linkcolor)$$linkcolor$$else$black$endif$,
             pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
@@ -154,6 +154,7 @@ $if(title)$
 $endif$
 $if(abstract)$
 \newpage
+\vspace*{50pt}
 \begin{abstract}
 $abstract$
 \end{abstract}
@@ -162,15 +163,15 @@ $endif$
 
 $for(include-before)$
 $include-before$
-
 $endfor$
 $if(toc)$
 {
 \newpage
 \hypersetup{linkcolor=black}
 \setcounter{tocdepth}{$toc-depth$}
+\pagenumbering{roman}
+\setcounter{page}{1}
 \tableofcontents
-\thispagestyle{empty}
 }
 $endif$
 \newpage
@@ -182,7 +183,6 @@ the purposes of consultation.
 \vspace*{30pt}
 Signed: 
 \vspace*{\fill}
-\thispagestyle{empty}
 \newpage
 
 \textbf{Extending an IDE to support input device logging of programmers during
@@ -217,7 +217,6 @@ the work of the author.
 
 \vspace*{40pt}
 Signed: 
-\thispagestyle{empty}
 \newpage
 
 \section*{Acknowledgements}\label{acknowledgements}
@@ -234,8 +233,8 @@ providing me with the foundation and support that made this dissertation
 possible. My regards go to all those that kindly gave of their time to
 participate in the pilot studies and user studies. 
 
-\thispagestyle{empty}
 \newpage
+\pagenumbering{arabic}
 \setcounter{page}{1}
 $body$
 
