@@ -1,6 +1,6 @@
-## Requirements
+# Requirements
 
-### High-level goals
+## High-level goals
 
 1. Design a task in JavaScript to go inside this adjusted model
    (incorporating Model Adjustment 1 and 2).
@@ -16,7 +16,7 @@
 
 I will now identify what the requirements are for the project.
 
-### Functional Requirements
+## Functional Requirements
 
 1.  Write software to assist the capture of objective data to inform me
     of the user’s activities as they use the Elm IDE.
@@ -40,7 +40,7 @@ I will now identify what the requirements are for the project.
         experiment, and to exercise hypotheses.\
         **Priority: High**
 
-### Non-Functional Requirements
+## Non-Functional Requirements
 
 1.  Source code
 
