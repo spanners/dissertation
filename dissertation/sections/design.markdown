@@ -10,9 +10,7 @@ More detail on what I will modify. How will I modify?
 Discussed progress made and what hypotheses to form that may usefully model
 cognitive load.
 
-## Progress since last meeting
-
-![Extensions made to the Elm IDE]
+![Extensions to be made to the Elm IDE]
 
 I have implemented full-screen mouse tracking that stores to a database a tuple:
 
@@ -137,4 +135,4 @@ What makes code difficult to understand and work with?
 
 6. **WIP** Visualise mouse data
 
-[Extensions made to the Elm IDE]: images/ide-extensions.png
+[Extensions to be made to the Elm IDE]: images/ide-extensions.png
