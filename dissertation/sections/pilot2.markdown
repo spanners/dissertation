@@ -28,17 +28,11 @@ saw some things before Pilot Study 2.**
 * $H_1$. There will not be a uniform distribution of the total amount of clicks per
   region (Alternative hypothesis), for an $\alpha$ of 0.05
 
-* $H_2$. There will be no t--value difference between groups in the total amount of
-  clicks for each of Elm and JS. (Null hypothesis)
-
-* $H_3$. There will be a t--value difference between groups in the total amount
-  of clicks for each of Elm and JS (Alternative hypothesis)
-
 ## Experiment
 
 ### Method
 
-**Use the IDE I made to gather click data blah blah**
+Use the IDE I have augmented to gather click data, I will run studies 
 
 A 2×2×2 multiple regression, that is --- 2 Languages (Elm, JavaScript) × 2
 region Difficulties (Hard, Simple) × 2 region Relevances (Relevant, Not
@@ -156,7 +150,7 @@ Yates' $\rho$--value   0
 : $\chi^2$ calculation of clicks per quadrant
 \label{tab:post-chisquared}
 
-### T--test result between groups Elm and JS
+### T--statistic result between groups Elm and JS
 
 Using SciPy's `stats.ttest` function (See \ref{ttest_scipy.py}), and assuming
 no variance between groups, and the following clicks per language in each
@@ -188,11 +182,6 @@ of chance (in fact, it is so small that SPSS rounded to 0). We can therefore
 **reject the null hypothesis $H_0$**, and **accept the alternative hypothesis
 $H_1$**.
 
-**This is the chapter in which you review the outcomes, and critique the
-outcomes process.**
-
-**You may include user evaluation here too.**
-
 ## Discussion
 
 Talk about "phases" in a programmer's activities during task-completion:
@@ -204,34 +193,57 @@ Talk about "phases" in a programmer's activities during task-completion:
 3. Solved task
 4. Playing (?)
 
-Flaws:
+The study, although found that there is a significant difference in the number
+of clicks in regions between languages (as an operationalisation of cognitive
+load experienced in completing the same task), unfortunately had a number of flaws which
+confound it's rigor, and therefore no meaning can be derived from these results.
 
-1. Self-reported expertise
-1. Self-reported task completion
-1. No way to be sure which error log pertains to which compile
-1. Unique participant ID per Surveymonkey
-1. Surveymonkey has taken my data hostage 
-1. Window dimensions not captured
-1. Syntax reference 404
-1. I did not capture window resizing
-1. Mouse scrolling not captured
+In summary, the flaws I have identified are as follows:
 
-Not capturing window resizing is problematic -- participant 15 (See Figure
-\ref{fig:visualise-15-overlay}) very likely had a much shorter window height
-than I have used here. I suspect this is the case because of the cluster of
-mouse clicks in the same range of the $x$ axis as the Compile button, but much
-futher up in the $y$ axis, but I have no way to be sure as I did not log window
-dimensions.
+1. Much smaller respondent count for JS than Elm.
+1. Small sample size -- this forced me to use a T-test rather than a Z-test,
+   meaning I can not be as sure of the results.
+1. Self-reported expertise -- We rely on the user themselves reporting their
+   expertise in the languages (See pre-questionnaire
+   \ref{pilot2-pre-questionnaire})
+1. Self-reported task completion -- We rely on the user themselves reporting
+   that they have completed the task according to the specification
+1. No way to be sure which error log pertains to which compile -- A shortcoming
+   that was discovered *after* Pilot Study 2 is that the error log that captures
+   when the user tries to compile syntactically/semantically correct code *does
+   not log the participant ID the error pertains to*
+1. No unique participant ID per Surveymonkey -- We can not be sure that,
+   although the timestamps are similar, a person filling out the survey at time
+   $t$ may not be the same person starting the task at time $t$.
+1. Window dimensions not captured -- How can we be sure that a click in location
+   `(x,y)` *on the user's screen and resolution* is the same `(x,y)` that I
+   capture in the database? Participant 15 (See Figure
+   \ref{fig:visualise-15-overlay}) very likely had a much shorter window height
+   than I have used here. I suspect this is the case because of the cluster of
+   mouse clicks in the same range of the $x$ axis as the Compile button, but
+   much futher up in the $y$ axis, but I have no way to be sure.
+1. I did not capture window resizing -- Same problem as above
+1. Mouse scrolling not captured -- Same problem as above. Although the task code was
+   purposefully designed to fit in as small a screen space as possible, if the
+   user has a smaller screen than the text's dimensions, they may scroll,
+   therefore offsetting the captured clicks.
+1. Syntax reference 404 links -- It was discovered *after* Pilot Study 2 that the
+   Syntax reference links returned `Server Error 404`, due to me accidentally
+   failing to include the documentation in the site where the task was hosted.
+   Captured click data suggests that people did attempt to follow the Syntax
+   reference links, and the server access error logs support this indication
+   with multiple 404s to the Syntax Reference. 
 
-Leon suggested an improvement over this experimental method is to take people
-who are new, and train them up either in JS or Elm, and then run the same task.
-That way, their level of ability is comparable. (New as in never having used JS
-or Elm)
+
+In addition to fixing these flaws/foibles, an improvement over this experimental
+method is to take people who are new -- as in: never having used Elm or JS, and
+train them up either in JS or Elm, and then run the same task.  That way, their
+level of ability is much more comparable. 
 
 My current method creates quite a bit of noise in the data, because I rely on
 self-reported level of expertise in JS/Functional languages. I don't know how to
-modify the data to account for this. I could group the analyses into categories?
-I.e those who reported being experts at JS, those who reported never having used
-it, those who reported being experts in at least one FP language, and those who
-reported being new.
-
+modify the data to account for this. I could group the analyses into categories
+-- i.e those who reported being experts at JS, those who reported never having
+used it, those who reported being experts in at least one FP language, and those
+who reported being new, and make cross comparisons with groups of equal levels
+of ability.
