@@ -27,12 +27,12 @@ achieve these High--level goals.
 1.  Write software to assist the capture of objective data to inform me
     of the user’s activities as they use the Elm IDE.
 
-    1.  The program must be able to capture data on-the-fly collecting mouse and
-        keyboard activity\
-        **Priority: High**
+    1. The program must be able to capture data on-the-fly collecting mouse and
+       keyboard activity.\
+       **Priority: High**
 
-    1. The program must be able to support both arbitrary Elm and Javascript
-       tasks\ 
+    1. The program must be able to support the loading of both arbitrary Elm and
+       arbitrary Javascript tasks.\
        **Priority: High**
 
     1. The program should only capture data relevant to the study at hand -- for
@@ -58,7 +58,9 @@ achieve these High--level goals.
 
     1. The experiment must link the questionnaire to the task and to the compile
        error output so that one can be certain of a 1--1 correspondence with
-       each source of data to each respondent, for collating afterwards.
+       each source of data to each respondent, for collating afterwards.\
+       **Priority: High**
+       
 
 2.  Perform Pilot and User Studies
 
