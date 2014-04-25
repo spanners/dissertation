@@ -1,8 +1,9 @@
 # Pilot Study 2
 
-**Using the Elm IDE blah blah
-
-Also using questionnaire (See \ref{pilot2-pre-questionnaire}). blah blah**
+Following from the outcomes of Pilot Study 1, including the modifications made
+to the experimental model, and the feature--augmented Elm IDE, I
+would like to conduct another Pilot Study to test the features and determine
+whether it accurately models thrashing/cognitive load.
 
 ## Observations
 
@@ -174,9 +175,16 @@ clicks)\label{fig:visualise-18-overlay}](images/visualise-18-overlay.png)
 ![Participant 15, Elm task (Illustrating the potential
 offset)\label{fig:visualise-15-overlay}](images/visualise-15-overlay.png)
 
-See Figure \ref{fig:visualise-18-overlay} for the visualisation of participant 18
-completing the JavaScript version of the task.
+See Figure \ref{fig:visualise-18-overlay} for the visualisation of participant
+18 completing the JavaScript version of the task. The augmented IDE can be used
+to visualise the click data for any participant number. Uncomment *line 32* of
+*EmbedMe.elm* (See code listing \ref{EmbedMe.elm}) and reload the task editor
+with the desired participant ID as an input parameter `p` to the URL, e.g. to
+visualise participant 18 click data:
 
+````
+http://0.0.0.0:8000/edit/task/MovingBox.elm?p=18
+````
 
 ### Analysis
 

@@ -28,7 +28,8 @@ scene (w,h) locs =
                    |> move (x - toFloat w / 2, toFloat h / 2 - y)
   in  collage w h (map drawCircle locs)
 
--- main = lift2 scene Window.dimensions stamps
+-- Uncomment the following line in order to visualise clicks
+--main = lift2 scene Window.dimensions stamps
 
 -- Outgoing
 
@@ -39,16 +40,16 @@ user_id = "1"
 firebaseRequest requestType requestData = 
   Http.request requestType 
                ("https://sweltering-fire-9141.firebaseio.com/"
-	          ++ "dissertation/" 
-		  ++ user_id 
+                  ++ "dissertation/" 
+                  ++ user_id 
                   ++ ".json")
                requestData 
                []
 
 serialize r = r |> JEXP.fromRecord 
                 |> Json.fromJSObject 
-		|> Json.toJSString " " 
-		|> JS.toString
+                |> Json.toJSString " " 
+                |> JS.toString
 
 toRequestData (t, (x, y)) = {t = t, x = x, y = y } |> serialize
 
