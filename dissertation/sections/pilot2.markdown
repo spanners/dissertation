@@ -36,15 +36,14 @@ saw some things before Pilot Study 2.**
 
 ### Method
 
-A 2×2×2 multiple regression, that is 2 Languages $\in$ {Elm, JavaScript}
-(abbreviated as *Lan.*), 2 region Difficulties $\in$ {Hard, Simple} (abbreviated
-as *Diff.*) and 2 region Relevances $\in$ {Relevant, Not relevant} (abbreviated
-as *Rel.*), will be done to determine if the number of mouse clicks per region
+A 2×2×2 multiple regression, that is --- 2 Languages (Elm, JavaScript) × 2
+region Difficulties (Hard, Simple) × 2 region Relevances (Relevant, Not
+relevant) --- will be done to determine if the number of mouse clicks per region
 differ across variables.
 
 ## Results
 
-See Section \ref{tab:multiple-regression} in Appendix for SPSS multiple regression
+See Section \ref{multiple-regression} in Appendix for SPSS multiple regression
 output. (**N.B** languages (Lan) and the relevance (Rel) and difficulty (Diff)
 are set to variables in the output: `Elm := 1.00`,  `JS := 2.00`, and later in
 the *K-Way and Higher Order Effects* tables, `Rel := 1`, `Diff := 2`, `Lan :=

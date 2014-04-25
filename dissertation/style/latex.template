@@ -4,6 +4,7 @@
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
+\usepackage{pdfpages} % for appendices
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -257,6 +258,8 @@ $if(biblatex)$
 $endif$
 $for(include-after)$
 $include-after$
+
+\includepdf{sections/SPSS_output.pdf}
 
 $endfor$
 \end{document}
