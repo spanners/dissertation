@@ -100,6 +100,10 @@ differs across regions.
 
 ## Results
 
+The raw click data (See \ref{mouseclick-data}), was processed with Python
+scripts (See \ref{ClicksPerCategory.py}, \ref{get_clicks_per_category.py},
+\ref{DecodeMouseData.py}) to produce the following tables:
+
 ----------- ----------
 Time (min)  Clicks
 ----------- ----------
@@ -159,6 +163,10 @@ irrelevant × easy × JS        12.5 %      106.37    3
 : 2×2×2 comparison of clicks per category --- Expected and Observed
 \label{tab:pre-chisquared}
 
+Table \ref{tab:pre-chisquared}, in the Expected column, shows a normal
+distribution of clicks per category -- if our null hypothesis $H_0$ holds, the
+observed outcome be 5% either side of this.
+
 
 ![Participant 18, JS task (Overlaid with mouse
 clicks)\label{fig:visualise-18-overlay}](images/visualise-18-overlay.png)
@@ -170,18 +178,9 @@ See Figure \ref{fig:visualise-18-overlay} for the visualisation of participant 1
 completing the JavaScript version of the task.
 
 
-
 ### Analysis
 
-1. **Describe data collected
-1. How it was analysed (I aggregated regions and looked at number of clicks per
-   region (Hard/Task, Hard/Not-Task, Simple/Task, Simple/Not-Task)\*(Elm,
-   JavaScript))
-1. Presentation of data (summary means std dev.)
-    1. $\chi^2$ frequency analyses
-    1. 2 × 2 × 2 making 8 cells. My expected is an even distribution of clicks in
-       each category, i.e. if I have 80 clicks in total across all groups, I
-       expect to find 10 in each cell if there is no correlation.**
+I will now talk about how I analysed the raw data that was captured.
 
 See Section \ref{multiple-regression} in Appendix for SPSS multiple regression
 output. (**N.B** languages (Lan) and the relevance (Rel) and difficulty (Diff)

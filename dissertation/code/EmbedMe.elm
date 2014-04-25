@@ -28,7 +28,7 @@ scene (w,h) locs =
                    |> move (x - toFloat w / 2, toFloat h / 2 - y)
   in  collage w h (map drawCircle locs)
 
-main = lift2 scene Window.dimensions stamps
+-- main = lift2 scene Window.dimensions stamps
 
 -- Outgoing
 
