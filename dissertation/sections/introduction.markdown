@@ -2,6 +2,9 @@
 
 Talk about project in general...
 
+Determining the cognitive load induced during programming, and by extension,
+determining the competency of a programmer, is not an easy endeavour -- 
+
 <!--
 
 I am interested in the effect of Functional Reactive Programming [FRP]

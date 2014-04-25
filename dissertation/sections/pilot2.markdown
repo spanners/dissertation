@@ -288,9 +288,17 @@ In summary, the flaws I have identified are as follows:
 1. Much smaller respondent count for JS than Elm.
 1. Small sample size -- this forced me to use a T-test rather than a Z-test,
    meaning I can not be as sure of the results.
-1. Self-reported expertise -- We rely on the user themselves reporting their
-   expertise in the languages (See pre-questionnaire
-   \ref{pilot2-pre-questionnaire})
+1. Self-reported expertise -- [@hansson2001competency] found that "these
+   judgements (self-reports) are well performed and accurate enough to be
+   incorporated as a valuable tool", but "the findings suggest that taking into
+   account the individual's perception of how important the specific competence
+   is for performing a particular job (relative competence) might be a way to
+   handle problems with the variation in the importance of different
+   competencies.", and there is no job--critical scenario here in this user
+   participation study. We rely on the user themselves trustfully reporting
+   their expertise in the languages (See pre-questionnaire
+   \ref{pilot2-pre-questionnaire}) without the incentive of a salary or the risk
+   of job loss.
 1. Self-reported task completion -- We rely on the user themselves reporting
    that they have completed the task according to the specification
 1. No way to be sure which error log pertains to which compile -- A shortcoming
