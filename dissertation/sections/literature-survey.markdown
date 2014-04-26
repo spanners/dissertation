@@ -224,11 +224,12 @@ of choice for GUI programmers, but experiments must be done to determine
 this.
 
 And perhaps this rapid development cycle is not always suitable – in
-their 2012 paper, Lopez et al. show that novices tend to "thrash" about,
-trying out many ideas that may or may not be a solution, and executing
-"poorly directed, ineffective problem solving …failing to realise they
-are doing it in good time, and fail to break out of it", whereas experts
-think much more about the problem at hand before proceeding with a
+their 2012 paper, Lopez et al. (an inspiring paper that provides foundational
+research into the beviour of software developers while programming) show that
+novices tend to "thrash" about, trying out many ideas that may or may not be a
+solution, and executing "poorly directed, ineffective problem solving …failing
+to realise they are doing it in good time, and fail to break out of it", whereas
+experts think much more about the problem at hand before proceeding with a
 solution [@Lopez2012a].
 
 ## Running User Studies
