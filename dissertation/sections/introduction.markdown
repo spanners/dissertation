@@ -11,9 +11,9 @@ ONE PAGE
 
 2. State your contributions
 
-<!-- in this paper, I am going to substantiate the following claims.. (both
+In this paper, I am going to substantiate the following claims... (both
 Evan's claims and my own claims of why this programmatic way of analysing
-cognitive load is useful -->
+cognitive load is useful)
 
    * One (Section \ref{pilot1}). It's innovative feaatures are...
    
