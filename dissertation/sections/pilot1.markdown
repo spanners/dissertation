@@ -1,4 +1,4 @@
-# Pilot Study 1
+# Pilot Study 1 \label{pilot1}
 
 Using a per-participant questionnaire (See \ref{pre-questionnaire}), I captured video
 & audio data of 2 participants while they completed the task of extending a

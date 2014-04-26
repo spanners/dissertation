@@ -1,4 +1,4 @@
-# Pilot Study 2
+# Pilot Study 2 \label{pilot2}
 
 Following from the outcomes of Pilot Study 1, including the modifications made
 to the experimental model, and the feature--augmented Elm IDE, I
@@ -112,7 +112,7 @@ Relevances (Relevant, Not
 relevant) --- to determine if the number of mouse clicks per region
 differs across regions.
 
-## Results
+## Results \label{pilot2-results}
 
 The raw click data (See \ref{mouseclick-data}), was processed with Python
 scripts (See \ref{ClicksPerCategory.py}, \ref{get_clicks_per_category.py},

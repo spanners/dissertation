@@ -11,6 +11,16 @@ ONE PAGE
 
 2. State your contributions
 
+<!-- in this paper, I am going to substantiate the following claims.. (both
+Evan's claims and my own claims of why this programmatic way of analysing
+cognitive load is useful -->
+
+   * one (Section \ref{pilot1}
+   
+   * two (Section \ref{pilot2})
+   
+   * three (Section \ref{pilot2-results})
+
 ...and that's all.
 
 <!-- Determining the cognitive load induced during programming, and by extension,
