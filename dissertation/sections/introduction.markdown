@@ -1,18 +1,26 @@
 # Introduction
 
-Talk about project in general...
+ONE PAGE
 
-Determining the cognitive load induced during programming, and by extension,
-determining the competency of a programmer, is not an easy endeavour -- 
+1. Describe the problem
 
-The main idea of this dissertation is...
+    1. Use a very specific example to illustrate the problem
+
+2. State your contributions
+
+...and that's all.
+
+<!-- Determining the cognitive load induced during programming, and by extension,
+determining the competency of a programmer, is not an easy endeavour -->
+
+<!-- The main idea of this dissertation is...
 
 1. Here is a problem
 2. It's an interesting problem
 3. It's an unsolved problem
 4. **Here is my idea**
 5. My idea works (details, data)
-6. Here's how my idea compares to other people's approaches
+6. Here's how my idea compares to other people's approaches -->
 
 <!--
 
