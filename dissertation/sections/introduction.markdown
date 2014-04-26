@@ -5,6 +5,15 @@ Talk about project in general...
 Determining the cognitive load induced during programming, and by extension,
 determining the competency of a programmer, is not an easy endeavour -- 
 
+The main idea of this dissertation is...
+
+1. Here is a problem
+2. It's an interesting problem
+3. It's an unsolved problem
+4. **Here is my idea**
+5. My idea works (details, data)
+6. Here's how my idea compares to other people's approaches
+
 <!--
 
 I am interested in the effect of Functional Reactive Programming [FRP]
