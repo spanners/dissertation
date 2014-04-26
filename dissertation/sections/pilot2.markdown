@@ -65,7 +65,8 @@ This will be a 2×2×2 study, using geometrically defined regions (See Figures
 \ref{fig:regions-elm-labelled} and \ref{fig:regions-js-labelled}), also known as
 bounding boxes, in the code, monitoring the count of mouse clicks per region as
 an indicator of thrashing/cognitive load. Regions can either be easy/hard in
-complexity (exhibiting/not--exhibiting one of the above 'difficult' properties).
+complexity (exhibiting/not--exhibiting some/all of the 'difficult' properties
+identified in the Design (See Section \ref{Design})).
 Or code can be task--relevant or task--irrelevant, that is *the code does/does
 not need to be changed to achieve the completed task set for the user*:
 
@@ -73,7 +74,7 @@ not need to be changed to achieve the completed task set for the user*:
 ------------------ -----------------
 **Elm**          
 
-Easy/Relevant      Hard/Task
+Easy/Relevant      Hard/Relevant
 
 Easy/Irrelevant    Hard/Irrelevant
 
@@ -117,39 +118,53 @@ The raw click data (See \ref{mouseclick-data}), was processed with Python
 scripts (See \ref{ClicksPerCategory.py}, \ref{get_clicks_per_category.py},
 \ref{DecodeMouseData.py}) to produce the following tables:
 
------------ ----------
-Time (min)  Clicks
------------ ----------
- 38.717     183
-
-  8.034     130
-
-  7.878      39
-
- 23.672      25
-
- 29.754     391
-
- 14.993      78
-
- 48.960     769
-
-  6.354      71
-
-  7.878      39
-
- 29.698     501
-
- 40.302     803
-
- 12.319      65
-
- 17.106      79
-
- 12.958     119
------------ ----------
+------------ ----------- -------
+Participant  Time (min)  Clicks
+------------ ----------- -------
+1            38.717      183
+ 
+2             8.034      130
+ 
+3             7.878       39
+            
+4            23.672       25
+            
+5            29.754      391
+            
+6            14.993       78
+            
+7            48.960      769
+            
+8             6.354       71
+            
+9             7.878       39
+            
+10           29.698      501
+            
+11           40.302      803
+            
+12           12.319       65
+            
+13           17.106       79
+            
+14           12.958      119
+------------ ----------- -------
 
 : Session time and clicks per session for Elm task
+
+------------ ----------- -------
+Participant  Time (min)  Clicks
+------------ ----------- -------
+1             8.545        126
+
+2             3.766         41
+
+3            18.731         75
+
+4             4.537        117
+------------ ----------- -------
+
+: Session time and clicks per session for JS task
 
 ----------------------------- ----------- --------- ----------
 Category                      Expected %  Expected  Observed  
