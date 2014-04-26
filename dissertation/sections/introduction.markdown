@@ -15,7 +15,7 @@ ONE PAGE
 Evan's claims and my own claims of why this programmatic way of analysing
 cognitive load is useful -->
 
-   * one (Section \ref{pilot1}
+   * one (Section \ref{pilot1})
    
    * two (Section \ref{pilot2})
    
