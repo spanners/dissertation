@@ -32,7 +32,7 @@ list below.
 ![Control flow of a compile in the Elm IDE\label{fig:compile-diagram}](images/compile_diagram.png)
 
 My extensions that I planned to make at the design stage are loosely illustrated
-in Figure \ref{ide-extensions}.
+in Figure \ref{fig:ide-extensions}.
 
 ![Extensions to be made to the IDE\label{fig:ide-extensions}](images/ide-extensions.png)
 
