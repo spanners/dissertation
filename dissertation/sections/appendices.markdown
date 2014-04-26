@@ -120,9 +120,9 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
-### ttest_scipy.py \label{ttest_scipy.py}
+### ttest-scipy.py \label{ttest-scipy.py}
 
-~~~~ {.python .numberLines code="code/ttest_scipy.py"}
+~~~~ {.python .numberLines code="code/ttest-scipy.py"}
 this will be replaced by contents of README
 ~~~~
 

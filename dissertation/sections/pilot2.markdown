@@ -240,9 +240,11 @@ Yates' $\rho$--value   0
 : $\chi^2$ calculation of clicks per quadrant
 \label{tab:post-chisquared}
 
+\newpage
+
 ### T--statistic result between groups Elm and JS
 
-Using SciPy's `stats.ttest` function (See \ref{ttest_scipy.py}), and assuming
+Using SciPy's `stats.ttest` function (See \ref{ttest-scipy.py}), and assuming
 no variance between groups, and the following clicks per language in each
 category, 
 
@@ -283,7 +285,7 @@ programmer activity during task--completion:
 1. Familiarisation -- Where is the bit I need to change?
 2. Narrowing in on the task once discovered -- Oh I need to change `X`, but how?
 3. Solved task
-4. Playing (?)
+4. Playing with the solved task
 
 (Not necessarily distinct and in sequence --- more often interleaved)
 
