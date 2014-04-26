@@ -4,3 +4,6 @@
 and critique the design process.**
 
 
+![Extensions to be made to the IDE\label{fig:ide-extensions}](images/ide-extensions.png)
+
+
