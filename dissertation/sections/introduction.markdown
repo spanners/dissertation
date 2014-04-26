@@ -6,6 +6,9 @@ ONE PAGE
 
     1. Use a very specific example to illustrate the problem
 
+<!-- in my case I think this specific example will be Evan's thesis claims that Elm is "easy" without evidence
+-->
+
 2. State your contributions
 
 ...and that's all.
