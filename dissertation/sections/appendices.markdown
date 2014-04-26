@@ -53,19 +53,19 @@ this will be replaced by contents of README
 this will be replaced by contents of README
 ~~~~
 
-### Server.hs \label{server.hs}
+### Server.hs \label{Server.hs}
 
 ~~~~ {.haskell .numberLines code="code/server/Server.hs"}
 this will be replaced by contents of README
 ~~~~
 
-### Editor.hs \label{editor.hs}
+### Editor.hs \label{Editor.hs}
 
 ~~~~ {.haskell .numberLines code="code/server/Editor.hs"}
 this will be replaced by contents of README
 ~~~~
 
-### Generate.hs \label{generate.hs}
+### Generate.hs \label{Generate.hs}
 
 ~~~~ {.haskell .numberLines code="code/server/Generate.hs"}
 this will be replaced by contents of README
