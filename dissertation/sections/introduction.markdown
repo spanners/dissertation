@@ -15,11 +15,13 @@ ONE PAGE
 Evan's claims and my own claims of why this programmatic way of analysing
 cognitive load is useful -->
 
-   * one (Section \ref{pilot1})
+   * One (Section \ref{pilot1}). It's innovative feaatures are...
    
-   * two (Section \ref{pilot2})
+   * Two (Section \ref{pilot2}). I have shown that there is statistical
+     significance...
    
-   * three (Section \ref{pilot2-results})
+   * Three (Section \ref{pilot2-results}). Cognitive load can be modelled by
+     analysing clicks...
 
 ...and that's all.
 
