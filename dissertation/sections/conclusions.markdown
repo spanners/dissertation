@@ -30,7 +30,7 @@ also learned about responding to user feedback and my own observations in these
 pilot studies to produce tighter hypotheses and implement experiments to test
 them. 
 
-# Further work \label{further-work}
+## Further work \label{further-work}
 
 In addition to fixing the flaws/foibles identified (Section \ref{pilot2-discussion}), an improvement over this experimental
 method is to take people who are new -- as in: never having used Elm or JS, and
