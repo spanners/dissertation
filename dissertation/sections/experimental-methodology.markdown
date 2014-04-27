@@ -1,6 +1,7 @@
 # Experimental methodology
 
-Here are some possible approaches I could take to analysing the paradigm of declaritive versus imperative progamming.
+Here are some possible approaches I could take to analysing the paradigm of
+declaritive versus imperative progamming.
 
 1. AB Testing of the languages with the same IDE?
 
@@ -44,33 +45,26 @@ Here are some possible approaches I could take to analysing the paradigm of decl
    "Given our definition of easy, our multiple operationalisations of the
    concept of easy show that this is in fact objectively true/false".
 
-## Pilots
+## Pilot Studies
 
-What might be surprising insights into declarative programming languages for User Interface Design -- the case of Elm?
+What might be surprising insights into declarative programming languages for
+User Interface Design in the case of Elm? I may explore Speak-aloud protocols
+where I prompt/facilitate the user to say what is on their mind when that e.g.
+pause for more than 10 seconds -- a measurement I set out to look for during an
+experiment. 
 
-Speak-aloud protocols where you prompt/facilitate the user to say what is on
-their mind when that e.g. pause for more than 10 seconds -- a measurement I set
-out to look for during an experiment. 
-
-I might ask 
+An example dialog with the user may begin (Me speaking first):
 
 * > I notice you have paused for at least 10 seconds -- why did you?
 * >> I thought the code would do X, but it did Y.
 * > Why did you think it would do X?
 * >> ...
 
-I must ask the participant questions designed in a way that they are not
+It is important that I must ask the participant questions designed in a way that they are not
 leading.
 
-Leon suggested I gather a rich data set, as it's difficult to take notes AND
-prompt the user during an experiment. SO difficult. Perhaps record video.
-
-## Actions for next meeting
-
-Devise a Pilot study, answering these 3 questions:
+Motivating questions for these pilot studies are:
 
 1. What might I ask people to do?
 2. How will I gather data?
 3. How will I analyse the data?
-
-Also see paper Leon will send me on "Thematic analysis & Psychology"
