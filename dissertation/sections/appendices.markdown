@@ -2,6 +2,21 @@
 
 # Appendix A {-}
 
+## User Manual
+
+### README.md \label{README.md}
+
+~~~~ {code="code/elm-lang.org/README.md"}
+this will be replaced by contents of README
+~~~~
+
+### INSTALL \label{INSTALL}
+
+~~~~ {code="code/elm-lang.org/INSTALL"}
+this will be replaced by contents of README
+~~~~
+
+
 ## Design Diagrams \label{design-diagrams}
 
 ![Elm click regions\label{fig:regions-elm}](images/regions_elm.png)
