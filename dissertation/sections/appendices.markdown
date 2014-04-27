@@ -18,13 +18,13 @@
 
 ### firebase-mouseclick-data.json \label{mouseclick-data}
 
-~~~~ {.json .numberLines code="code/firebase-mouseclick-data.json"}
+~~~~ {.json .numberLines code="code/mouse-data/example-of-mouseclick-data.json"}
 this will be replaced by contents of README
 ~~~~
 
 ### error\_log.json \label{error-log}
 
-~~~~ {.json .numberLines code="code/error\_log.json"}
+~~~~ {.json .numberLines code="code/elm-lang.org/error\_log.json"}
 this will be replaced by contents of README
 ~~~~
 
@@ -43,7 +43,7 @@ this will be replaced by contents of README
 
 ### LICENSE
 
-~~~~ {code="code/LICENSE"}
+~~~~ {code="code/elm-lang.org/LICENSE"}
 this will be replaced by contents of README
 ~~~~
 
@@ -55,68 +55,68 @@ this will be replaced by contents of README
 
 ### Server.hs \label{Server.hs}
 
-~~~~ {.haskell .numberLines code="code/server/Server.hs"}
+~~~~ {.haskell .numberLines code="code/elm-lang.org/server/Server.hs"}
 this will be replaced by contents of README
 ~~~~
 
 ### Editor.hs \label{Editor.hs}
 
-~~~~ {.haskell .numberLines code="code/server/Editor.hs"}
+~~~~ {.haskell .numberLines code="code/elm-lang.org/server/Editor.hs"}
 this will be replaced by contents of README
 ~~~~
 
 ### Generate.hs \label{Generate.hs}
 
-~~~~ {.haskell .numberLines code="code/server/Generate.hs"}
+~~~~ {.haskell .numberLines code="code/elm-lang.org/server/Generate.hs"}
 this will be replaced by contents of README
 ~~~~
 
 ### EmbedMe.elm \label{EmbedMe.elm}
 
-~~~~ {.haskell .numberLines code="code/EmbedMe.elm"}
+~~~~ {.haskell .numberLines code="code/elm-lang.org/EmbedMe.elm"}
 this will be replaced by contents of README
 ~~~~
 
 ### editor.js.diff
 
-~~~~ {.diff .numberLines code="code/editor.js.diff"}
+~~~~ {.diff .numberLines code="code/elm-lang.org/resources/misc/editor.js.diff"}
 this will be replaced by contents of README
 ~~~~
 
 
 ### MovingBox.js \label{MovingBox.js}
 
-~~~~ {.javascript .numberLines code="code/public/task/MovingBox.js"}
+~~~~ {.javascript .numberLines code="code/elm-lang.org/public/task/MovingBox.js"}
 this will be replaced by contents of README
 ~~~~
 
 ### MovingBox.elm \label{MovingBox.elm}
 
-~~~~ {.haskell .numberLines code="code/public/task/MovingBox.elm"}
+~~~~ {.haskell .numberLines code="code/elm-lang.org/public/task/MovingBox.elm"}
 this will be replaced by contents of README
 ~~~~
 
 ### ClicksPerCategory.py \label{ClicksPerCategory.py}
 
-~~~~ {.python .numberLines code="code/ClicksPerCategory.py"}
+~~~~ {.python .numberLines code="code/mouse-data/ClicksPerCategory.py"}
 this will be replaced by contents of README
 ~~~~
 
 ### get_clicks_per_category.py \label{get_clicks_per_category.py}
 
-~~~~ {.python .numberLines code="code/get_clicks_per_category.py"}
+~~~~ {.python .numberLines code="code/mouse-data/get_clicks_per_category.py"}
 this will be replaced by contents of README
 ~~~~
 
 ### DecodeMouseData.py \label{DecodeMouseData.py}
 
-~~~~ {.python .numberLines code="code/DecodeMouseData.py"}
+~~~~ {.python .numberLines code="code/mouse-data/DecodeMouseData.py"}
 this will be replaced by contents of README
 ~~~~
 
 ### test\_DecodeMouseData.py \label{test-DecodeMouseData.py}
 
-~~~~ {.python .numberLines code="code/test\_DecodeMouseData.py"}
+~~~~ {.python .numberLines code="code/mouse-data/test\_DecodeMouseData.py"}
 this will be replaced by contents of README
 ~~~~
 
