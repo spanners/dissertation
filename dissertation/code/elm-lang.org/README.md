@@ -23,7 +23,8 @@ json file:
 
 `https://sweltering-fire-9141.firebaseio.com/dissertation.json`
 
-*See the section 'Tracking user input' for customisation*
+*See the section 'How do I save to my own Firebase?' for 
+customisation*
 
 If you  write your own tasks, visiting `/edit/<path/to/task>` will 
 populate the click databse elm directory with click data as you use 
