@@ -103,12 +103,12 @@ If further languages need support, these case blocks (there are 2 in the codebas
 
 Refinements in later iterations of the codebase included:
 
-    1. Allowing Elm code to be read from a file into `Editor.hs`
-    2. Modifying the stamps example to be bare
-    3. Modifying the stamps example to define regions of code to be logged for
-       input
-    4. Visualising the mouse data straight from Firebase in the Elm 0.12 version
-    5. Writing python scripts to interpret the captured mouse 
+1. Allowing Elm code to be read from a file into `Editor.hs`
+2. Modifying the stamps example to be bare
+3. Modifying the stamps example to define regions of code to be logged for
+   input
+4. Visualising the mouse data straight from Firebase in the Elm 0.12 version
+5. Writing python scripts to interpret the captured mouse 
 
 Which were all relatively straightforward by then.
 

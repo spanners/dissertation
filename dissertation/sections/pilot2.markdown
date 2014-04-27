@@ -240,8 +240,6 @@ Yates' $\rho$--value   0
 : $\chi^2$ calculation of clicks per quadrant
 \label{tab:post-chisquared}
 
-\newpage
-
 ### T--statistic result between groups Elm and JS \label{t-stat}
 
 Using SciPy's `stats.ttest` function (See \ref{ttest-scipy.py}), and assuming
