@@ -1,0 +1,4 @@
+Installing elm-lang.org
+
+$ cabal install --bindir=.
+$ ./run-elm-server
