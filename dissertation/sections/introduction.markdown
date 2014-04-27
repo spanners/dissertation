@@ -5,7 +5,7 @@ presents a groundbreaking unification of various styles of Functional Reactive
 Programming --- Arrowized FRP, Concurrent FRP and others --- resulting in his
 implementation of Elm, a Functional Reactive programming language in an aim to
 "simplify the complicated task of creating responsive and usable graphical user
-interfaces." \ref{Czaplicki2012elm}. However, there is not, as of yet any
+interfaces." [@Czaplicki2012elm]. However, there is not, as of yet any
 evidence to support this claim and others similar to this, and the thesis has
 inspired me to build further on his work. 
 
@@ -55,7 +55,7 @@ all types of programming? Is it at least appropriate for User Interface
 design? It has been shown that novices tend to “thrash” about, trying
 out many ideas that may or may not be a solution, whereas experts think
 much more about the problem at hand before proceeding with a solution
-@Lopez2012a.
+[@Lopez2012a].
 
 My goal is to answer these questions. By way of conducting user studies,
 leveraging Elm with extensions to do A/B testing to illustrate it’s
