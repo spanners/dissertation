@@ -7,7 +7,7 @@ modelling cognitive load by way of conducting a user study (Section
 \ref{pilot2}), whose findings have shown that there is statistical significance
 in the amount of user activity depending on the difficulty of the task, language
 being used, and the relevance of the code to the task at hand (Section
-\ref{pilot2-analysis}.
+\ref{pilot2-analysis}).
 
 In light of the original objectives, I have not been able to assert the claims
 Evan made in his senior thesis that Elm is indeed easy -- in the Discussion of
