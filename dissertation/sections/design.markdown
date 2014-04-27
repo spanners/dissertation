@@ -1,8 +1,5 @@
 # System Architecture \label{Design}
 
-**This is the chapter in which you review your design decisions at various levels
-and critique the design process.**
-
 Before starting implementation, the design phase (more appropriately titled
 "System Architecture, here) was an important step in the creation of the
 eventual IDE, as it set the direction in which the implementation began. In
