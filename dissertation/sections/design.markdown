@@ -1,7 +1,7 @@
 # System Architecture \label{Design}
 
 Before starting implementation, the design phase (more appropriately titled
-"System Architecture, here) was an important step in the creation of the
+System Architecture, here) was an important step in the creation of the
 eventual IDE, as it set the direction in which the implementation began. In
 designing the extensions I wanted to make to the pre--existing Elm IDE, I first
 had to see if it was feasible. I devised a architectural diagram illustrating
