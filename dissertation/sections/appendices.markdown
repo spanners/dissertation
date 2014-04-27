@@ -31,7 +31,7 @@ this will be replaced by contents of README
 
 ## Raw results output
 
-### firebase-mouseclick-data.json \label{mouseclick-data}
+### example-of-mouseclick-data.json \label{mouseclick-data}
 
 ~~~~ {.json .numberLines code="code/mouse-data/example-of-mouseclick-data.json"}
 this will be replaced by contents of README
