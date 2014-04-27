@@ -1,10 +1,14 @@
 # Introduction
 
-ONE PAGE
+Evan Czaplicki, in his senior thesis "Elm: Concurrent FRP for Functional GUIs",
+presents a groundbreaking unification of various styles of Functional Reactive
+Programming --- Arrowized FRP, Concurrent FRP and others --- resulting in his
+implementation of Elm, a Functional Reactive programming language in an aim to
+"simplify the complicated task of creating responsive and usable graphical user
+interfaces." \ref{Czaplicki2012elm}. However, there is not, as of yet any evidence to support this
+claim, and the thesis has inspired me to build further on his work. 
 
-1. Describe the problem
-
-    1. Use a very specific example to illustrate the problem
+In this paper, I am going to substantiate the following claims:
 
 <!-- in my case I think this specific example will be Evan's thesis claims that Elm is "easy" without evidence
 -->
