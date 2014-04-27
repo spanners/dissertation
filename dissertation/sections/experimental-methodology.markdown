@@ -1,7 +1,7 @@
 # Experimental methodology
 
 Here are some possible approaches I could take to analysing the paradigm of
-declaritive versus imperative progamming.
+declarative versus imperative programming.
 
 1. AB Testing of the languages with the same IDE?
 
@@ -29,12 +29,12 @@ declaritive versus imperative progamming.
    get a different perspective of the same concept. (e.g. if total length of
    pauses during a 1 hour experiment is $< 10$ minutes, it is 'easy'). We do this
    to get 'coverage' of the measurement concept. It is a form of cross
-   validation. If we see an overlap in the correlational results after analysis,
+   validation. If we see an overlap in the correlation results after analysis,
    we can make a stronger assertion that e.g. "language A is easier than
    language B.". The idea I am describing here is methodological decision-making.
 5. Predict what will be the likely results of our experiments on the
    operationalised measurements. This is "feed forward validation".
-6. Do the experiement.
+6. Do the experiment.
 7. Analyse the data. See if the data has patterns that correlate with the
    assertion I wish to make. I will be representing the raw data in some outcome
    measure -- that is

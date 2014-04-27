@@ -4,7 +4,7 @@ In this section I will describe how I implemented the desired requirements for t
 
 ## Establishing context
 
-Initially, the implementation involved a lot of exploratory programming, in order to try and figure out how each compenent of the existing IDE fit together, trying to determine how to get
+Initially, the implementation involved a lot of exploratory programming, in order to try and figure out how each component of the existing IDE fit together, trying to determine how to get
 constantly updating user input signals to stream via a `port` from Elm to
 JavaScript, so that I could store `Mouse.position` and `Keyboard.keysDown` in a
 DB backend for Elm that for embedding into the code pane. I found an example by Dénes Harmath that was close to what I wanted to achieve and forked the
@@ -66,7 +66,7 @@ requests = clicks ~> toRequest
 sendRequests = Http.send requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With the Elm-runtime 0.12 port I was working on, I got the bug `elm: bad ADT got to port generation code` and had no luck finding why this was occuring, so posted on the *elm-discuss* mailing list asking for help (https://groups.google.com/forum/#!searchin/elm-discuss/ADT/elm-discuss/aIUK_MiW3yo/FZ0oSx-a1wYJ) on March 30th 2014.
+With the Elm-runtime 0.12 port I was working on, I got the bug `elm: bad ADT got to port generation code` and had no luck finding why this was occurring, so posted on the *elm-discuss* mailing list asking for help (https://groups.google.com/forum/#!searchin/elm-discuss/ADT/elm-discuss/aIUK_MiW3yo/FZ0oSx-a1wYJ) on March 30th 2014.
 
 For a while I only knew how to get visualisation working in Elm-runtime-0.10, which meant that I lost a lot of the benefits of the latest version (currently 0.12). I had to use regular expressions to swap where I'm doing a POST to submit mouseclick data, with GET to visualise the mouse data, depending on whether I want to visualise or capture mouse data. In essense, I would enter a special "View participant mouse data" mode into the IDE
 e.g. specify a url path in addition to the experiment and the participant ID,
@@ -114,5 +114,5 @@ Which were all relatively straightforward by then.
 
 ## Designing a task in JavaScript and Elm
 
-In order to minimise the effect of the length of Source Lines Of Code [SLOC] on task difficulty, and to incorporate the 2 by 2 regions --- (Hard, Easy) x (Task-relevant, Task-irrevant) --- I had to be very careful about how the Elm and Javascript tasks were presented. Pixi.js (http://www.pixijs.com/)  allows for a relatively similar (in API difficulty and function call SLOC), but still imperative paradigm for manipulating objects on a canvas, so this was the library of choice for the JS version of the task. The Elm version of the moving box task pre-existed on Elm-lang.org, and needed some minor adjustments to approach similarity with the Javascript version. This is the *"task juggling"* I predicted would be necessary in order to reach an acceptable equilibrium between the Elm and Javascript tasks.
+In order to minimise the effect of the length of Source Lines Of Code [SLOC] on task difficulty, and to incorporate the 2 by 2 regions --- (Hard, Easy) x (Task--relevant, Task--irrelevant) --- I had to be very careful about how the Elm and Javascript tasks were presented. Pixi.js (http://www.pixijs.com/)  allows for a relatively similar (in API difficulty and function call SLOC), but still imperative paradigm for manipulating objects on a canvas, so this was the library of choice for the JS version of the task. The Elm version of the moving box task pre-existed on Elm-lang.org, and needed some minor adjustments to approach similarity with the Javascript version. This is the *"task juggling"* I predicted would be necessary in order to reach an acceptable equilibrium between the Elm and Javascript tasks.
 
