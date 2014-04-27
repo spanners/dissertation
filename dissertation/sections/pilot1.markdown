@@ -128,8 +128,9 @@ result, but it is interesting.
 
 ### Model Adjustment 2
 
-* Extend the IDE to allow for tracking the user mouse and keyboard movements in
-  a 3-tuple: `(Time t, (Mouse.x, Mouse.y), Keypress k)`
+* Scrap the Thematic Analysis methodology entirely. Instead, extend the IDE to
+  allow for tracking the user mouse and keyboard movements in a 3-tuple: `(Time
+  t, (Mouse.x, Mouse.y), Keypress k)`
   
     * It doesn't have to be implemented this way. I could extend **Model
       Adjustment 1** to define blocks of code as tokens in themselves, and
