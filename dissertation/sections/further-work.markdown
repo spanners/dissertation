@@ -1,4 +1,4 @@
-# Further work
+# Further work \label{further-work}
 
 In addition to fixing these flaws/foibles, an improvement over this experimental
 method is to take people who are new -- as in: never having used Elm or JS, and

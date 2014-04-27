@@ -1,10 +1,10 @@
-# Implementation
+# Implementation \label{implementation}
 
 In this section I will describe how I implemented the desired requirements for the IDE, detailing the decisions made and issues encountered.
 
-## Finding my feet
+## Establishing context
 
-Initially, the implementation involved a lot of hacking around in order to try and figure out how each compenent of the existing IDE fit together, trying to determine how to get
+Initially, the implementation involved a lot of exploratory programming, in order to try and figure out how each compenent of the existing IDE fit together, trying to determine how to get
 constantly updating user input signals to stream via a `port` from Elm to
 JavaScript, so that I could store `Mouse.position` and `Keyboard.keysDown` in a
 DB backend for Elm that for embedding into the code pane. I found an example by Dénes Harmath that was close to what I wanted to achieve and forked the

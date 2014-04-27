@@ -213,7 +213,7 @@ visualise participant 18 click data:
 http://0.0.0.0:8000/edit/task/MovingBox.elm?p=18
 ````
 
-### Analysis
+### Analysis \label{pilot2-analysis}
 
 I will now talk about how I analysed the raw data that was captured.
 
@@ -275,7 +275,7 @@ of chance (in fact, it is so small that SPSS rounded to 0). We can therefore
 $H_1$**, assuming a rigorous study -- more on this in the Discussion section
 that follows.
 
-## Discussion
+## Discussion \label{pilot2-discussion}
 
 During the few (2 Elm tasks) Pilot Study 2 experiments that I did observe (not
 included in the results), I observed what could be interpreted as "phases" in a
