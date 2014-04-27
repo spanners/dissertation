@@ -22,7 +22,7 @@ related to my current area of interest.
 
 Central to this idea of iteration is my desired method of performing
 user studies: I will first do what I have called a “Pilot” --- a short and
-shallow trial User Study that focuses not on the research I’m concerned
+shallow trial User Study that focuses not on the research I'm concerned
 with, but instead the particular experimental design I would like to use
 in my actual User Study. By employing a Pilot I can hopefully get an
 idea of the nature of the experimental design --- perhaps discovering any

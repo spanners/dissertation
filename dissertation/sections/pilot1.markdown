@@ -2,7 +2,7 @@
 
 Using a per-participant questionnaire (See \ref{pre-questionnaire}), I captured video
 & audio data of 2 participants while they completed the task of extending a
-mario game to make mario fly. This initial pilot study was done to get a feel of
+Mario game to make Mario fly. This initial pilot study was done to get a feel of
 what behaviours may be worth investigating further while a user completes a
 programming task.  I may then refine the methodology to enable said behaviours
 to be isolated more effectively, varying some dependent variable to see if it
@@ -24,12 +24,12 @@ from the literature review, [@Lopez2012a].
 3. User is informed that they may ask for help, and that they will
    be prompted if they pause (at the moment they break the pause), to ask why they
    paused. They are also informed that they can end at any time, and the goal is
-   to make mario fly.
-4. User is shown the result of completed task (mario flying).
+   to make Mario fly.
+4. User is shown the result of completed task (Mario flying).
 4. Programming task is begun.
 5. User completes or ends the task.
 6. Post-questionnaire is given out (See \ref{post-questionnaire})
-7. De-breifing.
+7. De-briefing.
 8. Study ends.
 
 Using Thematic analysis [@Braun2006Thematic] to code the captured audio and
@@ -44,8 +44,8 @@ must be framed from that point on by that experimental methodology.
 
 One must make the statement along the lines of: "Amongst the number of different
 branches that the paper talks about, *X* with *Y* themes and *Z* focus is the
-flavour of thematic analysis that I am going to use" -- e.g. essentialism NOT
-constructionism, one aspect NOT whole, theoretical NOT inductive...
+flavour of thematic analysis that I am going to use" -- e.g. essentialist NOT
+constructionist, one aspect NOT whole, theoretical NOT inductive...
 
 As this is a Pilot Study I will simply be using the 6-phase analysis to gather
 themes in the data (if there are any), as shown in Table \ref{tab:phases-of-ta}.
@@ -115,7 +115,7 @@ result, but it is interesting.
 
 ### Model Adjustment 1
 
-* Add tooltips that appear as the user places the keyboard cursor to the right
+* Add tool tips that appear as the user places the keyboard cursor to the right
   of a token in the language.
 
 ### Observation 2
