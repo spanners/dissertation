@@ -5,32 +5,22 @@ presents a groundbreaking unification of various styles of Functional Reactive
 Programming --- Arrowized FRP, Concurrent FRP and others --- resulting in his
 implementation of Elm, a Functional Reactive programming language in an aim to
 "simplify the complicated task of creating responsive and usable graphical user
-interfaces." \ref{Czaplicki2012elm}. However, there is not, as of yet any evidence to support this
-claim, and the thesis has inspired me to build further on his work. 
+interfaces." \ref{Czaplicki2012elm}. However, there is not, as of yet any
+evidence to support this claim and others similar to this, and the thesis has
+inspired me to build further on his work. 
 
-In this paper, I am going to substantiate the following claims:
+In this dissertation, I am going to substantiate the following claims: 
 
-<!-- in my case I think this specific example will be Evan's thesis claims that Elm is "easy" without evidence
--->
+* Recording mouse-click data of users completing a programming task models
+  cognitive load (Section \ref{pilot2}). I have shown that there is statistical
+  significance between the number of clicks in regions over languages Elm and
+  Javascript.
 
-2. State your contributions
+* Users completing a task in Elm exhibit less thrash (*defined as:* number of
+  clicks in task-regions over the duration of the task) than those that completed
+  the same task in Javascript (Section \ref{t-stat}).
 
-In this paper, I am going to substantiate the following claims... (both
-Evan's claims and my own claims of why this programmatic way of analysing
-cognitive load is useful)
-
-   * One (Section \ref{pilot1}). It's innovative feaatures are...
-   
-   * Two (Section \ref{pilot2}). I have shown that there is statistical
-     significance...
-   
-   * Three (Section \ref{pilot2-results}). Cognitive load can be modelled by
-     analysing clicks...
-
-...and that's all.
-
-<!-- Determining the cognitive load induced during programming, and by extension,
-determining the competency of a programmer, is not an easy endeavour -->
+# Motivation
 
 <!-- The main idea of this dissertation is...
 
@@ -41,13 +31,11 @@ determining the competency of a programmer, is not an easy endeavour -->
 5. My idea works (details, data)
 6. Here's how my idea compares to other people's approaches -->
 
-<!--
-
 I am interested in the effect of Functional Reactive Programming [FRP]
 on User Interface programming.
 
 I first grew an interest in the field of Functional Reactive Programming
-after seeing Bret Victor's "Inventing on Principle" @Victor2012a. His
+after seeing Bret Victor's "Inventing on Principle" [@Victor2012a]. His
 talk claims that, in the traditional compile-run-debug cycle of coding,
 "most of the developer's time is spent looking at the code, blindly
 without an immediate connection to the thing they're making". He goes on
@@ -79,5 +67,3 @@ these aims, I may go on to do further user studies, or attempt to further
 analyse, compare and contrast User Interface Design and Declarative/Functional
 Reactive Programming languages against other methods, so as to make firmer
 statements about the benefits of Elm.
-
--->

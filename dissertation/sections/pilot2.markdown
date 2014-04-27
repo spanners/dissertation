@@ -242,7 +242,7 @@ Yates' $\rho$--value   0
 
 \newpage
 
-### T--statistic result between groups Elm and JS
+### T--statistic result between groups Elm and JS \label{t-stat}
 
 Using SciPy's `stats.ttest` function (See \ref{ttest-scipy.py}), and assuming
 no variance between groups, and the following clicks per language in each
