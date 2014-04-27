@@ -14,7 +14,7 @@ Observations and participant feedback from Pilot Study 1 (See
 I chose, and the way in which I carried out the experiment, was too taxing to
 capture the cognitive load incurred by the language itself for a given task, due
 to the difficulty of the task itself creating noise, and the experimental
-methodology incurring cognitive load -- my prompting and questionning causing
+methodology incurring cognitive load -- my prompting and questioning causing
 pauses. I could improve this by simplifying the task, in a way that is 'language
 agnostic', i.e. that is not idiomatic of Elm or JavaScript (the two languages
 that I am comparing).  Something like the following will never be that easy in
@@ -49,7 +49,7 @@ similar in length, have the same comments, and variables are named similarly.
 The task is to make the moving box clamp to the grey window's edges when moved
 with arrow keys, preventing it from disappearing. It must be clamped in such a
 way that, upon attempting to move the box *out of the grey window*, it stops
-half-way. A youtube video (See https://www.youtube.com/watch?v=cUgK42N7kt8) is
+half-way. A YouTube video (See https://www.youtube.com/watch?v=cUgK42N7kt8) is
 to be given to the participants so that they can see what the completed task
 looks like.
 
@@ -228,7 +228,7 @@ the *K-Way and Higher Order Effects* tables, `Rel := 1`, `Diff := 2`, `Lan :=
 ---------------------- -------------
 $\chi^2$               1633.879
 
-degrees of freedom     7
+Degrees of freedom     7
 
 $\rho$--value          0
 
@@ -251,7 +251,7 @@ category,
 * Elm: `sum([76, 487, 105, 66]) = 734` clicks
 * JS: `sum([33, 12, 69, 3]) = 117` clicks
 
-we can obtain a T--test value and $\rho$--value.
+ we can obtain a T--test value and $\rho$--value.
 
 --------------- -----
 T--value:       1.50 
@@ -292,7 +292,7 @@ programmer activity during task--completion:
 Since I conducted Pilot Study 2 remotely by sending the participant a link to
 the pre-questionnaire survey (See \ref{pilot2-pre-questionnaire}) and a link to
 either the Elm or JS task (See \ref{MovingBox.elm} and \ref{MovingBox.js},
-respectively) I can not assert with any certainty that this was occuring during
+respectively) I can not assert with any certainty that this was occurring during
 the experiments in Pilot Study 2.
 
 The study, although found that there is a significant difference in the number
@@ -322,7 +322,7 @@ In summary, the flaws I have identified are as follows:
    that was discovered *after* Pilot Study 2 is that the error log that captures
    when the user tries to compile syntactically/semantically correct code *does
    not log the participant ID the error pertains to*
-1. No unique participant ID per Surveymonkey -- We can not be sure that,
+1. No unique participant ID per SurveyMonkey -- We can not be sure that,
    although the timestamps are similar, a person filling out the survey at time
    $t$ may not be the same person starting the task at time $t$.
 1. Window dimensions not captured -- How can we be sure that a click in location
@@ -331,7 +331,7 @@ In summary, the flaws I have identified are as follows:
    \ref{fig:visualise-15-overlay}) very likely had a much shorter window height
    than I have used here. I suspect this is the case because of the cluster of
    mouse clicks in the same range of the $x$ axis as the Compile button, but
-   much futher up in the $y$ axis, but I have no way to be sure.
+   much further up in the $y$ axis, but I have no way to be sure.
 1. I did not capture window resizing -- Same problem as above
 1. Mouse scrolling not captured -- Same problem as above. Although the task code was
    purposefully designed to fit in as small a screen space as possible, if the

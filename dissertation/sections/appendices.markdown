@@ -151,7 +151,7 @@ this will be replaced by contents of README
 
 This study aims to assess how Functional Reactive Programming Languages are used. To do this, we will be asking you to modify a Mario game to get him to fly. The session will take no more than 1 hour.
 
-During the session, you will be introduced to Elm, a functional reactive programming language, as well as being shown what we want you to create. We’ll also present you with a questionnaire to see what experience you’ve had with Functional programming (or similar concepts) before. Finally we’ll give you another questionnaire to ask how you think the session went, and the level of workload in the task.
+During the session, you will be introduced to Elm, a functional reactive programming language, as well as being shown what we want you to create. We’ll also present you with a questionnaire to see what experience you've had with Functional programming (or similar concepts) before. Finally we’ll give you another questionnaire to ask how you think the session went, and the level of workload in the task.
 
 The session will be recorded on video and then the audio from the session will be transcribed anonymously in order to find any problems that you had during the session. During this process, the data will be stored securely.
 Important Information
@@ -186,7 +186,7 @@ Experimenter: Simon Buist, Dept. of Computer Science. EMAIL ADDRESS
 1. Have you ever used a Functional programming language before? Examples are: Scheme, Lisp, Haskell, ML, SPARK. Please circle one answer)
     * Yes
     * No
-2. If so, please list the Functional programming  languages you’ve used before:
+2. If so, please list the Functional programming  languages you've used before:
     * .............................................................
 
 #### Design & Software
@@ -273,7 +273,7 @@ If you want to have the study as a whole explained to you, please do so now. How
 
 This study aims to assess how Functional Reactive Programming Languages are used. To do this, we will be asking you to modify a Mario game to get him to fly. The session will take no more than 1 hour.
 
-During the session, you will be introduced to Elm, a functional reactive programming language, as well as being shown what we want you to create. We’ll also present you with a questionnaire to see what experience you’ve had with Functional programming (or similar concepts) before. Finally we’ll give you another questionnaire to ask how you think the session went, and the level of workload in the task.
+During the session, you will be introduced to Elm, a functional reactive programming language, as well as being shown what we want you to create. We’ll also present you with a questionnaire to see what experience you've had with Functional programming (or similar concepts) before. Finally we’ll give you another questionnaire to ask how you think the session went, and the level of workload in the task.
 
 The session will be recorded on video and then the audio from the session will be transcribed anonymously in order to find any problems that you had during the session. During this process, the data will be stored securely.
 Important Information
@@ -309,7 +309,7 @@ Experimenter: Simon Buist, Dept. of Computer Science. EMAIL ADDRESS
 1. Have you ever used a Functional programming language before? Examples are: Scheme, Lisp, Haskell, ML, SPARK. Please circle one answer)
     * **Yes**
     * No
-2. If so, please list the Functional programming  languages you’ve used before:
+2. If so, please list the Functional programming  languages you've used before:
     * **Lisp**
 
 #### Design & Software

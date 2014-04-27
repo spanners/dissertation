@@ -58,7 +58,7 @@ much more about the problem at hand before proceeding with a solution
 [@Lopez2012a].
 
 My goal is to answer these questions. By way of conducting user studies,
-leveraging Elm with extensions to do A/B testing to illustrate it’s
+leveraging Elm with extensions to do A/B testing to illustrate it's
 effectiveness (or ineffectiveness) at enhancing User Interface Design.
 
 As far as the scope of this project goes, I will be researching as much as is
