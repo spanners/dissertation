@@ -39,8 +39,8 @@ main = lift asText Mouse.position
 
 Using the IDE I have augmented to gather click data, and a pre-questionnaire to
 determine level of expertise (See Section \ref{pilot2-pre-questionnaire}), I
-will two independent pilots of users completing the same task in either Elm or
-JavaScript.
+will split the sample of users completing the same task by language: into either
+Elm or JavaScript.
 
 The task (See code listings \ref{MovingBox.elm} and \ref{MovingBox.js} for the
 Elm and JS versions, respectively) is designed in such a way as to approximate the
