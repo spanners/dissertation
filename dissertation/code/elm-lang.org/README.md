@@ -27,14 +27,14 @@ json file:
 customisation*
 
 If you  write your own tasks, visiting `/edit/<path/to/task>` will 
-populate the click databse elm directory with click data as you use 
+populate the click database elm directory with click data as you use 
 it, for your task.
 
 Furthermore, appending `?p=<participant-id>` allows you to annotate
 the data with the particular participant performing those clicks.
 
 If you host the elm environment on a server on the Internet, you can
-send the link to your tasks to participants with a separate
+send the link to your tasks to participants with a separate participant ID.
 
 Example:
 

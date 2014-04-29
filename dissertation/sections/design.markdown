@@ -39,8 +39,9 @@ incorporate the same compile loop *within* the code pane in order to embed
 arbitrary Elm code. The embedded code would itself need to be created, and
 hooked into a database back--end to perform the JSON click data storage functionality
 
-* For Stage 1., I determined that would probably need to send some extra information in the `POST` submission to
-`/compile`, perhaps using another parameter.
+* For Stage 1., I determined that I would probably need to send some extra
+  information in the `POST` submission to `/compile`, perhaps using another
+  parameter.
 
 * For Stage 2., the `getHtmlPage` function in `Generate.hs` was predicted to need heavy
   modification, due to the fact that this is where the IDE builds the HTML page

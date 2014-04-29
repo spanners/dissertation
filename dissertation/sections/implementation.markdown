@@ -37,7 +37,7 @@ mouse input. See the palindrome Elm example at http://elm-lang.org/edit/examples
 My initial implementation of click logging used `Elm.embed` and offset a `<div>` tag as the place to load the arbitrary Elm code. This meant that all co--ordinates were offset by the height of the code `<div>`, and I would have to compute the offset after gathering the data. I tried to use `Elm.worker(Main.Elm, div, {})` and make the `<div>` element encompass the
   entire CodeMirror window, but the `Elm.worker` function turns out to be only for computational code, not for interacting with the outside world (Input/Output).
 
-I managed to get Evan's stamps example (http://github.com/evancz/elm-html-and-js) example working with Firebase (on my own repository, here: http://github.com/spanners/elm-js-and-html). Now I can successfully store user mouse events persistently in a JSON file.
+I managed to get Evan's stamps example (http://github.com/evancz/elm-html-and-js) working with Firebase (on my own repository, here: http://github.com/spanners/elm-js-and-html). Now I can successfully store user mouse events persistently in a JSON file.
 
 This required dealing with **Disadvantage 1.** which I did
 successfully, using the new `port` FFI.
